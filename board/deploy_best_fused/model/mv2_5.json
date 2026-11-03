@@ -1,0 +1,208 @@
+{
+  "format_version": 1,
+  "input_tensor": "mv2_5_features:0",
+  "output_tensor": "stack5_block1_deep_3_bn/FusedBatchNormV3:0",
+  "input_shape": [
+    1,
+    16,
+    16,
+    288
+  ],
+  "output_shape": [
+    1,
+    8,
+    8,
+    384
+  ],
+  "weights_file": "mv2_5_weights.npz",
+  "nodes": [
+    {
+      "name": "mv2_5_features",
+      "op": "Placeholder",
+      "inputs": [],
+      "attrs": {}
+    },
+    {
+      "name": "stack5_block1_deep_2_pad/Pad/paddings",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0000"
+    },
+    {
+      "name": "cle_params/layer_00/weights",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0001"
+    },
+    {
+      "name": "cle_params/layer_00/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0002"
+    },
+    {
+      "name": "cle_params/layer_01/weights",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0003"
+    },
+    {
+      "name": "cle_params/layer_01/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0004"
+    },
+    {
+      "name": "cle_params/layer_02/weights",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0005"
+    },
+    {
+      "name": "cle_params/layer_02/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0006"
+    },
+    {
+      "name": "stack5_block1_deep_1_conv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "mv2_5_features",
+        "cle_params/layer_00/weights"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack5_block1_deep_1_bn/FusedBatchNormV3",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack5_block1_deep_1_conv/Conv2D",
+        "cle_params/layer_00/bias"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack5_block1_deep_1_relu/Relu",
+      "op": "Relu",
+      "inputs": [
+        "stack5_block1_deep_1_bn/FusedBatchNormV3"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack5_block1_deep_2_pad/Pad",
+      "op": "Pad",
+      "inputs": [
+        "stack5_block1_deep_1_relu/Relu",
+        "stack5_block1_deep_2_pad/Pad/paddings"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack5_block1_deep_2_dw_conv/depthwise",
+      "op": "DepthwiseConv2dNative",
+      "inputs": [
+        "stack5_block1_deep_2_pad/Pad",
+        "cle_params/layer_01/weights"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack5_block1_deep_2_bn/FusedBatchNormV3",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack5_block1_deep_2_dw_conv/depthwise",
+        "cle_params/layer_01/bias"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack5_block1_deep_2_relu/Relu",
+      "op": "Relu",
+      "inputs": [
+        "stack5_block1_deep_2_bn/FusedBatchNormV3"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack5_block1_deep_3_conv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "stack5_block1_deep_2_relu/Relu",
+        "cle_params/layer_02/weights"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack5_block1_deep_3_bn/FusedBatchNormV3",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack5_block1_deep_3_conv/Conv2D",
+        "cle_params/layer_02/bias"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    }
+  ]
+}

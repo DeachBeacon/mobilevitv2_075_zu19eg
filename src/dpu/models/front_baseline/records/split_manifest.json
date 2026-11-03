@@ -1,0 +1,100 @@
+{
+  "format_version": 1,
+  "tensorflow_version": "1.15.2",
+  "source": {
+    "file": "C:\\WorkSpace\\Isar\\MobileViTv2_075_ZU19EG\\code\\tensorflow\\pb\\deploy\\mobilevitv2_075_10cls_relu_deploy_b1_gnfold.pb",
+    "sha256": "c205a47377ee7ffc8683f43f7a95b5a46a00f8b0b9282cee5ebc147c23e0de2d"
+  },
+  "cut_tensor": "stack3_block2_pre_2_conv/Conv2D:0",
+  "feature_shape": [
+    1,
+    32,
+    32,
+    96
+  ],
+  "dpu_front": {
+    "file": "front_baseline/fp32/dpu_front_fp32.pb",
+    "sha256": "f73970c59fe37769d7357e27adb980792d1d4be1d13a51af3bdd4e1ac01d3af2",
+    "bytes": 592402,
+    "node_count": 195,
+    "ops": {
+      "AddV2": 1,
+      "Const": 77,
+      "Conv2D": 10,
+      "DepthwiseConv2dNative": 5,
+      "FusedBatchNormV3": 14,
+      "Identity": 71,
+      "Pad": 6,
+      "Placeholder": 1,
+      "Relu": 10
+    },
+    "input_tensor": "input_1:0",
+    "output_tensor": "stack3_block2_pre_2_conv/Conv2D:0",
+    "input_shape": [
+      1,
+      256,
+      256,
+      3
+    ],
+    "output_shape": [
+      1,
+      32,
+      32,
+      96
+    ],
+    "dtype": "float32",
+    "layout": "NHWC"
+  },
+  "ps_tail": {
+    "file": "tail_shared/ps_tail_fp32.pb",
+    "sha256": "10e9452b83e7e1a965582ed4549797fa63920e78bf318f9e3f0aea9cfc1eabbd",
+    "bytes": 9514657,
+    "node_count": 941,
+    "ops": {
+      "AddV2": 39,
+      "BiasAdd": 40,
+      "Const": 337,
+      "Conv2D": 45,
+      "DepthwiseConv2dNative": 4,
+      "FusedBatchNormV3": 11,
+      "Identity": 134,
+      "MatMul": 1,
+      "Mean": 43,
+      "Mul": 39,
+      "Pad": 4,
+      "Placeholder": 1,
+      "Relu": 24,
+      "Reshape": 78,
+      "Rsqrt": 21,
+      "Softmax": 9,
+      "SplitV": 9,
+      "SquaredDifference": 21,
+      "StopGradient": 21,
+      "Sub": 21,
+      "Sum": 9,
+      "Transpose": 30
+    },
+    "input_tensor": "ps_features:0",
+    "output_tensor": "predictions/BiasAdd:0",
+    "input_shape": [
+      1,
+      32,
+      32,
+      96
+    ],
+    "output_shape": [
+      1,
+      10
+    ],
+    "dtype": "float32",
+    "layout": "NHWC"
+  },
+  "note": "FP32 graph export only. The front must be quantized and compiled before DPU execution.",
+  "ps_tail_numpy": {
+    "graph_file": "tail_shared/ps_tail_numpy.json",
+    "graph_sha256": "2f7b1864c252e2174d9217633d3a846bbddd0a17b1d0173527316c85869967bd",
+    "weights_file": "tail_shared/ps_tail_numpy_weights.npz",
+    "weights_sha256": "00b1918aff5b6308b8ed40854260b3f8ae604613d94164163a00cde1c3e0537d",
+    "runtime_dependencies": "Python 3.7 + NumPy 1.17-compatible APIs; no TensorFlow"
+  }
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1390" viewBox="0 0 1500 1390">
+<rect width="100%" height="100%" fill="white"/>
+<text x="52" y="72" font-family="Microsoft YaHei, sans-serif" font-size="34" fill="#172D47" text-anchor="start">图8  FastTail与NumPy底层算子流程</text>
+<text x="54" y="112" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#607185" text-anchor="start">同一JSON/NPZ支持参考实现与快速实现</text>
+<path d="M52 134H1448" stroke="#D9E1EB" stroke-width="2"/>
+<rect x="200" y="175" width="1100" height="115" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="750.0" y="214" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">FastTail.__init__()</text>
+<text x="750.0" y="250" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">读JSON / NPZ → _optimize() → 建立张量引用计数</text>
+<rect x="200" y="345" width="1100" height="130" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="750.0" y="384" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">_optimize(nodes)</text>
+<text x="750.0" y="420" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">_const_of追踪参数；_add_bias合并偏置</text>
+<text x="750.0" y="449" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">BN / BiasAdd融合 → 消除直通节点 → 重定向边和输出端口</text>
+<polyline points="750.0,290 750.0,345" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,345.0 744.5,334.4 755.5,334.4" fill="#75889E"/>
+<rect x="200" y="535" width="1100" height="115" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="750.0" y="574" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">predict(features)</text>
+<text x="750.0" y="610" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">检查输入形状 → 按拓扑顺序取节点输入</text>
+<polyline points="750.0,475 750.0,535" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,535.0 744.5,524.4 755.5,524.4" fill="#75889E"/>
+<rect x="55" y="725" width="650" height="160" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="380.0" y="764" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">卷积节点：_conv()</text>
+<text x="380.0" y="800" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">1×1：直接矩阵乘法</text>
+<text x="380.0" y="829" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">一般卷积：连续im2col + matmul</text>
+<text x="380.0" y="858" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">深度卷积：按卷积核位置累加</text>
+<rect x="795" y="725" width="650" height="160" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="1120.0" y="764" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">其他节点：_evaluate()</text>
+<text x="1120.0" y="800" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">Transpose / Reshape / SplitV</text>
+<text x="1120.0" y="829" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">归约 / 归一化基础运算 / ReLU</text>
+<text x="1120.0" y="858" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">Softmax / MatMul / 加减乘等</text>
+<polyline points="750,650 750,685 380,685 380,725" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="380.0,725.0 374.5,714.4 385.5,714.4" fill="#75889E"/>
+<polyline points="750,685 1120,685 1120,725" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1120.0,725.0 1114.5,714.4 1125.5,714.4" fill="#75889E"/>
+<rect x="200" y="955" width="1100" height="115" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="750.0" y="994" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">保存必要输出并释放不再使用的中间张量</text>
+<text x="750.0" y="1030" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">按端口保存输出；引用计数减一，计数归零时释放</text>
+<polyline points="380,885 380,920 750,920 750,955" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,955.0 744.5,944.4 755.5,944.4" fill="#75889E"/>
+<polyline points="1120,885 1120,920 750,920" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,920.0 760.6,914.5 760.6,925.5" fill="#75889E"/>
+<polyline points="1300,1012 1465,1012 1465,592 1300,592" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1300.0,592.0 1310.6,586.5 1310.6,597.5" fill="#75889E"/>
+<text x="1390" y="683" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#607185" text-anchor="middle">下一节点</text>
+<rect x="200" y="1135" width="1100" height="110" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="750.0" y="1174" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">检查该段输出形状并返回</text>
+<text x="750.0" y="1210" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">PS1 / PS2返回中间特征；PS3返回10类logits</text>
+<polyline points="750.0,1070 750.0,1135" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,1135.0 744.5,1124.4 755.5,1124.4" fill="#75889E"/>
+<text x="54" y="1365" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#607185" text-anchor="start">融合在加载时完成；推理阶段不重复执行可合并的BN和偏置节点。</text>
+</svg>

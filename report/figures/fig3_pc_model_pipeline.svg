@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1130" viewBox="0 0 1400 1130">
+<rect width="100%" height="100%" fill="white"/>
+<text x="52" y="72" font-family="Microsoft YaHei, sans-serif" font-size="34" fill="#172D47" text-anchor="start">图3  PC端模型处理函数流程</text>
+<text x="54" y="112" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#607185" text-anchor="start">入口函数 → 图切分 → 参数处理 → 导出与接口检查</text>
+<path d="M52 134H1348" stroke="#D9E1EB" stroke-width="2"/>
+<rect x="170" y="170" width="1060" height="95" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="700.0" y="209" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">源模型转换</text>
+<text x="700.0" y="245" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">PT → H5 → source.pb；固定输入 [1,256,256,3]</text>
+<rect x="170" y="310" width="1060" height="100" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="700.0" y="349" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">prepare_pc() → prepare()</text>
+<text x="700.0" y="385" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">环境 / 源图 / 参数身份检查；准备图像缓存</text>
+<polyline points="700.0,265 700.0,310" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="700.0,310.0 694.5,299.4 705.5,299.4" fill="#75889E"/>
+<rect x="170" y="455" width="1060" height="95" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="700.0" y="494" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">split_graph(original)</text>
+<text x="700.0" y="530" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">前端祖先子图 + 后段切点占位符；检查DPU前端算子</text>
+<polyline points="700.0,410 700.0,455" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="700.0,455.0 694.5,444.4 705.5,444.4" fill="#75889E"/>
+<rect x="60" y="610" width="610" height="175" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="365.0" y="648" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">前端：fold_front() → apply_scales()</text>
+<text x="365.0" y="698.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">feature_groups()约束残差尺度</text>
+<text x="365.0" y="727.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">采用固定CLE尺度；再add_output_bias()</text>
+<rect x="730" y="610" width="610" height="175" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="1035.0" y="648" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">后段：cut()循环生成五个子图</text>
+<text x="1035.0" y="698.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">PS1 / MV2_4 / PS2 / MV2_5 / PS3</text>
+<text x="1035.0" y="727.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">MV2：fold_front → equalize → apply_scales</text>
+<polyline points="700,550 700,580 365,580 365,610" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="365.0,610.0 359.5,599.4 370.5,599.4" fill="#75889E"/>
+<polyline points="700,580 1035,580 1035,610" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1035.0,610.0 1029.5,599.4 1040.5,599.4" fill="#75889E"/>
+<rect x="170" y="850" width="1060" height="110" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="700.0" y="889" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">prepare_numpy_export() → check_prepared()</text>
+<text x="700.0" y="925" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">拓扑排序 / 算子白名单 / 数值权重 → 六段PB、JSON/NPZ与哈希清单</text>
+<polyline points="365,785 365,815 700,815 700,850" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="700.0,850.0 694.5,839.4 705.5,839.4" fill="#75889E"/>
+<polyline points="1035,785 1035,815 700,815" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="700.0,815.0 710.6,809.5 710.6,820.5" fill="#75889E"/>
+<text x="54" y="1105" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#607185" text-anchor="start">各段以固定FP32张量连接；切分检查唯一输入，防止遗漏跨段依赖。</text>
+</svg>

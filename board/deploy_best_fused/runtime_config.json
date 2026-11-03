@@ -1,0 +1,143 @@
+{
+  "stages": [
+    {
+      "output_shape": [
+        1,
+        32,
+        32,
+        192
+      ],
+      "name": "ps1",
+      "input_shape": [
+        1,
+        32,
+        32,
+        96
+      ],
+      "input_tensor": "ps_features:0",
+      "backend": "numpy",
+      "graph": "ps1.json",
+      "output_tensor": "stack3_block3_output/stack3_block3_output/Identity:0"
+    },
+    {
+      "output_node": "stack4_block1_deep_3_conv_Conv2D",
+      "output_shape": [
+        1,
+        16,
+        16,
+        288
+      ],
+      "so_sha256": "df023e1f709f91c8e38b502670915cca729dacc5680c3f577c46aa20e5856f5e",
+      "backend": "dpu",
+      "expected_input_scale": 1.0,
+      "elf_sha256": "356e77a87be072507f21b1cad1cbd5919c66749ba74f4e7953710bf485e82511",
+      "input_node": "stack4_block1_deep_1_conv_Conv2D",
+      "output_tensor": "stack4_block1_deep_3_bn/FusedBatchNormV3:0",
+      "kernel": "mobilevitv2_075_mv4a_ctlb100",
+      "name": "mv2_4",
+      "input_shape": [
+        1,
+        32,
+        32,
+        192
+      ],
+      "input_tensor": "mv2_4_features:0",
+      "quantization": {
+        "quantize_eval_model.pb": "6c1586b80d863e4766f160cce7fde255481fea0834550ff94464012de04df39b",
+        "deploy_model.pb": "b9ce61a867aa91028eda829a625adf80c204136000477b8bd765b82d38d8b378"
+      },
+      "graph": "mv2_4.json",
+      "selection_sha256": "cf286d053d375de6c577c7c35cc18199273c615f4b56b9d85e86dd3b0e5e9881"
+    },
+    {
+      "output_shape": [
+        1,
+        16,
+        16,
+        288
+      ],
+      "name": "ps2",
+      "input_shape": [
+        1,
+        16,
+        16,
+        288
+      ],
+      "input_tensor": "ps2_features:0",
+      "backend": "numpy",
+      "graph": "ps2.json",
+      "output_tensor": "stack4_block5_output/stack4_block5_output/Identity:0"
+    },
+    {
+      "output_node": "stack5_block1_deep_3_conv_Conv2D",
+      "output_shape": [
+        1,
+        8,
+        8,
+        384
+      ],
+      "so_sha256": "a59d54b192634432346c293a730799d757ef52fa1ffc96d42bb7ad9a70015146",
+      "output_tensor": "stack5_block1_deep_3_bn/FusedBatchNormV3:0",
+      "expected_input_scale": 1.0,
+      "name": "mv2_5",
+      "input_node": "stack5_block1_deep_1_conv_Conv2D",
+      "kernel": "mobilevitv2_075_mv2_5_cle",
+      "input_shape": [
+        1,
+        16,
+        16,
+        288
+      ],
+      "input_tensor": "mv2_5_features:0",
+      "graph": "mv2_5.json",
+      "backend": "dpu"
+    },
+    {
+      "output_shape": [
+        1,
+        10
+      ],
+      "name": "ps3",
+      "input_shape": [
+        1,
+        8,
+        8,
+        384
+      ],
+      "input_tensor": "ps3_features:0",
+      "backend": "numpy",
+      "graph": "ps3.json",
+      "output_tensor": "predictions/BiasAdd:0"
+    }
+  ],
+  "front": {
+    "input_node": "stem_conv_Conv2D",
+    "output_node": "stack3_block2_pre_2_conv_Conv2D_linear",
+    "output_shape": [
+      1,
+      32,
+      32,
+      96
+    ],
+    "so_sha256": "d5ec53668189463b0a9f8b833b9688e9845a8f0d499ca90c8669de80b32076ea",
+    "kernel": "mobilevitv2_075_fronta_ctlb100",
+    "input_shape": [
+      1,
+      256,
+      256,
+      3
+    ],
+    "quantization": {
+      "quantize_eval_model.pb": "8c24feb10e0775980b3982ed05a4e70374b2ce855725e8ab01d103b2addc74bd",
+      "deploy_model.pb": "64731da89b18b5b987d6d269c15a48f4b86615f7b7f955a7ac7cba55bdbf2641"
+    },
+    "expected_input_scale": 32.0,
+    "selection_sha256": "5897f71ebafb91a1c1ddce6608d5b71a53f8798e74ecbcedf2b8920757e38ebc",
+    "elf_sha256": "6b74fc643560f4b6f3ca73073115ce5a65c26fe02c51d4052e724383e6f66d2a"
+  },
+  "format_version": 1,
+  "quantized_bias_correction": true,
+  "mv2_transform": "scheme_a_control_bc100",
+  "mv2_5_policy": "Frozen original CLE model and library",
+  "front_candidate": "control_bc100"
+}

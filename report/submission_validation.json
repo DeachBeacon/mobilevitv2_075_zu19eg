@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "uncompressed_bytes": 123621583,
+  "limit_bytes": 200000000,
+  "files": 791,
+  "python_syntax_checked_files": 196,
+  "notebook_code_cells_checked": 8,
+  "graph_weight_paths_checked": 6,
+  "shared_ps_models_valid": true,
+  "calibration_images": 300,
+  "obsolete_mv2_control_package_absent": true,
+  "onnx_branch_absent": true,
+  "final_mv2_kernel": "mobilevitv2_075_mv4a_ctlb100",
+  "libraries": {
+    "passed": true,
+    "libraries": [
+      {
+        "stage": "front",
+        "kernel": "mobilevitv2_075_fronta_ctlb100",
+        "path": "C:\\WorkSpace\\Z19-Onborad\\tmp\\isar_release_20261103\\mobilevitv2_075_zu19eg\\board\\deploy_best_fused\\model\\libdpumodelmobilevitv2_075_fronta_ctlb100.so",
+        "passed": true,
+        "embedded_kernels": [
+          "mobilevitv2_075_fronta_ctlb100"
+        ]
+      },
+      {
+        "stage": "mv2_4",
+        "kernel": "mobilevitv2_075_mv4a_ctlb100",
+        "path": "C:\\WorkSpace\\Z19-Onborad\\tmp\\isar_release_20261103\\mobilevitv2_075_zu19eg\\board\\deploy_best_fused\\model\\libdpumodelmobilevitv2_075_mv4a_ctlb100.so",
+        "passed": true,
+        "embedded_kernels": [
+          "mobilevitv2_075_mv4a_ctlb100"
+        ]
+      },
+      {
+        "stage": "mv2_5",
+        "kernel": "mobilevitv2_075_mv2_5_cle",
+        "path": "C:\\WorkSpace\\Z19-Onborad\\tmp\\isar_release_20261103\\mobilevitv2_075_zu19eg\\board\\deploy_best_fused\\model\\libdpumodelmobilevitv2_075_mv2_5_cle.so",
+        "passed": true,
+        "embedded_kernels": [
+          "mobilevitv2_075_mv2_5_cle"
+        ]
+      }
+    ],
+    "LD_LIBRARY_PATH": "",
+    "scope": "Library files, embedded kernel names, metadata and optional loader check; no DPU task is run"
+  },
+  "summary_screen_present": true,
+  "visual_default_deploy_valid": true,
+  "root_readme_links_checked": 7,
+  "skill_hashes_verified": 50,
+  "pc_reconstruction_passed": true,
+  "shell_syntax_checked_files": 35,
+  "docker_previews": [
+    {
+      "role": "vitis",
+      "command": "docker run --rm -it --network=host -e USER=zqf -e UID=197609 -e GID=197121 -e DPU_SYSROOT=/opt/vitis_ai/petalinux_sdk/sysroots/aarch64-xilinx-linux -v /c/WorkSpace/Z19-Onborad/tmp/isar_release_20261103/mobilevitv2_075_zu19eg:/workspace -v /dev/shm:/dev/shm -w /workspace/build/mobilevitv2_axu19eg_release/compile_tools xilinx/vitis-ai:1.2.82 bash"
+    },
+    {
+      "role": "runtime",
+      "command": "docker run --rm -it --network=host -e USER=zqf -e UID=197609 -e GID=197121 -e DPU_SYSROOT=/opt/vitis_ai/petalinux_sdk/sysroots/aarch64-xilinx-linux -v /c/WorkSpace/Z19-Onborad/tmp/isar_release_20261103/mobilevitv2_075_zu19eg:/workspace -v /dev/shm:/dev/shm -w /workspace/build/mobilevitv2_axu19eg_release/compile_tools xilinx/vitis-ai:runtime-1.0.0-cpu bash"
+    }
+  ],
+  "naming_passed": true,
+  "naming_exceptions": [
+    "README.md",
+    "SKILL.md"
+  ],
+  "final_elf_so_payloads_verified": 3,
+  "vendor_hwh_configuration_verified": true,
+  "hardware_post_implementation_reports_available": false,
+  "actual_board_inference_run": false,
+  "actual_vitis_compilation_run": false,
+  "actual_docker_start_run": false,
+  "visual_ui_not_run_reason": "No board display or local OpenCV in available PC environments"
+}

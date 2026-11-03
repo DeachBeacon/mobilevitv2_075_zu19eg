@@ -1,0 +1,15 @@
+# Fixed assets are byte-hashed. Preserve their bytes across Windows/Linux checkouts.
+* -text
+*.sh text eol=lf
+*.md text eol=lf
+*.pb filter=lfs diff=lfs merge=lfs -text
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.h5 filter=lfs diff=lfs merge=lfs -text
+*.npy filter=lfs diff=lfs merge=lfs -text
+*.npz filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
+*.elf filter=lfs diff=lfs merge=lfs -text
+*.dcf filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+compile_tools/modle/driver/calibration/board_capture/*.tar.gz filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-03",
+  "environment": {
+    "python": "3.6.10",
+    "tensorflow": "1.15.2",
+    "numpy": "1.19.5",
+    "platform": "Windows"
+  },
+  "whole_bundle_synthetic_tests": 13,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "source_full_report_sha256": "a5f3f45340182a761f9f21da863bc955540da36b35db093c1b90d14fe987709a",
+  "not_executed": [
+    "Docker native quantized candidate search",
+    "New target compilation and linking",
+    "Board accuracy and speed measurement",
+    "Independent-set acceptance",
+    "PYNQ hardware execution"
+  ],
+  "skill": "pb-hybrid-split",
+  "synthetic_checks": [
+    "test_explicit_shape_specializes_unknown_rank_input",
+    "test_quantized_graph_is_not_accepted_as_float_source",
+    "test_multiport_multiinput_and_skip_dependency",
+    "test_optional_numpy_and_no_tensorflow_runtime_dependency",
+    "test_saved_artifact_changes_are_rejected",
+    "test_numpy_unknown_operator_fails_instead_of_being_skipped",
+    "test_generic_boundary_range_and_noncontiguous_transfer"
+  ],
+  "retained_case": {
+    "samples": 10,
+    "source_sha256": "c205a47377ee7ffc8683f43f7a95b5a46a00f8b0b9282cee5ebc147c23e0de2d",
+    "saved_pb_max_abs_error": 0.0,
+    "numpy_max_abs_error": 5.116686224937439e-06,
+    "scope": "Host FP32 parity; not proof of INT8 or board performance"
+  }
+}

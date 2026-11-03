@@ -1,0 +1,6 @@
+{
+  "data/samples/baseline/sample_split_logits.npy": "data/samples/baseline/sample_reference_logits.npy",
+  "data/samples/cle/sample_input_fp32.npy": "data/samples/baseline/sample_input_fp32.npy",
+  "sim/diagnostics/native_quant_accuracy_10_sample/float_features.npy": "data/samples/baseline/sample_features_fp32.npy",
+  "sim/diagnostics/native_quant_accuracy_10_sample/sample_input_fp32.npy": "data/samples/baseline/sample_input_fp32.npy"
+}

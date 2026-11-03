@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1240" viewBox="0 0 1280 1240">
+<rect width="100%" height="100%" fill="white"/>
+<text x="52" y="72" font-family="Microsoft YaHei, sans-serif" font-size="34" fill="#172D47" text-anchor="start">图4  量化、编译与组装函数流程</text>
+<text x="54" y="112" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#607185" text-anchor="start">PC模型不在Docker中重新导出</text>
+<path d="M52 134H1228" stroke="#D9E1EB" stroke-width="2"/>
+<rect x="90" y="165" width="1100" height="110" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="640.0" y="204" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">check_prepared() → init_build()</text>
+<text x="640.0" y="240" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">校验源图 / 参数 / PC产物；绑定构建目录</text>
+<rect x="90" y="310" width="1100" height="110" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="640.0" y="349" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">cache_mv2() → Vitis AI量化</text>
+<text x="640.0" y="385" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">父量化前缀 + PS1/PS2 → MV2特征缓存；分别量化三个DPU段</text>
+<polyline points="640.0,275 640.0,310" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,310.0 634.5,299.4 645.5,299.4" fill="#75889E"/>
+<rect x="90" y="455" width="1100" height="110" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="640.0" y="494" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">postprocess()</text>
+<text x="640.0" y="530" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">lock_input：同步输入位置；correct_mv4：更新MV2_4偏置</text>
+<polyline points="640.0,420 640.0,455" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,455.0 634.5,444.4 645.5,444.4" fill="#75889E"/>
+<rect x="90" y="600" width="1100" height="110" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="640.0" y="639" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">quantized() / evaluate()</text>
+<text x="640.0" y="675" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">固化量化产物身份；可选执行完整链路原生精度评估</text>
+<polyline points="640.0,565 640.0,600" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,600.0 634.5,589.4 645.5,589.4" fill="#75889E"/>
+<rect x="90" y="745" width="1100" height="110" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="640.0" y="784" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">Vitis AI编译 → compiled()</text>
+<text x="640.0" y="820" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">三段deploy PB → ELF；检查单DPU且无CPU回退；提取节点名</text>
+<polyline points="640.0,710 640.0,745" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,745.0 634.5,734.4 645.5,734.4" fill="#75889E"/>
+<rect x="90" y="890" width="1100" height="110" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="640.0" y="929" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">assemble(link=True)</text>
+<text x="640.0" y="965" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">交叉链接SO → 核对DPU节 → 复制PS模型 / 程序 / 配置</text>
+<polyline points="640.0,855 640.0,890" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,890.0 634.5,879.4 645.5,879.4" fill="#75889E"/>
+<rect x="90" y="1035" width="1100" height="110" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="640.0" y="1074" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">部署包检查与输出</text>
+<text x="640.0" y="1110" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">inspect_libraries()；记录BUILD_INFO.json</text>
+<polyline points="640.0,1000 640.0,1035" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,1035.0 634.5,1024.4 645.5,1024.4" fill="#75889E"/>
+<text x="54" y="1215" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#607185" text-anchor="start">前端scale=32；两个MV2 scale=1；编译与运行配置必须对应。</text>
+</svg>

@@ -1,0 +1,4250 @@
+{
+  "success": true,
+  "source_weights": "C:\\WorkSpace\\qsfpga\\Models\\weights\\bestmodel_v1_only_weights.pt",
+  "source_sha256": "7d6d7bd14d2a163ac4c4b3dfeb05cc75d9c5be3a06c58918570fe1c67943cde9",
+  "weights_file": "C:\\Users\\zqf\\Documents\\Codex\\2026-10-26\\mobilevitv2-tensorflow-c-workspace-z19-onborad\\outputs\\converted_mobilevitv2\\mobilevitv2_075_10cls_relu_weights.h5",
+  "weights_sha256": "ee24e3c7b4d238b19011f9752e81a15030b64aa387298a9966bdc8c8cc1e8631",
+  "architecture": "MobileViTv2-0.75",
+  "num_classes": 10,
+  "activation": "relu",
+  "patch": [
+    2,
+    2
+  ],
+  "input_shape": [
+    null,
+    256,
+    256,
+    3
+  ],
+  "output": "10 logits, no softmax",
+  "preprocessing": {
+    "embedded_in_model": false,
+    "layout": "NHWC",
+    "color": "RGB",
+    "formula": "(RGB/255 - mean)/std",
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "python_pytorch": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+  "torch_version": "2.9.1+cu130",
+  "python_tensorflow": "3.6.10 |Anaconda, Inc.| (default, May  7 2020, 19:46:08) [MSC v.1916 64 bit (AMD64)]",
+  "tensorflow_version": "1.15.2",
+  "apple_block_class": "cvnets.modules.my_mobilevit_block.my_MobileViTBlockv2",
+  "torch_trainable_parameters": 2484859,
+  "tensorflow_total_parameters_including_bn_statistics": 2496523,
+  "source_state_entries": 269,
+  "mapped_layer_count": 111,
+  "ignored_only_bn_counters": [
+    "conv_1.block.norm.num_batches_tracked",
+    "layer_1.0.block.conv_3x3.block.norm.num_batches_tracked",
+    "layer_1.0.block.exp_1x1.block.norm.num_batches_tracked",
+    "layer_1.0.block.red_1x1.block.norm.num_batches_tracked",
+    "layer_2.0.block.conv_3x3.block.norm.num_batches_tracked",
+    "layer_2.0.block.exp_1x1.block.norm.num_batches_tracked",
+    "layer_2.0.block.red_1x1.block.norm.num_batches_tracked",
+    "layer_2.1.block.conv_3x3.block.norm.num_batches_tracked",
+    "layer_2.1.block.exp_1x1.block.norm.num_batches_tracked",
+    "layer_2.1.block.red_1x1.block.norm.num_batches_tracked",
+    "layer_3.0.block.conv_3x3.block.norm.num_batches_tracked",
+    "layer_3.0.block.exp_1x1.block.norm.num_batches_tracked",
+    "layer_3.0.block.red_1x1.block.norm.num_batches_tracked",
+    "layer_3.1.conv_proj.block.norm.num_batches_tracked",
+    "layer_3.1.local_rep.0.block.norm.num_batches_tracked",
+    "layer_4.0.block.conv_3x3.block.norm.num_batches_tracked",
+    "layer_4.0.block.exp_1x1.block.norm.num_batches_tracked",
+    "layer_4.0.block.red_1x1.block.norm.num_batches_tracked",
+    "layer_4.1.conv_proj.block.norm.num_batches_tracked",
+    "layer_4.1.local_rep.0.block.norm.num_batches_tracked",
+    "layer_5.0.block.conv_3x3.block.norm.num_batches_tracked",
+    "layer_5.0.block.exp_1x1.block.norm.num_batches_tracked",
+    "layer_5.0.block.red_1x1.block.norm.num_batches_tracked",
+    "layer_5.1.conv_proj.block.norm.num_batches_tracked",
+    "layer_5.1.local_rep.0.block.norm.num_batches_tracked"
+  ],
+  "verification": {
+    "atol": 0.001,
+    "rtol": 0.0001,
+    "per_layer_random_input": [
+      {
+        "shape": [
+          1,
+          24,
+          128,
+          128
+        ],
+        "max_abs": 1.9073486328125e-06,
+        "mean_abs": 3.713766005830621e-08,
+        "allclose": true,
+        "source": "conv_1.block.conv",
+        "target": "stem_conv"
+      },
+      {
+        "shape": [
+          1,
+          24,
+          128,
+          128
+        ],
+        "max_abs": 1.1444091796875e-05,
+        "mean_abs": 2.394093598923064e-07,
+        "allclose": true,
+        "source": "conv_1.block.norm",
+        "target": "stem_bn"
+      },
+      {
+        "shape": [
+          1,
+          48,
+          128,
+          128
+        ],
+        "max_abs": 1.1444091796875e-05,
+        "mean_abs": 3.386649041203782e-07,
+        "allclose": true,
+        "source": "layer_1.0.block.exp_1x1.block.conv",
+        "target": "stack1_block1_deep_1_conv"
+      },
+      {
+        "shape": [
+          1,
+          48,
+          128,
+          128
+        ],
+        "max_abs": 1.9073486328125e-05,
+        "mean_abs": 4.5220397737466556e-07,
+        "allclose": true,
+        "source": "layer_1.0.block.exp_1x1.block.norm",
+        "target": "stack1_block1_deep_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          48,
+          128,
+          128
+        ],
+        "max_abs": 6.103515625e-05,
+        "mean_abs": 2.9490661290765274e-07,
+        "allclose": true,
+        "source": "layer_1.0.block.conv_3x3.block.conv",
+        "target": "stack1_block1_deep_2_dw_conv"
+      },
+      {
+        "shape": [
+          1,
+          48,
+          128,
+          128
+        ],
+        "max_abs": 6.4849853515625e-05,
+        "mean_abs": 1.1400846915421425e-06,
+        "allclose": true,
+        "source": "layer_1.0.block.conv_3x3.block.norm",
+        "target": "stack1_block1_deep_2_bn"
+      },
+      {
+        "shape": [
+          1,
+          48,
+          128,
+          128
+        ],
+        "max_abs": 9.1552734375e-05,
+        "mean_abs": 2.384988647463615e-06,
+        "allclose": true,
+        "source": "layer_1.0.block.red_1x1.block.conv",
+        "target": "stack1_block1_deep_3_conv"
+      },
+      {
+        "shape": [
+          1,
+          48,
+          128,
+          128
+        ],
+        "max_abs": 9.1552734375e-05,
+        "mean_abs": 1.3494709492078982e-06,
+        "allclose": true,
+        "source": "layer_1.0.block.red_1x1.block.norm",
+        "target": "stack1_block1_deep_3_bn"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          128,
+          128
+        ],
+        "max_abs": 0.00019073486328125,
+        "mean_abs": 3.87972386306501e-06,
+        "allclose": true,
+        "source": "layer_2.0.block.exp_1x1.block.conv",
+        "target": "stack2_block1_deep_1_conv"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          128,
+          128
+        ],
+        "max_abs": 0.0001373291015625,
+        "mean_abs": 2.7169180611963384e-06,
+        "allclose": true,
+        "source": "layer_2.0.block.exp_1x1.block.norm",
+        "target": "stack2_block1_deep_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          64,
+          64
+        ],
+        "max_abs": 7.62939453125e-05,
+        "mean_abs": 1.427563802280929e-06,
+        "allclose": true,
+        "source": "layer_2.0.block.conv_3x3.block.conv",
+        "target": "stack2_block1_deep_2_dw_conv"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          64,
+          64
+        ],
+        "max_abs": 0.0001220703125,
+        "mean_abs": 1.9347401121194707e-06,
+        "allclose": true,
+        "source": "layer_2.0.block.conv_3x3.block.norm",
+        "target": "stack2_block1_deep_2_bn"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          64,
+          64
+        ],
+        "max_abs": 5.340576171875e-05,
+        "mean_abs": 4.407715550769353e-06,
+        "allclose": true,
+        "source": "layer_2.0.block.red_1x1.block.conv",
+        "target": "stack2_block1_deep_3_conv"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          64,
+          64
+        ],
+        "max_abs": 2.6702880859375e-05,
+        "mean_abs": 1.4559997225660481e-06,
+        "allclose": true,
+        "source": "layer_2.0.block.red_1x1.block.norm",
+        "target": "stack2_block1_deep_3_bn"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          64,
+          64
+        ],
+        "max_abs": 9.1552734375e-05,
+        "mean_abs": 5.443490863399347e-06,
+        "allclose": true,
+        "source": "layer_2.1.block.exp_1x1.block.conv",
+        "target": "stack2_block2_deep_1_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          64,
+          64
+        ],
+        "max_abs": 4.57763671875e-05,
+        "mean_abs": 7.364367320406018e-07,
+        "allclose": true,
+        "source": "layer_2.1.block.exp_1x1.block.norm",
+        "target": "stack2_block2_deep_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          64,
+          64
+        ],
+        "max_abs": 1.3947486877441406e-05,
+        "mean_abs": 3.1083405360732286e-07,
+        "allclose": true,
+        "source": "layer_2.1.block.conv_3x3.block.conv",
+        "target": "stack2_block2_deep_2_dw_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          64,
+          64
+        ],
+        "max_abs": 0.00010156631469726562,
+        "mean_abs": 1.2810068028556998e-06,
+        "allclose": true,
+        "source": "layer_2.1.block.conv_3x3.block.norm",
+        "target": "stack2_block2_deep_2_bn"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          64,
+          64
+        ],
+        "max_abs": 0.00012969970703125,
+        "mean_abs": 5.085849352326477e-06,
+        "allclose": true,
+        "source": "layer_2.1.block.red_1x1.block.conv",
+        "target": "stack2_block2_deep_3_conv"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          64,
+          64
+        ],
+        "max_abs": 3.814697265625e-05,
+        "mean_abs": 2.1327311969798757e-06,
+        "allclose": true,
+        "source": "layer_2.1.block.red_1x1.block.norm",
+        "target": "stack2_block2_deep_3_bn"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          64,
+          64
+        ],
+        "max_abs": 9.5367431640625e-05,
+        "mean_abs": 8.25267215986969e-06,
+        "allclose": true,
+        "source": "layer_3.0.block.exp_1x1.block.conv",
+        "target": "stack3_block1_deep_1_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          64,
+          64
+        ],
+        "max_abs": 2.86102294921875e-05,
+        "mean_abs": 7.865319275879301e-07,
+        "allclose": true,
+        "source": "layer_3.0.block.exp_1x1.block.norm",
+        "target": "stack3_block1_deep_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          32,
+          32
+        ],
+        "max_abs": 1.52587890625e-05,
+        "mean_abs": 4.4725513248522475e-07,
+        "allclose": true,
+        "source": "layer_3.0.block.conv_3x3.block.conv",
+        "target": "stack3_block1_deep_2_dw_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          32,
+          32
+        ],
+        "max_abs": 3.4332275390625e-05,
+        "mean_abs": 1.109566596824152e-06,
+        "allclose": true,
+        "source": "layer_3.0.block.conv_3x3.block.norm",
+        "target": "stack3_block1_deep_2_bn"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          32,
+          32
+        ],
+        "max_abs": 6.4849853515625e-05,
+        "mean_abs": 5.574367150984472e-06,
+        "allclose": true,
+        "source": "layer_3.0.block.red_1x1.block.conv",
+        "target": "stack3_block1_deep_3_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          32,
+          32
+        ],
+        "max_abs": 0.00012969970703125,
+        "mean_abs": 6.573733116965741e-06,
+        "allclose": true,
+        "source": "layer_3.0.block.red_1x1.block.norm",
+        "target": "stack3_block1_deep_3_bn"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          32,
+          32
+        ],
+        "max_abs": 0.000194549560546875,
+        "mean_abs": 6.974569259909913e-06,
+        "allclose": true,
+        "source": "layer_3.1.local_rep.0.block.conv",
+        "target": "stack3_block2_pre_1_dw_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          32,
+          32
+        ],
+        "max_abs": 3.314018249511719e-05,
+        "mean_abs": 1.6904544963836088e-06,
+        "allclose": true,
+        "source": "layer_3.1.local_rep.0.block.norm",
+        "target": "stack3_block2_pre_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          32,
+          32
+        ],
+        "max_abs": 6.866455078125e-05,
+        "mean_abs": 5.601197699434124e-06,
+        "allclose": true,
+        "source": "layer_3.1.local_rep.1.block.conv",
+        "target": "stack3_block2_pre_2_conv"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          4,
+          256
+        ],
+        "max_abs": 2.1457672119140625e-06,
+        "mean_abs": 2.4874472615010745e-07,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.0.pre_norm_attn.0",
+        "target": "stack3_block2_attn_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          193,
+          4,
+          256
+        ],
+        "max_abs": 7.867813110351562e-06,
+        "mean_abs": 6.441968025683309e-07,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv",
+        "target": "stack3_block2_attn_mhsa_qkv_conv"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          4,
+          256
+        ],
+        "max_abs": 2.6702880859375e-05,
+        "mean_abs": 1.1563361113076098e-06,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv",
+        "target": "stack3_block2_attn_mhsa_outputconv"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          4,
+          256
+        ],
+        "max_abs": 4.291534423828125e-06,
+        "mean_abs": 5.317449449648848e-07,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.0.pre_norm_ffn.0",
+        "target": "stack3_block2_mlp_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          256
+        ],
+        "max_abs": 1.7881393432617188e-05,
+        "mean_abs": 1.4700940482725855e-06,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.0.pre_norm_ffn.1.block.conv",
+        "target": "stack3_block2_mlp_Conv_0"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          4,
+          256
+        ],
+        "max_abs": 3.814697265625e-05,
+        "mean_abs": 2.8727172320941463e-06,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.0.pre_norm_ffn.3.block.conv",
+        "target": "stack3_block2_mlp_Conv_1"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          4,
+          256
+        ],
+        "max_abs": 3.7550926208496094e-06,
+        "mean_abs": 3.5894143479708873e-07,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.1.pre_norm_attn.0",
+        "target": "stack3_block3_attn_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          193,
+          4,
+          256
+        ],
+        "max_abs": 8.58306884765625e-06,
+        "mean_abs": 9.574325758876512e-07,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv",
+        "target": "stack3_block3_attn_mhsa_qkv_conv"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          4,
+          256
+        ],
+        "max_abs": 2.9087066650390625e-05,
+        "mean_abs": 1.8384347413302748e-06,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv",
+        "target": "stack3_block3_attn_mhsa_outputconv"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          4,
+          256
+        ],
+        "max_abs": 7.867813110351562e-06,
+        "mean_abs": 6.487969699264795e-07,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.1.pre_norm_ffn.0",
+        "target": "stack3_block3_mlp_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          256
+        ],
+        "max_abs": 2.6106834411621094e-05,
+        "mean_abs": 1.8835315813703346e-06,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.1.pre_norm_ffn.1.block.conv",
+        "target": "stack3_block3_mlp_Conv_0"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          4,
+          256
+        ],
+        "max_abs": 2.288818359375e-05,
+        "mean_abs": 2.7060739284934243e-06,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.1.pre_norm_ffn.3.block.conv",
+        "target": "stack3_block3_mlp_Conv_1"
+      },
+      {
+        "shape": [
+          1,
+          96,
+          4,
+          256
+        ],
+        "max_abs": 6.198883056640625e-06,
+        "mean_abs": 9.203783406519506e-07,
+        "allclose": true,
+        "source": "layer_3.1.global_rep.2",
+        "target": "stack3_block3_post_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          32,
+          32
+        ],
+        "max_abs": 3.4332275390625e-05,
+        "mean_abs": 2.9416905817925e-06,
+        "allclose": true,
+        "source": "layer_3.1.conv_proj.block.conv",
+        "target": "stack3_block3_post_1_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          32,
+          32
+        ],
+        "max_abs": 5.340576171875e-05,
+        "mean_abs": 1.7752773828760837e-06,
+        "allclose": true,
+        "source": "layer_3.1.conv_proj.block.norm",
+        "target": "stack3_block3_post_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          32,
+          32
+        ],
+        "max_abs": 8.7738037109375e-05,
+        "mean_abs": 1.1289804206171539e-05,
+        "allclose": true,
+        "source": "layer_4.0.block.exp_1x1.block.conv",
+        "target": "stack4_block1_deep_1_conv"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          32,
+          32
+        ],
+        "max_abs": 1.621246337890625e-05,
+        "mean_abs": 6.774648682039697e-07,
+        "allclose": true,
+        "source": "layer_4.0.block.exp_1x1.block.norm",
+        "target": "stack4_block1_deep_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          16,
+          16
+        ],
+        "max_abs": 1.4781951904296875e-05,
+        "mean_abs": 2.6093005089933285e-07,
+        "allclose": true,
+        "source": "layer_4.0.block.conv_3x3.block.conv",
+        "target": "stack4_block1_deep_2_dw_conv"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          16,
+          16
+        ],
+        "max_abs": 3.0517578125e-05,
+        "mean_abs": 6.782781269976113e-07,
+        "allclose": true,
+        "source": "layer_4.0.block.conv_3x3.block.norm",
+        "target": "stack4_block1_deep_2_bn"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "max_abs": 4.1961669921875e-05,
+        "mean_abs": 4.260109108145116e-06,
+        "allclose": true,
+        "source": "layer_4.0.block.red_1x1.block.conv",
+        "target": "stack4_block1_deep_3_conv"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "max_abs": 6.866455078125e-05,
+        "mean_abs": 4.424723101692507e-06,
+        "allclose": true,
+        "source": "layer_4.0.block.red_1x1.block.norm",
+        "target": "stack4_block1_deep_3_bn"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "max_abs": 0.00017547607421875,
+        "mean_abs": 4.563496531773126e-06,
+        "allclose": true,
+        "source": "layer_4.1.local_rep.0.block.conv",
+        "target": "stack4_block2_pre_1_dw_conv"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "max_abs": 2.574920654296875e-05,
+        "mean_abs": 2.296883167218766e-06,
+        "allclose": true,
+        "source": "layer_4.1.local_rep.0.block.norm",
+        "target": "stack4_block2_pre_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          16,
+          16
+        ],
+        "max_abs": 7.62939453125e-05,
+        "mean_abs": 7.754175385343842e-06,
+        "allclose": true,
+        "source": "layer_4.1.local_rep.1.block.conv",
+        "target": "stack4_block2_pre_2_conv"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 1.7881393432617188e-06,
+        "mean_abs": 2.4540057097510726e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.0.pre_norm_attn.0",
+        "target": "stack4_block2_attn_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          289,
+          4,
+          64
+        ],
+        "max_abs": 6.556510925292969e-06,
+        "mean_abs": 8.402044500144257e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv",
+        "target": "stack4_block2_attn_mhsa_qkv_conv"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 3.0517578125e-05,
+        "mean_abs": 2.2549802451976575e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv",
+        "target": "stack4_block2_attn_mhsa_outputconv"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 4.649162292480469e-06,
+        "mean_abs": 5.670279392688826e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.0.pre_norm_ffn.0",
+        "target": "stack4_block2_mlp_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          4,
+          64
+        ],
+        "max_abs": 1.811981201171875e-05,
+        "mean_abs": 2.218155941591249e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.0.pre_norm_ffn.1.block.conv",
+        "target": "stack4_block2_mlp_Conv_0"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 4.38690185546875e-05,
+        "mean_abs": 4.385939064377453e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.0.pre_norm_ffn.3.block.conv",
+        "target": "stack4_block2_mlp_Conv_1"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 2.2649765014648438e-06,
+        "mean_abs": 2.4274010002045543e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.1.pre_norm_attn.0",
+        "target": "stack4_block3_attn_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          289,
+          4,
+          64
+        ],
+        "max_abs": 5.602836608886719e-06,
+        "mean_abs": 7.77793843553809e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv",
+        "target": "stack4_block3_attn_mhsa_qkv_conv"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 2.6702880859375e-05,
+        "mean_abs": 1.8580449250293896e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv",
+        "target": "stack4_block3_attn_mhsa_outputconv"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 5.245208740234375e-06,
+        "mean_abs": 6.420962677111675e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.1.pre_norm_ffn.0",
+        "target": "stack4_block3_mlp_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          4,
+          64
+        ],
+        "max_abs": 1.71661376953125e-05,
+        "mean_abs": 2.4738028514548205e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.1.pre_norm_ffn.1.block.conv",
+        "target": "stack4_block3_mlp_Conv_0"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 1.52587890625e-05,
+        "mean_abs": 1.4956441418689792e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.1.pre_norm_ffn.3.block.conv",
+        "target": "stack4_block3_mlp_Conv_1"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 2.205371856689453e-06,
+        "mean_abs": 2.668683407591743e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.2.pre_norm_attn.0",
+        "target": "stack4_block4_attn_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          289,
+          4,
+          64
+        ],
+        "max_abs": 6.9141387939453125e-06,
+        "mean_abs": 8.890080493983987e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.2.pre_norm_attn.1.qkv_proj.block.conv",
+        "target": "stack4_block4_attn_mhsa_qkv_conv"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 2.09808349609375e-05,
+        "mean_abs": 1.8686571365833515e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.2.pre_norm_attn.1.out_proj.block.conv",
+        "target": "stack4_block4_attn_mhsa_outputconv"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 7.867813110351562e-06,
+        "mean_abs": 9.05576371224015e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.2.pre_norm_ffn.0",
+        "target": "stack4_block4_mlp_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          4,
+          64
+        ],
+        "max_abs": 3.4332275390625e-05,
+        "mean_abs": 3.5416135233390378e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.2.pre_norm_ffn.1.block.conv",
+        "target": "stack4_block4_mlp_Conv_0"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 3.0517578125e-05,
+        "mean_abs": 3.052468400710495e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.2.pre_norm_ffn.3.block.conv",
+        "target": "stack4_block4_mlp_Conv_1"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 2.205371856689453e-06,
+        "mean_abs": 2.6548542564341915e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.3.pre_norm_attn.0",
+        "target": "stack4_block5_attn_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          289,
+          4,
+          64
+        ],
+        "max_abs": 6.67572021484375e-06,
+        "mean_abs": 8.929768000598415e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.3.pre_norm_attn.1.qkv_proj.block.conv",
+        "target": "stack4_block5_attn_mhsa_qkv_conv"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 2.288818359375e-05,
+        "mean_abs": 2.2012548015482025e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.3.pre_norm_attn.1.out_proj.block.conv",
+        "target": "stack4_block5_attn_mhsa_outputconv"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 5.364418029785156e-06,
+        "mean_abs": 7.964427481965686e-07,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.3.pre_norm_ffn.0",
+        "target": "stack4_block5_mlp_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          4,
+          64
+        ],
+        "max_abs": 2.765655517578125e-05,
+        "mean_abs": 3.2636978630762314e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.3.pre_norm_ffn.1.block.conv",
+        "target": "stack4_block5_mlp_Conv_0"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 5.340576171875e-05,
+        "mean_abs": 3.6316605473984964e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.3.pre_norm_ffn.3.block.conv",
+        "target": "stack4_block5_mlp_Conv_1"
+      },
+      {
+        "shape": [
+          1,
+          144,
+          4,
+          64
+        ],
+        "max_abs": 7.152557373046875e-06,
+        "mean_abs": 1.106330955735757e-06,
+        "allclose": true,
+        "source": "layer_4.1.global_rep.4",
+        "target": "stack4_block5_post_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "max_abs": 3.62396240234375e-05,
+        "mean_abs": 4.155850547249429e-06,
+        "allclose": true,
+        "source": "layer_4.1.conv_proj.block.conv",
+        "target": "stack4_block5_post_1_conv"
+      },
+      {
+        "shape": [
+          1,
+          288,
+          16,
+          16
+        ],
+        "max_abs": 2.86102294921875e-05,
+        "mean_abs": 1.9937444903916912e-06,
+        "allclose": true,
+        "source": "layer_4.1.conv_proj.block.norm",
+        "target": "stack4_block5_post_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          576,
+          16,
+          16
+        ],
+        "max_abs": 9.1552734375e-05,
+        "mean_abs": 1.3894993571739178e-05,
+        "allclose": true,
+        "source": "layer_5.0.block.exp_1x1.block.conv",
+        "target": "stack5_block1_deep_1_conv"
+      },
+      {
+        "shape": [
+          1,
+          576,
+          16,
+          16
+        ],
+        "max_abs": 5.7220458984375e-05,
+        "mean_abs": 5.607408297692018e-07,
+        "allclose": true,
+        "source": "layer_5.0.block.exp_1x1.block.norm",
+        "target": "stack5_block1_deep_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "max_abs": 3.0517578125e-05,
+        "mean_abs": 1.5274872566806152e-07,
+        "allclose": true,
+        "source": "layer_5.0.block.conv_3x3.block.conv",
+        "target": "stack5_block1_deep_2_dw_conv"
+      },
+      {
+        "shape": [
+          1,
+          576,
+          8,
+          8
+        ],
+        "max_abs": 7.05718994140625e-05,
+        "mean_abs": 5.650387606692675e-07,
+        "allclose": true,
+        "source": "layer_5.0.block.conv_3x3.block.norm",
+        "target": "stack5_block1_deep_2_bn"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          8,
+          8
+        ],
+        "max_abs": 8.7738037109375e-05,
+        "mean_abs": 9.197622603096534e-06,
+        "allclose": true,
+        "source": "layer_5.0.block.red_1x1.block.conv",
+        "target": "stack5_block1_deep_3_conv"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          8,
+          8
+        ],
+        "max_abs": 9.1552734375e-05,
+        "mean_abs": 4.060031187691493e-06,
+        "allclose": true,
+        "source": "layer_5.0.block.red_1x1.block.norm",
+        "target": "stack5_block1_deep_3_bn"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          8,
+          8
+        ],
+        "max_abs": 5.7220458984375e-05,
+        "mean_abs": 4.500809154706076e-06,
+        "allclose": true,
+        "source": "layer_5.1.local_rep.0.block.conv",
+        "target": "stack5_block2_pre_1_dw_conv"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          8,
+          8
+        ],
+        "max_abs": 1.52587890625e-05,
+        "mean_abs": 1.0520669775360147e-06,
+        "allclose": true,
+        "source": "layer_5.1.local_rep.0.block.norm",
+        "target": "stack5_block2_pre_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          8,
+          8
+        ],
+        "max_abs": 2.765655517578125e-05,
+        "mean_abs": 3.431105369600118e-06,
+        "allclose": true,
+        "source": "layer_5.1.local_rep.1.block.conv",
+        "target": "stack5_block2_pre_2_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 2.8014183044433594e-06,
+        "mean_abs": 3.142280036172451e-07,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.0.pre_norm_attn.0",
+        "target": "stack5_block2_attn_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          385,
+          4,
+          16
+        ],
+        "max_abs": 1.704692840576172e-05,
+        "mean_abs": 1.1549321925485856e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv",
+        "target": "stack5_block2_attn_mhsa_qkv_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 4.9591064453125e-05,
+        "mean_abs": 1.0950590194624965e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv",
+        "target": "stack5_block2_attn_mhsa_outputconv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 3.9637088775634766e-06,
+        "mean_abs": 5.720747253690206e-07,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.0.pre_norm_ffn.0",
+        "target": "stack5_block2_mlp_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          4,
+          16
+        ],
+        "max_abs": 1.239776611328125e-05,
+        "mean_abs": 2.185070115956478e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.0.pre_norm_ffn.1.block.conv",
+        "target": "stack5_block2_mlp_Conv_0"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 8.702278137207031e-06,
+        "mean_abs": 7.013422873569652e-07,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.0.pre_norm_ffn.3.block.conv",
+        "target": "stack5_block2_mlp_Conv_1"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 1.773238182067871e-06,
+        "mean_abs": 2.709771536046901e-07,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.1.pre_norm_attn.0",
+        "target": "stack5_block3_attn_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          385,
+          4,
+          16
+        ],
+        "max_abs": 1.0848045349121094e-05,
+        "mean_abs": 1.0583521543594543e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv",
+        "target": "stack5_block3_attn_mhsa_qkv_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 1.1444091796875e-05,
+        "mean_abs": 1.094040726457024e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv",
+        "target": "stack5_block3_attn_mhsa_outputconv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 7.62939453125e-06,
+        "mean_abs": 1.0013081919169053e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.1.pre_norm_ffn.0",
+        "target": "stack5_block3_mlp_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          4,
+          16
+        ],
+        "max_abs": 2.47955322265625e-05,
+        "mean_abs": 4.236169388605049e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.1.pre_norm_ffn.1.block.conv",
+        "target": "stack5_block3_mlp_Conv_0"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 1.4424324035644531e-05,
+        "mean_abs": 3.078665713474038e-07,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.1.pre_norm_ffn.3.block.conv",
+        "target": "stack5_block3_mlp_Conv_1"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 2.384185791015625e-06,
+        "mean_abs": 1.8662210266029433e-07,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.2.pre_norm_attn.0",
+        "target": "stack5_block4_attn_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          385,
+          4,
+          16
+        ],
+        "max_abs": 1.2755393981933594e-05,
+        "mean_abs": 7.373938615273801e-07,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.2.pre_norm_attn.1.qkv_proj.block.conv",
+        "target": "stack5_block4_attn_mhsa_qkv_conv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 2.6702880859375e-05,
+        "mean_abs": 6.590089469682425e-07,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.2.pre_norm_attn.1.out_proj.block.conv",
+        "target": "stack5_block4_attn_mhsa_outputconv"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 7.271766662597656e-06,
+        "mean_abs": 7.551138310191163e-07,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.2.pre_norm_ffn.0",
+        "target": "stack5_block4_mlp_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          4,
+          16
+        ],
+        "max_abs": 2.86102294921875e-05,
+        "mean_abs": 3.4594606859172927e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.2.pre_norm_ffn.1.block.conv",
+        "target": "stack5_block4_mlp_Conv_0"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 0.00018310546875,
+        "mean_abs": 3.3722399166435935e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.2.pre_norm_ffn.3.block.conv",
+        "target": "stack5_block4_mlp_Conv_1"
+      },
+      {
+        "shape": [
+          1,
+          192,
+          4,
+          16
+        ],
+        "max_abs": 2.4318695068359375e-05,
+        "mean_abs": 2.201314600824844e-06,
+        "allclose": true,
+        "source": "layer_5.1.global_rep.3",
+        "target": "stack5_block4_post_group_norm"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          8,
+          8
+        ],
+        "max_abs": 9.918212890625e-05,
+        "mean_abs": 1.2624521332327276e-05,
+        "allclose": true,
+        "source": "layer_5.1.conv_proj.block.conv",
+        "target": "stack5_block4_post_1_conv"
+      },
+      {
+        "shape": [
+          1,
+          384,
+          8,
+          8
+        ],
+        "max_abs": 1.52587890625e-05,
+        "mean_abs": 5.82473603571998e-07,
+        "allclose": true,
+        "source": "layer_5.1.conv_proj.block.norm",
+        "target": "stack5_block4_post_1_bn"
+      },
+      {
+        "shape": [
+          1,
+          10
+        ],
+        "max_abs": 2.86102294921875e-06,
+        "mean_abs": 8.672475928506174e-07,
+        "allclose": true,
+        "source": "classifier.1",
+        "target": "predictions"
+      }
+    ],
+    "logits": [
+      {
+        "shape": [
+          1,
+          10
+        ],
+        "max_abs": 2.86102294921875e-06,
+        "mean_abs": 8.672475928506174e-07,
+        "allclose": true,
+        "case": "random_rgb",
+        "pytorch_top1": [
+          7
+        ],
+        "tensorflow_top1": [
+          7
+        ]
+      },
+      {
+        "shape": [
+          1,
+          10
+        ],
+        "max_abs": 1.430511474609375e-06,
+        "mean_abs": 5.997717380523682e-07,
+        "allclose": true,
+        "case": "black_rgb",
+        "pytorch_top1": [
+          5
+        ],
+        "tensorflow_top1": [
+          5
+        ]
+      },
+      {
+        "shape": [
+          2,
+          10
+        ],
+        "max_abs": 0.00039464235305786133,
+        "mean_abs": 5.800863800686784e-05,
+        "allclose": true,
+        "case": "gradient_rgb_batch2",
+        "pytorch_top1": [
+          0,
+          0
+        ],
+        "tensorflow_top1": [
+          0,
+          0
+        ]
+      }
+    ],
+    "hdf5_reload": [
+      {
+        "shape": [
+          1,
+          10
+        ],
+        "max_abs": 2.86102294921875e-06,
+        "mean_abs": 8.672475928506174e-07,
+        "allclose": true,
+        "case": "random_rgb"
+      },
+      {
+        "shape": [
+          1,
+          10
+        ],
+        "max_abs": 1.430511474609375e-06,
+        "mean_abs": 5.997717380523682e-07,
+        "allclose": true,
+        "case": "black_rgb"
+      },
+      {
+        "shape": [
+          2,
+          10
+        ],
+        "max_abs": 0.00039464235305786133,
+        "mean_abs": 5.800863800686784e-05,
+        "allclose": true,
+        "case": "gradient_rgb_batch2"
+      }
+    ]
+  },
+  "mapping": [
+    {
+      "source": "conv_1.block.conv",
+      "target": "stem_conv",
+      "weights": [
+        "weight_000_00"
+      ],
+      "source_keys": [
+        "conv_1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          3,
+          24
+        ]
+      ]
+    },
+    {
+      "source": "conv_1.block.norm",
+      "target": "stem_bn",
+      "weights": [
+        "weight_001_00",
+        "weight_001_01",
+        "weight_001_02",
+        "weight_001_03"
+      ],
+      "source_keys": [
+        "conv_1.block.norm.weight",
+        "conv_1.block.norm.bias",
+        "conv_1.block.norm.running_mean",
+        "conv_1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          24
+        ],
+        [
+          24
+        ],
+        [
+          24
+        ],
+        [
+          24
+        ]
+      ]
+    },
+    {
+      "source": "layer_1.0.block.exp_1x1.block.conv",
+      "target": "stack1_block1_deep_1_conv",
+      "weights": [
+        "weight_002_00"
+      ],
+      "source_keys": [
+        "layer_1.0.block.exp_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          24,
+          48
+        ]
+      ]
+    },
+    {
+      "source": "layer_1.0.block.exp_1x1.block.norm",
+      "target": "stack1_block1_deep_1_bn",
+      "weights": [
+        "weight_003_00",
+        "weight_003_01",
+        "weight_003_02",
+        "weight_003_03"
+      ],
+      "source_keys": [
+        "layer_1.0.block.exp_1x1.block.norm.weight",
+        "layer_1.0.block.exp_1x1.block.norm.bias",
+        "layer_1.0.block.exp_1x1.block.norm.running_mean",
+        "layer_1.0.block.exp_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ]
+      ]
+    },
+    {
+      "source": "layer_1.0.block.conv_3x3.block.conv",
+      "target": "stack1_block1_deep_2_dw_conv",
+      "weights": [
+        "weight_004_00"
+      ],
+      "source_keys": [
+        "layer_1.0.block.conv_3x3.block.conv.weight"
+      ],
+      "kind": "depthwise",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          48,
+          1
+        ]
+      ]
+    },
+    {
+      "source": "layer_1.0.block.conv_3x3.block.norm",
+      "target": "stack1_block1_deep_2_bn",
+      "weights": [
+        "weight_005_00",
+        "weight_005_01",
+        "weight_005_02",
+        "weight_005_03"
+      ],
+      "source_keys": [
+        "layer_1.0.block.conv_3x3.block.norm.weight",
+        "layer_1.0.block.conv_3x3.block.norm.bias",
+        "layer_1.0.block.conv_3x3.block.norm.running_mean",
+        "layer_1.0.block.conv_3x3.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ]
+      ]
+    },
+    {
+      "source": "layer_1.0.block.red_1x1.block.conv",
+      "target": "stack1_block1_deep_3_conv",
+      "weights": [
+        "weight_006_00"
+      ],
+      "source_keys": [
+        "layer_1.0.block.red_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          48,
+          48
+        ]
+      ]
+    },
+    {
+      "source": "layer_1.0.block.red_1x1.block.norm",
+      "target": "stack1_block1_deep_3_bn",
+      "weights": [
+        "weight_007_00",
+        "weight_007_01",
+        "weight_007_02",
+        "weight_007_03"
+      ],
+      "source_keys": [
+        "layer_1.0.block.red_1x1.block.norm.weight",
+        "layer_1.0.block.red_1x1.block.norm.bias",
+        "layer_1.0.block.red_1x1.block.norm.running_mean",
+        "layer_1.0.block.red_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.0.block.exp_1x1.block.conv",
+      "target": "stack2_block1_deep_1_conv",
+      "weights": [
+        "weight_008_00"
+      ],
+      "source_keys": [
+        "layer_2.0.block.exp_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          48,
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.0.block.exp_1x1.block.norm",
+      "target": "stack2_block1_deep_1_bn",
+      "weights": [
+        "weight_009_00",
+        "weight_009_01",
+        "weight_009_02",
+        "weight_009_03"
+      ],
+      "source_keys": [
+        "layer_2.0.block.exp_1x1.block.norm.weight",
+        "layer_2.0.block.exp_1x1.block.norm.bias",
+        "layer_2.0.block.exp_1x1.block.norm.running_mean",
+        "layer_2.0.block.exp_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          96
+        ],
+        [
+          96
+        ],
+        [
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.0.block.conv_3x3.block.conv",
+      "target": "stack2_block1_deep_2_dw_conv",
+      "weights": [
+        "weight_010_00"
+      ],
+      "source_keys": [
+        "layer_2.0.block.conv_3x3.block.conv.weight"
+      ],
+      "kind": "depthwise",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          96,
+          1
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.0.block.conv_3x3.block.norm",
+      "target": "stack2_block1_deep_2_bn",
+      "weights": [
+        "weight_011_00",
+        "weight_011_01",
+        "weight_011_02",
+        "weight_011_03"
+      ],
+      "source_keys": [
+        "layer_2.0.block.conv_3x3.block.norm.weight",
+        "layer_2.0.block.conv_3x3.block.norm.bias",
+        "layer_2.0.block.conv_3x3.block.norm.running_mean",
+        "layer_2.0.block.conv_3x3.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          96
+        ],
+        [
+          96
+        ],
+        [
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.0.block.red_1x1.block.conv",
+      "target": "stack2_block1_deep_3_conv",
+      "weights": [
+        "weight_012_00"
+      ],
+      "source_keys": [
+        "layer_2.0.block.red_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.0.block.red_1x1.block.norm",
+      "target": "stack2_block1_deep_3_bn",
+      "weights": [
+        "weight_013_00",
+        "weight_013_01",
+        "weight_013_02",
+        "weight_013_03"
+      ],
+      "source_keys": [
+        "layer_2.0.block.red_1x1.block.norm.weight",
+        "layer_2.0.block.red_1x1.block.norm.bias",
+        "layer_2.0.block.red_1x1.block.norm.running_mean",
+        "layer_2.0.block.red_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          96
+        ],
+        [
+          96
+        ],
+        [
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.1.block.exp_1x1.block.conv",
+      "target": "stack2_block2_deep_1_conv",
+      "weights": [
+        "weight_014_00"
+      ],
+      "source_keys": [
+        "layer_2.1.block.exp_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.1.block.exp_1x1.block.norm",
+      "target": "stack2_block2_deep_1_bn",
+      "weights": [
+        "weight_015_00",
+        "weight_015_01",
+        "weight_015_02",
+        "weight_015_03"
+      ],
+      "source_keys": [
+        "layer_2.1.block.exp_1x1.block.norm.weight",
+        "layer_2.1.block.exp_1x1.block.norm.bias",
+        "layer_2.1.block.exp_1x1.block.norm.running_mean",
+        "layer_2.1.block.exp_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.1.block.conv_3x3.block.conv",
+      "target": "stack2_block2_deep_2_dw_conv",
+      "weights": [
+        "weight_016_00"
+      ],
+      "source_keys": [
+        "layer_2.1.block.conv_3x3.block.conv.weight"
+      ],
+      "kind": "depthwise",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          192,
+          1
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.1.block.conv_3x3.block.norm",
+      "target": "stack2_block2_deep_2_bn",
+      "weights": [
+        "weight_017_00",
+        "weight_017_01",
+        "weight_017_02",
+        "weight_017_03"
+      ],
+      "source_keys": [
+        "layer_2.1.block.conv_3x3.block.norm.weight",
+        "layer_2.1.block.conv_3x3.block.norm.bias",
+        "layer_2.1.block.conv_3x3.block.norm.running_mean",
+        "layer_2.1.block.conv_3x3.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.1.block.red_1x1.block.conv",
+      "target": "stack2_block2_deep_3_conv",
+      "weights": [
+        "weight_018_00"
+      ],
+      "source_keys": [
+        "layer_2.1.block.red_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_2.1.block.red_1x1.block.norm",
+      "target": "stack2_block2_deep_3_bn",
+      "weights": [
+        "weight_019_00",
+        "weight_019_01",
+        "weight_019_02",
+        "weight_019_03"
+      ],
+      "source_keys": [
+        "layer_2.1.block.red_1x1.block.norm.weight",
+        "layer_2.1.block.red_1x1.block.norm.bias",
+        "layer_2.1.block.red_1x1.block.norm.running_mean",
+        "layer_2.1.block.red_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          96
+        ],
+        [
+          96
+        ],
+        [
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.0.block.exp_1x1.block.conv",
+      "target": "stack3_block1_deep_1_conv",
+      "weights": [
+        "weight_020_00"
+      ],
+      "source_keys": [
+        "layer_3.0.block.exp_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.0.block.exp_1x1.block.norm",
+      "target": "stack3_block1_deep_1_bn",
+      "weights": [
+        "weight_021_00",
+        "weight_021_01",
+        "weight_021_02",
+        "weight_021_03"
+      ],
+      "source_keys": [
+        "layer_3.0.block.exp_1x1.block.norm.weight",
+        "layer_3.0.block.exp_1x1.block.norm.bias",
+        "layer_3.0.block.exp_1x1.block.norm.running_mean",
+        "layer_3.0.block.exp_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.0.block.conv_3x3.block.conv",
+      "target": "stack3_block1_deep_2_dw_conv",
+      "weights": [
+        "weight_022_00"
+      ],
+      "source_keys": [
+        "layer_3.0.block.conv_3x3.block.conv.weight"
+      ],
+      "kind": "depthwise",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          192,
+          1
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.0.block.conv_3x3.block.norm",
+      "target": "stack3_block1_deep_2_bn",
+      "weights": [
+        "weight_023_00",
+        "weight_023_01",
+        "weight_023_02",
+        "weight_023_03"
+      ],
+      "source_keys": [
+        "layer_3.0.block.conv_3x3.block.norm.weight",
+        "layer_3.0.block.conv_3x3.block.norm.bias",
+        "layer_3.0.block.conv_3x3.block.norm.running_mean",
+        "layer_3.0.block.conv_3x3.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.0.block.red_1x1.block.conv",
+      "target": "stack3_block1_deep_3_conv",
+      "weights": [
+        "weight_024_00"
+      ],
+      "source_keys": [
+        "layer_3.0.block.red_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.0.block.red_1x1.block.norm",
+      "target": "stack3_block1_deep_3_bn",
+      "weights": [
+        "weight_025_00",
+        "weight_025_01",
+        "weight_025_02",
+        "weight_025_03"
+      ],
+      "source_keys": [
+        "layer_3.0.block.red_1x1.block.norm.weight",
+        "layer_3.0.block.red_1x1.block.norm.bias",
+        "layer_3.0.block.red_1x1.block.norm.running_mean",
+        "layer_3.0.block.red_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.local_rep.0.block.conv",
+      "target": "stack3_block2_pre_1_dw_conv",
+      "weights": [
+        "weight_026_00"
+      ],
+      "source_keys": [
+        "layer_3.1.local_rep.0.block.conv.weight"
+      ],
+      "kind": "depthwise",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          192,
+          1
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.local_rep.0.block.norm",
+      "target": "stack3_block2_pre_1_bn",
+      "weights": [
+        "weight_027_00",
+        "weight_027_01",
+        "weight_027_02",
+        "weight_027_03"
+      ],
+      "source_keys": [
+        "layer_3.1.local_rep.0.block.norm.weight",
+        "layer_3.1.local_rep.0.block.norm.bias",
+        "layer_3.1.local_rep.0.block.norm.running_mean",
+        "layer_3.1.local_rep.0.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.local_rep.1.block.conv",
+      "target": "stack3_block2_pre_2_conv",
+      "weights": [
+        "weight_028_00"
+      ],
+      "source_keys": [
+        "layer_3.1.local_rep.1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.0.pre_norm_attn.0",
+      "target": "stack3_block2_attn_group_norm",
+      "weights": [
+        "weight_029_00",
+        "weight_029_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.0.pre_norm_attn.0.weight",
+        "layer_3.1.global_rep.0.pre_norm_attn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv",
+      "target": "stack3_block2_attn_mhsa_qkv_conv",
+      "weights": [
+        "weight_030_00",
+        "weight_030_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv.weight",
+        "layer_3.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          193
+        ],
+        [
+          193
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv",
+      "target": "stack3_block2_attn_mhsa_outputconv",
+      "weights": [
+        "weight_031_00",
+        "weight_031_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv.weight",
+        "layer_3.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.0.pre_norm_ffn.0",
+      "target": "stack3_block2_mlp_group_norm",
+      "weights": [
+        "weight_032_00",
+        "weight_032_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.0.pre_norm_ffn.0.weight",
+        "layer_3.1.global_rep.0.pre_norm_ffn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.0.pre_norm_ffn.1.block.conv",
+      "target": "stack3_block2_mlp_Conv_0",
+      "weights": [
+        "weight_033_00",
+        "weight_033_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.0.pre_norm_ffn.1.block.conv.weight",
+        "layer_3.1.global_rep.0.pre_norm_ffn.1.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.0.pre_norm_ffn.3.block.conv",
+      "target": "stack3_block2_mlp_Conv_1",
+      "weights": [
+        "weight_034_00",
+        "weight_034_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.0.pre_norm_ffn.3.block.conv.weight",
+        "layer_3.1.global_rep.0.pre_norm_ffn.3.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.1.pre_norm_attn.0",
+      "target": "stack3_block3_attn_group_norm",
+      "weights": [
+        "weight_035_00",
+        "weight_035_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.1.pre_norm_attn.0.weight",
+        "layer_3.1.global_rep.1.pre_norm_attn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv",
+      "target": "stack3_block3_attn_mhsa_qkv_conv",
+      "weights": [
+        "weight_036_00",
+        "weight_036_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv.weight",
+        "layer_3.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          193
+        ],
+        [
+          193
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv",
+      "target": "stack3_block3_attn_mhsa_outputconv",
+      "weights": [
+        "weight_037_00",
+        "weight_037_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv.weight",
+        "layer_3.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.1.pre_norm_ffn.0",
+      "target": "stack3_block3_mlp_group_norm",
+      "weights": [
+        "weight_038_00",
+        "weight_038_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.1.pre_norm_ffn.0.weight",
+        "layer_3.1.global_rep.1.pre_norm_ffn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.1.pre_norm_ffn.1.block.conv",
+      "target": "stack3_block3_mlp_Conv_0",
+      "weights": [
+        "weight_039_00",
+        "weight_039_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.1.pre_norm_ffn.1.block.conv.weight",
+        "layer_3.1.global_rep.1.pre_norm_ffn.1.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.1.pre_norm_ffn.3.block.conv",
+      "target": "stack3_block3_mlp_Conv_1",
+      "weights": [
+        "weight_040_00",
+        "weight_040_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.1.pre_norm_ffn.3.block.conv.weight",
+        "layer_3.1.global_rep.1.pre_norm_ffn.3.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.global_rep.2",
+      "target": "stack3_block3_post_group_norm",
+      "weights": [
+        "weight_041_00",
+        "weight_041_01"
+      ],
+      "source_keys": [
+        "layer_3.1.global_rep.2.weight",
+        "layer_3.1.global_rep.2.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          96
+        ],
+        [
+          96
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.conv_proj.block.conv",
+      "target": "stack3_block3_post_1_conv",
+      "weights": [
+        "weight_042_00"
+      ],
+      "source_keys": [
+        "layer_3.1.conv_proj.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          96,
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_3.1.conv_proj.block.norm",
+      "target": "stack3_block3_post_1_bn",
+      "weights": [
+        "weight_043_00",
+        "weight_043_01",
+        "weight_043_02",
+        "weight_043_03"
+      ],
+      "source_keys": [
+        "layer_3.1.conv_proj.block.norm.weight",
+        "layer_3.1.conv_proj.block.norm.bias",
+        "layer_3.1.conv_proj.block.norm.running_mean",
+        "layer_3.1.conv_proj.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.0.block.exp_1x1.block.conv",
+      "target": "stack4_block1_deep_1_conv",
+      "weights": [
+        "weight_044_00"
+      ],
+      "source_keys": [
+        "layer_4.0.block.exp_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.0.block.exp_1x1.block.norm",
+      "target": "stack4_block1_deep_1_bn",
+      "weights": [
+        "weight_045_00",
+        "weight_045_01",
+        "weight_045_02",
+        "weight_045_03"
+      ],
+      "source_keys": [
+        "layer_4.0.block.exp_1x1.block.norm.weight",
+        "layer_4.0.block.exp_1x1.block.norm.bias",
+        "layer_4.0.block.exp_1x1.block.norm.running_mean",
+        "layer_4.0.block.exp_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.0.block.conv_3x3.block.conv",
+      "target": "stack4_block1_deep_2_dw_conv",
+      "weights": [
+        "weight_046_00"
+      ],
+      "source_keys": [
+        "layer_4.0.block.conv_3x3.block.conv.weight"
+      ],
+      "kind": "depthwise",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          384,
+          1
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.0.block.conv_3x3.block.norm",
+      "target": "stack4_block1_deep_2_bn",
+      "weights": [
+        "weight_047_00",
+        "weight_047_01",
+        "weight_047_02",
+        "weight_047_03"
+      ],
+      "source_keys": [
+        "layer_4.0.block.conv_3x3.block.norm.weight",
+        "layer_4.0.block.conv_3x3.block.norm.bias",
+        "layer_4.0.block.conv_3x3.block.norm.running_mean",
+        "layer_4.0.block.conv_3x3.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.0.block.red_1x1.block.conv",
+      "target": "stack4_block1_deep_3_conv",
+      "weights": [
+        "weight_048_00"
+      ],
+      "source_keys": [
+        "layer_4.0.block.red_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          384,
+          288
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.0.block.red_1x1.block.norm",
+      "target": "stack4_block1_deep_3_bn",
+      "weights": [
+        "weight_049_00",
+        "weight_049_01",
+        "weight_049_02",
+        "weight_049_03"
+      ],
+      "source_keys": [
+        "layer_4.0.block.red_1x1.block.norm.weight",
+        "layer_4.0.block.red_1x1.block.norm.bias",
+        "layer_4.0.block.red_1x1.block.norm.running_mean",
+        "layer_4.0.block.red_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          288
+        ],
+        [
+          288
+        ],
+        [
+          288
+        ],
+        [
+          288
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.local_rep.0.block.conv",
+      "target": "stack4_block2_pre_1_dw_conv",
+      "weights": [
+        "weight_050_00"
+      ],
+      "source_keys": [
+        "layer_4.1.local_rep.0.block.conv.weight"
+      ],
+      "kind": "depthwise",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          288,
+          1
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.local_rep.0.block.norm",
+      "target": "stack4_block2_pre_1_bn",
+      "weights": [
+        "weight_051_00",
+        "weight_051_01",
+        "weight_051_02",
+        "weight_051_03"
+      ],
+      "source_keys": [
+        "layer_4.1.local_rep.0.block.norm.weight",
+        "layer_4.1.local_rep.0.block.norm.bias",
+        "layer_4.1.local_rep.0.block.norm.running_mean",
+        "layer_4.1.local_rep.0.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          288
+        ],
+        [
+          288
+        ],
+        [
+          288
+        ],
+        [
+          288
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.local_rep.1.block.conv",
+      "target": "stack4_block2_pre_2_conv",
+      "weights": [
+        "weight_052_00"
+      ],
+      "source_keys": [
+        "layer_4.1.local_rep.1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          288,
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.0.pre_norm_attn.0",
+      "target": "stack4_block2_attn_group_norm",
+      "weights": [
+        "weight_053_00",
+        "weight_053_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.0.pre_norm_attn.0.weight",
+        "layer_4.1.global_rep.0.pre_norm_attn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv",
+      "target": "stack4_block2_attn_mhsa_qkv_conv",
+      "weights": [
+        "weight_054_00",
+        "weight_054_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv.weight",
+        "layer_4.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          289
+        ],
+        [
+          289
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv",
+      "target": "stack4_block2_attn_mhsa_outputconv",
+      "weights": [
+        "weight_055_00",
+        "weight_055_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv.weight",
+        "layer_4.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.0.pre_norm_ffn.0",
+      "target": "stack4_block2_mlp_group_norm",
+      "weights": [
+        "weight_056_00",
+        "weight_056_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.0.pre_norm_ffn.0.weight",
+        "layer_4.1.global_rep.0.pre_norm_ffn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.0.pre_norm_ffn.1.block.conv",
+      "target": "stack4_block2_mlp_Conv_0",
+      "weights": [
+        "weight_057_00",
+        "weight_057_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.0.pre_norm_ffn.1.block.conv.weight",
+        "layer_4.1.global_rep.0.pre_norm_ffn.1.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          288
+        ],
+        [
+          288
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.0.pre_norm_ffn.3.block.conv",
+      "target": "stack4_block2_mlp_Conv_1",
+      "weights": [
+        "weight_058_00",
+        "weight_058_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.0.pre_norm_ffn.3.block.conv.weight",
+        "layer_4.1.global_rep.0.pre_norm_ffn.3.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          288,
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.1.pre_norm_attn.0",
+      "target": "stack4_block3_attn_group_norm",
+      "weights": [
+        "weight_059_00",
+        "weight_059_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.1.pre_norm_attn.0.weight",
+        "layer_4.1.global_rep.1.pre_norm_attn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv",
+      "target": "stack4_block3_attn_mhsa_qkv_conv",
+      "weights": [
+        "weight_060_00",
+        "weight_060_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv.weight",
+        "layer_4.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          289
+        ],
+        [
+          289
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv",
+      "target": "stack4_block3_attn_mhsa_outputconv",
+      "weights": [
+        "weight_061_00",
+        "weight_061_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv.weight",
+        "layer_4.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.1.pre_norm_ffn.0",
+      "target": "stack4_block3_mlp_group_norm",
+      "weights": [
+        "weight_062_00",
+        "weight_062_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.1.pre_norm_ffn.0.weight",
+        "layer_4.1.global_rep.1.pre_norm_ffn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.1.pre_norm_ffn.1.block.conv",
+      "target": "stack4_block3_mlp_Conv_0",
+      "weights": [
+        "weight_063_00",
+        "weight_063_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.1.pre_norm_ffn.1.block.conv.weight",
+        "layer_4.1.global_rep.1.pre_norm_ffn.1.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          288
+        ],
+        [
+          288
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.1.pre_norm_ffn.3.block.conv",
+      "target": "stack4_block3_mlp_Conv_1",
+      "weights": [
+        "weight_064_00",
+        "weight_064_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.1.pre_norm_ffn.3.block.conv.weight",
+        "layer_4.1.global_rep.1.pre_norm_ffn.3.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          288,
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.2.pre_norm_attn.0",
+      "target": "stack4_block4_attn_group_norm",
+      "weights": [
+        "weight_065_00",
+        "weight_065_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.2.pre_norm_attn.0.weight",
+        "layer_4.1.global_rep.2.pre_norm_attn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.2.pre_norm_attn.1.qkv_proj.block.conv",
+      "target": "stack4_block4_attn_mhsa_qkv_conv",
+      "weights": [
+        "weight_066_00",
+        "weight_066_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.2.pre_norm_attn.1.qkv_proj.block.conv.weight",
+        "layer_4.1.global_rep.2.pre_norm_attn.1.qkv_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          289
+        ],
+        [
+          289
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.2.pre_norm_attn.1.out_proj.block.conv",
+      "target": "stack4_block4_attn_mhsa_outputconv",
+      "weights": [
+        "weight_067_00",
+        "weight_067_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.2.pre_norm_attn.1.out_proj.block.conv.weight",
+        "layer_4.1.global_rep.2.pre_norm_attn.1.out_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.2.pre_norm_ffn.0",
+      "target": "stack4_block4_mlp_group_norm",
+      "weights": [
+        "weight_068_00",
+        "weight_068_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.2.pre_norm_ffn.0.weight",
+        "layer_4.1.global_rep.2.pre_norm_ffn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.2.pre_norm_ffn.1.block.conv",
+      "target": "stack4_block4_mlp_Conv_0",
+      "weights": [
+        "weight_069_00",
+        "weight_069_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.2.pre_norm_ffn.1.block.conv.weight",
+        "layer_4.1.global_rep.2.pre_norm_ffn.1.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          288
+        ],
+        [
+          288
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.2.pre_norm_ffn.3.block.conv",
+      "target": "stack4_block4_mlp_Conv_1",
+      "weights": [
+        "weight_070_00",
+        "weight_070_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.2.pre_norm_ffn.3.block.conv.weight",
+        "layer_4.1.global_rep.2.pre_norm_ffn.3.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          288,
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.3.pre_norm_attn.0",
+      "target": "stack4_block5_attn_group_norm",
+      "weights": [
+        "weight_071_00",
+        "weight_071_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.3.pre_norm_attn.0.weight",
+        "layer_4.1.global_rep.3.pre_norm_attn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.3.pre_norm_attn.1.qkv_proj.block.conv",
+      "target": "stack4_block5_attn_mhsa_qkv_conv",
+      "weights": [
+        "weight_072_00",
+        "weight_072_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.3.pre_norm_attn.1.qkv_proj.block.conv.weight",
+        "layer_4.1.global_rep.3.pre_norm_attn.1.qkv_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          289
+        ],
+        [
+          289
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.3.pre_norm_attn.1.out_proj.block.conv",
+      "target": "stack4_block5_attn_mhsa_outputconv",
+      "weights": [
+        "weight_073_00",
+        "weight_073_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.3.pre_norm_attn.1.out_proj.block.conv.weight",
+        "layer_4.1.global_rep.3.pre_norm_attn.1.out_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.3.pre_norm_ffn.0",
+      "target": "stack4_block5_mlp_group_norm",
+      "weights": [
+        "weight_074_00",
+        "weight_074_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.3.pre_norm_ffn.0.weight",
+        "layer_4.1.global_rep.3.pre_norm_ffn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.3.pre_norm_ffn.1.block.conv",
+      "target": "stack4_block5_mlp_Conv_0",
+      "weights": [
+        "weight_075_00",
+        "weight_075_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.3.pre_norm_ffn.1.block.conv.weight",
+        "layer_4.1.global_rep.3.pre_norm_ffn.1.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          288
+        ],
+        [
+          288
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.3.pre_norm_ffn.3.block.conv",
+      "target": "stack4_block5_mlp_Conv_1",
+      "weights": [
+        "weight_076_00",
+        "weight_076_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.3.pre_norm_ffn.3.block.conv.weight",
+        "layer_4.1.global_rep.3.pre_norm_ffn.3.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          288,
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.global_rep.4",
+      "target": "stack4_block5_post_group_norm",
+      "weights": [
+        "weight_077_00",
+        "weight_077_01"
+      ],
+      "source_keys": [
+        "layer_4.1.global_rep.4.weight",
+        "layer_4.1.global_rep.4.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          144
+        ],
+        [
+          144
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.conv_proj.block.conv",
+      "target": "stack4_block5_post_1_conv",
+      "weights": [
+        "weight_078_00"
+      ],
+      "source_keys": [
+        "layer_4.1.conv_proj.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          144,
+          288
+        ]
+      ]
+    },
+    {
+      "source": "layer_4.1.conv_proj.block.norm",
+      "target": "stack4_block5_post_1_bn",
+      "weights": [
+        "weight_079_00",
+        "weight_079_01",
+        "weight_079_02",
+        "weight_079_03"
+      ],
+      "source_keys": [
+        "layer_4.1.conv_proj.block.norm.weight",
+        "layer_4.1.conv_proj.block.norm.bias",
+        "layer_4.1.conv_proj.block.norm.running_mean",
+        "layer_4.1.conv_proj.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          288
+        ],
+        [
+          288
+        ],
+        [
+          288
+        ],
+        [
+          288
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.0.block.exp_1x1.block.conv",
+      "target": "stack5_block1_deep_1_conv",
+      "weights": [
+        "weight_080_00"
+      ],
+      "source_keys": [
+        "layer_5.0.block.exp_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          288,
+          576
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.0.block.exp_1x1.block.norm",
+      "target": "stack5_block1_deep_1_bn",
+      "weights": [
+        "weight_081_00",
+        "weight_081_01",
+        "weight_081_02",
+        "weight_081_03"
+      ],
+      "source_keys": [
+        "layer_5.0.block.exp_1x1.block.norm.weight",
+        "layer_5.0.block.exp_1x1.block.norm.bias",
+        "layer_5.0.block.exp_1x1.block.norm.running_mean",
+        "layer_5.0.block.exp_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          576
+        ],
+        [
+          576
+        ],
+        [
+          576
+        ],
+        [
+          576
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.0.block.conv_3x3.block.conv",
+      "target": "stack5_block1_deep_2_dw_conv",
+      "weights": [
+        "weight_082_00"
+      ],
+      "source_keys": [
+        "layer_5.0.block.conv_3x3.block.conv.weight"
+      ],
+      "kind": "depthwise",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          576,
+          1
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.0.block.conv_3x3.block.norm",
+      "target": "stack5_block1_deep_2_bn",
+      "weights": [
+        "weight_083_00",
+        "weight_083_01",
+        "weight_083_02",
+        "weight_083_03"
+      ],
+      "source_keys": [
+        "layer_5.0.block.conv_3x3.block.norm.weight",
+        "layer_5.0.block.conv_3x3.block.norm.bias",
+        "layer_5.0.block.conv_3x3.block.norm.running_mean",
+        "layer_5.0.block.conv_3x3.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          576
+        ],
+        [
+          576
+        ],
+        [
+          576
+        ],
+        [
+          576
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.0.block.red_1x1.block.conv",
+      "target": "stack5_block1_deep_3_conv",
+      "weights": [
+        "weight_084_00"
+      ],
+      "source_keys": [
+        "layer_5.0.block.red_1x1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          576,
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.0.block.red_1x1.block.norm",
+      "target": "stack5_block1_deep_3_bn",
+      "weights": [
+        "weight_085_00",
+        "weight_085_01",
+        "weight_085_02",
+        "weight_085_03"
+      ],
+      "source_keys": [
+        "layer_5.0.block.red_1x1.block.norm.weight",
+        "layer_5.0.block.red_1x1.block.norm.bias",
+        "layer_5.0.block.red_1x1.block.norm.running_mean",
+        "layer_5.0.block.red_1x1.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.local_rep.0.block.conv",
+      "target": "stack5_block2_pre_1_dw_conv",
+      "weights": [
+        "weight_086_00"
+      ],
+      "source_keys": [
+        "layer_5.1.local_rep.0.block.conv.weight"
+      ],
+      "kind": "depthwise",
+      "tensorflow_shapes": [
+        [
+          3,
+          3,
+          384,
+          1
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.local_rep.0.block.norm",
+      "target": "stack5_block2_pre_1_bn",
+      "weights": [
+        "weight_087_00",
+        "weight_087_01",
+        "weight_087_02",
+        "weight_087_03"
+      ],
+      "source_keys": [
+        "layer_5.1.local_rep.0.block.norm.weight",
+        "layer_5.1.local_rep.0.block.norm.bias",
+        "layer_5.1.local_rep.0.block.norm.running_mean",
+        "layer_5.1.local_rep.0.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.local_rep.1.block.conv",
+      "target": "stack5_block2_pre_2_conv",
+      "weights": [
+        "weight_088_00"
+      ],
+      "source_keys": [
+        "layer_5.1.local_rep.1.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          384,
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.0.pre_norm_attn.0",
+      "target": "stack5_block2_attn_group_norm",
+      "weights": [
+        "weight_089_00",
+        "weight_089_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.0.pre_norm_attn.0.weight",
+        "layer_5.1.global_rep.0.pre_norm_attn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv",
+      "target": "stack5_block2_attn_mhsa_qkv_conv",
+      "weights": [
+        "weight_090_00",
+        "weight_090_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv.weight",
+        "layer_5.1.global_rep.0.pre_norm_attn.1.qkv_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          385
+        ],
+        [
+          385
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv",
+      "target": "stack5_block2_attn_mhsa_outputconv",
+      "weights": [
+        "weight_091_00",
+        "weight_091_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv.weight",
+        "layer_5.1.global_rep.0.pre_norm_attn.1.out_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.0.pre_norm_ffn.0",
+      "target": "stack5_block2_mlp_group_norm",
+      "weights": [
+        "weight_092_00",
+        "weight_092_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.0.pre_norm_ffn.0.weight",
+        "layer_5.1.global_rep.0.pre_norm_ffn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.0.pre_norm_ffn.1.block.conv",
+      "target": "stack5_block2_mlp_Conv_0",
+      "weights": [
+        "weight_093_00",
+        "weight_093_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.0.pre_norm_ffn.1.block.conv.weight",
+        "layer_5.1.global_rep.0.pre_norm_ffn.1.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          384
+        ],
+        [
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.0.pre_norm_ffn.3.block.conv",
+      "target": "stack5_block2_mlp_Conv_1",
+      "weights": [
+        "weight_094_00",
+        "weight_094_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.0.pre_norm_ffn.3.block.conv.weight",
+        "layer_5.1.global_rep.0.pre_norm_ffn.3.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          384,
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.1.pre_norm_attn.0",
+      "target": "stack5_block3_attn_group_norm",
+      "weights": [
+        "weight_095_00",
+        "weight_095_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.1.pre_norm_attn.0.weight",
+        "layer_5.1.global_rep.1.pre_norm_attn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv",
+      "target": "stack5_block3_attn_mhsa_qkv_conv",
+      "weights": [
+        "weight_096_00",
+        "weight_096_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv.weight",
+        "layer_5.1.global_rep.1.pre_norm_attn.1.qkv_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          385
+        ],
+        [
+          385
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv",
+      "target": "stack5_block3_attn_mhsa_outputconv",
+      "weights": [
+        "weight_097_00",
+        "weight_097_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv.weight",
+        "layer_5.1.global_rep.1.pre_norm_attn.1.out_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.1.pre_norm_ffn.0",
+      "target": "stack5_block3_mlp_group_norm",
+      "weights": [
+        "weight_098_00",
+        "weight_098_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.1.pre_norm_ffn.0.weight",
+        "layer_5.1.global_rep.1.pre_norm_ffn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.1.pre_norm_ffn.1.block.conv",
+      "target": "stack5_block3_mlp_Conv_0",
+      "weights": [
+        "weight_099_00",
+        "weight_099_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.1.pre_norm_ffn.1.block.conv.weight",
+        "layer_5.1.global_rep.1.pre_norm_ffn.1.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          384
+        ],
+        [
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.1.pre_norm_ffn.3.block.conv",
+      "target": "stack5_block3_mlp_Conv_1",
+      "weights": [
+        "weight_100_00",
+        "weight_100_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.1.pre_norm_ffn.3.block.conv.weight",
+        "layer_5.1.global_rep.1.pre_norm_ffn.3.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          384,
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.2.pre_norm_attn.0",
+      "target": "stack5_block4_attn_group_norm",
+      "weights": [
+        "weight_101_00",
+        "weight_101_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.2.pre_norm_attn.0.weight",
+        "layer_5.1.global_rep.2.pre_norm_attn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.2.pre_norm_attn.1.qkv_proj.block.conv",
+      "target": "stack5_block4_attn_mhsa_qkv_conv",
+      "weights": [
+        "weight_102_00",
+        "weight_102_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.2.pre_norm_attn.1.qkv_proj.block.conv.weight",
+        "layer_5.1.global_rep.2.pre_norm_attn.1.qkv_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          385
+        ],
+        [
+          385
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.2.pre_norm_attn.1.out_proj.block.conv",
+      "target": "stack5_block4_attn_mhsa_outputconv",
+      "weights": [
+        "weight_103_00",
+        "weight_103_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.2.pre_norm_attn.1.out_proj.block.conv.weight",
+        "layer_5.1.global_rep.2.pre_norm_attn.1.out_proj.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.2.pre_norm_ffn.0",
+      "target": "stack5_block4_mlp_group_norm",
+      "weights": [
+        "weight_104_00",
+        "weight_104_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.2.pre_norm_ffn.0.weight",
+        "layer_5.1.global_rep.2.pre_norm_ffn.0.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.2.pre_norm_ffn.1.block.conv",
+      "target": "stack5_block4_mlp_Conv_0",
+      "weights": [
+        "weight_105_00",
+        "weight_105_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.2.pre_norm_ffn.1.block.conv.weight",
+        "layer_5.1.global_rep.2.pre_norm_ffn.1.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          384
+        ],
+        [
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.2.pre_norm_ffn.3.block.conv",
+      "target": "stack5_block4_mlp_Conv_1",
+      "weights": [
+        "weight_106_00",
+        "weight_106_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.2.pre_norm_ffn.3.block.conv.weight",
+        "layer_5.1.global_rep.2.pre_norm_ffn.3.block.conv.bias"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          384,
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.global_rep.3",
+      "target": "stack5_block4_post_group_norm",
+      "weights": [
+        "weight_107_00",
+        "weight_107_01"
+      ],
+      "source_keys": [
+        "layer_5.1.global_rep.3.weight",
+        "layer_5.1.global_rep.3.bias"
+      ],
+      "kind": "gn",
+      "tensorflow_shapes": [
+        [
+          192
+        ],
+        [
+          192
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.conv_proj.block.conv",
+      "target": "stack5_block4_post_1_conv",
+      "weights": [
+        "weight_108_00"
+      ],
+      "source_keys": [
+        "layer_5.1.conv_proj.block.conv.weight"
+      ],
+      "kind": "conv",
+      "tensorflow_shapes": [
+        [
+          1,
+          1,
+          192,
+          384
+        ]
+      ]
+    },
+    {
+      "source": "layer_5.1.conv_proj.block.norm",
+      "target": "stack5_block4_post_1_bn",
+      "weights": [
+        "weight_109_00",
+        "weight_109_01",
+        "weight_109_02",
+        "weight_109_03"
+      ],
+      "source_keys": [
+        "layer_5.1.conv_proj.block.norm.weight",
+        "layer_5.1.conv_proj.block.norm.bias",
+        "layer_5.1.conv_proj.block.norm.running_mean",
+        "layer_5.1.conv_proj.block.norm.running_var"
+      ],
+      "kind": "bn",
+      "tensorflow_shapes": [
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ],
+        [
+          384
+        ]
+      ]
+    },
+    {
+      "source": "classifier.1",
+      "target": "predictions",
+      "weights": [
+        "weight_110_00",
+        "weight_110_01"
+      ],
+      "source_keys": [
+        "classifier.1.weight",
+        "classifier.1.bias"
+      ],
+      "kind": "dense",
+      "tensorflow_shapes": [
+        [
+          384,
+          10
+        ],
+        [
+          10
+        ]
+      ]
+    }
+  ],
+  "keras_source_sha256": {
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\keras_cv_attention_models\\backend.py": "3d8f1bd1f50341556222e30b66e9a3a0c226dfcfae2fc68ead506e97fca31629",
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\keras_cv_attention_models\\common_layers.py": "7a5965677d01769a51ed38ba32b726921ceca2481281499d3bbc97e05e223e17",
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\keras_cv_attention_models\\mlp_family\\res_mlp.py": "9bc4c391e9d2cfd93f2b30118a30a22d266605e12b40615ddc15e6fb1762fc08",
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\keras_cv_attention_models\\convnext\\convnext.py": "61c46d5ad11426f75571eecd6bae3250e26c01be412be5a70de7f494e1e09c6b",
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\keras_cv_attention_models\\mlp_family\\mlp_mixer.py": "7d807718d2b24d5d5b3dee8f367deb609252c50a7faf7b29000b978a3f34ddfe",
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\keras_cv_attention_models\\mobilevit\\mobilevit.py": "c544b8dcaf46824ec5e8cf7bec995a3f5ed68cdaab5d8f40c37cad94bff4d4d0",
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\keras_cv_attention_models\\mobilevit\\mobilevit_v2.py": "74dd6ae2d795a41e5eba52ba687b34c40cbc0563854bee43a96f3297f32e3592"
+  },
+  "compatibility": "Original KECAM definitions with TF1.15 inference adapter; no repository edits. Use build_tf_model() for loading under tf115."
+}

@@ -1,0 +1,19 @@
+{
+  "candidate_id": "example_control",
+  "evidence": "example_not_measured",
+  "evaluation_mode": "whole_hybrid",
+  "backend": "native_fixneuron",
+  "dataset_sha256": "replace_with_actual_dataset_digest",
+  "preprocess_sha256": "replace_with_actual_preprocess_digest",
+  "fixed_artifacts_sha256": "replace_with_actual_frozen_backend_digest",
+  "input_range_policy": "error",
+  "deployable": false,
+  "sample_count": 1,
+  "correct_images": 1,
+  "accuracy": 1.0,
+  "artifacts": {
+    "../quant/quantize_eval_model.pb": "replace_with_actual_sha256",
+    "../quant/deploy_model.pb": "replace_with_actual_sha256"
+  },
+  "rows": [{"sample_id": "example_only", "label": 0, "prediction": 0}]
+}

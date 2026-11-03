@@ -1,0 +1,5500 @@
+{
+  "validation_passed": true,
+  "tensorflow_version": "1.15.2",
+  "source_path": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\mobilevitv2_075_10cls_relu_deploy_b1.pb",
+  "source_sha256": "78C15505EC9BC402EF5A07DC99DEBA942BAB549DC46ABEB0554230088D0C3132",
+  "deployment_path": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\mobilevitv2_075_10cls_relu_deploy_b1_gnfold.pb",
+  "deployment_sha256": "C205A47377EE7FFC8683F43F7A95B5A46A00F8B0B9282CEE5EBC147C23E0DE2D",
+  "source_nodes": 1255,
+  "deployment_nodes": 1135,
+  "source_bytes": 10141846,
+  "deployment_bytes": 10107005,
+  "input_tensor": "input_1:0",
+  "input_shape": [
+    1,
+    256,
+    256,
+    3
+  ],
+  "output_tensor": "predictions/BiasAdd:0",
+  "output_shape": [
+    1,
+    10
+  ],
+  "fold_count": 21,
+  "new_bias_add_count": 3,
+  "weight_formula": "W'[0,0,i,o] = gamma[i] * original_W[0,0,i,o]",
+  "bias_formula": "b'[o] = original_b[o] + sum_i(beta[i] * original_W[0,0,i,o])",
+  "random_seed": 20261028,
+  "rtol": 0.0001,
+  "atol": 0.0001,
+  "preprocessing": "RGB uint8 / 255; (x - [0.485,0.456,0.406]) / [0.229,0.224,0.225]; no resize",
+  "fold_audit": [
+    {
+      "group_norm": "stack3_block2_attn_group_norm",
+      "gamma_const": "stack3_block2_attn_group_norm/gamma",
+      "beta_const": "stack3_block2_attn_group_norm/beta",
+      "channels": 96,
+      "normalized_tensor": "stack3_block2_attn_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack3_block2_attn_group_norm/mul_1",
+        "stack3_block2_attn_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_3/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack3_block2_attn_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "output_shape": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "data_consumers": [
+            "reshape_3/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "channel_labels_sha256": "33430D11EDC36AC512D2CB6ED0486F17ECDDDFBFF444DF803908150367C1ED60"
+        }
+      ],
+      "conv": "stack3_block2_attn_mhsa_qkv_conv/Conv2D",
+      "kernel_const": "stack3_block2_attn_mhsa_qkv_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        96,
+        193
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack3_block2_attn_mhsa_qkv_conv/bias",
+      "bias_added": false,
+      "original_endpoint": "stack3_block2_attn_mhsa_qkv_conv/BiasAdd:0",
+      "folded_endpoint": "stack3_block2_attn_mhsa_qkv_conv/BiasAdd:0",
+      "original_kernel_sha256": "E90D531D77841ECCC82E77107BCBC14EE0BE4BF64D5A75F30A40318699DE7D44",
+      "folded_kernel_sha256": "7CDA24A4D5E4C252D11BFB270CE8CE031D505FE82022ECB5C8B2A0E0AF662977",
+      "original_bias_sha256": "4D454A56A8762BEA04AB138D1E40C702CEE162B5B87E3D6DAA16A11B4F88946D",
+      "folded_bias_sha256": "237E2F35A9A88048DA2A2368EC60DB97632768DEDDCCC94B81C30B0831807FE1",
+      "gamma_sha256": "3BF217E37FCBD16433EBC141BD5C87EC6ECD4ED45A9F48955B4F7ABA1E2F35E2",
+      "beta_sha256": "5B85F254A038DED89ED60B064CC9BA8DABA077C468DF65CD2C2E1A67B5F8D61C",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 98304,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          1024,
+          1,
+          96
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 1.7537406985460987e-07,
+          "max_error_over_tolerance": 0.008126283254401729,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 1.794257497627118e-07,
+          "max_error_over_tolerance": 0.01618431624153936,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 1.7936659328794414e-07,
+          "max_error_over_tolerance": 0.01745186840139402,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 1.8121607962749704e-07,
+          "max_error_over_tolerance": 0.014507222506061243,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 1.6841676407648973e-07,
+          "max_error_over_tolerance": 0.014411625362419953,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 4.291534423828125e-06,
+          "mean_abs_error": 1.717351856761732e-07,
+          "max_error_over_tolerance": 0.013323484106320642,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 1.738843362354742e-07,
+          "max_error_over_tolerance": 0.016645597375685384,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 3.337860107421875e-06,
+          "mean_abs_error": 1.6936375422887575e-07,
+          "max_error_over_tolerance": 0.014243630762676264,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 3.337860107421875e-06,
+          "mean_abs_error": 1.7073222566751879e-07,
+          "max_error_over_tolerance": 0.013938305602702648,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 1.6839546664404803e-07,
+          "max_error_over_tolerance": 0.01539005680906222,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 4.0531158447265625e-06,
+          "mean_abs_error": 1.7272383145166671e-07,
+          "max_error_over_tolerance": 0.012160542859186052,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 1.6904508118697749e-07,
+          "max_error_over_tolerance": 0.018560817418399104,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 3.337860107421875e-06,
+          "mean_abs_error": 1.6819303191415942e-07,
+          "max_error_over_tolerance": 0.014084348345370755,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 1.6618465437619268e-07,
+          "max_error_over_tolerance": 0.01307212895742364,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack3_block2_mlp_group_norm",
+      "gamma_const": "stack3_block2_mlp_group_norm/gamma",
+      "beta_const": "stack3_block2_mlp_group_norm/beta",
+      "channels": 96,
+      "normalized_tensor": "stack3_block2_mlp_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack3_block2_mlp_group_norm/mul_1",
+        "stack3_block2_mlp_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_1_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack3_block2_mlp_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "output_shape": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "data_consumers": [
+            "reshape_1_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "channel_labels_sha256": "33430D11EDC36AC512D2CB6ED0486F17ECDDDFBFF444DF803908150367C1ED60"
+        }
+      ],
+      "conv": "stack3_block2_mlp_Conv_0/Conv2D",
+      "kernel_const": "stack3_block2_mlp_Conv_0/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        96,
+        192
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack3_block2_mlp_Conv_0/bias",
+      "bias_added": false,
+      "original_endpoint": "stack3_block2_mlp_Conv_0/BiasAdd:0",
+      "folded_endpoint": "stack3_block2_mlp_Conv_0/BiasAdd:0",
+      "original_kernel_sha256": "775B5E057048C088529B77B4C45CF9D12980AFB0DDD738E43A8F76249ED0A386",
+      "folded_kernel_sha256": "3A2B912DF25072F61033DCB090B35B53BA0961DD438C3DCDFCEC258511146738",
+      "original_bias_sha256": "67879220F9E2B8771AE6FCF86831B4723B9A8E409941F8784542B21CE9E2328F",
+      "folded_bias_sha256": "E0B1DCB925DE130931F9AC3319C9E47D35D089E6D1F152D8153B9DBA4BBA35A2",
+      "gamma_sha256": "AB107169774BDC6C6A0EF60DB0F5FEC0658120B7137186E432F3288BDE695D95",
+      "beta_sha256": "75E7334A7570D2A5CFA002DB0E3B4FC6B2C407F71BC7F80E509CC8898D30983D",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 98304,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          1024,
+          1,
+          96
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 3.9346158094607137e-07,
+          "max_error_over_tolerance": 0.02456017636171442,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 1.0967254638671875e-05,
+          "mean_abs_error": 4.4818862339942217e-07,
+          "max_error_over_tolerance": 0.049607439793103905,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 1.0967254638671875e-05,
+          "mean_abs_error": 4.444269071276115e-07,
+          "max_error_over_tolerance": 0.04332815706283622,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 1.2874603271484375e-05,
+          "mean_abs_error": 4.4556995248967723e-07,
+          "max_error_over_tolerance": 0.048602200707648036,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 3.9177296192368277e-07,
+          "max_error_over_tolerance": 0.045062826592835725,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 3.956494628217418e-07,
+          "max_error_over_tolerance": 0.04351433362149491,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 8.58306884765625e-06,
+          "mean_abs_error": 3.920838678913204e-07,
+          "max_error_over_tolerance": 0.05921679862143293,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 3.9110695126964856e-07,
+          "max_error_over_tolerance": 0.0451394311889997,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 1.33514404296875e-05,
+          "mean_abs_error": 3.8922224139999645e-07,
+          "max_error_over_tolerance": 0.05453092948878162,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 3.8896906199662834e-07,
+          "max_error_over_tolerance": 0.04704734766656917,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 4.0393226778216257e-07,
+          "max_error_over_tolerance": 0.04269838112646157,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 3.8489075363893715e-07,
+          "max_error_over_tolerance": 0.04988617637423944,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 1.33514404296875e-05,
+          "mean_abs_error": 3.881818588051071e-07,
+          "max_error_over_tolerance": 0.040014761000724715,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 8.58306884765625e-06,
+          "mean_abs_error": 3.835885022951402e-07,
+          "max_error_over_tolerance": 0.04753393923261209,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack3_block3_attn_group_norm",
+      "gamma_const": "stack3_block3_attn_group_norm/gamma",
+      "beta_const": "stack3_block3_attn_group_norm/beta",
+      "channels": 96,
+      "normalized_tensor": "stack3_block3_attn_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack3_block3_attn_group_norm/mul_1",
+        "stack3_block3_attn_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_2_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack3_block3_attn_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "output_shape": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "data_consumers": [
+            "reshape_2_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "channel_labels_sha256": "33430D11EDC36AC512D2CB6ED0486F17ECDDDFBFF444DF803908150367C1ED60"
+        }
+      ],
+      "conv": "stack3_block3_attn_mhsa_qkv_conv/Conv2D",
+      "kernel_const": "stack3_block3_attn_mhsa_qkv_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        96,
+        193
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack3_block3_attn_mhsa_qkv_conv/bias",
+      "bias_added": false,
+      "original_endpoint": "stack3_block3_attn_mhsa_qkv_conv/BiasAdd:0",
+      "folded_endpoint": "stack3_block3_attn_mhsa_qkv_conv/BiasAdd:0",
+      "original_kernel_sha256": "D91F4C3C80CD1D281D9E0E3A686AF2E552CCB3F85257C857D171FF3F492E9783",
+      "folded_kernel_sha256": "AAF8A0B99F22CF58C7BC8D1A50E9236573A4D47FACB3A209D6D812D470B11A77",
+      "original_bias_sha256": "A8D75B0C7E293D4E4C3422173CB576B5BE23DAB23A99C4BD9F551B6A48F565D6",
+      "folded_bias_sha256": "C1F55D14AB738F85D96D653303D4306F7F04C9E5555A5D6794AED7197290F31E",
+      "gamma_sha256": "6E199E9C260C2663776BFE1223228ECB6830CF00CA2B7AF63AD0D817009C415E",
+      "beta_sha256": "BF5B39414F965E8AEDB4C8FF9C10492F98A6418982AC08E9EE7367208B6039CB",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 98304,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          1024,
+          1,
+          96
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 2.4475921095072034e-07,
+          "max_error_over_tolerance": 0.008237617353771752,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 2.569739948754017e-07,
+          "max_error_over_tolerance": 0.018920181489475912,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 2.5654380447051407e-07,
+          "max_error_over_tolerance": 0.01851239485827489,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 2.565120649314802e-07,
+          "max_error_over_tolerance": 0.016133460828007526,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 2.1781555234424865e-07,
+          "max_error_over_tolerance": 0.016257413380501507,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 2.2737742092384166e-07,
+          "max_error_over_tolerance": 0.01808261620691226,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 2.22741027519926e-07,
+          "max_error_over_tolerance": 0.016517218278163732,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 2.2176940929363615e-07,
+          "max_error_over_tolerance": 0.016712492320609777,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 2.2184639810849889e-07,
+          "max_error_over_tolerance": 0.01621683524509181,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 2.1565854193055682e-07,
+          "max_error_over_tolerance": 0.016544791568229213,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 2.3155397168595744e-07,
+          "max_error_over_tolerance": 0.01693943390105846,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 5.245208740234375e-06,
+          "mean_abs_error": 2.1248497297198147e-07,
+          "max_error_over_tolerance": 0.015771195564732807,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 2.1680605033549197e-07,
+          "max_error_over_tolerance": 0.018815091396658344,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 2.1413118989641748e-07,
+          "max_error_over_tolerance": 0.015154868660154535,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack3_block3_mlp_group_norm",
+      "gamma_const": "stack3_block3_mlp_group_norm/gamma",
+      "beta_const": "stack3_block3_mlp_group_norm/beta",
+      "channels": 96,
+      "normalized_tensor": "stack3_block3_mlp_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack3_block3_mlp_group_norm/mul_1",
+        "stack3_block3_mlp_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_3_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack3_block3_mlp_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "output_shape": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "data_consumers": [
+            "reshape_3_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "channel_labels_sha256": "33430D11EDC36AC512D2CB6ED0486F17ECDDDFBFF444DF803908150367C1ED60"
+        }
+      ],
+      "conv": "stack3_block3_mlp_Conv_0/Conv2D",
+      "kernel_const": "stack3_block3_mlp_Conv_0/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        96,
+        192
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack3_block3_mlp_Conv_0/bias",
+      "bias_added": false,
+      "original_endpoint": "stack3_block3_mlp_Conv_0/BiasAdd:0",
+      "folded_endpoint": "stack3_block3_mlp_Conv_0/BiasAdd:0",
+      "original_kernel_sha256": "483C7C90BF4015FB9CACD8F21355A51181902FC57083A4DAA40209B22F673C44",
+      "folded_kernel_sha256": "FA46CA513FF52B153600463A82118887E936CE7FAD054ED63CE0C772C06EC97B",
+      "original_bias_sha256": "86A29BFFDE2CCB711C1EBFB542CE1AA19E5E0E359002A98878065A099C87B04F",
+      "folded_bias_sha256": "E1DB39E2D6264B55D199B7058D645DE6015A73DF3A3ABC1BF0F49550937AEF94",
+      "gamma_sha256": "A7CD91A0602841A2D9B0464ECA5D60029615E4CFB83AA27DE7A506F4A736BF0A",
+      "beta_sha256": "9AAC6936DBD09055230A863BBA371F0CCF5D6D9A16E2BB79352DE5EAAFF44631",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 98304,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          1024,
+          1,
+          96
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 4.4849754961736227e-07,
+          "max_error_over_tolerance": 0.020376741498212145,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 1.049041748046875e-05,
+          "mean_abs_error": 4.80020503346168e-07,
+          "max_error_over_tolerance": 0.07967831209463659,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 8.106231689453125e-06,
+          "mean_abs_error": 4.775079294934889e-07,
+          "max_error_over_tolerance": 0.04797381013756969,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 7.152557373046875e-06,
+          "mean_abs_error": 4.784703454182212e-07,
+          "max_error_over_tolerance": 0.055545253572627976,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 4.461016753036044e-07,
+          "max_error_over_tolerance": 0.03897906044872694,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 4.51860690494262e-07,
+          "max_error_over_tolerance": 0.043964915997034365,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 4.4631994455812674e-07,
+          "max_error_over_tolerance": 0.037136790582852644,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 4.46580467420669e-07,
+          "max_error_over_tolerance": 0.036977703532349505,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 2.288818359375e-05,
+          "mean_abs_error": 4.475133342414968e-07,
+          "max_error_over_tolerance": 0.03274156846145031,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 4.401635275523101e-07,
+          "max_error_over_tolerance": 0.039842802035604974,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 4.514460177536724e-07,
+          "max_error_over_tolerance": 0.037183861646287585,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 4.4748505464061356e-07,
+          "max_error_over_tolerance": 0.04262699766688233,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 4.497584503345327e-07,
+          "max_error_over_tolerance": 0.03574088395247713,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 4.5137390240294434e-07,
+          "max_error_over_tolerance": 0.03645769722247034,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack3_block3_post_group_norm",
+      "gamma_const": "stack3_block3_post_group_norm/gamma",
+      "beta_const": "stack3_block3_post_group_norm/beta",
+      "channels": 96,
+      "normalized_tensor": "stack3_block3_post_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack3_block3_post_group_norm/mul_1",
+        "stack3_block3_post_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "Reshape_4",
+          "op": "Reshape",
+          "input_tensor": "stack3_block3_post_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            256,
+            96
+          ],
+          "output_shape": [
+            1,
+            4,
+            16,
+            1536
+          ],
+          "data_consumers": [
+            "Reshape_4"
+          ],
+          "integer_parameter": [
+            -1,
+            4,
+            16,
+            1536
+          ],
+          "channel_labels_sha256": "33430D11EDC36AC512D2CB6ED0486F17ECDDDFBFF444DF803908150367C1ED60"
+        },
+        {
+          "name": "transpose_2",
+          "op": "Transpose",
+          "input_tensor": "Reshape_4:0",
+          "input_shape": [
+            1,
+            4,
+            16,
+            1536
+          ],
+          "output_shape": [
+            1,
+            16,
+            4,
+            1536
+          ],
+          "data_consumers": [
+            "transpose_2"
+          ],
+          "integer_parameter": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "channel_labels_sha256": "33430D11EDC36AC512D2CB6ED0486F17ECDDDFBFF444DF803908150367C1ED60"
+        },
+        {
+          "name": "Reshape_5",
+          "op": "Reshape",
+          "input_tensor": "transpose_2:0",
+          "input_shape": [
+            1,
+            16,
+            4,
+            1536
+          ],
+          "output_shape": [
+            32,
+            2,
+            16,
+            96
+          ],
+          "data_consumers": [
+            "Reshape_5"
+          ],
+          "integer_parameter": [
+            -1,
+            2,
+            16,
+            96
+          ],
+          "channel_labels_sha256": "33430D11EDC36AC512D2CB6ED0486F17ECDDDFBFF444DF803908150367C1ED60"
+        },
+        {
+          "name": "transpose_3",
+          "op": "Transpose",
+          "input_tensor": "Reshape_5:0",
+          "input_shape": [
+            32,
+            2,
+            16,
+            96
+          ],
+          "output_shape": [
+            32,
+            16,
+            2,
+            96
+          ],
+          "data_consumers": [
+            "transpose_3"
+          ],
+          "integer_parameter": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "channel_labels_sha256": "33430D11EDC36AC512D2CB6ED0486F17ECDDDFBFF444DF803908150367C1ED60"
+        },
+        {
+          "name": "Reshape_6",
+          "op": "Reshape",
+          "input_tensor": "transpose_3:0",
+          "input_shape": [
+            32,
+            16,
+            2,
+            96
+          ],
+          "output_shape": [
+            1,
+            32,
+            32,
+            96
+          ],
+          "data_consumers": [
+            "Reshape_6"
+          ],
+          "integer_parameter": [
+            -1,
+            32,
+            32,
+            96
+          ],
+          "channel_labels_sha256": "33430D11EDC36AC512D2CB6ED0486F17ECDDDFBFF444DF803908150367C1ED60"
+        }
+      ],
+      "conv": "stack3_block3_post_1_conv/Conv2D",
+      "kernel_const": "stack3_block3_post_1_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        96,
+        192
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack3_block3_post_1_conv/gn_folded_bias",
+      "bias_added": true,
+      "original_endpoint": "stack3_block3_post_1_conv/Conv2D:0",
+      "folded_endpoint": "stack3_block3_post_1_conv/gn_folded_BiasAdd:0",
+      "original_kernel_sha256": "13B16387E7E19D191269382CE88561FC46B7BFED330B2304854EE2283F16ACB5",
+      "folded_kernel_sha256": "D07B5BC298337FA3DE3411E1E0078D1C4FB0B64D934EED9A8CB8C8E7555972DB",
+      "original_bias_sha256": "EF115A0E0C15CDC41958CA46B5B14B456115F4BAEC5E3CA68599D2A8F435E3B8",
+      "folded_bias_sha256": "1EE4D945E474A0F0BC7338FFC03C9B06AF4540B47D91A387C236ADFF9F14C671",
+      "gamma_sha256": "D8DC7C7BA496EB0A20B22B8F889C4D737B413EFA078BAB78FBF4712C7DEB8694",
+      "beta_sha256": "FA96F839E0708EFFDD33FFCF79BB6F0EAC9471FF299AA1B5B2A18783329D3464",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 98304,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          1024,
+          1,
+          96
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 2.6702880859375e-05,
+          "mean_abs_error": 1.7271178095098112e-06,
+          "max_error_over_tolerance": 0.03622212103807176,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 3.0517578125e-05,
+          "mean_abs_error": 1.4751356264923003e-06,
+          "max_error_over_tolerance": 0.08370541952038459,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 1.474990267091858e-06,
+          "max_error_over_tolerance": 0.061670891207836406,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 1.473142126728888e-06,
+          "max_error_over_tolerance": 0.07104117204982895,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 1.580897732741023e-06,
+          "max_error_over_tolerance": 0.06091947236094085,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 3.814697265625e-05,
+          "mean_abs_error": 1.589084177355815e-06,
+          "max_error_over_tolerance": 0.06801019429569016,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 1.5680465123568688e-06,
+          "max_error_over_tolerance": 0.058064569231385955,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 4.57763671875e-05,
+          "mean_abs_error": 1.5597635272997696e-06,
+          "max_error_over_tolerance": 0.06593372469607212,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 3.0517578125e-05,
+          "mean_abs_error": 1.5623214708604394e-06,
+          "max_error_over_tolerance": 0.06336664610758175,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 1.5581096299780116e-06,
+          "max_error_over_tolerance": 0.06229340123923032,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 3.814697265625e-05,
+          "mean_abs_error": 1.5828060311307013e-06,
+          "max_error_over_tolerance": 0.08062571474988248,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 1.546193287849107e-06,
+          "max_error_over_tolerance": 0.05933444902761243,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 1.5674227155463665e-06,
+          "max_error_over_tolerance": 0.08152711606267382,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 3.0517578125e-05,
+          "mean_abs_error": 1.5589188427552376e-06,
+          "max_error_over_tolerance": 0.11546001076416564,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack4_block2_attn_group_norm",
+      "gamma_const": "stack4_block2_attn_group_norm/gamma",
+      "beta_const": "stack4_block2_attn_group_norm/beta",
+      "channels": 144,
+      "normalized_tensor": "stack4_block2_attn_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack4_block2_attn_group_norm/mul_1",
+        "stack4_block2_attn_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_4_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack4_block2_attn_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "output_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "data_consumers": [
+            "reshape_4_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        }
+      ],
+      "conv": "stack4_block2_attn_mhsa_qkv_conv/Conv2D",
+      "kernel_const": "stack4_block2_attn_mhsa_qkv_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        144,
+        289
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack4_block2_attn_mhsa_qkv_conv/bias",
+      "bias_added": false,
+      "original_endpoint": "stack4_block2_attn_mhsa_qkv_conv/BiasAdd:0",
+      "folded_endpoint": "stack4_block2_attn_mhsa_qkv_conv/BiasAdd:0",
+      "original_kernel_sha256": "096E99D23B4C9D5793B2F23DDC46E3A861B66A035544649C79B8D59F0517EC8D",
+      "folded_kernel_sha256": "AAC5F13F12AE530417E1BF7A387D0C702EBBD6BBD430441D4E0B76B830FC00BC",
+      "original_bias_sha256": "A25FB0C7E6BA439CD3430E879377A90572D8F53D48575A21E1B16437E249CADF",
+      "folded_bias_sha256": "519C8891576F9041A53D13DF0D64511C19E7AB31E5A79F372499E4551463762C",
+      "gamma_sha256": "44DEBF18777D02D444F065DE189DB8E07F173C878383DE045FC4E0399DED2708",
+      "beta_sha256": "E75CE8E10D2461787285EBDB8CEFB606FBA458046E096657D96DF2ED0835073A",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 36864,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          256,
+          1,
+          144
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 2.693818069617409e-07,
+          "max_error_over_tolerance": 0.014927929820816324,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 2.6165487372469896e-07,
+          "max_error_over_tolerance": 0.01875380936752778,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 4.291534423828125e-06,
+          "mean_abs_error": 2.622485865160475e-07,
+          "max_error_over_tolerance": 0.024632442897891953,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 2.605290703418476e-07,
+          "max_error_over_tolerance": 0.022408042993565153,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 8.58306884765625e-06,
+          "mean_abs_error": 2.964379746117629e-07,
+          "max_error_over_tolerance": 0.03312359786627246,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 2.9962905950751236e-07,
+          "max_error_over_tolerance": 0.020414101913135398,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 2.950240722601624e-07,
+          "max_error_over_tolerance": 0.03021680558003676,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 3.0000325206296184e-07,
+          "max_error_over_tolerance": 0.02333957537310256,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 3.060664645801814e-07,
+          "max_error_over_tolerance": 0.02126835237264422,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 2.957217081961106e-07,
+          "max_error_over_tolerance": 0.026957514749389462,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 3.0069565919113496e-07,
+          "max_error_over_tolerance": 0.025742699875975345,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 3.018576913041137e-07,
+          "max_error_over_tolerance": 0.01971181557532586,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 6.198883056640625e-06,
+          "mean_abs_error": 3.008219467789808e-07,
+          "max_error_over_tolerance": 0.020854337319833008,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 8.58306884765625e-06,
+          "mean_abs_error": 2.963289988936557e-07,
+          "max_error_over_tolerance": 0.01956209528984899,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack4_block2_mlp_group_norm",
+      "gamma_const": "stack4_block2_mlp_group_norm/gamma",
+      "beta_const": "stack4_block2_mlp_group_norm/beta",
+      "channels": 144,
+      "normalized_tensor": "stack4_block2_mlp_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack4_block2_mlp_group_norm/mul_1",
+        "stack4_block2_mlp_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_5_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack4_block2_mlp_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "output_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "data_consumers": [
+            "reshape_5_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        }
+      ],
+      "conv": "stack4_block2_mlp_Conv_0/Conv2D",
+      "kernel_const": "stack4_block2_mlp_Conv_0/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        144,
+        288
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack4_block2_mlp_Conv_0/bias",
+      "bias_added": false,
+      "original_endpoint": "stack4_block2_mlp_Conv_0/BiasAdd:0",
+      "folded_endpoint": "stack4_block2_mlp_Conv_0/BiasAdd:0",
+      "original_kernel_sha256": "AC933860266D21D9664C152E67794C5B1D2D636D1866ACAFF83AF75B2396BE00",
+      "folded_kernel_sha256": "96EF37EEFD14FA39FA31ACD9AB41375E232E9811A84DB9FD2B90148FEE1B919C",
+      "original_bias_sha256": "87A89AA77AD6BE744282C373B0C6F0026568DB6E3A0CB3E8D19DB0D2AEB534E2",
+      "folded_bias_sha256": "96E487147D4B505F7FBA055C2D04622C54F6E6F78D1623DC1BB8DE8CD172AA3E",
+      "gamma_sha256": "B279EAE6DE73A47FCA6121C55675D5B309FAFE30EBEAA127B86B886B3A6D2CB0",
+      "beta_sha256": "1FC2DDD1304E1CFDA8104975C7077D18B6ADD540B3BB1FFEE85069DF7ABB50E6",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 36864,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          256,
+          1,
+          144
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 5.610417146171029e-07,
+          "max_error_over_tolerance": 0.03880661885691224,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 5.513498611738518e-07,
+          "max_error_over_tolerance": 0.055145850168725086,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 5.525199261076826e-07,
+          "max_error_over_tolerance": 0.03558248930350835,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 5.499133142924014e-07,
+          "max_error_over_tolerance": 0.04469543413792564,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 7.427189530062606e-07,
+          "max_error_over_tolerance": 0.07182700880769244,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 7.640078365511727e-07,
+          "max_error_over_tolerance": 0.05597326716760075,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 7.613210249878143e-07,
+          "max_error_over_tolerance": 0.04488612390365642,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 7.501171239709947e-07,
+          "max_error_over_tolerance": 0.08673902278239859,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 7.669811010499769e-07,
+          "max_error_over_tolerance": 0.055405523230806865,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 7.458282374904634e-07,
+          "max_error_over_tolerance": 0.0578652516683792,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 1.71661376953125e-05,
+          "mean_abs_error": 7.798965574086955e-07,
+          "max_error_over_tolerance": 0.05243030865067323,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 1.33514404296875e-05,
+          "mean_abs_error": 7.768827446044371e-07,
+          "max_error_over_tolerance": 0.05804740150807149,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 1.33514404296875e-05,
+          "mean_abs_error": 7.788480363362598e-07,
+          "max_error_over_tolerance": 0.053729423779869265,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 1.239776611328125e-05,
+          "mean_abs_error": 7.468970579793677e-07,
+          "max_error_over_tolerance": 0.049243011801087776,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack4_block3_attn_group_norm",
+      "gamma_const": "stack4_block3_attn_group_norm/gamma",
+      "beta_const": "stack4_block3_attn_group_norm/beta",
+      "channels": 144,
+      "normalized_tensor": "stack4_block3_attn_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack4_block3_attn_group_norm/mul_1",
+        "stack4_block3_attn_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_6_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack4_block3_attn_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "output_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "data_consumers": [
+            "reshape_6_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        }
+      ],
+      "conv": "stack4_block3_attn_mhsa_qkv_conv/Conv2D",
+      "kernel_const": "stack4_block3_attn_mhsa_qkv_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        144,
+        289
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack4_block3_attn_mhsa_qkv_conv/bias",
+      "bias_added": false,
+      "original_endpoint": "stack4_block3_attn_mhsa_qkv_conv/BiasAdd:0",
+      "folded_endpoint": "stack4_block3_attn_mhsa_qkv_conv/BiasAdd:0",
+      "original_kernel_sha256": "F0A9F4FB19D8F2D53327D5D677D0086FD4EF189BD0CC963BA9274498D6CD9E12",
+      "folded_kernel_sha256": "7B3A7422EAF663B4670EEA2AF75258B96211BF1B2426BA07EA39135C6659454E",
+      "original_bias_sha256": "DD0CF6C98A38C1589361C4CEBDB7DD4D87C93CCB34A89DC39C3C0A5FB45BD373",
+      "folded_bias_sha256": "187352FBC0986F6AF1BC1A720FA68F567C1FD297C7B0B19239694EC16C646D4F",
+      "gamma_sha256": "D3B6C87C79DF5188ECA781E16B9A375B219F58F815135563594D1871170517E3",
+      "beta_sha256": "B5A8555328A35B8BA6C31265528066B67277C5D54651DC41F14FCC72174C5AD5",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 36864,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          256,
+          1,
+          144
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 2.384185791015625e-06,
+          "mean_abs_error": 2.248075345686595e-07,
+          "max_error_over_tolerance": 0.014134092491145578,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 2.0508369746912838e-07,
+          "max_error_over_tolerance": 0.012215265628446822,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 2.057310248157944e-07,
+          "max_error_over_tolerance": 0.014185937925578136,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 3.0994415283203125e-06,
+          "mean_abs_error": 2.048389961887441e-07,
+          "max_error_over_tolerance": 0.012920077224476124,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 8.58306884765625e-06,
+          "mean_abs_error": 2.9419882697936237e-07,
+          "max_error_over_tolerance": 0.022521582788390053,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 3.080447650409608e-07,
+          "max_error_over_tolerance": 0.020817695966802715,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 2.8589894984468935e-07,
+          "max_error_over_tolerance": 0.015599701845127162,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 2.919452879307985e-07,
+          "max_error_over_tolerance": 0.018066834139812464,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 6.198883056640625e-06,
+          "mean_abs_error": 2.986709162803161e-07,
+          "max_error_over_tolerance": 0.02199112762168964,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 7.152557373046875e-06,
+          "mean_abs_error": 2.8578766419886207e-07,
+          "max_error_over_tolerance": 0.01789878552475127,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.065782237165949e-07,
+          "max_error_over_tolerance": 0.017386535565491464,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 5.245208740234375e-06,
+          "mean_abs_error": 2.8306990992809585e-07,
+          "max_error_over_tolerance": 0.01610494302977059,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 5.245208740234375e-06,
+          "mean_abs_error": 2.991274322679582e-07,
+          "max_error_over_tolerance": 0.01733236283106154,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 7.152557373046875e-06,
+          "mean_abs_error": 2.933100964507462e-07,
+          "max_error_over_tolerance": 0.017815408719757196,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack4_block3_mlp_group_norm",
+      "gamma_const": "stack4_block3_mlp_group_norm/gamma",
+      "beta_const": "stack4_block3_mlp_group_norm/beta",
+      "channels": 144,
+      "normalized_tensor": "stack4_block3_mlp_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack4_block3_mlp_group_norm/mul_1",
+        "stack4_block3_mlp_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_7_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack4_block3_mlp_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "output_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "data_consumers": [
+            "reshape_7_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        }
+      ],
+      "conv": "stack4_block3_mlp_Conv_0/Conv2D",
+      "kernel_const": "stack4_block3_mlp_Conv_0/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        144,
+        288
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack4_block3_mlp_Conv_0/bias",
+      "bias_added": false,
+      "original_endpoint": "stack4_block3_mlp_Conv_0/BiasAdd:0",
+      "folded_endpoint": "stack4_block3_mlp_Conv_0/BiasAdd:0",
+      "original_kernel_sha256": "ED3C501726A74F1A69301EEDC644596581614BAAE5F4EC299BD3525C2A2B6BC7",
+      "folded_kernel_sha256": "4B65ABA46B6232B0A7C1DFA89A79E930813CA98F4817CCE25627C9CEA27C906F",
+      "original_bias_sha256": "823B12A1F2E3A883BEDE6CC093B3362BF2852F7A75840600DFD6C7705F778106",
+      "folded_bias_sha256": "6AE86F2251D15B3E60DB3628480848CE0DEAAB5F8C280D9B77E06BF5BF9633F2",
+      "gamma_sha256": "7AC71D0BDBE60CF63258780A4BC71E40854C121BEF38BE8A055A49ABA9471BD6",
+      "beta_sha256": "02089A8B3909A1F8ED9229DE910260D652A1F3C79C309B3091F31DBEABA2C296",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 36864,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          256,
+          1,
+          144
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 5.543317658723229e-07,
+          "max_error_over_tolerance": 0.04705191922639801,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 5.496775783184502e-07,
+          "max_error_over_tolerance": 0.03793887082193873,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 5.537844521717893e-07,
+          "max_error_over_tolerance": 0.047606805868967025,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 5.482624045624915e-07,
+          "max_error_over_tolerance": 0.037102584937092564,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 7.459424927623736e-07,
+          "max_error_over_tolerance": 0.07700732425217331,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 7.618372263904247e-07,
+          "max_error_over_tolerance": 0.07103960142047629,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 7.576992276072916e-07,
+          "max_error_over_tolerance": 0.08482123923830527,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 7.575767489874529e-07,
+          "max_error_over_tolerance": 0.055748387799508206,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 7.753284686865906e-07,
+          "max_error_over_tolerance": 0.0541875702745052,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 7.322418645748662e-07,
+          "max_error_over_tolerance": 0.08934060253854939,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 1.811981201171875e-05,
+          "mean_abs_error": 7.945337630290952e-07,
+          "max_error_over_tolerance": 0.05233577850451821,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 7.821787827803443e-07,
+          "max_error_over_tolerance": 0.05778905306413117,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 7.936679240730074e-07,
+          "max_error_over_tolerance": 0.055307980646631415,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 7.52206688048318e-07,
+          "max_error_over_tolerance": 0.0637857672994974,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack4_block4_attn_group_norm",
+      "gamma_const": "stack4_block4_attn_group_norm/gamma",
+      "beta_const": "stack4_block4_attn_group_norm/beta",
+      "channels": 144,
+      "normalized_tensor": "stack4_block4_attn_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack4_block4_attn_group_norm/mul_1",
+        "stack4_block4_attn_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_8_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack4_block4_attn_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "output_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "data_consumers": [
+            "reshape_8_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        }
+      ],
+      "conv": "stack4_block4_attn_mhsa_qkv_conv/Conv2D",
+      "kernel_const": "stack4_block4_attn_mhsa_qkv_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        144,
+        289
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack4_block4_attn_mhsa_qkv_conv/bias",
+      "bias_added": false,
+      "original_endpoint": "stack4_block4_attn_mhsa_qkv_conv/BiasAdd:0",
+      "folded_endpoint": "stack4_block4_attn_mhsa_qkv_conv/BiasAdd:0",
+      "original_kernel_sha256": "DA6022B792BDC89D4D48B78C13DBBE89943DFE10B1F5A11FE2919014EBC219C8",
+      "folded_kernel_sha256": "B772E831C15EF8E6C43FF2804479829B5EA6316ED0D72237602B90C391300376",
+      "original_bias_sha256": "1D711979A04192C7CF2191D6288E192895B81AC575115625266F6D1B1735AB28",
+      "folded_bias_sha256": "B8102E516358D8759A5D544E07DA2479E1E1AF32DD13EA4BB4D4791A753F4DE7",
+      "gamma_sha256": "1AF91E1023E3250F083E62BDA9728048C258ED900EDAB460C659246176817935",
+      "beta_sha256": "588D04EC721773CC9191E950802E693515032554D0DDF728848989F58ACE9F8A",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 36864,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          256,
+          1,
+          144
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 3.0994415283203125e-06,
+          "mean_abs_error": 2.049072366147415e-07,
+          "max_error_over_tolerance": 0.02034137203493208,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 4.5299530029296875e-06,
+          "mean_abs_error": 2.2292705199392802e-07,
+          "max_error_over_tolerance": 0.017586441205559335,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 3.337860107421875e-06,
+          "mean_abs_error": 2.2275711810151856e-07,
+          "max_error_over_tolerance": 0.020996356922110444,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 3.0994415283203125e-06,
+          "mean_abs_error": 2.2496758675392858e-07,
+          "max_error_over_tolerance": 0.017684556585165174,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 3.2016457027572795e-07,
+          "max_error_over_tolerance": 0.02479844546811509,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 3.377201814473539e-07,
+          "max_error_over_tolerance": 0.022663184846034818,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 5.245208740234375e-06,
+          "mean_abs_error": 3.083550522186887e-07,
+          "max_error_over_tolerance": 0.02110155533592243,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 3.2072739643818186e-07,
+          "max_error_over_tolerance": 0.022893049624347947,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 6.198883056640625e-06,
+          "mean_abs_error": 3.295632129948776e-07,
+          "max_error_over_tolerance": 0.02734309846523188,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.142639039733663e-07,
+          "max_error_over_tolerance": 0.02433564838742723,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 6.198883056640625e-06,
+          "mean_abs_error": 3.3072725606672983e-07,
+          "max_error_over_tolerance": 0.023237705247031594,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 6.198883056640625e-06,
+          "mean_abs_error": 3.159615812600819e-07,
+          "max_error_over_tolerance": 0.026656490722208402,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.3089202881273475e-07,
+          "max_error_over_tolerance": 0.022262038840628634,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 6.198883056640625e-06,
+          "mean_abs_error": 3.2537802993432717e-07,
+          "max_error_over_tolerance": 0.02363752796368803,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack4_block4_mlp_group_norm",
+      "gamma_const": "stack4_block4_mlp_group_norm/gamma",
+      "beta_const": "stack4_block4_mlp_group_norm/beta",
+      "channels": 144,
+      "normalized_tensor": "stack4_block4_mlp_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack4_block4_mlp_group_norm/mul_1",
+        "stack4_block4_mlp_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_9_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack4_block4_mlp_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "output_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "data_consumers": [
+            "reshape_9_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        }
+      ],
+      "conv": "stack4_block4_mlp_Conv_0/Conv2D",
+      "kernel_const": "stack4_block4_mlp_Conv_0/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        144,
+        288
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack4_block4_mlp_Conv_0/bias",
+      "bias_added": false,
+      "original_endpoint": "stack4_block4_mlp_Conv_0/BiasAdd:0",
+      "folded_endpoint": "stack4_block4_mlp_Conv_0/BiasAdd:0",
+      "original_kernel_sha256": "F11662F7A5D18272AC21176EFBBC4536A5A2F34E1A020340198234BA9D387B4A",
+      "folded_kernel_sha256": "6415E051121B937BDD66C61AC655FDCA3C1EF44992349BD14E160D49DF3440F6",
+      "original_bias_sha256": "732CE4E6D0D50D6D20FC33FC22A10363D9D63CF226ED3D96E9FE75C32ED608E3",
+      "folded_bias_sha256": "968C4FF349EAFD3F92D628E76B8C94CACD414E0F3D44F2F73CA023CD22E8900C",
+      "gamma_sha256": "C5779B824441009A1FEC744C641ABB3E11D1D7427CE2AD9BF54457A3DEDFAB79",
+      "beta_sha256": "BABEF1AA9DF5B7327D65C65DC1A029161EDA2E1FBDED0F78B3E826836E30A590",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 36864,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          256,
+          1,
+          144
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 8.512344922766918e-07,
+          "max_error_over_tolerance": 0.051485900242979124,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 8.676593602609096e-07,
+          "max_error_over_tolerance": 0.06896135578025464,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 8.678263030661684e-07,
+          "max_error_over_tolerance": 0.07995112634676496,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 8.6988934021469e-07,
+          "max_error_over_tolerance": 0.06214792093008803,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 2.288818359375e-05,
+          "mean_abs_error": 1.1451524591797756e-06,
+          "max_error_over_tolerance": 0.12099258594661806,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 2.288818359375e-05,
+          "mean_abs_error": 1.2354606345373516e-06,
+          "max_error_over_tolerance": 0.07658302748925247,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 2.288818359375e-05,
+          "mean_abs_error": 1.1862969889383141e-06,
+          "max_error_over_tolerance": 0.07538919672810886,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 2.09808349609375e-05,
+          "mean_abs_error": 1.1925292508547298e-06,
+          "max_error_over_tolerance": 0.07918389906270018,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 2.288818359375e-05,
+          "mean_abs_error": 1.2673435776378028e-06,
+          "max_error_over_tolerance": 0.07501167369171828,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 2.6702880859375e-05,
+          "mean_abs_error": 1.1604829018728601e-06,
+          "max_error_over_tolerance": 0.07401691656628122,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 3.0517578125e-05,
+          "mean_abs_error": 1.2647205949178897e-06,
+          "max_error_over_tolerance": 0.09423499010737461,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 1.194112984295417e-06,
+          "max_error_over_tolerance": 0.06383486685961819,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 1.258155660050559e-06,
+          "max_error_over_tolerance": 0.0692702193472982,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 1.1908049499551353e-06,
+          "max_error_over_tolerance": 0.08545499085631597,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack4_block5_attn_group_norm",
+      "gamma_const": "stack4_block5_attn_group_norm/gamma",
+      "beta_const": "stack4_block5_attn_group_norm/beta",
+      "channels": 144,
+      "normalized_tensor": "stack4_block5_attn_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack4_block5_attn_group_norm/mul_1",
+        "stack4_block5_attn_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_10/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack4_block5_attn_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "output_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "data_consumers": [
+            "reshape_10/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        }
+      ],
+      "conv": "stack4_block5_attn_mhsa_qkv_conv/Conv2D",
+      "kernel_const": "stack4_block5_attn_mhsa_qkv_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        144,
+        289
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack4_block5_attn_mhsa_qkv_conv/bias",
+      "bias_added": false,
+      "original_endpoint": "stack4_block5_attn_mhsa_qkv_conv/BiasAdd:0",
+      "folded_endpoint": "stack4_block5_attn_mhsa_qkv_conv/BiasAdd:0",
+      "original_kernel_sha256": "E75ECD8F108D1284C25AD05B8E008A50327880AB1E402480CCE9C9ED8CEF3DE2",
+      "folded_kernel_sha256": "5A2B72BCA4E078FB708437FA1B706914A7680DFD0957EF3BE12474EC6D3C8EF0",
+      "original_bias_sha256": "0E7AC80C52E95D7C2CD84A0B43CBD4256CBFA48FB101130A987AD8D6546DA73E",
+      "folded_bias_sha256": "DB389B9E0F8C0766CB4A992753902FAACFD5F75040D4B10D4D7D374DA1EE52EC",
+      "gamma_sha256": "B8EB2D11B17BE24AB4EFE94049A792027FCDBAE5FC6F5E2807960177A4F5EC10",
+      "beta_sha256": "5EFDFCAC6717EF1B492DA78F88919735E60E36156F58D0EDCA327B6D870D402D",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 36864,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          256,
+          1,
+          144
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 2.1226243041439633e-07,
+          "max_error_over_tolerance": 0.01347662789890041,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 3.337860107421875e-06,
+          "mean_abs_error": 2.365838356133209e-07,
+          "max_error_over_tolerance": 0.01626555800623296,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 3.0994415283203125e-06,
+          "mean_abs_error": 2.366248509920344e-07,
+          "max_error_over_tolerance": 0.013874963493347381,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 2.3778550470127823e-07,
+          "max_error_over_tolerance": 0.013091243512675186,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.368195708408858e-07,
+          "max_error_over_tolerance": 0.020788767413191304,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 8.58306884765625e-06,
+          "mean_abs_error": 3.623782822142829e-07,
+          "max_error_over_tolerance": 0.02588628156508458,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.266382056520446e-07,
+          "max_error_over_tolerance": 0.027927689626020304,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 3.4056593686951306e-07,
+          "max_error_over_tolerance": 0.02433666367055296,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 3.498235481161186e-07,
+          "max_error_over_tolerance": 0.022348456235688607,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 3.2639004262712074e-07,
+          "max_error_over_tolerance": 0.02086119171643799,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 7.152557373046875e-06,
+          "mean_abs_error": 3.486626867022024e-07,
+          "max_error_over_tolerance": 0.023311669924969494,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.305078821682136e-07,
+          "max_error_over_tolerance": 0.025287652917630736,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 3.4699711237553103e-07,
+          "max_error_over_tolerance": 0.021553539703431546,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 3.419135531072608e-07,
+          "max_error_over_tolerance": 0.020041421610183928,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack4_block5_mlp_group_norm",
+      "gamma_const": "stack4_block5_mlp_group_norm/gamma",
+      "beta_const": "stack4_block5_mlp_group_norm/beta",
+      "channels": 144,
+      "normalized_tensor": "stack4_block5_mlp_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack4_block5_mlp_group_norm/mul_1",
+        "stack4_block5_mlp_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_11/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack4_block5_mlp_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "output_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "data_consumers": [
+            "reshape_11/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        }
+      ],
+      "conv": "stack4_block5_mlp_Conv_0/Conv2D",
+      "kernel_const": "stack4_block5_mlp_Conv_0/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        144,
+        288
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack4_block5_mlp_Conv_0/bias",
+      "bias_added": false,
+      "original_endpoint": "stack4_block5_mlp_Conv_0/BiasAdd:0",
+      "folded_endpoint": "stack4_block5_mlp_Conv_0/BiasAdd:0",
+      "original_kernel_sha256": "2945A3224C710C38A5063DA7E5AE617D36D7AF7643236BDE697BE7F071F23BEE",
+      "folded_kernel_sha256": "88BE1791812A3047774BE97D2117E06EF1FE87DDA287E1E27B35B4559D2B5873",
+      "original_bias_sha256": "885A8B38F5BDFA8450704ACB5F779915801055CBFDD00CA33D8A0E27D6CB4319",
+      "folded_bias_sha256": "4F54846E87CBD4A39D6542B0D5C012A5EC7B8FD0AE8FE9304CA69B74244CBC1A",
+      "gamma_sha256": "B930B57FAF7A13712D183790AAE10C7F50BFFCEFF448765035C8E8DDE589DE0B",
+      "beta_sha256": "449F4ADAC3D541B20C9E4BA1A5D867A19CA4B080F8CCAEBE80AA6FAC0641E5A3",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 36864,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          256,
+          1,
+          144
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 7.662828364926908e-07,
+          "max_error_over_tolerance": 0.050273235032401095,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 1.049041748046875e-05,
+          "mean_abs_error": 7.97168063905297e-07,
+          "max_error_over_tolerance": 0.06566338486541058,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 9.059906005859375e-06,
+          "mean_abs_error": 8.010954641374863e-07,
+          "max_error_over_tolerance": 0.06863810558828576,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 1.0967254638671875e-05,
+          "mean_abs_error": 7.991600594121135e-07,
+          "max_error_over_tolerance": 0.07060208991599763,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 1.0219450309200006e-06,
+          "max_error_over_tolerance": 0.09523430235678924,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 1.079103741277423e-06,
+          "max_error_over_tolerance": 0.06540880091768547,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 1.621246337890625e-05,
+          "mean_abs_error": 1.038465092683004e-06,
+          "max_error_over_tolerance": 0.07309006523288322,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 1.71661376953125e-05,
+          "mean_abs_error": 1.0595940693747252e-06,
+          "max_error_over_tolerance": 0.08183640901837227,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 1.1099445045046095e-06,
+          "max_error_over_tolerance": 0.06550695101535774,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 1.0351298745566357e-06,
+          "max_error_over_tolerance": 0.0805600534918755,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 2.09808349609375e-05,
+          "mean_abs_error": 1.1026252953646083e-06,
+          "max_error_over_tolerance": 0.08538857054278229,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 1.0890786749466013e-06,
+          "max_error_over_tolerance": 0.07836091099629444,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 1.71661376953125e-05,
+          "mean_abs_error": 1.097515147800247e-06,
+          "max_error_over_tolerance": 0.0890721796407719,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 1.71661376953125e-05,
+          "mean_abs_error": 1.0675406277490158e-06,
+          "max_error_over_tolerance": 0.06092869961094994,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack4_block5_post_group_norm",
+      "gamma_const": "stack4_block5_post_group_norm/gamma",
+      "beta_const": "stack4_block5_post_group_norm/beta",
+      "channels": 144,
+      "normalized_tensor": "stack4_block5_post_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack4_block5_post_group_norm/mul_1",
+        "stack4_block5_post_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "Reshape_12",
+          "op": "Reshape",
+          "input_tensor": "stack4_block5_post_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            64,
+            144
+          ],
+          "output_shape": [
+            1,
+            4,
+            8,
+            1152
+          ],
+          "data_consumers": [
+            "Reshape_12"
+          ],
+          "integer_parameter": [
+            -1,
+            4,
+            8,
+            1152
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        },
+        {
+          "name": "transpose_6",
+          "op": "Transpose",
+          "input_tensor": "Reshape_12:0",
+          "input_shape": [
+            1,
+            4,
+            8,
+            1152
+          ],
+          "output_shape": [
+            1,
+            8,
+            4,
+            1152
+          ],
+          "data_consumers": [
+            "transpose_6"
+          ],
+          "integer_parameter": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        },
+        {
+          "name": "Reshape_13",
+          "op": "Reshape",
+          "input_tensor": "transpose_6:0",
+          "input_shape": [
+            1,
+            8,
+            4,
+            1152
+          ],
+          "output_shape": [
+            16,
+            2,
+            8,
+            144
+          ],
+          "data_consumers": [
+            "Reshape_13"
+          ],
+          "integer_parameter": [
+            -1,
+            2,
+            8,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        },
+        {
+          "name": "transpose_7",
+          "op": "Transpose",
+          "input_tensor": "Reshape_13:0",
+          "input_shape": [
+            16,
+            2,
+            8,
+            144
+          ],
+          "output_shape": [
+            16,
+            8,
+            2,
+            144
+          ],
+          "data_consumers": [
+            "transpose_7"
+          ],
+          "integer_parameter": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        },
+        {
+          "name": "Reshape_14",
+          "op": "Reshape",
+          "input_tensor": "transpose_7:0",
+          "input_shape": [
+            16,
+            8,
+            2,
+            144
+          ],
+          "output_shape": [
+            1,
+            16,
+            16,
+            144
+          ],
+          "data_consumers": [
+            "Reshape_14"
+          ],
+          "integer_parameter": [
+            -1,
+            16,
+            16,
+            144
+          ],
+          "channel_labels_sha256": "DE1306FD6CCD9CE50697E1B7D8CEFE87C92F8E8ABB57A1FEF0E89BE44EB03ED1"
+        }
+      ],
+      "conv": "stack4_block5_post_1_conv/Conv2D",
+      "kernel_const": "stack4_block5_post_1_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        144,
+        288
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack4_block5_post_1_conv/gn_folded_bias",
+      "bias_added": true,
+      "original_endpoint": "stack4_block5_post_1_conv/Conv2D:0",
+      "folded_endpoint": "stack4_block5_post_1_conv/gn_folded_BiasAdd:0",
+      "original_kernel_sha256": "FE234CBB1E69136A077F831BB8D907E73C15773F39CF58EA0B32DFABEBC602B7",
+      "folded_kernel_sha256": "7DD8FE82545C3D776AA81663C19FE77FC406FF301B65D5DD2F6B65B4F65B056F",
+      "original_bias_sha256": "4CF9816ED1062189FF0C8D427FBA5E912CC68FC9AF76CF7F08FD255977DE3B33",
+      "folded_bias_sha256": "C99C9BF88ABA9980C0CDCE2AF2E5531D660E05F75230BECEC95C09D550B6D273",
+      "gamma_sha256": "C2F17485C8A7EF04F45D42683C822B8EFC851F9FEDFD337A9EEE8398BB0D3435",
+      "beta_sha256": "31A4D64EF6722751BB115D16762D4B3BD8CEB97D53A5C7ACBAAE23CB1C43E638",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 36864,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          256,
+          1,
+          144
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 2.6702880859375e-05,
+          "mean_abs_error": 1.8669760682617682e-06,
+          "max_error_over_tolerance": 0.06244594032600718,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 2.0023721187071666e-06,
+          "max_error_over_tolerance": 0.09234539698934487,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 2.09808349609375e-05,
+          "mean_abs_error": 2.0032527680137314e-06,
+          "max_error_over_tolerance": 0.07966425558689132,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 2.015601748123825e-06,
+          "max_error_over_tolerance": 0.07079964256703901,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 4.1961669921875e-05,
+          "mean_abs_error": 2.128481745226433e-06,
+          "max_error_over_tolerance": 0.11652881662815776,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 2.86102294921875e-05,
+          "mean_abs_error": 2.156682998904418e-06,
+          "max_error_over_tolerance": 0.08690990813458256,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 3.0517578125e-05,
+          "mean_abs_error": 2.1430937463170117e-06,
+          "max_error_over_tolerance": 0.07941804454892773,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 4.1961669921875e-05,
+          "mean_abs_error": 2.1515373376246316e-06,
+          "max_error_over_tolerance": 0.08779969892129115,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 2.86102294921875e-05,
+          "mean_abs_error": 2.155891978519422e-06,
+          "max_error_over_tolerance": 0.09811314764231094,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 2.1484026391978737e-06,
+          "max_error_over_tolerance": 0.07688363425390642,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 3.62396240234375e-05,
+          "mean_abs_error": 2.159079666164132e-06,
+          "max_error_over_tolerance": 0.10803057187089557,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 4.1961669921875e-05,
+          "mean_abs_error": 2.155861976937956e-06,
+          "max_error_over_tolerance": 0.11609668667219361,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 2.1809129727835675e-06,
+          "max_error_over_tolerance": 0.13509161706066986,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 2.1700412086526435e-06,
+          "max_error_over_tolerance": 0.07673888712298887,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack5_block2_attn_group_norm",
+      "gamma_const": "stack5_block2_attn_group_norm/gamma",
+      "beta_const": "stack5_block2_attn_group_norm/beta",
+      "channels": 192,
+      "normalized_tensor": "stack5_block2_attn_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack5_block2_attn_group_norm/mul_1",
+        "stack5_block2_attn_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_12_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack5_block2_attn_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "output_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "data_consumers": [
+            "reshape_12_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        }
+      ],
+      "conv": "stack5_block2_attn_mhsa_qkv_conv/Conv2D",
+      "kernel_const": "stack5_block2_attn_mhsa_qkv_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        192,
+        385
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack5_block2_attn_mhsa_qkv_conv/bias",
+      "bias_added": false,
+      "original_endpoint": "stack5_block2_attn_mhsa_qkv_conv/BiasAdd:0",
+      "folded_endpoint": "stack5_block2_attn_mhsa_qkv_conv/BiasAdd:0",
+      "original_kernel_sha256": "535F6D395592B56AD24403D0914CA157E549F40042B84EFED36AB5F88A18E297",
+      "folded_kernel_sha256": "68AD58538A326763B731B85BD0BB372E8A820CDE35744CA0C900A73CF97D2FC5",
+      "original_bias_sha256": "44935B47586BA7F29278E1E47B5DBD16AD8F1DA1241BF7B1D1ED8FB7F1561D1A",
+      "folded_bias_sha256": "C085B8D8087A93DC837D13D26F07C50427F09D6F8E150372FE15460BC704C4B9",
+      "gamma_sha256": "6F381F1F0A9D9C923FF686FC32BB2D64B67A35614AA270E60DC9BC4417D718F7",
+      "beta_sha256": "DF6BD075A4E8DCAB81235AA873837A2C1FAB37A270223A159ED423853CBF98CE",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 12288,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          64,
+          1,
+          192
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.1170832687178504e-07,
+          "max_error_over_tolerance": 0.016498730216475715,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 3.337860107421875e-06,
+          "mean_abs_error": 3.120170070112429e-07,
+          "max_error_over_tolerance": 0.0166059773547608,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 3.814697265625e-06,
+          "mean_abs_error": 3.087123048600632e-07,
+          "max_error_over_tolerance": 0.015454333107994437,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 4.5299530029296875e-06,
+          "mean_abs_error": 3.1091032440882996e-07,
+          "max_error_over_tolerance": 0.018876515915314914,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 3.397353439495064e-07,
+          "max_error_over_tolerance": 0.02522237163830626,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.388231467491911e-07,
+          "max_error_over_tolerance": 0.025313353736614554,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 3.4387354011792546e-07,
+          "max_error_over_tolerance": 0.02553916175062841,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.354241406278951e-07,
+          "max_error_over_tolerance": 0.025099321601193294,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 3.4276917259293524e-07,
+          "max_error_over_tolerance": 0.0284175713455479,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 5.245208740234375e-06,
+          "mean_abs_error": 3.2894683747806334e-07,
+          "max_error_over_tolerance": 0.03159037264875035,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 3.2943194541572167e-07,
+          "max_error_over_tolerance": 0.02249446054394983,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 3.4766126191243527e-07,
+          "max_error_over_tolerance": 0.02567733734639303,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 6.198883056640625e-06,
+          "mean_abs_error": 3.4962829343019077e-07,
+          "max_error_over_tolerance": 0.019697056244641072,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 3.3562341682286327e-07,
+          "max_error_over_tolerance": 0.01891665051854677,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack5_block2_mlp_group_norm",
+      "gamma_const": "stack5_block2_mlp_group_norm/gamma",
+      "beta_const": "stack5_block2_mlp_group_norm/beta",
+      "channels": 192,
+      "normalized_tensor": "stack5_block2_mlp_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack5_block2_mlp_group_norm/mul_1",
+        "stack5_block2_mlp_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_13_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack5_block2_mlp_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "output_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "data_consumers": [
+            "reshape_13_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        }
+      ],
+      "conv": "stack5_block2_mlp_Conv_0/Conv2D",
+      "kernel_const": "stack5_block2_mlp_Conv_0/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        192,
+        384
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack5_block2_mlp_Conv_0/bias",
+      "bias_added": false,
+      "original_endpoint": "stack5_block2_mlp_Conv_0/BiasAdd:0",
+      "folded_endpoint": "stack5_block2_mlp_Conv_0/BiasAdd:0",
+      "original_kernel_sha256": "0CFE98C5239BA464885EFDC81FF44F7A9B7CA89661812AF212A20BFD6B5EB9FD",
+      "folded_kernel_sha256": "399DE40A8C0D50E50DDA7F60E57F4B83D10AB6BCF0D3856319173B3255101CD5",
+      "original_bias_sha256": "82DD34ED7C9B209AAA1F4F02EF73C01A704B721586060D37CE80B893DCC0BD00",
+      "folded_bias_sha256": "665A81EB4D8E00085D4C49FA74BD2B9B04353120756F9F632E7E8405AD4FA5AF",
+      "gamma_sha256": "EFF9CDE71B0ECF619DE50C33C2E6153C93CD144E7C9336137AA2F75C79CCE6D1",
+      "beta_sha256": "2E3A33EF325C0273C131BC1B417B4E9F8AE392130247969B9BCB48A979FC16B0",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 12288,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          64,
+          1,
+          192
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 5.121998280325594e-07,
+          "max_error_over_tolerance": 0.03569713833890506,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 4.0531158447265625e-06,
+          "mean_abs_error": 4.976682248525321e-07,
+          "max_error_over_tolerance": 0.029002019783520638,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 4.76837158203125e-06,
+          "mean_abs_error": 5.000632275672009e-07,
+          "max_error_over_tolerance": 0.032247498630633004,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-06,
+          "mean_abs_error": 4.987720482555839e-07,
+          "max_error_over_tolerance": 0.02938389938617034,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 7.76995875639841e-07,
+          "max_error_over_tolerance": 0.06054999892873079,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 8.482641836356682e-07,
+          "max_error_over_tolerance": 0.05711611394422421,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 1.71661376953125e-05,
+          "mean_abs_error": 8.426726102091683e-07,
+          "max_error_over_tolerance": 0.0441617202194436,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 8.243217356114959e-07,
+          "max_error_over_tolerance": 0.04112077129408301,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 8.548555949043172e-07,
+          "max_error_over_tolerance": 0.04839528674579668,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 1.2874603271484375e-05,
+          "mean_abs_error": 7.909490401895406e-07,
+          "max_error_over_tolerance": 0.03978053872396761,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 8.355355021194555e-07,
+          "max_error_over_tolerance": 0.05067866911929628,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 1.52587890625e-05,
+          "mean_abs_error": 8.023804790961245e-07,
+          "max_error_over_tolerance": 0.0699525090159758,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 7.656687254590603e-07,
+          "max_error_over_tolerance": 0.040002145997479394,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 7.711490373670434e-07,
+          "max_error_over_tolerance": 0.06227910380369626,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack5_block3_attn_group_norm",
+      "gamma_const": "stack5_block3_attn_group_norm/gamma",
+      "beta_const": "stack5_block3_attn_group_norm/beta",
+      "channels": 192,
+      "normalized_tensor": "stack5_block3_attn_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack5_block3_attn_group_norm/mul_1",
+        "stack5_block3_attn_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_14_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack5_block3_attn_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "output_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "data_consumers": [
+            "reshape_14_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        }
+      ],
+      "conv": "stack5_block3_attn_mhsa_qkv_conv/Conv2D",
+      "kernel_const": "stack5_block3_attn_mhsa_qkv_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        192,
+        385
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack5_block3_attn_mhsa_qkv_conv/bias",
+      "bias_added": false,
+      "original_endpoint": "stack5_block3_attn_mhsa_qkv_conv/BiasAdd:0",
+      "folded_endpoint": "stack5_block3_attn_mhsa_qkv_conv/BiasAdd:0",
+      "original_kernel_sha256": "251D7771466D4AE330E2371D0C68C8D7AF005506FBD91B04016DFFD421745DEA",
+      "folded_kernel_sha256": "55115BAFD27F6A74146A326373A5813743F36561558E28009ECB291BEE57FB0D",
+      "original_bias_sha256": "79F8D955B7FF42426D1DBF8033CE2C3451105C9CB38825D2B260B73C97413710",
+      "folded_bias_sha256": "A9DE83DDA6D3765E9FE7E702F67C840CCD2F21813D48510F2122A9741860E327",
+      "gamma_sha256": "A3881A3543FD3D306565EDC7312EAFA32F75777F38564C50787570DB45D755DE",
+      "beta_sha256": "C56EEE44252F3E649AF67C4D9102438743B04BCBFACDD9085D07A2D7DEA0136B",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 12288,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          64,
+          1,
+          192
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 2.384185791015625e-06,
+          "mean_abs_error": 2.379450560003132e-07,
+          "max_error_over_tolerance": 0.015332540768746761,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 2.4057725178343907e-07,
+          "max_error_over_tolerance": 0.021341046461770093,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 2.86102294921875e-06,
+          "mean_abs_error": 2.403307669076391e-07,
+          "max_error_over_tolerance": 0.018431081807738933,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 2.7418136596679688e-06,
+          "mean_abs_error": 2.390340778692444e-07,
+          "max_error_over_tolerance": 0.018741702291519106,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 5.9604644775390625e-06,
+          "mean_abs_error": 4.069773063015241e-07,
+          "max_error_over_tolerance": 0.03370970215792658,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 4.7045884587402856e-07,
+          "max_error_over_tolerance": 0.04257324016416241,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 4.522860739622023e-07,
+          "max_error_over_tolerance": 0.039785729972659244,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 6.198883056640625e-06,
+          "mean_abs_error": 4.351590555947419e-07,
+          "max_error_over_tolerance": 0.02810337011177006,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 4.6001499301040327e-07,
+          "max_error_over_tolerance": 0.027822031453448606,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 6.67572021484375e-06,
+          "mean_abs_error": 4.144151114507929e-07,
+          "max_error_over_tolerance": 0.03551808427116096,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 4.6050038442692974e-07,
+          "max_error_over_tolerance": 0.050005656889935676,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 4.5989423101259905e-07,
+          "max_error_over_tolerance": 0.05446779696678729,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 7.152557373046875e-06,
+          "mean_abs_error": 4.124300034305492e-07,
+          "max_error_over_tolerance": 0.02683045406787246,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 9.059906005859375e-06,
+          "mean_abs_error": 4.0886132575740867e-07,
+          "max_error_over_tolerance": 0.03233242910306608,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack5_block3_mlp_group_norm",
+      "gamma_const": "stack5_block3_mlp_group_norm/gamma",
+      "beta_const": "stack5_block3_mlp_group_norm/beta",
+      "channels": 192,
+      "normalized_tensor": "stack5_block3_mlp_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack5_block3_mlp_group_norm/mul_1",
+        "stack5_block3_mlp_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_15_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack5_block3_mlp_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "output_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "data_consumers": [
+            "reshape_15_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        }
+      ],
+      "conv": "stack5_block3_mlp_Conv_0/Conv2D",
+      "kernel_const": "stack5_block3_mlp_Conv_0/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        192,
+        384
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack5_block3_mlp_Conv_0/bias",
+      "bias_added": false,
+      "original_endpoint": "stack5_block3_mlp_Conv_0/BiasAdd:0",
+      "folded_endpoint": "stack5_block3_mlp_Conv_0/BiasAdd:0",
+      "original_kernel_sha256": "FCAF5C5D7D96131BD2AA3BEBA2A3BCD388CE2C8ADC56F35E29AE98C345BA09F7",
+      "folded_kernel_sha256": "DB78B7B45CC1ABFB7D0D1D8FE3467C1F104ABCB043A44871401CF0B6A37BC20C",
+      "original_bias_sha256": "AFB5FA3CD7207E55E13A675C6E8E97201B05064733CECD98E1F329C7D22F9C3F",
+      "folded_bias_sha256": "D37FD10A8628D679AEEA2CA0BF937EEB12EA301B0695E2F7718A6EB897225877",
+      "gamma_sha256": "5278E9B10EAAECC9017CB1851A9EA3D292DD297A9D81B184DCCA9FBC800EEF72",
+      "beta_sha256": "AA9F9ECAC1B11505586F1EE8CE6F844699AAEBE54FF41270D1963B9DC890C7A6",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 12288,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          64,
+          1,
+          192
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 1.71661376953125e-05,
+          "mean_abs_error": 1.0618447655967127e-06,
+          "max_error_over_tolerance": 0.03286037859850485,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 1.33514404296875e-05,
+          "mean_abs_error": 9.817401102433603e-07,
+          "max_error_over_tolerance": 0.03402993694576779,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 9.851937647908926e-07,
+          "max_error_over_tolerance": 0.02319697993878781,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 7.62939453125e-06,
+          "mean_abs_error": 9.694049367681146e-07,
+          "max_error_over_tolerance": 0.022572686468932082,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 2.6702880859375e-05,
+          "mean_abs_error": 1.8744928335460524e-06,
+          "max_error_over_tolerance": 0.08028342342280347,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 7.62939453125e-05,
+          "mean_abs_error": 2.662201344113176e-06,
+          "max_error_over_tolerance": 0.12597174231516794,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 4.1961669921875e-05,
+          "mean_abs_error": 2.2366948542185128e-06,
+          "max_error_over_tolerance": 0.10755374791718031,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 6.103515625e-05,
+          "mean_abs_error": 2.339642378501594e-06,
+          "max_error_over_tolerance": 0.052338420225175986,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 6.103515625e-05,
+          "mean_abs_error": 2.565410492631296e-06,
+          "max_error_over_tolerance": 0.08259783024677478,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 8.392333984375e-05,
+          "mean_abs_error": 2.1516389097087085e-06,
+          "max_error_over_tolerance": 0.08172672218635327,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 4.57763671875e-05,
+          "mean_abs_error": 2.4843344969364503e-06,
+          "max_error_over_tolerance": 0.08532765392468811,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 6.866455078125e-05,
+          "mean_abs_error": 2.4911326666673026e-06,
+          "max_error_over_tolerance": 0.1537665737301495,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 3.0517578125e-05,
+          "mean_abs_error": 1.8439798926313717e-06,
+          "max_error_over_tolerance": 0.07852763456749519,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 6.103515625e-05,
+          "mean_abs_error": 2.1673537654957422e-06,
+          "max_error_over_tolerance": 0.07426146968399269,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack5_block4_attn_group_norm",
+      "gamma_const": "stack5_block4_attn_group_norm/gamma",
+      "beta_const": "stack5_block4_attn_group_norm/beta",
+      "channels": 192,
+      "normalized_tensor": "stack5_block4_attn_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack5_block4_attn_group_norm/mul_1",
+        "stack5_block4_attn_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_16_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack5_block4_attn_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "output_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "data_consumers": [
+            "reshape_16_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        }
+      ],
+      "conv": "stack5_block4_attn_mhsa_qkv_conv/Conv2D",
+      "kernel_const": "stack5_block4_attn_mhsa_qkv_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        192,
+        385
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack5_block4_attn_mhsa_qkv_conv/bias",
+      "bias_added": false,
+      "original_endpoint": "stack5_block4_attn_mhsa_qkv_conv/BiasAdd:0",
+      "folded_endpoint": "stack5_block4_attn_mhsa_qkv_conv/BiasAdd:0",
+      "original_kernel_sha256": "FF5CD33D83E8B24BFA4866EFD73936E33D4039E419433705D738864D1F0D50AC",
+      "folded_kernel_sha256": "E72A99B3D14FA86005F45B03407517116AE43577C2C21A8BFE4CEA2A848A21A3",
+      "original_bias_sha256": "E6945482F173E41771CA405F5B9688A7D1E3EA224961C8D0E3F18D6B829602E5",
+      "folded_bias_sha256": "98D07416E97CA91C64E8D3D936C9C7BCFD75C9178985FB9524EAD87E57DF3FAC",
+      "gamma_sha256": "92EEF6ED9E121E211290852DF75A296B3D4827A659E5E911AF0130DF4D8FA830",
+      "beta_sha256": "1D7244E7E267DE8A76B29B8FC01B17EE8F4A894482C44D20FF429CE73D3BCA81",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 12288,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          64,
+          1,
+          192
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 6.198883056640625e-06,
+          "mean_abs_error": 2.8446030972356143e-07,
+          "max_error_over_tolerance": 0.05396430800668438,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 5.9604644775390625e-06,
+          "mean_abs_error": 2.8437367858147467e-07,
+          "max_error_over_tolerance": 0.022058491456920404,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 6.318092346191406e-06,
+          "mean_abs_error": 2.797578110710367e-07,
+          "max_error_over_tolerance": 0.023632046714046392,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 6.9141387939453125e-06,
+          "mean_abs_error": 2.8245721024448997e-07,
+          "max_error_over_tolerance": 0.02498723125900504,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 8.106231689453125e-06,
+          "mean_abs_error": 4.1467710262067713e-07,
+          "max_error_over_tolerance": 0.03922199255566581,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 1.33514404296875e-05,
+          "mean_abs_error": 5.286461341061763e-07,
+          "max_error_over_tolerance": 0.033929355785260525,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 4.783052763623464e-07,
+          "max_error_over_tolerance": 0.05433773498449508,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 2.288818359375e-05,
+          "mean_abs_error": 4.4349220040097057e-07,
+          "max_error_over_tolerance": 0.025935109275961987,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 1.9073486328125e-05,
+          "mean_abs_error": 4.7380298938505447e-07,
+          "max_error_over_tolerance": 0.02969146929520961,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 2.288818359375e-05,
+          "mean_abs_error": 4.367471987067105e-07,
+          "max_error_over_tolerance": 0.046888788234290144,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 1.049041748046875e-05,
+          "mean_abs_error": 4.90112038927951e-07,
+          "max_error_over_tolerance": 0.05606172946038387,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 1.1444091796875e-05,
+          "mean_abs_error": 4.891138720362411e-07,
+          "max_error_over_tolerance": 0.034166506684307665,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 4.510232700978394e-07,
+          "max_error_over_tolerance": 0.06625864312670396,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 9.5367431640625e-06,
+          "mean_abs_error": 4.353090159159589e-07,
+          "max_error_over_tolerance": 0.04178900655849892,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack5_block4_mlp_group_norm",
+      "gamma_const": "stack5_block4_mlp_group_norm/gamma",
+      "beta_const": "stack5_block4_mlp_group_norm/beta",
+      "channels": 192,
+      "normalized_tensor": "stack5_block4_mlp_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack5_block4_mlp_group_norm/mul_1",
+        "stack5_block4_mlp_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "reshape_17_1/Reshape",
+          "op": "Reshape",
+          "input_tensor": "stack5_block4_mlp_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "output_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "data_consumers": [
+            "reshape_17_1/Reshape"
+          ],
+          "integer_parameter": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        }
+      ],
+      "conv": "stack5_block4_mlp_Conv_0/Conv2D",
+      "kernel_const": "stack5_block4_mlp_Conv_0/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        192,
+        384
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack5_block4_mlp_Conv_0/bias",
+      "bias_added": false,
+      "original_endpoint": "stack5_block4_mlp_Conv_0/BiasAdd:0",
+      "folded_endpoint": "stack5_block4_mlp_Conv_0/BiasAdd:0",
+      "original_kernel_sha256": "1B576FBF0AFA1EF44CCE00CDA7E6831C61ECB7F5167B012303F7203C457EC83E",
+      "folded_kernel_sha256": "3386768149E391A1BCEDB5BD15EFA0C7EB7AB19C55C6DFA385536E12558EFD51",
+      "original_bias_sha256": "A556B5760D900B7BB4AE3D75A22C87E6FB5C77206F72DADE6131F64ACE45D027",
+      "folded_bias_sha256": "7D4D3F830DE64417AE5C8C423F513D7283FBC0464478AD40BA06F97B9D6B17DF",
+      "gamma_sha256": "BF54A9CD8E62AF4AE5E8750FA0D5382701AFB6CED6836AC1D229BF3EBCDB397D",
+      "beta_sha256": "0D62479FC3117127283C453162CF330AD1738845C121F8409E737A4FF775F281",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 12288,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          64,
+          1,
+          192
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 4.57763671875e-05,
+          "mean_abs_error": 1.2986274668946862e-06,
+          "max_error_over_tolerance": 0.07829514922402983,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 3.814697265625e-05,
+          "mean_abs_error": 1.1643084386984508e-06,
+          "max_error_over_tolerance": 0.1885780018617792,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 4.1961669921875e-05,
+          "mean_abs_error": 1.1784468370024115e-06,
+          "max_error_over_tolerance": 0.10341696548424303,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 4.57763671875e-05,
+          "mean_abs_error": 1.166065582462276e-06,
+          "max_error_over_tolerance": 0.30623806947521004,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 6.103515625e-05,
+          "mean_abs_error": 1.9966641957580578e-06,
+          "max_error_over_tolerance": 0.204484042941649,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 6.103515625e-05,
+          "mean_abs_error": 3.020637753555396e-06,
+          "max_error_over_tolerance": 0.06383494835752677,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 5.7220458984375e-05,
+          "mean_abs_error": 2.116490577463992e-06,
+          "max_error_over_tolerance": 0.10672904524582721,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 7.62939453125e-05,
+          "mean_abs_error": 2.1624603808353036e-06,
+          "max_error_over_tolerance": 0.217126275464392,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 8.392333984375e-05,
+          "mean_abs_error": 2.215911081293598e-06,
+          "max_error_over_tolerance": 0.1982399343673325,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 8.392333984375e-05,
+          "mean_abs_error": 2.4373948690481484e-06,
+          "max_error_over_tolerance": 0.18141627499358065,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 5.340576171875e-05,
+          "mean_abs_error": 2.2024299444941184e-06,
+          "max_error_over_tolerance": 0.1293679765554787,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 6.103515625e-05,
+          "mean_abs_error": 2.441630082709404e-06,
+          "max_error_over_tolerance": 0.08252913278387271,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 4.00543212890625e-05,
+          "mean_abs_error": 2.061506772103409e-06,
+          "max_error_over_tolerance": 0.20301256888663777,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 5.14984130859375e-05,
+          "mean_abs_error": 2.0479892555158585e-06,
+          "max_error_over_tolerance": 0.195267774249151,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    },
+    {
+      "group_norm": "stack5_block4_post_group_norm",
+      "gamma_const": "stack5_block4_post_group_norm/gamma",
+      "beta_const": "stack5_block4_post_group_norm/beta",
+      "channels": 192,
+      "normalized_tensor": "stack5_block4_post_group_norm/Reshape_1:0",
+      "affine_nodes_removed": [
+        "stack5_block4_post_group_norm/mul_1",
+        "stack5_block4_post_group_norm/add_1"
+      ],
+      "path": [
+        {
+          "name": "Reshape_18",
+          "op": "Reshape",
+          "input_tensor": "stack5_block4_post_group_norm/add_1:0",
+          "input_shape": [
+            1,
+            4,
+            16,
+            192
+          ],
+          "output_shape": [
+            1,
+            4,
+            4,
+            768
+          ],
+          "data_consumers": [
+            "Reshape_18"
+          ],
+          "integer_parameter": [
+            -1,
+            4,
+            4,
+            768
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        },
+        {
+          "name": "transpose_10",
+          "op": "Transpose",
+          "input_tensor": "Reshape_18:0",
+          "input_shape": [
+            1,
+            4,
+            4,
+            768
+          ],
+          "output_shape": [
+            1,
+            4,
+            4,
+            768
+          ],
+          "data_consumers": [
+            "transpose_10"
+          ],
+          "integer_parameter": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        },
+        {
+          "name": "Reshape_19",
+          "op": "Reshape",
+          "input_tensor": "transpose_10:0",
+          "input_shape": [
+            1,
+            4,
+            4,
+            768
+          ],
+          "output_shape": [
+            8,
+            2,
+            4,
+            192
+          ],
+          "data_consumers": [
+            "Reshape_19"
+          ],
+          "integer_parameter": [
+            -1,
+            2,
+            4,
+            192
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        },
+        {
+          "name": "transpose_11",
+          "op": "Transpose",
+          "input_tensor": "Reshape_19:0",
+          "input_shape": [
+            8,
+            2,
+            4,
+            192
+          ],
+          "output_shape": [
+            8,
+            4,
+            2,
+            192
+          ],
+          "data_consumers": [
+            "transpose_11"
+          ],
+          "integer_parameter": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        },
+        {
+          "name": "Reshape_20",
+          "op": "Reshape",
+          "input_tensor": "transpose_11:0",
+          "input_shape": [
+            8,
+            4,
+            2,
+            192
+          ],
+          "output_shape": [
+            1,
+            8,
+            8,
+            192
+          ],
+          "data_consumers": [
+            "Reshape_20"
+          ],
+          "integer_parameter": [
+            -1,
+            8,
+            8,
+            192
+          ],
+          "channel_labels_sha256": "6B617DC4A5C5860EF2CC486BD9318A67508A057EF7A2690265C33507C4418A6D"
+        }
+      ],
+      "conv": "stack5_block4_post_1_conv/Conv2D",
+      "kernel_const": "stack5_block4_post_1_conv/kernel",
+      "kernel_shape": [
+        1,
+        1,
+        192,
+        384
+      ],
+      "kernel_layout": "HWIO",
+      "bias_const": "stack5_block4_post_1_conv/gn_folded_bias",
+      "bias_added": true,
+      "original_endpoint": "stack5_block4_post_1_conv/Conv2D:0",
+      "folded_endpoint": "stack5_block4_post_1_conv/gn_folded_BiasAdd:0",
+      "original_kernel_sha256": "F2C190F28BDCB9C3184B93EC73BF600CAF2E152BB6AC7033AB2F386B4780B639",
+      "folded_kernel_sha256": "755DB7EFB061E7DCD0E4A38E76C3239A1241F0F8417AD51A90644488D205C460",
+      "original_bias_sha256": "80422BC3D307B4A25BDAFCC84AC7FB01CB55A09810E8B0F37BB12E0EDB5C48CA",
+      "folded_bias_sha256": "BDBFE218D73BCD072AFD4C68AFDCA840F22C2F8E8B174C53D4785903114B40E4",
+      "gamma_sha256": "CF3C5513BCA89E20EAB8B6263B6782E958100D46B31E0179A4959D7E4853169E",
+      "beta_sha256": "98475512044FCBC00A49DDC19149A747FF7DEBF7658BEE690DB233E7018A0287",
+      "bias_formula_uses_original_kernel": true,
+      "constant_accumulation_dtype": "float64",
+      "constant_storage_dtype": "float32",
+      "checked_channel_elements": 12288,
+      "final_channel_label_mismatches": 0,
+      "channel_mapping": "original channel i -> Conv2D input channel i for every element",
+      "no_nonlinearity_or_unhandled_branch": true,
+      "statistics": {
+        "mean_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "variance_axes_in_grouped_tensor": [
+          1,
+          3
+        ],
+        "grouped_shape": [
+          1,
+          64,
+          1,
+          192
+        ],
+        "effective_input_axes": [
+          1,
+          2,
+          3
+        ],
+        "groups": 1,
+        "epsilon": 9.999999747378752e-06,
+        "dynamic_mean_variance_preserved": true
+      },
+      "local_equivalence_checks": [
+        {
+          "max_abs_error": 3.0517578125e-05,
+          "mean_abs_error": 2.748103781868849e-06,
+          "max_error_over_tolerance": 0.05352981829679719,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "zero"
+        },
+        {
+          "max_abs_error": 3.4332275390625e-05,
+          "mean_abs_error": 2.5791902515948095e-06,
+          "max_error_over_tolerance": 0.07167472691659994,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_0"
+        },
+        {
+          "max_abs_error": 2.6702880859375e-05,
+          "mean_abs_error": 2.5942760855102165e-06,
+          "max_error_over_tolerance": 0.06948987761353502,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_1"
+        },
+        {
+          "max_abs_error": 2.288818359375e-05,
+          "mean_abs_error": 2.579276166943719e-06,
+          "max_error_over_tolerance": 0.0730886603176353,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "random_normal_2"
+        },
+        {
+          "max_abs_error": 0.00018310546875,
+          "mean_abs_error": 4.074284153906167e-06,
+          "max_error_over_tolerance": 0.09151383416390937,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c0"
+        },
+        {
+          "max_abs_error": 6.866455078125e-05,
+          "mean_abs_error": 3.4725470546466872e-06,
+          "max_error_over_tolerance": 0.09238872808122532,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c1"
+        },
+        {
+          "max_abs_error": 9.918212890625e-05,
+          "mean_abs_error": 3.6759802680326934e-06,
+          "max_error_over_tolerance": 0.11341121964181514,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c2"
+        },
+        {
+          "max_abs_error": 0.0001678466796875,
+          "mean_abs_error": 3.1680691658190576e-06,
+          "max_error_over_tolerance": 0.11336153231923303,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c3"
+        },
+        {
+          "max_abs_error": 0.00018310546875,
+          "mean_abs_error": 3.5501984167278047e-06,
+          "max_error_over_tolerance": 0.1278066214944488,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c4"
+        },
+        {
+          "max_abs_error": 9.1552734375e-05,
+          "mean_abs_error": 3.987323713279996e-06,
+          "max_error_over_tolerance": 0.13992475670178678,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c5"
+        },
+        {
+          "max_abs_error": 7.62939453125e-05,
+          "mean_abs_error": 3.6425164277413082e-06,
+          "max_error_over_tolerance": 0.2882724894758089,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c6"
+        },
+        {
+          "max_abs_error": 5.340576171875e-05,
+          "mean_abs_error": 3.3289889434702977e-06,
+          "max_error_over_tolerance": 0.07909200047202106,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c7"
+        },
+        {
+          "max_abs_error": 9.1552734375e-05,
+          "mean_abs_error": 3.765906929705428e-06,
+          "max_error_over_tolerance": 0.10788445866057071,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c8"
+        },
+        {
+          "max_abs_error": 9.1552734375e-05,
+          "mean_abs_error": 3.307793019047267e-06,
+          "max_error_over_tolerance": 0.14182942397089005,
+          "allclose": true,
+          "bitwise_equal": false,
+          "input": "real_c9"
+        }
+      ]
+    }
+  ],
+  "preservation": {
+    "removed_nodes": [
+      "stack3_block2_attn_group_norm/add_1",
+      "stack3_block2_attn_group_norm/add_1/ReadVariableOp",
+      "stack3_block2_attn_group_norm/beta",
+      "stack3_block2_attn_group_norm/gamma",
+      "stack3_block2_attn_group_norm/mul_1",
+      "stack3_block2_attn_group_norm/mul_1/ReadVariableOp",
+      "stack3_block2_mlp_group_norm/add_1",
+      "stack3_block2_mlp_group_norm/add_1/ReadVariableOp",
+      "stack3_block2_mlp_group_norm/beta",
+      "stack3_block2_mlp_group_norm/gamma",
+      "stack3_block2_mlp_group_norm/mul_1",
+      "stack3_block2_mlp_group_norm/mul_1/ReadVariableOp",
+      "stack3_block3_attn_group_norm/add_1",
+      "stack3_block3_attn_group_norm/add_1/ReadVariableOp",
+      "stack3_block3_attn_group_norm/beta",
+      "stack3_block3_attn_group_norm/gamma",
+      "stack3_block3_attn_group_norm/mul_1",
+      "stack3_block3_attn_group_norm/mul_1/ReadVariableOp",
+      "stack3_block3_mlp_group_norm/add_1",
+      "stack3_block3_mlp_group_norm/add_1/ReadVariableOp",
+      "stack3_block3_mlp_group_norm/beta",
+      "stack3_block3_mlp_group_norm/gamma",
+      "stack3_block3_mlp_group_norm/mul_1",
+      "stack3_block3_mlp_group_norm/mul_1/ReadVariableOp",
+      "stack3_block3_post_group_norm/add_1",
+      "stack3_block3_post_group_norm/add_1/ReadVariableOp",
+      "stack3_block3_post_group_norm/beta",
+      "stack3_block3_post_group_norm/gamma",
+      "stack3_block3_post_group_norm/mul_1",
+      "stack3_block3_post_group_norm/mul_1/ReadVariableOp",
+      "stack4_block2_attn_group_norm/add_1",
+      "stack4_block2_attn_group_norm/add_1/ReadVariableOp",
+      "stack4_block2_attn_group_norm/beta",
+      "stack4_block2_attn_group_norm/gamma",
+      "stack4_block2_attn_group_norm/mul_1",
+      "stack4_block2_attn_group_norm/mul_1/ReadVariableOp",
+      "stack4_block2_mlp_group_norm/add_1",
+      "stack4_block2_mlp_group_norm/add_1/ReadVariableOp",
+      "stack4_block2_mlp_group_norm/beta",
+      "stack4_block2_mlp_group_norm/gamma",
+      "stack4_block2_mlp_group_norm/mul_1",
+      "stack4_block2_mlp_group_norm/mul_1/ReadVariableOp",
+      "stack4_block3_attn_group_norm/add_1",
+      "stack4_block3_attn_group_norm/add_1/ReadVariableOp",
+      "stack4_block3_attn_group_norm/beta",
+      "stack4_block3_attn_group_norm/gamma",
+      "stack4_block3_attn_group_norm/mul_1",
+      "stack4_block3_attn_group_norm/mul_1/ReadVariableOp",
+      "stack4_block3_mlp_group_norm/add_1",
+      "stack4_block3_mlp_group_norm/add_1/ReadVariableOp",
+      "stack4_block3_mlp_group_norm/beta",
+      "stack4_block3_mlp_group_norm/gamma",
+      "stack4_block3_mlp_group_norm/mul_1",
+      "stack4_block3_mlp_group_norm/mul_1/ReadVariableOp",
+      "stack4_block4_attn_group_norm/add_1",
+      "stack4_block4_attn_group_norm/add_1/ReadVariableOp",
+      "stack4_block4_attn_group_norm/beta",
+      "stack4_block4_attn_group_norm/gamma",
+      "stack4_block4_attn_group_norm/mul_1",
+      "stack4_block4_attn_group_norm/mul_1/ReadVariableOp",
+      "stack4_block4_mlp_group_norm/add_1",
+      "stack4_block4_mlp_group_norm/add_1/ReadVariableOp",
+      "stack4_block4_mlp_group_norm/beta",
+      "stack4_block4_mlp_group_norm/gamma",
+      "stack4_block4_mlp_group_norm/mul_1",
+      "stack4_block4_mlp_group_norm/mul_1/ReadVariableOp",
+      "stack4_block5_attn_group_norm/add_1",
+      "stack4_block5_attn_group_norm/add_1/ReadVariableOp",
+      "stack4_block5_attn_group_norm/beta",
+      "stack4_block5_attn_group_norm/gamma",
+      "stack4_block5_attn_group_norm/mul_1",
+      "stack4_block5_attn_group_norm/mul_1/ReadVariableOp",
+      "stack4_block5_mlp_group_norm/add_1",
+      "stack4_block5_mlp_group_norm/add_1/ReadVariableOp",
+      "stack4_block5_mlp_group_norm/beta",
+      "stack4_block5_mlp_group_norm/gamma",
+      "stack4_block5_mlp_group_norm/mul_1",
+      "stack4_block5_mlp_group_norm/mul_1/ReadVariableOp",
+      "stack4_block5_post_group_norm/add_1",
+      "stack4_block5_post_group_norm/add_1/ReadVariableOp",
+      "stack4_block5_post_group_norm/beta",
+      "stack4_block5_post_group_norm/gamma",
+      "stack4_block5_post_group_norm/mul_1",
+      "stack4_block5_post_group_norm/mul_1/ReadVariableOp",
+      "stack5_block2_attn_group_norm/add_1",
+      "stack5_block2_attn_group_norm/add_1/ReadVariableOp",
+      "stack5_block2_attn_group_norm/beta",
+      "stack5_block2_attn_group_norm/gamma",
+      "stack5_block2_attn_group_norm/mul_1",
+      "stack5_block2_attn_group_norm/mul_1/ReadVariableOp",
+      "stack5_block2_mlp_group_norm/add_1",
+      "stack5_block2_mlp_group_norm/add_1/ReadVariableOp",
+      "stack5_block2_mlp_group_norm/beta",
+      "stack5_block2_mlp_group_norm/gamma",
+      "stack5_block2_mlp_group_norm/mul_1",
+      "stack5_block2_mlp_group_norm/mul_1/ReadVariableOp",
+      "stack5_block3_attn_group_norm/add_1",
+      "stack5_block3_attn_group_norm/add_1/ReadVariableOp",
+      "stack5_block3_attn_group_norm/beta",
+      "stack5_block3_attn_group_norm/gamma",
+      "stack5_block3_attn_group_norm/mul_1",
+      "stack5_block3_attn_group_norm/mul_1/ReadVariableOp",
+      "stack5_block3_mlp_group_norm/add_1",
+      "stack5_block3_mlp_group_norm/add_1/ReadVariableOp",
+      "stack5_block3_mlp_group_norm/beta",
+      "stack5_block3_mlp_group_norm/gamma",
+      "stack5_block3_mlp_group_norm/mul_1",
+      "stack5_block3_mlp_group_norm/mul_1/ReadVariableOp",
+      "stack5_block4_attn_group_norm/add_1",
+      "stack5_block4_attn_group_norm/add_1/ReadVariableOp",
+      "stack5_block4_attn_group_norm/beta",
+      "stack5_block4_attn_group_norm/gamma",
+      "stack5_block4_attn_group_norm/mul_1",
+      "stack5_block4_attn_group_norm/mul_1/ReadVariableOp",
+      "stack5_block4_mlp_group_norm/add_1",
+      "stack5_block4_mlp_group_norm/add_1/ReadVariableOp",
+      "stack5_block4_mlp_group_norm/beta",
+      "stack5_block4_mlp_group_norm/gamma",
+      "stack5_block4_mlp_group_norm/mul_1",
+      "stack5_block4_mlp_group_norm/mul_1/ReadVariableOp",
+      "stack5_block4_post_group_norm/add_1",
+      "stack5_block4_post_group_norm/add_1/ReadVariableOp",
+      "stack5_block4_post_group_norm/beta",
+      "stack5_block4_post_group_norm/gamma",
+      "stack5_block4_post_group_norm/mul_1",
+      "stack5_block4_post_group_norm/mul_1/ReadVariableOp"
+    ],
+    "added_nodes": [
+      "stack3_block3_post_1_conv/gn_folded_BiasAdd",
+      "stack3_block3_post_1_conv/gn_folded_bias",
+      "stack4_block5_post_1_conv/gn_folded_BiasAdd",
+      "stack4_block5_post_1_conv/gn_folded_bias",
+      "stack5_block4_post_1_conv/gn_folded_BiasAdd",
+      "stack5_block4_post_1_conv/gn_folded_bias"
+    ],
+    "changed_existing_nodes": [
+      "Reshape_12",
+      "Reshape_18",
+      "Reshape_4",
+      "reshape_10/Reshape",
+      "reshape_11/Reshape",
+      "reshape_12_1/Reshape",
+      "reshape_13_1/Reshape",
+      "reshape_14_1/Reshape",
+      "reshape_15_1/Reshape",
+      "reshape_16_1/Reshape",
+      "reshape_17_1/Reshape",
+      "reshape_1_1/Reshape",
+      "reshape_2_1/Reshape",
+      "reshape_3/Reshape",
+      "reshape_3_1/Reshape",
+      "reshape_4_1/Reshape",
+      "reshape_5_1/Reshape",
+      "reshape_6_1/Reshape",
+      "reshape_7_1/Reshape",
+      "reshape_8_1/Reshape",
+      "reshape_9_1/Reshape",
+      "stack3_block2_attn_mhsa_qkv_conv/bias",
+      "stack3_block2_attn_mhsa_qkv_conv/kernel",
+      "stack3_block2_mlp_Conv_0/bias",
+      "stack3_block2_mlp_Conv_0/kernel",
+      "stack3_block3_attn_mhsa_qkv_conv/bias",
+      "stack3_block3_attn_mhsa_qkv_conv/kernel",
+      "stack3_block3_mlp_Conv_0/bias",
+      "stack3_block3_mlp_Conv_0/kernel",
+      "stack3_block3_post_1_bn/FusedBatchNormV3",
+      "stack3_block3_post_1_conv/kernel",
+      "stack4_block2_attn_mhsa_qkv_conv/bias",
+      "stack4_block2_attn_mhsa_qkv_conv/kernel",
+      "stack4_block2_mlp_Conv_0/bias",
+      "stack4_block2_mlp_Conv_0/kernel",
+      "stack4_block3_attn_mhsa_qkv_conv/bias",
+      "stack4_block3_attn_mhsa_qkv_conv/kernel",
+      "stack4_block3_mlp_Conv_0/bias",
+      "stack4_block3_mlp_Conv_0/kernel",
+      "stack4_block4_attn_mhsa_qkv_conv/bias",
+      "stack4_block4_attn_mhsa_qkv_conv/kernel",
+      "stack4_block4_mlp_Conv_0/bias",
+      "stack4_block4_mlp_Conv_0/kernel",
+      "stack4_block5_attn_mhsa_qkv_conv/bias",
+      "stack4_block5_attn_mhsa_qkv_conv/kernel",
+      "stack4_block5_mlp_Conv_0/bias",
+      "stack4_block5_mlp_Conv_0/kernel",
+      "stack4_block5_post_1_bn/FusedBatchNormV3",
+      "stack4_block5_post_1_conv/kernel",
+      "stack5_block2_attn_mhsa_qkv_conv/bias",
+      "stack5_block2_attn_mhsa_qkv_conv/kernel",
+      "stack5_block2_mlp_Conv_0/bias",
+      "stack5_block2_mlp_Conv_0/kernel",
+      "stack5_block3_attn_mhsa_qkv_conv/bias",
+      "stack5_block3_attn_mhsa_qkv_conv/kernel",
+      "stack5_block3_mlp_Conv_0/bias",
+      "stack5_block3_mlp_Conv_0/kernel",
+      "stack5_block4_attn_mhsa_qkv_conv/bias",
+      "stack5_block4_attn_mhsa_qkv_conv/kernel",
+      "stack5_block4_mlp_Conv_0/bias",
+      "stack5_block4_mlp_Conv_0/kernel",
+      "stack5_block4_post_1_bn/FusedBatchNormV3",
+      "stack5_block4_post_1_conv/kernel"
+    ],
+    "unchanged_existing_node_count": 1066,
+    "all_other_node_definitions_exactly_equal": true,
+    "integer_const_count_preserved_exactly": 188,
+    "all_21_dynamic_group_norm_cores_exactly_equal": true,
+    "all_9_softmax_node_definitions_exactly_equal": true,
+    "all_25_batch_norm_attributes_and_parameters_exactly_equal": true,
+    "batch_norm_data_edges_redirected_through_new_bias": 3
+  },
+  "comparisons": [
+    {
+      "max_abs_error": 7.152557373046875e-07,
+      "mean_abs_error": 3.8743019104003906e-07,
+      "max_error_over_tolerance": 0.004146995267296217,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "zero",
+      "image_path": null,
+      "image_sha256": null,
+      "normalized_input_sha256": "599C1BB5FFD4B87229A81958F33F1060821CD01CD7AA7CCAFA0D862F4522F3F6",
+      "original_class_index": 5,
+      "folded_class_index": 5,
+      "class_equal": true,
+      "original_logits": [
+        [
+          1.0601224899291992,
+          -0.3654322922229767,
+          -0.6847098469734192,
+          -1.088420033454895,
+          0.18172907829284668,
+          2.459897756576538,
+          -0.59269118309021,
+          1.1315349340438843,
+          -1.2897491455078125,
+          -0.3191012442111969
+        ]
+      ],
+      "folded_logits": [
+        [
+          1.0601218938827515,
+          -0.3654317259788513,
+          -0.6847093105316162,
+          -1.0884196758270264,
+          0.18172898888587952,
+          2.459897041320801,
+          -0.5926907062530518,
+          1.1315346956253052,
+          -1.289749026298523,
+          -0.3191014230251312
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 7.152557373046875e-07,
+      "mean_abs_error": 2.816319465637207e-07,
+      "max_error_over_tolerance": 0.003349718107264115,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "random_normal_0",
+      "image_path": null,
+      "image_sha256": null,
+      "normalized_input_sha256": "B019E0B244932CEAF32FBF5FD1D92846BAE5DC23C70A2F338693EE8371A0C6CD",
+      "original_class_index": 5,
+      "folded_class_index": 5,
+      "class_equal": true,
+      "original_logits": [
+        [
+          0.6437137126922607,
+          -0.4668754041194916,
+          -0.4937357008457184,
+          -1.135271430015564,
+          -0.172038733959198,
+          1.8441100120544434,
+          -0.3154401481151581,
+          1.4440444707870483,
+          -1.0505671501159668,
+          0.5488044619560242
+        ]
+      ],
+      "folded_logits": [
+        [
+          0.6437132358551025,
+          -0.4668756127357483,
+          -0.49373602867126465,
+          -1.1352707147598267,
+          -0.17203892767429352,
+          1.844110369682312,
+          -0.3154401481151581,
+          1.4440443515777588,
+          -1.0505669116973877,
+          0.5488046407699585
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 5.662441253662109e-07,
+      "mean_abs_error": 2.473592758178711e-07,
+      "max_error_over_tolerance": 0.003798124258353769,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "random_normal_1",
+      "image_path": null,
+      "image_sha256": null,
+      "normalized_input_sha256": "201DBDD296CE5E6752E52F3E362D34733E77FE7F0652C60D3CA6656650E1B2D5",
+      "original_class_index": 5,
+      "folded_class_index": 5,
+      "class_equal": true,
+      "original_logits": [
+        [
+          0.6511560082435608,
+          -0.490852028131485,
+          -0.5273613929748535,
+          -1.1918058395385742,
+          -0.21011629700660706,
+          1.784817099571228,
+          -0.31300124526023865,
+          1.5748133659362793,
+          -1.0489383935928345,
+          0.6543441414833069
+        ]
+      ],
+      "folded_logits": [
+        [
+          0.6511557698249817,
+          -0.4908514618873596,
+          -0.5273612141609192,
+          -1.1918057203292847,
+          -0.2101162075996399,
+          1.7848173379898071,
+          -0.31300121545791626,
+          1.5748130083084106,
+          -1.0489388704299927,
+          0.6543443202972412
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 9.5367431640625e-07,
+      "mean_abs_error": 3.7550926208496093e-07,
+      "max_error_over_tolerance": 0.005163696557584806,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "random_normal_2",
+      "image_path": null,
+      "image_sha256": null,
+      "normalized_input_sha256": "57D77AF46CBAC832421D1300D5686710BC18076FDF5AD605073D433DFFC1EC1C",
+      "original_class_index": 5,
+      "folded_class_index": 5,
+      "class_equal": true,
+      "original_logits": [
+        [
+          0.6611539125442505,
+          -0.462613970041275,
+          -0.5092349648475647,
+          -1.1652634143829346,
+          -0.14564961194992065,
+          1.7353836297988892,
+          -0.33539319038391113,
+          1.414455771446228,
+          -1.0135281085968018,
+          0.6160225868225098
+        ]
+      ],
+      "folded_logits": [
+        [
+          0.6611534953117371,
+          -0.46261391043663025,
+          -0.5092352628707886,
+          -1.1652628183364868,
+          -0.14564934372901917,
+          1.7353826761245728,
+          -0.3353929817676544,
+          1.4144558906555176,
+          -1.0135281085968018,
+          0.6160217523574829
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 9.5367431640625e-07,
+      "mean_abs_error": 4.224479198455811e-07,
+      "max_error_over_tolerance": 0.007237324369166732,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c0",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c0\\c0_1.jpg",
+      "image_sha256": "90EB039B04612F73CBDB218584CE098A324CCD31760C629CFEE9FB7A5C74C0C7",
+      "normalized_input_sha256": "292FCBE9ABA7DFE9758E1B9EFCDB6A991DADAE14652BCC8E6FD136D046004A81",
+      "original_class_index": 0,
+      "folded_class_index": 0,
+      "class_equal": true,
+      "original_logits": [
+        [
+          3.490809202194214,
+          -1.5199514627456665,
+          -1.3318397998809814,
+          -0.984048068523407,
+          -0.19418075680732727,
+          -0.026862064376473427,
+          -1.2318456172943115,
+          0.5560193061828613,
+          -0.8577396869659424,
+          0.8926307559013367
+        ]
+      ],
+      "folded_logits": [
+        [
+          3.490809917449951,
+          -1.5199509859085083,
+          -1.3318397998809814,
+          -0.9840476512908936,
+          -0.1941816210746765,
+          -0.02686232514679432,
+          -1.2318456172943115,
+          0.5560183525085449,
+          -0.8577392101287842,
+          0.8926306962966919
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 4.76837158203125e-07,
+      "mean_abs_error": 2.115964889526367e-07,
+      "max_error_over_tolerance": 0.0026508955046909296,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c1",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c1\\c1_1.jpg",
+      "image_sha256": "E0857A1E6A8AA9936FAD4355222CAF96E20CCAD76550FEFCEF4D80118F4F98FE",
+      "normalized_input_sha256": "641266010D9C19741D411A202439AB59B033C958F62A24554C1AF192AD2B3212",
+      "original_class_index": 1,
+      "folded_class_index": 1,
+      "class_equal": true,
+      "original_logits": [
+        [
+          -0.42689305543899536,
+          4.342540740966797,
+          -0.32822543382644653,
+          -0.5359625220298767,
+          -0.5269458889961243,
+          -0.5059076547622681,
+          -0.2878805994987488,
+          -0.087738037109375,
+          -0.2923455238342285,
+          -0.5739304423332214
+        ]
+      ],
+      "folded_logits": [
+        [
+          -0.4268933832645416,
+          4.342540264129639,
+          -0.3282257318496704,
+          -0.5359623432159424,
+          -0.526945948600769,
+          -0.5059074759483337,
+          -0.2878805994987488,
+          -0.08773812651634216,
+          -0.29234543442726135,
+          -0.573930025100708
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 8.642673492431641e-07,
+      "mean_abs_error": 3.7997961044311523e-07,
+      "max_error_over_tolerance": 0.007093776335262436,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c2",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c2\\c2_1.jpg",
+      "image_sha256": "334FC92F9840B2E9640A578BD3A3F1BDDE4E1005FD3569900BB9A188563BCCEE",
+      "normalized_input_sha256": "4FD2DBED57433303ACB2E1F1E115904BCADE6C6CA789D2179C077CB998E0D6EB",
+      "original_class_index": 8,
+      "folded_class_index": 8,
+      "class_equal": true,
+      "original_logits": [
+        [
+          -0.0532396137714386,
+          -0.35240429639816284,
+          0.21834592521190643,
+          -0.15524572134017944,
+          -0.15186746418476105,
+          -0.8549275398254395,
+          -0.5465550422668457,
+          -0.383613646030426,
+          4.653339385986328,
+          -0.6305238604545593
+        ]
+      ],
+      "folded_logits": [
+        [
+          -0.053240224719047546,
+          -0.3524043560028076,
+          0.2183450609445572,
+          -0.15524527430534363,
+          -0.15186761319637299,
+          -0.8549274802207947,
+          -0.5465548634529114,
+          -0.3836142420768738,
+          4.65333890914917,
+          -0.6305235028266907
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 7.152557373046875e-07,
+      "mean_abs_error": 2.339482307434082e-07,
+      "max_error_over_tolerance": 0.0031200456275472573,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c3",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c3\\c3_1.jpg",
+      "image_sha256": "0E9AB9BC3757197C7AC2DC84269F10A8BE5629929FBD0B3454598B9912530792",
+      "normalized_input_sha256": "849C30EE43CC6D7ABF0BB8093169E10DA4A940337F89565755733532F4D980FE",
+      "original_class_index": 3,
+      "folded_class_index": 3,
+      "class_equal": true,
+      "original_logits": [
+        [
+          -0.8550538420677185,
+          0.18747010827064514,
+          -0.9175759553909302,
+          3.7191221714019775,
+          -0.9911956787109375,
+          -0.9549522399902344,
+          -0.7349566221237183,
+          -0.6431047916412354,
+          -0.9641399383544922,
+          -0.7193396091461182
+        ]
+      ],
+      "folded_logits": [
+        [
+          -0.8550539612770081,
+          0.18747012317180634,
+          -0.9175759553909302,
+          3.719122886657715,
+          -0.991195559501648,
+          -0.9549521207809448,
+          -0.7349568605422974,
+          -0.6431050300598145,
+          -0.9641396999359131,
+          -0.7193401455879211
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 2.205371856689453e-06,
+      "mean_abs_error": 7.778406143188477e-07,
+      "max_error_over_tolerance": 0.013539833604959473,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c4",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c4\\c4_1.jpg",
+      "image_sha256": "6F9F6BF8BE48D975EE557685DFAD9C32B2072B6A6B2D50C2D05F4EC33B55C556",
+      "normalized_input_sha256": "0DF638BEE10FCF4E8019001A4AC6CB7C750BCBEAAD6D1795DE3E0B16ECCE4600",
+      "original_class_index": 4,
+      "folded_class_index": 4,
+      "class_equal": true,
+      "original_logits": [
+        [
+          -1.0045853853225708,
+          0.6288027763366699,
+          -0.5917776823043823,
+          -0.282095342874527,
+          4.0743608474731445,
+          -1.3269073963165283,
+          -0.6340688467025757,
+          0.5233626365661621,
+          -0.5707792043685913,
+          -0.7302348017692566
+        ]
+      ],
+      "folded_logits": [
+        [
+          -1.004586100578308,
+          0.6288049817085266,
+          -0.5917777419090271,
+          -0.28209614753723145,
+          4.074359893798828,
+          -1.326907753944397,
+          -0.6340691447257996,
+          0.5233643651008606,
+          -0.5707792639732361,
+          -0.7302353978157043
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 4.76837158203125e-07,
+      "mean_abs_error": 2.339482307434082e-07,
+      "max_error_over_tolerance": 0.0034007601336541243,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c5",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c5\\c5_1.jpg",
+      "image_sha256": "93846611E1243D6121B64F70659480B26FED847E1AD260369DBC61656D499482",
+      "normalized_input_sha256": "A1AA0FC7BCAB40591F3163EFD70F6774F46EFB3736FA73C5B6DDA9E1D836F57D",
+      "original_class_index": 5,
+      "folded_class_index": 5,
+      "class_equal": true,
+      "original_logits": [
+        [
+          -0.2336929738521576,
+          -0.38583749532699585,
+          -0.4021487534046173,
+          -0.3813495337963104,
+          -0.3034776747226715,
+          4.298577308654785,
+          -0.4969653785228729,
+          -0.005584057420492172,
+          -0.747967004776001,
+          -0.49446818232536316
+        ]
+      ],
+      "folded_logits": [
+        [
+          -0.23369315266609192,
+          -0.38583722710609436,
+          -0.4021482765674591,
+          -0.3813495934009552,
+          -0.30347761511802673,
+          4.298576831817627,
+          -0.49696508049964905,
+          -0.005584251135587692,
+          -0.747967004776001,
+          -0.4944678544998169
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 9.5367431640625e-07,
+      "mean_abs_error": 2.8312206268310547e-07,
+      "max_error_over_tolerance": 0.002540225583462827,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c6",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c6\\c6_1.jpg",
+      "image_sha256": "7A43D02DC71E99133FAB1DF633C693D95C48544BB3FA11A22A008D844690E12A",
+      "normalized_input_sha256": "9BFEB8F404BA17CF1772D4B2AADED209561280BA54F6D248C70D14F6B30524AE",
+      "original_class_index": 6,
+      "folded_class_index": 6,
+      "class_equal": true,
+      "original_logits": [
+        [
+          -0.7204277515411377,
+          -1.0627996921539307,
+          -0.3624171018600464,
+          -0.9849684238433838,
+          -0.5748230814933777,
+          -0.8301972150802612,
+          2.7542898654937744,
+          2.623399019241333,
+          0.6631226539611816,
+          -1.2377551794052124
+        ]
+      ],
+      "folded_logits": [
+        [
+          -0.7204279899597168,
+          -1.0627995729446411,
+          -0.3624170124530792,
+          -0.9849688410758972,
+          -0.5748230814933777,
+          -0.8301974534988403,
+          2.754290819168091,
+          2.623399019241333,
+          0.6631229519844055,
+          -1.2377556562423706
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 5.960464477539062e-07,
+      "mean_abs_error": 3.159046173095703e-07,
+      "max_error_over_tolerance": 0.004167122011561471,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c7",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c7\\img.jpg",
+      "image_sha256": "FFEDCCC7412E56697A55C408383B4AD68C5E773E52DDFFE8B20DA93A05D830D8",
+      "normalized_input_sha256": "E5D55EAC0A58EDE35287C01A112072D8984378EC9A4286EE842CBC135D23681A",
+      "original_class_index": 7,
+      "folded_class_index": 7,
+      "class_equal": true,
+      "original_logits": [
+        [
+          -0.40826040506362915,
+          -0.5398480892181396,
+          -0.3267500102519989,
+          -0.5130577087402344,
+          -0.29882219433784485,
+          -0.264539897441864,
+          -0.6405870318412781,
+          4.347754001617432,
+          -0.49031689763069153,
+          -0.43035516142845154
+        ]
+      ],
+      "folded_logits": [
+        [
+          -0.40826019644737244,
+          -0.5398486852645874,
+          -0.3267502784729004,
+          -0.5130578279495239,
+          -0.29882243275642395,
+          -0.2645401656627655,
+          -0.6405867338180542,
+          4.347753524780273,
+          -0.49031680822372437,
+          -0.4303557574748993
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 2.2649765014648438e-06,
+      "mean_abs_error": 6.407499313354492e-07,
+      "max_error_over_tolerance": 0.008266050222345875,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c8",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c8\\img_153.jpg",
+      "image_sha256": "09F58B9041346EBF30EA9DF041545757ABD7F7FB8B9D846B348204AA5D354761",
+      "normalized_input_sha256": "7EE63C1B6DE2C99908B32A30E611AD86664E9478E167219D5DD3B1C2F03C874A",
+      "original_class_index": 8,
+      "folded_class_index": 8,
+      "class_equal": true,
+      "original_logits": [
+        [
+          0.761570394039154,
+          -0.6783589720726013,
+          1.7400952577590942,
+          -0.5073596239089966,
+          -0.8406012058258057,
+          -0.6856218576431274,
+          -0.42127665877342224,
+          -0.4156096577644348,
+          3.644131660461426,
+          -0.679038405418396
+        ]
+      ],
+      "folded_logits": [
+        [
+          0.7615706324577332,
+          -0.6783586144447327,
+          1.7400929927825928,
+          -0.5073591470718384,
+          -0.8406009078025818,
+          -0.6856217384338379,
+          -0.4212762415409088,
+          -0.41561034321784973,
+          3.644132375717163,
+          -0.6790392398834229
+        ]
+      ]
+    },
+    {
+      "max_abs_error": 2.5033950805664062e-06,
+      "mean_abs_error": 6.049871444702149e-07,
+      "max_error_over_tolerance": 0.013677595369313312,
+      "allclose": true,
+      "bitwise_equal": false,
+      "input": "real_c9",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c9\\img_1029.jpg",
+      "image_sha256": "2A1CCBCC228B597AE3A0C5595103F624E74840410EADCE1E1D2E6CFBD53EA168",
+      "normalized_input_sha256": "A63844245615C8326182EB3C23ED0363C438E44F889DAD3217A5FF74C961F06B",
+      "original_class_index": 9,
+      "folded_class_index": 9,
+      "class_equal": true,
+      "original_logits": [
+        [
+          0.8302888870239258,
+          -0.5971064567565918,
+          -0.6084809899330139,
+          -0.5154798626899719,
+          -0.5567390322685242,
+          -0.6129716634750366,
+          -0.7852786779403687,
+          -0.4783061742782593,
+          -0.5023483633995056,
+          3.8567285537719727
+        ]
+      ],
+      "folded_logits": [
+        [
+          0.8302913904190063,
+          -0.5971067547798157,
+          -0.6084812879562378,
+          -0.5154801607131958,
+          -0.5567392110824585,
+          -0.6129711866378784,
+          -0.7852786779403687,
+          -0.47830620408058167,
+          -0.5023484230041504,
+          3.85672664642334
+        ]
+      ]
+    }
+  ],
+  "max_logits_abs_error": 2.5033950805664062e-06,
+  "mean_logits_abs_error": 3.854611090251377e-07,
+  "all_classes_equal": true,
+  "local_fold_checks": 294,
+  "original_pb_hashes_preserved": {
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\mobilevitv2_075_10cls_relu_frozen.pb": "3F92787E4E9B13819BB82651301D9D22A61F9F90B087BE0F38B678FE6B765625",
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\mobilevitv2_075_10cls_relu_inference.pb": "776D00911C18FC0F7A5F8930FECA8A31273CDBE1C32A1E408B502943B514FB5A",
+    "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\mobilevitv2_075_10cls_relu_deploy_b1.pb": "78C15505EC9BC402EF5A07DC99DEBA942BAB549DC46ABEB0554230088D0C3132"
+  },
+  "structure": {
+    "node_count": 1135,
+    "function_count": 0,
+    "op_counts": {
+      "AddV2": 40,
+      "BiasAdd": 40,
+      "Const": 414,
+      "Conv2D": 55,
+      "DepthwiseConv2dNative": 9,
+      "FusedBatchNormV3": 25,
+      "Identity": 205,
+      "MatMul": 1,
+      "Mean": 43,
+      "Mul": 39,
+      "Pad": 10,
+      "Placeholder": 1,
+      "Relu": 34,
+      "Reshape": 78,
+      "Rsqrt": 21,
+      "Softmax": 9,
+      "SplitV": 9,
+      "SquaredDifference": 21,
+      "StopGradient": 21,
+      "Sub": 21,
+      "Sum": 9,
+      "Transpose": 30
+    },
+    "placeholders": [
+      {
+        "name": "input_1",
+        "op": "Placeholder"
+      }
+    ],
+    "control_flow_ops": {},
+    "batch_norm_count": 25,
+    "training_batch_norm_count": 0,
+    "training_batch_norm_nodes": [],
+    "inference_batch_norm_count": 25,
+    "learning_phase_nodes": [],
+    "variable_or_update_ops": {},
+    "random_ops": {},
+    "gradient_or_optimizer_nodes": [],
+    "registered_gradient_count": 0,
+    "pure_inference": true
+  },
+  "training_performed": false,
+  "vitis_ai_quantization_executed": false,
+  "full_dataset_accuracy_evaluated": false,
+  "external_quantization_script_updated_by_exporter": false
+}

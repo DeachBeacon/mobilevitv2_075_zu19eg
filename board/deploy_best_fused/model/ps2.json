@@ -1,0 +1,3379 @@
+{
+  "format_version": 1,
+  "input_tensor": "ps2_features:0",
+  "output_tensor": "stack4_block5_output/stack4_block5_output/Identity:0",
+  "input_shape": [
+    1,
+    16,
+    16,
+    288
+  ],
+  "output_shape": [
+    1,
+    16,
+    16,
+    288
+  ],
+  "weights_file": "ps2_weights.npz",
+  "nodes": [
+    {
+      "name": "ps2_features",
+      "op": "Placeholder",
+      "inputs": [],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_pre_1_pad/Pad/paddings",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0000"
+    },
+    {
+      "name": "stack4_block2_pre_1_dw_conv/depthwise_kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0001"
+    },
+    {
+      "name": "stack4_block2_pre_1_bn/gamma",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0002"
+    },
+    {
+      "name": "stack4_block2_pre_1_bn/beta",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0003"
+    },
+    {
+      "name": "stack4_block2_pre_1_bn/moving_mean",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0004"
+    },
+    {
+      "name": "stack4_block2_pre_1_bn/moving_variance",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0005"
+    },
+    {
+      "name": "stack4_block2_pre_2_conv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0006"
+    },
+    {
+      "name": "Reshape_7/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0007"
+    },
+    {
+      "name": "transpose_4/perm",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0008"
+    },
+    {
+      "name": "Reshape_8/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0009"
+    },
+    {
+      "name": "transpose_5/perm",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0010"
+    },
+    {
+      "name": "Reshape_9/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0011"
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/Shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0012"
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0013"
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/moments/mean/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0014"
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/moments/variance/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0015"
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/add/y",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0016"
+    },
+    {
+      "name": "reshape_4_1/Reshape/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0017"
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_qkv_conv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0018"
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_qkv_conv/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0019"
+    },
+    {
+      "name": "Const_2",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0020"
+    },
+    {
+      "name": "split_2/split_dim",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0021"
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0022"
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/concat_1",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0023"
+    },
+    {
+      "name": "Sum_2/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0024"
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_outputconv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0025"
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_outputconv/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0026"
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/Shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0027"
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0028"
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/moments/mean/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0029"
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/moments/variance/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0030"
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/add/y",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0031"
+    },
+    {
+      "name": "reshape_5_1/Reshape/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0032"
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_0/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0033"
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_0/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0034"
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_1/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0035"
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_1/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0036"
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/Shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0037"
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0038"
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/moments/mean/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0039"
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/moments/variance/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0040"
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/add/y",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0041"
+    },
+    {
+      "name": "reshape_6_1/Reshape/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0042"
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_qkv_conv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0043"
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_qkv_conv/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0044"
+    },
+    {
+      "name": "Const_3",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0045"
+    },
+    {
+      "name": "split_3/split_dim",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0046"
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0047"
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/concat_1",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0048"
+    },
+    {
+      "name": "Sum_3/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0049"
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_outputconv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0050"
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_outputconv/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0051"
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/Shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0052"
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0053"
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/moments/mean/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0054"
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/moments/variance/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0055"
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/add/y",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0056"
+    },
+    {
+      "name": "reshape_7_1/Reshape/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0057"
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_0/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0058"
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_0/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0059"
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_1/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0060"
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_1/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0061"
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/Shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0062"
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0063"
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/moments/mean/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0064"
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/moments/variance/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0065"
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/add/y",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0066"
+    },
+    {
+      "name": "reshape_8_1/Reshape/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0067"
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_qkv_conv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0068"
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_qkv_conv/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0069"
+    },
+    {
+      "name": "Const_4",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0070"
+    },
+    {
+      "name": "split_4/split_dim",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0071"
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0072"
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/concat_1",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0073"
+    },
+    {
+      "name": "Sum_4/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0074"
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_outputconv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0075"
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_outputconv/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0076"
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/Shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0077"
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0078"
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/moments/mean/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0079"
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/moments/variance/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0080"
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/add/y",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0081"
+    },
+    {
+      "name": "reshape_9_1/Reshape/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0082"
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_0/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0083"
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_0/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0084"
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_1/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0085"
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_1/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0086"
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/Shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0087"
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0088"
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/moments/mean/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0089"
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/moments/variance/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0090"
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/add/y",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0091"
+    },
+    {
+      "name": "reshape_10/Reshape/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0092"
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_qkv_conv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0093"
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_qkv_conv/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0094"
+    },
+    {
+      "name": "Const_5",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0095"
+    },
+    {
+      "name": "split_5/split_dim",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0096"
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0097"
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/concat_1",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0098"
+    },
+    {
+      "name": "Sum_5/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0099"
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_outputconv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0100"
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_outputconv/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0101"
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/Shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0102"
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0103"
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/moments/mean/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0104"
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/moments/variance/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0105"
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/add/y",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0106"
+    },
+    {
+      "name": "reshape_11/Reshape/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0107"
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_0/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0108"
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_0/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0109"
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_1/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0110"
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_1/bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0111"
+    },
+    {
+      "name": "stack4_block5_post_group_norm/Shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0112"
+    },
+    {
+      "name": "stack4_block5_post_group_norm/concat",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0113"
+    },
+    {
+      "name": "stack4_block5_post_group_norm/moments/mean/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0114"
+    },
+    {
+      "name": "stack4_block5_post_group_norm/moments/variance/reduction_indices",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0115"
+    },
+    {
+      "name": "stack4_block5_post_group_norm/add/y",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0116"
+    },
+    {
+      "name": "Reshape_12/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0117"
+    },
+    {
+      "name": "transpose_6/perm",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0118"
+    },
+    {
+      "name": "Reshape_13/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0119"
+    },
+    {
+      "name": "transpose_7/perm",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0120"
+    },
+    {
+      "name": "Reshape_14/shape",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0121"
+    },
+    {
+      "name": "stack4_block5_post_1_conv/kernel",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0122"
+    },
+    {
+      "name": "stack4_block5_post_1_bn/gamma",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0123"
+    },
+    {
+      "name": "stack4_block5_post_1_bn/beta",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0124"
+    },
+    {
+      "name": "stack4_block5_post_1_bn/moving_mean",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0125"
+    },
+    {
+      "name": "stack4_block5_post_1_bn/moving_variance",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0126"
+    },
+    {
+      "name": "stack4_block5_post_1_conv/gn_folded_bias",
+      "op": "Const",
+      "inputs": [],
+      "attrs": {},
+      "weight_key": "weight_0127"
+    },
+    {
+      "name": "stack4_block2_pre_1_pad/Pad",
+      "op": "Pad",
+      "inputs": [
+        "ps2_features",
+        "stack4_block2_pre_1_pad/Pad/paddings"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_pre_1_dw_conv/depthwise/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_pre_1_dw_conv/depthwise_kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_pre_1_bn/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_pre_1_bn/gamma"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_pre_1_bn/ReadVariableOp_1",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_pre_1_bn/beta"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_pre_1_bn/FusedBatchNormV3/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_pre_1_bn/moving_mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_pre_1_bn/FusedBatchNormV3/ReadVariableOp_1",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_pre_1_bn/moving_variance"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_pre_2_conv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_pre_2_conv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_qkv_conv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_attn_mhsa_qkv_conv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_qkv_conv/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_attn_mhsa_qkv_conv/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_outputconv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_attn_mhsa_outputconv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_outputconv/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_attn_mhsa_outputconv/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_0/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_mlp_Conv_0/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_0/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_mlp_Conv_0/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_1/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_mlp_Conv_1/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_1/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block2_mlp_Conv_1/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_qkv_conv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block3_attn_mhsa_qkv_conv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_qkv_conv/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block3_attn_mhsa_qkv_conv/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_outputconv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block3_attn_mhsa_outputconv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_outputconv/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block3_attn_mhsa_outputconv/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_0/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block3_mlp_Conv_0/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_0/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block3_mlp_Conv_0/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_1/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block3_mlp_Conv_1/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_1/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block3_mlp_Conv_1/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_qkv_conv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block4_attn_mhsa_qkv_conv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_qkv_conv/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block4_attn_mhsa_qkv_conv/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_outputconv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block4_attn_mhsa_outputconv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_outputconv/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block4_attn_mhsa_outputconv/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_0/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block4_mlp_Conv_0/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_0/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block4_mlp_Conv_0/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_1/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block4_mlp_Conv_1/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_1/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block4_mlp_Conv_1/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_qkv_conv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_attn_mhsa_qkv_conv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_qkv_conv/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_attn_mhsa_qkv_conv/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_outputconv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_attn_mhsa_outputconv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_outputconv/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_attn_mhsa_outputconv/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_0/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_mlp_Conv_0/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_0/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_mlp_Conv_0/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_1/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_mlp_Conv_1/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_1/BiasAdd/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_mlp_Conv_1/bias"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_1_conv/Conv2D/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_post_1_conv/kernel"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_1_bn/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_post_1_bn/gamma"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_1_bn/ReadVariableOp_1",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_post_1_bn/beta"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_1_bn/FusedBatchNormV3/ReadVariableOp",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_post_1_bn/moving_mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_1_bn/FusedBatchNormV3/ReadVariableOp_1",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_post_1_bn/moving_variance"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_pre_1_dw_conv/depthwise",
+      "op": "DepthwiseConv2dNative",
+      "inputs": [
+        "stack4_block2_pre_1_pad/Pad",
+        "stack4_block2_pre_1_dw_conv/depthwise/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block2_pre_1_bn/FusedBatchNormV3",
+      "op": "FusedBatchNormV3",
+      "inputs": [
+        "stack4_block2_pre_1_dw_conv/depthwise",
+        "stack4_block2_pre_1_bn/ReadVariableOp",
+        "stack4_block2_pre_1_bn/ReadVariableOp_1",
+        "stack4_block2_pre_1_bn/FusedBatchNormV3/ReadVariableOp",
+        "stack4_block2_pre_1_bn/FusedBatchNormV3/ReadVariableOp_1"
+      ],
+      "attrs": {
+        "epsilon": 1.0009999641624745e-05,
+        "is_training": false,
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block2_pre_1_relu/Relu",
+      "op": "Relu",
+      "inputs": [
+        "stack4_block2_pre_1_bn/FusedBatchNormV3"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_pre_2_conv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "stack4_block2_pre_1_relu/Relu",
+        "stack4_block2_pre_2_conv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "Reshape_7",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block2_pre_2_conv/Conv2D",
+        "Reshape_7/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "transpose_4",
+      "op": "Transpose",
+      "inputs": [
+        "Reshape_7",
+        "transpose_4/perm"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Reshape_8",
+      "op": "Reshape",
+      "inputs": [
+        "transpose_4",
+        "Reshape_8/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "transpose_5",
+      "op": "Transpose",
+      "inputs": [
+        "Reshape_8",
+        "transpose_5/perm"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Reshape_9",
+      "op": "Reshape",
+      "inputs": [
+        "transpose_5",
+        "Reshape_9/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "Reshape_9",
+        "stack4_block2_attn_group_norm/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/moments/mean",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block2_attn_group_norm/Reshape",
+        "stack4_block2_attn_group_norm/moments/mean/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/moments/StopGradient",
+      "op": "StopGradient",
+      "inputs": [
+        "stack4_block2_attn_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/sub",
+      "op": "Sub",
+      "inputs": [
+        "stack4_block2_attn_group_norm/Reshape",
+        "stack4_block2_attn_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/moments/SquaredDifference",
+      "op": "SquaredDifference",
+      "inputs": [
+        "stack4_block2_attn_group_norm/Reshape",
+        "stack4_block2_attn_group_norm/moments/StopGradient"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/moments/variance",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block2_attn_group_norm/moments/SquaredDifference",
+        "stack4_block2_attn_group_norm/moments/variance/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block2_attn_group_norm/moments/variance",
+        "stack4_block2_attn_group_norm/add/y"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/Rsqrt",
+      "op": "Rsqrt",
+      "inputs": [
+        "stack4_block2_attn_group_norm/add"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/mul",
+      "op": "Mul",
+      "inputs": [
+        "stack4_block2_attn_group_norm/sub",
+        "stack4_block2_attn_group_norm/Rsqrt"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/Reshape_1",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block2_attn_group_norm/mul",
+        "stack4_block2_attn_group_norm/Shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "reshape_4_1/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block2_attn_group_norm/Reshape_1:0",
+        "reshape_4_1/Reshape/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_qkv_conv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "reshape_4_1/Reshape",
+        "stack4_block2_attn_mhsa_qkv_conv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_qkv_conv/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block2_attn_mhsa_qkv_conv/Conv2D",
+        "stack4_block2_attn_mhsa_qkv_conv/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "split_2",
+      "op": "SplitV",
+      "inputs": [
+        "stack4_block2_attn_mhsa_qkv_conv/BiasAdd",
+        "Const_2",
+        "split_2/split_dim"
+      ],
+      "attrs": {
+        "num_split": 3
+      }
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/transpose",
+      "op": "Transpose",
+      "inputs": [
+        "split_2",
+        "stack4_block2_attn_mhsa_attention_scores/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Relu_2",
+      "op": "Relu",
+      "inputs": [
+        "split_2:2"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/Softmax",
+      "op": "Softmax",
+      "inputs": [
+        "stack4_block2_attn_mhsa_attention_scores/transpose"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/transpose_1",
+      "op": "Transpose",
+      "inputs": [
+        "stack4_block2_attn_mhsa_attention_scores/Softmax",
+        "stack4_block2_attn_mhsa_attention_scores/concat_1"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "multiply_2/mul",
+      "op": "Mul",
+      "inputs": [
+        "split_2:1",
+        "stack4_block2_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Sum_2",
+      "op": "Sum",
+      "inputs": [
+        "multiply_2/mul",
+        "Sum_2/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "mul_2",
+      "op": "Mul",
+      "inputs": [
+        "Relu_2",
+        "Sum_2"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_outputconv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "mul_2",
+        "stack4_block2_attn_mhsa_outputconv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_outputconv/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block2_attn_mhsa_outputconv/Conv2D",
+        "stack4_block2_attn_mhsa_outputconv/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block2_1_output/add",
+      "op": "AddV2",
+      "inputs": [
+        "Reshape_9",
+        "stack4_block2_attn_mhsa_outputconv/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block2_1_output/add",
+        "stack4_block2_mlp_group_norm/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/moments/mean",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/Reshape",
+        "stack4_block2_mlp_group_norm/moments/mean/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/moments/StopGradient",
+      "op": "StopGradient",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/sub",
+      "op": "Sub",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/Reshape",
+        "stack4_block2_mlp_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/moments/SquaredDifference",
+      "op": "SquaredDifference",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/Reshape",
+        "stack4_block2_mlp_group_norm/moments/StopGradient"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/moments/variance",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/moments/SquaredDifference",
+        "stack4_block2_mlp_group_norm/moments/variance/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/moments/variance",
+        "stack4_block2_mlp_group_norm/add/y"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/Rsqrt",
+      "op": "Rsqrt",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/add"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/mul",
+      "op": "Mul",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/sub",
+        "stack4_block2_mlp_group_norm/Rsqrt"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/Reshape_1",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/mul",
+        "stack4_block2_mlp_group_norm/Shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "reshape_5_1/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block2_mlp_group_norm/Reshape_1:0",
+        "reshape_5_1/Reshape/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_0/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "reshape_5_1/Reshape",
+        "stack4_block2_mlp_Conv_0/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_0/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block2_mlp_Conv_0/Conv2D",
+        "stack4_block2_mlp_Conv_0/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block2_mlp_relu/Relu",
+      "op": "Relu",
+      "inputs": [
+        "stack4_block2_mlp_Conv_0/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_1/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "stack4_block2_mlp_relu/Relu",
+        "stack4_block2_mlp_Conv_1/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block2_mlp_Conv_1/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block2_mlp_Conv_1/Conv2D",
+        "stack4_block2_mlp_Conv_1/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block2_2_output/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block2_1_output/add",
+        "stack4_block2_mlp_Conv_1/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block2_2_output/add",
+        "stack4_block3_attn_group_norm/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/moments/mean",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block3_attn_group_norm/Reshape",
+        "stack4_block3_attn_group_norm/moments/mean/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/moments/StopGradient",
+      "op": "StopGradient",
+      "inputs": [
+        "stack4_block3_attn_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/sub",
+      "op": "Sub",
+      "inputs": [
+        "stack4_block3_attn_group_norm/Reshape",
+        "stack4_block3_attn_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/moments/SquaredDifference",
+      "op": "SquaredDifference",
+      "inputs": [
+        "stack4_block3_attn_group_norm/Reshape",
+        "stack4_block3_attn_group_norm/moments/StopGradient"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/moments/variance",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block3_attn_group_norm/moments/SquaredDifference",
+        "stack4_block3_attn_group_norm/moments/variance/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block3_attn_group_norm/moments/variance",
+        "stack4_block3_attn_group_norm/add/y"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/Rsqrt",
+      "op": "Rsqrt",
+      "inputs": [
+        "stack4_block3_attn_group_norm/add"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/mul",
+      "op": "Mul",
+      "inputs": [
+        "stack4_block3_attn_group_norm/sub",
+        "stack4_block3_attn_group_norm/Rsqrt"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/Reshape_1",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block3_attn_group_norm/mul",
+        "stack4_block3_attn_group_norm/Shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "reshape_6_1/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block3_attn_group_norm/Reshape_1:0",
+        "reshape_6_1/Reshape/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_qkv_conv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "reshape_6_1/Reshape",
+        "stack4_block3_attn_mhsa_qkv_conv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_qkv_conv/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block3_attn_mhsa_qkv_conv/Conv2D",
+        "stack4_block3_attn_mhsa_qkv_conv/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "split_3",
+      "op": "SplitV",
+      "inputs": [
+        "stack4_block3_attn_mhsa_qkv_conv/BiasAdd",
+        "Const_3",
+        "split_3/split_dim"
+      ],
+      "attrs": {
+        "num_split": 3
+      }
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/transpose",
+      "op": "Transpose",
+      "inputs": [
+        "split_3",
+        "stack4_block3_attn_mhsa_attention_scores/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Relu_3",
+      "op": "Relu",
+      "inputs": [
+        "split_3:2"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/Softmax",
+      "op": "Softmax",
+      "inputs": [
+        "stack4_block3_attn_mhsa_attention_scores/transpose"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/transpose_1",
+      "op": "Transpose",
+      "inputs": [
+        "stack4_block3_attn_mhsa_attention_scores/Softmax",
+        "stack4_block3_attn_mhsa_attention_scores/concat_1"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "multiply_3/mul",
+      "op": "Mul",
+      "inputs": [
+        "split_3:1",
+        "stack4_block3_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Sum_3",
+      "op": "Sum",
+      "inputs": [
+        "multiply_3/mul",
+        "Sum_3/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "mul_3",
+      "op": "Mul",
+      "inputs": [
+        "Relu_3",
+        "Sum_3"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_outputconv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "mul_3",
+        "stack4_block3_attn_mhsa_outputconv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_outputconv/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block3_attn_mhsa_outputconv/Conv2D",
+        "stack4_block3_attn_mhsa_outputconv/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block3_1_output/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block2_2_output/add",
+        "stack4_block3_attn_mhsa_outputconv/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block3_1_output/add",
+        "stack4_block3_mlp_group_norm/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/moments/mean",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/Reshape",
+        "stack4_block3_mlp_group_norm/moments/mean/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/moments/StopGradient",
+      "op": "StopGradient",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/sub",
+      "op": "Sub",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/Reshape",
+        "stack4_block3_mlp_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/moments/SquaredDifference",
+      "op": "SquaredDifference",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/Reshape",
+        "stack4_block3_mlp_group_norm/moments/StopGradient"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/moments/variance",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/moments/SquaredDifference",
+        "stack4_block3_mlp_group_norm/moments/variance/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/moments/variance",
+        "stack4_block3_mlp_group_norm/add/y"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/Rsqrt",
+      "op": "Rsqrt",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/add"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/mul",
+      "op": "Mul",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/sub",
+        "stack4_block3_mlp_group_norm/Rsqrt"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/Reshape_1",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/mul",
+        "stack4_block3_mlp_group_norm/Shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "reshape_7_1/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block3_mlp_group_norm/Reshape_1:0",
+        "reshape_7_1/Reshape/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_0/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "reshape_7_1/Reshape",
+        "stack4_block3_mlp_Conv_0/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_0/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block3_mlp_Conv_0/Conv2D",
+        "stack4_block3_mlp_Conv_0/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block3_mlp_relu/Relu",
+      "op": "Relu",
+      "inputs": [
+        "stack4_block3_mlp_Conv_0/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_1/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "stack4_block3_mlp_relu/Relu",
+        "stack4_block3_mlp_Conv_1/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block3_mlp_Conv_1/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block3_mlp_Conv_1/Conv2D",
+        "stack4_block3_mlp_Conv_1/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block3_2_output/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block3_1_output/add",
+        "stack4_block3_mlp_Conv_1/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block3_2_output/add",
+        "stack4_block4_attn_group_norm/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/moments/mean",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block4_attn_group_norm/Reshape",
+        "stack4_block4_attn_group_norm/moments/mean/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/moments/StopGradient",
+      "op": "StopGradient",
+      "inputs": [
+        "stack4_block4_attn_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/sub",
+      "op": "Sub",
+      "inputs": [
+        "stack4_block4_attn_group_norm/Reshape",
+        "stack4_block4_attn_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/moments/SquaredDifference",
+      "op": "SquaredDifference",
+      "inputs": [
+        "stack4_block4_attn_group_norm/Reshape",
+        "stack4_block4_attn_group_norm/moments/StopGradient"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/moments/variance",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block4_attn_group_norm/moments/SquaredDifference",
+        "stack4_block4_attn_group_norm/moments/variance/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block4_attn_group_norm/moments/variance",
+        "stack4_block4_attn_group_norm/add/y"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/Rsqrt",
+      "op": "Rsqrt",
+      "inputs": [
+        "stack4_block4_attn_group_norm/add"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/mul",
+      "op": "Mul",
+      "inputs": [
+        "stack4_block4_attn_group_norm/sub",
+        "stack4_block4_attn_group_norm/Rsqrt"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/Reshape_1",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block4_attn_group_norm/mul",
+        "stack4_block4_attn_group_norm/Shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "reshape_8_1/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block4_attn_group_norm/Reshape_1:0",
+        "reshape_8_1/Reshape/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_qkv_conv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "reshape_8_1/Reshape",
+        "stack4_block4_attn_mhsa_qkv_conv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_qkv_conv/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block4_attn_mhsa_qkv_conv/Conv2D",
+        "stack4_block4_attn_mhsa_qkv_conv/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "split_4",
+      "op": "SplitV",
+      "inputs": [
+        "stack4_block4_attn_mhsa_qkv_conv/BiasAdd",
+        "Const_4",
+        "split_4/split_dim"
+      ],
+      "attrs": {
+        "num_split": 3
+      }
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/transpose",
+      "op": "Transpose",
+      "inputs": [
+        "split_4",
+        "stack4_block4_attn_mhsa_attention_scores/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Relu_4",
+      "op": "Relu",
+      "inputs": [
+        "split_4:2"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/Softmax",
+      "op": "Softmax",
+      "inputs": [
+        "stack4_block4_attn_mhsa_attention_scores/transpose"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/transpose_1",
+      "op": "Transpose",
+      "inputs": [
+        "stack4_block4_attn_mhsa_attention_scores/Softmax",
+        "stack4_block4_attn_mhsa_attention_scores/concat_1"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "multiply_4/mul",
+      "op": "Mul",
+      "inputs": [
+        "split_4:1",
+        "stack4_block4_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Sum_4",
+      "op": "Sum",
+      "inputs": [
+        "multiply_4/mul",
+        "Sum_4/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "mul_4",
+      "op": "Mul",
+      "inputs": [
+        "Relu_4",
+        "Sum_4"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_outputconv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "mul_4",
+        "stack4_block4_attn_mhsa_outputconv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_outputconv/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block4_attn_mhsa_outputconv/Conv2D",
+        "stack4_block4_attn_mhsa_outputconv/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block4_1_output/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block3_2_output/add",
+        "stack4_block4_attn_mhsa_outputconv/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block4_1_output/add",
+        "stack4_block4_mlp_group_norm/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/moments/mean",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/Reshape",
+        "stack4_block4_mlp_group_norm/moments/mean/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/moments/StopGradient",
+      "op": "StopGradient",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/sub",
+      "op": "Sub",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/Reshape",
+        "stack4_block4_mlp_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/moments/SquaredDifference",
+      "op": "SquaredDifference",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/Reshape",
+        "stack4_block4_mlp_group_norm/moments/StopGradient"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/moments/variance",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/moments/SquaredDifference",
+        "stack4_block4_mlp_group_norm/moments/variance/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/moments/variance",
+        "stack4_block4_mlp_group_norm/add/y"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/Rsqrt",
+      "op": "Rsqrt",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/add"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/mul",
+      "op": "Mul",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/sub",
+        "stack4_block4_mlp_group_norm/Rsqrt"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/Reshape_1",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/mul",
+        "stack4_block4_mlp_group_norm/Shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "reshape_9_1/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block4_mlp_group_norm/Reshape_1:0",
+        "reshape_9_1/Reshape/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_0/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "reshape_9_1/Reshape",
+        "stack4_block4_mlp_Conv_0/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_0/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block4_mlp_Conv_0/Conv2D",
+        "stack4_block4_mlp_Conv_0/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block4_mlp_relu/Relu",
+      "op": "Relu",
+      "inputs": [
+        "stack4_block4_mlp_Conv_0/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_1/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "stack4_block4_mlp_relu/Relu",
+        "stack4_block4_mlp_Conv_1/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block4_mlp_Conv_1/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block4_mlp_Conv_1/Conv2D",
+        "stack4_block4_mlp_Conv_1/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block4_2_output/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block4_1_output/add",
+        "stack4_block4_mlp_Conv_1/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block4_2_output/add",
+        "stack4_block5_attn_group_norm/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/moments/mean",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block5_attn_group_norm/Reshape",
+        "stack4_block5_attn_group_norm/moments/mean/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/moments/StopGradient",
+      "op": "StopGradient",
+      "inputs": [
+        "stack4_block5_attn_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/sub",
+      "op": "Sub",
+      "inputs": [
+        "stack4_block5_attn_group_norm/Reshape",
+        "stack4_block5_attn_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/moments/SquaredDifference",
+      "op": "SquaredDifference",
+      "inputs": [
+        "stack4_block5_attn_group_norm/Reshape",
+        "stack4_block5_attn_group_norm/moments/StopGradient"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/moments/variance",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block5_attn_group_norm/moments/SquaredDifference",
+        "stack4_block5_attn_group_norm/moments/variance/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block5_attn_group_norm/moments/variance",
+        "stack4_block5_attn_group_norm/add/y"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/Rsqrt",
+      "op": "Rsqrt",
+      "inputs": [
+        "stack4_block5_attn_group_norm/add"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/mul",
+      "op": "Mul",
+      "inputs": [
+        "stack4_block5_attn_group_norm/sub",
+        "stack4_block5_attn_group_norm/Rsqrt"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/Reshape_1",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block5_attn_group_norm/mul",
+        "stack4_block5_attn_group_norm/Shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "reshape_10/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block5_attn_group_norm/Reshape_1:0",
+        "reshape_10/Reshape/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_qkv_conv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "reshape_10/Reshape",
+        "stack4_block5_attn_mhsa_qkv_conv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_qkv_conv/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block5_attn_mhsa_qkv_conv/Conv2D",
+        "stack4_block5_attn_mhsa_qkv_conv/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "split_5",
+      "op": "SplitV",
+      "inputs": [
+        "stack4_block5_attn_mhsa_qkv_conv/BiasAdd",
+        "Const_5",
+        "split_5/split_dim"
+      ],
+      "attrs": {
+        "num_split": 3
+      }
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/transpose",
+      "op": "Transpose",
+      "inputs": [
+        "split_5",
+        "stack4_block5_attn_mhsa_attention_scores/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Relu_5",
+      "op": "Relu",
+      "inputs": [
+        "split_5:2"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/Softmax",
+      "op": "Softmax",
+      "inputs": [
+        "stack4_block5_attn_mhsa_attention_scores/transpose"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/transpose_1",
+      "op": "Transpose",
+      "inputs": [
+        "stack4_block5_attn_mhsa_attention_scores/Softmax",
+        "stack4_block5_attn_mhsa_attention_scores/concat_1"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "multiply_5/mul",
+      "op": "Mul",
+      "inputs": [
+        "split_5:1",
+        "stack4_block5_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Sum_5",
+      "op": "Sum",
+      "inputs": [
+        "multiply_5/mul",
+        "Sum_5/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "mul_5",
+      "op": "Mul",
+      "inputs": [
+        "Relu_5",
+        "Sum_5"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_outputconv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "mul_5",
+        "stack4_block5_attn_mhsa_outputconv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_outputconv/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block5_attn_mhsa_outputconv/Conv2D",
+        "stack4_block5_attn_mhsa_outputconv/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_1_output/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block4_2_output/add",
+        "stack4_block5_attn_mhsa_outputconv/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block5_1_output/add",
+        "stack4_block5_mlp_group_norm/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/moments/mean",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/Reshape",
+        "stack4_block5_mlp_group_norm/moments/mean/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/moments/StopGradient",
+      "op": "StopGradient",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/sub",
+      "op": "Sub",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/Reshape",
+        "stack4_block5_mlp_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/moments/SquaredDifference",
+      "op": "SquaredDifference",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/Reshape",
+        "stack4_block5_mlp_group_norm/moments/StopGradient"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/moments/variance",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/moments/SquaredDifference",
+        "stack4_block5_mlp_group_norm/moments/variance/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/moments/variance",
+        "stack4_block5_mlp_group_norm/add/y"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/Rsqrt",
+      "op": "Rsqrt",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/add"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/mul",
+      "op": "Mul",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/sub",
+        "stack4_block5_mlp_group_norm/Rsqrt"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/Reshape_1",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/mul",
+        "stack4_block5_mlp_group_norm/Shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "reshape_11/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block5_mlp_group_norm/Reshape_1:0",
+        "reshape_11/Reshape/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_0/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "reshape_11/Reshape",
+        "stack4_block5_mlp_Conv_0/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_0/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block5_mlp_Conv_0/Conv2D",
+        "stack4_block5_mlp_Conv_0/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_mlp_relu/Relu",
+      "op": "Relu",
+      "inputs": [
+        "stack4_block5_mlp_Conv_0/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_1/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "stack4_block5_mlp_relu/Relu",
+        "stack4_block5_mlp_Conv_1/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_mlp_Conv_1/BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block5_mlp_Conv_1/Conv2D",
+        "stack4_block5_mlp_Conv_1/BiasAdd/ReadVariableOp"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_2_output/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block5_1_output/add",
+        "stack4_block5_mlp_Conv_1/BiasAdd"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_group_norm/Reshape",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block5_2_output/add",
+        "stack4_block5_post_group_norm/concat"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_group_norm/moments/mean",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block5_post_group_norm/Reshape",
+        "stack4_block5_post_group_norm/moments/mean/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block5_post_group_norm/moments/StopGradient",
+      "op": "StopGradient",
+      "inputs": [
+        "stack4_block5_post_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_group_norm/sub",
+      "op": "Sub",
+      "inputs": [
+        "stack4_block5_post_group_norm/Reshape",
+        "stack4_block5_post_group_norm/moments/mean"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_group_norm/moments/SquaredDifference",
+      "op": "SquaredDifference",
+      "inputs": [
+        "stack4_block5_post_group_norm/Reshape",
+        "stack4_block5_post_group_norm/moments/StopGradient"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_group_norm/moments/variance",
+      "op": "Mean",
+      "inputs": [
+        "stack4_block5_post_group_norm/moments/SquaredDifference",
+        "stack4_block5_post_group_norm/moments/variance/reduction_indices"
+      ],
+      "attrs": {
+        "keep_dims": true
+      }
+    },
+    {
+      "name": "stack4_block5_post_group_norm/add",
+      "op": "AddV2",
+      "inputs": [
+        "stack4_block5_post_group_norm/moments/variance",
+        "stack4_block5_post_group_norm/add/y"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_group_norm/Rsqrt",
+      "op": "Rsqrt",
+      "inputs": [
+        "stack4_block5_post_group_norm/add"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_group_norm/mul",
+      "op": "Mul",
+      "inputs": [
+        "stack4_block5_post_group_norm/sub",
+        "stack4_block5_post_group_norm/Rsqrt"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_group_norm/Reshape_1",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block5_post_group_norm/mul",
+        "stack4_block5_post_group_norm/Shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Reshape_12",
+      "op": "Reshape",
+      "inputs": [
+        "stack4_block5_post_group_norm/Reshape_1:0",
+        "Reshape_12/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "transpose_6",
+      "op": "Transpose",
+      "inputs": [
+        "Reshape_12",
+        "transpose_6/perm"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Reshape_13",
+      "op": "Reshape",
+      "inputs": [
+        "transpose_6",
+        "Reshape_13/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "transpose_7",
+      "op": "Transpose",
+      "inputs": [
+        "Reshape_13",
+        "transpose_7/perm"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "Reshape_14",
+      "op": "Reshape",
+      "inputs": [
+        "transpose_7",
+        "Reshape_14/shape"
+      ],
+      "attrs": {}
+    },
+    {
+      "name": "stack4_block5_post_1_conv/Conv2D",
+      "op": "Conv2D",
+      "inputs": [
+        "Reshape_14",
+        "stack4_block5_post_1_conv/Conv2D/ReadVariableOp"
+      ],
+      "attrs": {
+        "strides": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "dilations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "explicit_paddings": [],
+        "padding": "VALID",
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_post_1_conv/gn_folded_BiasAdd",
+      "op": "BiasAdd",
+      "inputs": [
+        "stack4_block5_post_1_conv/Conv2D:0",
+        "stack4_block5_post_1_conv/gn_folded_bias:0"
+      ],
+      "attrs": {
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_post_1_bn/FusedBatchNormV3",
+      "op": "FusedBatchNormV3",
+      "inputs": [
+        "stack4_block5_post_1_conv/gn_folded_BiasAdd:0",
+        "stack4_block5_post_1_bn/ReadVariableOp",
+        "stack4_block5_post_1_bn/ReadVariableOp_1",
+        "stack4_block5_post_1_bn/FusedBatchNormV3/ReadVariableOp",
+        "stack4_block5_post_1_bn/FusedBatchNormV3/ReadVariableOp_1"
+      ],
+      "attrs": {
+        "epsilon": 1.0009999641624745e-05,
+        "is_training": false,
+        "data_format": "NHWC"
+      }
+    },
+    {
+      "name": "stack4_block5_output/stack4_block5_output/Identity",
+      "op": "Identity",
+      "inputs": [
+        "stack4_block5_post_1_bn/FusedBatchNormV3"
+      ],
+      "attrs": {}
+    }
+  ]
+}

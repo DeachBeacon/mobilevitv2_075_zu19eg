@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1510" viewBox="0 0 1500 1510">
+<rect width="100%" height="100%" fill="white"/>
+<text x="52" y="72" font-family="Microsoft YaHei, sans-serif" font-size="34" fill="#172D47" text-anchor="start">图7  DpuStage.predict()执行流程</text>
+<text x="54" y="112" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#607185" text-anchor="start">初始化已校验边界和实际输入尺度s</text>
+<path d="M52 134H1448" stroke="#D9E1EB" stroke-width="2"/>
+<rect x="300" y="175" width="900" height="110" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="750.0" y="214" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">校验与连续化输入value</text>
+<text x="750.0" y="250" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">浮点类型 / 精确形状 / 有限值 → 连续float32数组</text>
+<rect x="300" y="340" width="900" height="130" rx="14" fill="#F2F5F9" stroke="#77879D" stroke-width="2"/>
+<text x="750.0" y="379" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">统计min / max与越界元素</text>
+<text x="750.0" y="415" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">合法端点区间 [-128/s, 127/s]</text>
+<text x="750.0" y="444" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">记录段名、调用数、最值、越界比例</text>
+<polyline points="750.0,285 750.0,340" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,340.0 744.5,329.4 755.5,329.4" fill="#75889E"/>
+<rect x="45" y="555" width="440" height="145" rx="14" fill="#FFF0EB" stroke="#B66449" stroke-width="2"/>
+<text x="265.0" y="594" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">越界且策略为error</text>
+<text x="265.0" y="630" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">保存首次越界输入</text>
+<text x="265.0" y="659" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">抛出异常，停止当前推理</text>
+<rect x="530" y="555" width="440" height="145" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="750.0" y="594" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">范围正常</text>
+<text x="750.0" y="630" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">直接使用输入</text>
+<text x="750.0" y="659" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">保持运行库原有舍入方式</text>
+<rect x="1015" y="555" width="440" height="145" rx="14" fill="#FFF0EB" stroke="#B66449" stroke-width="2"/>
+<text x="1235.0" y="594" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">越界且策略为clip</text>
+<text x="1235.0" y="630" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">按该段实际尺度饱和裁剪</text>
+<text x="1235.0" y="659" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">更新裁剪计数</text>
+<polyline points="750,470 750,510 265,510 265,555" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="265.0,555.0 259.5,544.4 270.5,544.4" fill="#75889E"/>
+<polyline points="750,510 750,555" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,555.0 744.5,544.4 755.5,544.4" fill="#75889E"/>
+<polyline points="750,510 1235,510 1235,555" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1235.0,555.0 1229.5,544.4 1240.5,544.4" fill="#75889E"/>
+<rect x="300" y="790" width="900" height="100" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="750.0" y="828" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">dpuSetInputTensorInHWCFP32()</text>
+<text x="750.0" y="865" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">写入FP32特征；check_status()检查返回码</text>
+<polyline points="750,700 750,790" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,790.0 744.5,779.4 755.5,779.4" fill="#75889E"/>
+<polyline points="1235,700 1235,745 750,745" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,745.0 760.6,739.5 760.6,750.5" fill="#75889E"/>
+<rect x="300" y="945" width="900" height="100" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="750.0" y="984" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">dpuRunTask()</text>
+<text x="750.0" y="1020" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">执行当前DPU kernel；check_status()</text>
+<polyline points="750.0,890 750.0,945" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,945.0 744.5,934.4 755.5,934.4" fill="#75889E"/>
+<rect x="300" y="1100" width="900" height="100" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="750.0" y="1138" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">dpuGetOutputTensorInHWCFP32()</text>
+<text x="750.0" y="1175" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">取回已反量化FP32输出</text>
+<polyline points="750.0,1045 750.0,1100" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,1100.0 744.5,1089.4 755.5,1089.4" fill="#75889E"/>
+<rect x="300" y="1255" width="900" height="110" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="750.0" y="1294" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">检查输出 → reshape → copy()</text>
+<text x="750.0" y="1330" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">验证元素数与有限性；复制后交给下一PS段</text>
+<polyline points="750.0,1200 750.0,1255" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,1255.0 744.5,1244.4 755.5,1244.4" fill="#75889E"/>
+<text x="54" y="1485" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#607185" text-anchor="start">输入范围报告包括预热与被拒绝的输入；默认策略为error。</text>
+</svg>

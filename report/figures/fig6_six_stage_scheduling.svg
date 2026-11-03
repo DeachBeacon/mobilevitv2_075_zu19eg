@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1385" viewBox="0 0 1280 1385">
+<rect width="100%" height="100%" fill="white"/>
+<text x="52" y="72" font-family="Microsoft YaHei, sans-serif" font-size="34" fill="#172D47" text-anchor="start">图6  HybridRunner.predict()六段调度</text>
+<text x="54" y="112" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#607185" text-anchor="start">所有段间数据均为FP32；每段分别记录墙钟耗时</text>
+<path d="M52 134H1228" stroke="#D9E1EB" stroke-width="2"/>
+<rect x="90" y="165" width="1100" height="110" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="640.0" y="204" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">输入 image</text>
+<text x="640.0" y="240" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">float32 [1,256,256,3]；已完成统一预处理</text>
+<rect x="90" y="310" width="1100" height="110" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="640.0" y="349" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">self.front.predict(image)</text>
+<text x="640.0" y="385" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">DPU front → [1,32,32,96]</text>
+<polyline points="640.0,275 640.0,310" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,310.0 634.5,299.4 645.5,299.4" fill="#75889E"/>
+<rect x="90" y="455" width="1100" height="110" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="640.0" y="494" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">ps1.predict(value)</text>
+<text x="640.0" y="530" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">PS Transformer所在计算段1 → [1,32,32,192]</text>
+<polyline points="640.0,420 640.0,455" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,455.0 634.5,444.4 645.5,444.4" fill="#75889E"/>
+<rect x="90" y="600" width="1100" height="110" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="640.0" y="639" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">mv2_4.predict(value)</text>
+<text x="640.0" y="675" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">DPU中间MV2 → [1,16,16,288]</text>
+<polyline points="640.0,565 640.0,600" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,600.0 634.5,589.4 645.5,589.4" fill="#75889E"/>
+<rect x="90" y="745" width="1100" height="110" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="640.0" y="784" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">ps2.predict(value)</text>
+<text x="640.0" y="820" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">PS Transformer所在计算段2 → [1,16,16,288]</text>
+<polyline points="640.0,710 640.0,745" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,745.0 634.5,734.4 645.5,734.4" fill="#75889E"/>
+<rect x="90" y="890" width="1100" height="110" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="640.0" y="929" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">mv2_5.predict(value)</text>
+<text x="640.0" y="965" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">DPU中间MV2 → [1,8,8,384]</text>
+<polyline points="640.0,855 640.0,890" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,890.0 634.5,879.4 645.5,879.4" fill="#75889E"/>
+<rect x="90" y="1035" width="1100" height="110" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="640.0" y="1074" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">ps3.predict(value)</text>
+<text x="640.0" y="1110" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">PS Transformer与分类后端 → [1,10]</text>
+<polyline points="640.0,1000 640.0,1035" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,1035.0 634.5,1024.4 645.5,1024.4" fill="#75889E"/>
+<rect x="90" y="1180" width="1100" height="110" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="640.0" y="1219" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">输出检查与类别选择</text>
+<text x="640.0" y="1255" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">有限性 / 10维检查 → argmax；返回class_index、logits、seconds</text>
+<polyline points="640.0,1145 640.0,1180" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="640.0,1180.0 634.5,1169.4 645.5,1169.4" fill="#75889E"/>
+<text x="54" y="1360" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#607185" text-anchor="start">DPU耗时包含数据传输与量化/反量化；Python调度按序执行。</text>
+</svg>

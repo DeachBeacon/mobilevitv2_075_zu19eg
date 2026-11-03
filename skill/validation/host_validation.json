@@ -1,0 +1,412 @@
+{
+  "passed": true,
+  "synthetic_tests": 13,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Host regression: numeric graph transformations and provenance, not native INT8 or board validation",
+  "retained_case": {
+    "passed": true,
+    "samples": 10,
+    "source_sha256": "c205a47377ee7ffc8683f43f7a95b5a46a00f8b0b9282cee5ebc147c23e0de2d",
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "scope": "Host saved-PB chain and optional NumPy parity only",
+    "results": [
+      {
+        "sample": "sample0.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 5.116686224937439e-06,
+            "relative_l2": 1.7789341927333935e-06,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      },
+      {
+        "sample": "sample1.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 2.384185791015625e-06,
+            "relative_l2": 5.588083852233824e-07,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      },
+      {
+        "sample": "sample2.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 1.430511474609375e-06,
+            "relative_l2": 3.3182824925478913e-07,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      },
+      {
+        "sample": "sample3.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 1.6689300537109375e-06,
+            "relative_l2": 4.225860451307372e-07,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      },
+      {
+        "sample": "sample4.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 1.0132789611816406e-06,
+            "relative_l2": 3.201651633297151e-07,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      },
+      {
+        "sample": "sample5.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 1.430511474609375e-06,
+            "relative_l2": 4.188222651486536e-07,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      },
+      {
+        "sample": "sample6.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 5.364418029785156e-07,
+            "relative_l2": 1.8575750976454327e-07,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      },
+      {
+        "sample": "sample7.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 8.121132850646973e-07,
+            "relative_l2": 3.7328375964144534e-07,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      },
+      {
+        "sample": "sample8.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 2.86102294921875e-06,
+            "relative_l2": 8.834749881403988e-07,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      },
+      {
+        "sample": "sample9.npz",
+        "passed": true,
+        "checks": [
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "front",
+            "tensor": "stack3_block2_pre_2_conv/Conv2D:0"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 1.1920928955078125e-06,
+            "relative_l2": 3.148224028143509e-07,
+            "part": "tail",
+            "backend": "numpy"
+          },
+          {
+            "passed": true,
+            "max_abs_error": 0.0,
+            "relative_l2": 0.0,
+            "part": "tail",
+            "tensor": "predictions/BiasAdd:0"
+          }
+        ]
+      }
+    ],
+    "retained_elf_so": {
+      "matched": true,
+      "scope": "Existing binary payload inspection only; no compiler/linker or DPU executed"
+    },
+    "retained_quant_boundaries": {
+      "front": {
+        "consistent": true,
+        "tags": [
+          {
+            "node": "input_1/aquant",
+            "attribute": "quantize_pos",
+            "position": 5
+          },
+          {
+            "node": "stem_pad/Pad/aquant",
+            "attribute": "quantize_pos",
+            "position": 5
+          },
+          {
+            "node": "input_1",
+            "attribute": "opos",
+            "position": 5
+          },
+          {
+            "node": "stem_conv/Conv2D",
+            "attribute": "ipos",
+            "position": 5
+          },
+          {
+            "node": "stem_pad/Pad",
+            "attribute": "ipos",
+            "position": 5
+          },
+          {
+            "node": "stem_pad/Pad",
+            "attribute": "opos",
+            "position": 5
+          }
+        ],
+        "positions": [
+          5
+        ],
+        "scope": "Legacy 8-bit single input boundary metadata, not internal quantization or accuracy validation",
+        "input_scale": 32.0,
+        "representable_interval": [
+          -4.0,
+          3.96875
+        ],
+        "source_hashes": {
+          "eval": "333a36c2690a66b3e62a958cfa5e64c29be2958b9dd1f6f4f58b37416003c190",
+          "deploy": "081c634dc650ad9cbb1a9af56d9639b9c25f69708b43cdd94df97ccdec317ead"
+        },
+        "range_audit": {
+          "elements": 1966080,
+          "outside_elements": 0,
+          "scope": "Conservative endpoints; runtime rounding is not emulated"
+        }
+      },
+      "mv2_4": {
+        "consistent": true,
+        "tags": [
+          {
+            "node": "mv2_4_features/aquant",
+            "attribute": "quantize_pos",
+            "position": 0
+          },
+          {
+            "node": "mv2_4_features",
+            "attribute": "opos",
+            "position": 0
+          },
+          {
+            "node": "stack4_block1_deep_1_conv/Conv2D",
+            "attribute": "ipos",
+            "position": 0
+          }
+        ],
+        "positions": [
+          0
+        ],
+        "scope": "Legacy 8-bit single input boundary metadata, not internal quantization or accuracy validation",
+        "input_scale": 1.0,
+        "representable_interval": [
+          -128.0,
+          127.0
+        ],
+        "source_hashes": {
+          "eval": "943faab9ee35f71e41466f5b66a5af3520cb0a2a26f63d0914447e75e21cd5f8",
+          "deploy": "ecdd6b433696b4273a58f31ee1b88230a35916d0197b2ae78188fb11477784ce"
+        }
+      },
+      "mv2_5": {
+        "consistent": true,
+        "tags": [
+          {
+            "node": "mv2_5_features/aquant",
+            "attribute": "quantize_pos",
+            "position": 0
+          },
+          {
+            "node": "mv2_5_features",
+            "attribute": "opos",
+            "position": 0
+          },
+          {
+            "node": "stack5_block1_deep_1_conv/Conv2D",
+            "attribute": "ipos",
+            "position": 0
+          }
+        ],
+        "positions": [
+          0
+        ],
+        "scope": "Legacy 8-bit single input boundary metadata, not internal quantization or accuracy validation",
+        "input_scale": 1.0,
+        "representable_interval": [
+          -128.0,
+          127.0
+        ],
+        "source_hashes": {
+          "eval": "9c01a034fb53007994bba728cf36bc6264ec6b762e0a1f899d0a1e88cfc37efe",
+          "deploy": "9b6f9f1d18e33e1296ca7f5f61f77aed00c4691f30fc40e8033de7c1167c8875"
+        }
+      }
+    }
+  }
+}

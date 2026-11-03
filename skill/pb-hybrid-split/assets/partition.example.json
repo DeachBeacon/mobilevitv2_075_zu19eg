@@ -1,0 +1,19 @@
+{
+  "model_inputs": ["image:0"],
+  "model_outputs": ["logits:0"],
+  "parts": [
+    {
+      "name": "front",
+      "device": "dpu",
+      "require_static_nhwc4": true,
+      "inputs": [{"tensor": "image:0", "placeholder": "image"}],
+      "outputs": ["features:0"]
+    },
+    {
+      "name": "tail",
+      "device": "ps",
+      "inputs": [{"tensor": "features:0", "placeholder": "ps_features"}],
+      "outputs": ["logits:0"]
+    }
+  ]
+}

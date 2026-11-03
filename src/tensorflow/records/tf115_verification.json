@@ -1,0 +1,146 @@
+{
+  "tensorflow_version": "1.15.2",
+  "python_version": "3.6.10",
+  "h5_weights_sha256": "EE24E3C7B4D238B19011F9752E81A15030B64AA387298A9966BDC8C8CC1E8631",
+  "model_entry": "from keras_cv_attention_models import mobilevit",
+  "imagenet_eval_imported": false,
+  "aggregate_attention_imported": false,
+  "classifier_activation": "linear",
+  "tf1_resize_antialias_probe_shape": [
+    1,
+    4,
+    4,
+    1
+  ],
+  "strict_h5_load": {
+    "weighted_layers": 111,
+    "tensors": 244,
+    "scalars": 2496523,
+    "max_weight_error": 0.0
+  },
+  "stem_and_attention_and_classifier_shapes": {
+    "stem_conv": [
+      3,
+      3,
+      3,
+      24
+    ],
+    "stack1_block1_deep_3_conv": [
+      1,
+      1,
+      48,
+      48
+    ],
+    "stack2_block2_deep_3_conv": [
+      1,
+      1,
+      192,
+      96
+    ],
+    "stack3_block3_post_1_conv": [
+      1,
+      1,
+      96,
+      192
+    ],
+    "stack4_block5_post_1_conv": [
+      1,
+      1,
+      144,
+      288
+    ],
+    "stack5_block4_post_1_conv": [
+      1,
+      1,
+      192,
+      384
+    ],
+    "stack3_block2_attn_mhsa_qkv_conv": [
+      1,
+      1,
+      96,
+      193
+    ],
+    "stack4_block2_attn_mhsa_qkv_conv": [
+      1,
+      1,
+      144,
+      289
+    ],
+    "stack5_block2_attn_mhsa_qkv_conv": [
+      1,
+      1,
+      192,
+      385
+    ],
+    "stack3_block2_mlp_Conv_0": [
+      1,
+      1,
+      96,
+      192
+    ],
+    "stack4_block2_mlp_Conv_0": [
+      1,
+      1,
+      144,
+      288
+    ],
+    "stack5_block2_mlp_Conv_0": [
+      1,
+      1,
+      192,
+      384
+    ],
+    "predictions": [
+      384,
+      10
+    ]
+  },
+  "transformer_attention_block_counts_by_stage": {
+    "3": 2,
+    "4": 4,
+    "5": 3
+  },
+  "batch_norm_layers": 25,
+  "batch_norm_moving_stats_unchanged_during_predict": true,
+  "preprocessing": "raw RGB uint8 -> float32 / 255 -> ImageNet mean/std; standardized float32 is passed directly",
+  "preprocessing_max_abs_error_vs_torchvision": 0.0,
+  "batch_consistency_max_abs_error": 0.0001316070556640625,
+  "group_norm_batch_consistency_max_abs_error": 3.5762786865234375e-07,
+  "comparisons": [
+    {
+      "input": "zero",
+      "max_abs_error": 0.00012576580047607422,
+      "mean_abs_error": 6.321668479358777e-05,
+      "single_max_abs_error": 8.07642936706543e-06,
+      "single_mean_abs_error": 3.951788130507339e-06,
+      "pytorch_class": 5,
+      "tensorflow_class": 5,
+      "allclose": true,
+      "single_allclose": true
+    },
+    {
+      "input": "standard_normal",
+      "max_abs_error": 6.663799285888672e-05,
+      "mean_abs_error": 2.733170913415961e-05,
+      "single_max_abs_error": 5.91278076171875e-05,
+      "single_mean_abs_error": 1.94489948626142e-05,
+      "pytorch_class": 5,
+      "tensorflow_class": 5,
+      "allclose": true,
+      "single_allclose": true
+    },
+    {
+      "input": "normalized_rgb",
+      "max_abs_error": 5.650520324707031e-05,
+      "mean_abs_error": 2.1991134417476133e-05,
+      "single_max_abs_error": 5.1975250244140625e-05,
+      "single_mean_abs_error": 1.278221589018358e-05,
+      "pytorch_class": 7,
+      "tensorflow_class": 7,
+      "allclose": true,
+      "single_allclose": true
+    }
+  ],
+  "image_dataset_or_full_validation_set_tested": false
+}

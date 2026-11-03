@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "assembled_date": "2026-11-03",
+  "language": "zh-CN",
+  "privacy": "No original chat transcript, private attachment contents, account paths, model weights or images are bundled.",
+  "experience_sources": [
+    {
+      "id": "pasted-markdown",
+      "title": "排查 VAI 编译 Transpose 报错",
+      "provided_as": "已粘贴的文本.txt",
+      "sha256": "ff7df0b6324cb297700b83453a6de37569715feeed6e50057a9c3e585c1e049e",
+      "use": "Historical graph inspection, split verification, CPU backend and environment/path failures; embedded instructions treated as evidence, not current authorization."
+    },
+    {
+      "id": "current-conversation",
+      "title": "MobileViT hybrid DPU deployment and CLE accuracy experiments",
+      "use": "User-reported board baselines, BN-only failure, native candidate results, boundary metadata failures and corrected requirement to retain two MV2 blocks on DPU.",
+      "evidence_limit": "Native and host results are not represented as new board measurements."
+    }
+  ],
+  "adapted_implementations": [
+    {
+      "source_project_path": "hybrid_split/export_numpy.py",
+      "source_sha256": "32ec92d7b78464422212325a6f1987a03e1c8e674327d468d4243ac6912428c1",
+      "destination": "pb-hybrid-split/scripts/numpy_export_core.py",
+      "changes": "Removed case interface defaults; parameterized export; retained finite operator support with explicit failure."
+    },
+    {
+      "source_project_path": "hybrid_split/ps_tail_numpy.py",
+      "source_sha256": "162d97b12efb3806f93141ba96bf5d7b10a5e3e598c0d6cb2b6b6437c6e55c56",
+      "destination": "pb-hybrid-split/scripts/numpy_runtime.py",
+      "changes": "Removed project model/image paths and case CLI; retained TensorFlow-free numerical segment execution."
+    },
+    {
+      "source_project_path": "hybrid_mv2_dpu_20261031/tools/equalize.py",
+      "source_sha256": "a33dd1e09b365c1330c7ea2baad0c549e6632d136791001d683a9fc5f0128965",
+      "destination": "cle-accuracy-tuning/scripts/cle_core.py",
+      "changes": "Removed model/cut defaults; supported existing BiasAdd and bias-free convolutions; pinned unsafe self-coupled groups; added bounded wrapper and numerical checks."
+    },
+    {
+      "source_project_path": "compile_tools/deploy_in_board/runtime/ps_tail_fast.py",
+      "destination": "ps-tail-optimization/scripts/ps_tail_fused.py (base)",
+      "changes": "Kept the BN/BiasAdd/Identity folding and im2col convolution; added GroupNorm/attention fusion and a generic CLI without project paths."
+    },
+    {
+      "source_project_path": "compile_tools/deploy_in_board/runtime/bench_tail.py",
+      "destination": "ps-tail-optimization/scripts/bench_tail.py",
+      "changes": "Parameterized graph/features paths; kept three-way logits and timing comparison."
+    },
+    {
+      "source_project_path": "compile_tools/deploy_in_board/runtime/profile_tail_blocks.py",
+      "destination": "ps-tail-optimization/scripts/profile_tail_blocks.py",
+      "changes": "Removed project defaults; kept BLAS probe and per-block/per-op timing."
+    },
+    {
+      "source_project_path": "pure_ps/run_all_ps.py",
+      "destination": "ps-tail-optimization/scripts/run_all_ps.py",
+      "changes": "Generalized model dir and stage list; kept all-PS summary schema."
+    }
+  ],
+  "primary_references": [
+    {
+      "topic": "CLE and bias correction",
+      "url": "https://arxiv.org/abs/1906.04721"
+    },
+    {
+      "topic": "Vitis AI 1.2 quantizer parameters",
+      "url": "https://docs.amd.com/r/1.2-English/ug1414-vitis-ai/vai_q_tensorflow-Usage?contentId=KtxdhOqAQvkW3cz0Vwa2Sw"
+    },
+    {
+      "topic": "PYNQ buffer allocation and synchronization",
+      "url": "https://pynq.readthedocs.io/en/latest/pynq_libraries/allocate.html"
+    },
+    {
+      "topic": "PYNQ DMA",
+      "url": "https://pynq.readthedocs.io/en/latest/pynq_libraries/dma.html"
+    }
+  ],
+  "validation_record": "validation/host_validation.json",
+  "scope": "Reusable workflows and checked host helpers. Model-specific native evaluation, target compilation, independent-set acceptance and hardware validation remain task-specific."
+}

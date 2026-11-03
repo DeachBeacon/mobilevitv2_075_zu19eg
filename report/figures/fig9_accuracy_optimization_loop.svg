@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1370" viewBox="0 0 1500 1370">
+<rect width="100%" height="100%" fill="white"/>
+<text x="52" y="72" font-family="Microsoft YaHei, sans-serif" font-size="34" fill="#172D47" text-anchor="start">图9  采集、补偿与完整链路评估</text>
+<text x="54" y="112" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#607185" text-anchor="start">同输入对齐 → 参数补偿 → 重建与验证</text>
+<path d="M52 134H1448" stroke="#D9E1EB" stroke-width="2"/>
+<rect x="220" y="175" width="1060" height="130" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="750.0" y="214" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">capture_features.main()：板端对照采集</text>
+<text x="750.0" y="250" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">保存实际MV2输入、logits及部分诊断输出</text>
+<text x="750.0" y="279" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">manifest绑定图片、NPZ及三个SO哈希</text>
+<rect x="220" y="365" width="1060" height="140" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="750.0" y="404" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">fit()：同输入浮点 / 真实FixNeuron对照</text>
+<text x="750.0" y="440" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">MeanError.add() → MeanError.value()</text>
+<text x="750.0" y="469" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">delta[c] = mean(reference[...,c] - quantized[...,c])</text>
+<polyline points="750.0,305 750.0,365" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,365.0 744.5,354.4 755.5,354.4" fill="#75889E"/>
+<rect x="55" y="585" width="650" height="160" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="380.0" y="624" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">前端补偿</text>
+<text x="380.0" y="666.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">add_output_bias()在PC浮点图应用偏移</text>
+<text x="380.0" y="695.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">再执行量化；外部输出形状不变</text>
+<rect x="795" y="585" width="650" height="160" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="1120.0" y="624" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">MV2_4补偿</text>
+<text x="1120.0" y="666.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">原始末层偏置 + delta → 原FixNeuron网格</text>
+<text x="1120.0" y="695.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">correct_mv4()同步eval与deploy偏置</text>
+<polyline points="750,505 750,545 380,545 380,585" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="380.0,585.0 374.5,574.4 385.5,574.4" fill="#75889E"/>
+<polyline points="750,545 1120,545 1120,585" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1120.0,585.0 1114.5,574.4 1125.5,574.4" fill="#75889E"/>
+<rect x="220" y="825" width="1060" height="125" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="750.0" y="863" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">evaluate()：完整混合链路评价</text>
+<text x="750.0" y="900" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">前端量化 → PS1 → MV2_4量化 → PS2 → MV2_5量化 → PS3</text>
+<text x="750.0" y="929" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">统计类别、准确率和MV2输入越界</text>
+<polyline points="380,745 380,785 750,785 750,825" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,825.0 744.5,814.4 755.5,814.4" fill="#75889E"/>
+<polyline points="1120,745 1120,785 750,785" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,785.0 760.6,779.5 760.6,790.5" fill="#75889E"/>
+<rect x="220" y="1015" width="1060" height="130" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="750.0" y="1054" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">编译 / 链接 → 最佳组合上板验证</text>
+<text x="750.0" y="1090" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">检查同一版本的精度、耗时与范围报告</text>
+<text x="750.0" y="1119" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">另用独立图片集评价泛化表现</text>
+<polyline points="750.0,950 750.0,1015" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="750.0,1015.0 744.5,1004.4 755.5,1004.4" fill="#75889E"/>
+<text x="54" y="1345" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#607185" text-anchor="start">历史最终候选：Docker原生258/300（86%）；最佳组合板端表现仍需实测。</text>
+</svg>

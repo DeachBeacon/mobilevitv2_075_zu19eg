@@ -1,0 +1,6 @@
+{
+  "evaluation_mode": "whole_hybrid",
+  "backend": "native_fixneuron",
+  "baseline_id": "control",
+  "reports": ["reports/control.json", "reports/candidate.json"]
+}

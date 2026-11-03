@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "weights": "C:\\WorkSpace\\qsfpga\\Models\\weights\\bestmodel_v1_only_weights.pt",
+    "data_dir": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\train_p",
+    "eval_dir": null,
+    "output_dir": "C:\\WorkSpace\\qsfpga\\Models\\int8_percentile_v2\\full_run",
+    "clip_weights": false,
+    "percentile": 99.9,
+    "per_channel": true,
+    "calib_samples": 500,
+    "eval_samples": 0,
+    "batch_size": 8,
+    "histogram_bins": 8192,
+    "threads": 4,
+    "seed": 42,
+    "val_split": 0.2
+  },
+  "classes": [
+    "c0",
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "c7",
+    "c8",
+    "c9"
+  ],
+  "input_shape_chw": [
+    3,
+    256,
+    256
+  ],
+  "full_evaluation_split": true,
+  "weights_sha256": "7d6d7bd14d2a163ac4c4b3dfeb05cc75d9c5be3a06c58918570fe1c67943cde9",
+  "versions": {
+    "torch": "2.9.1+cu130",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.31.0"
+  },
+  "scope": "Conv/Gemm/MatMul/Relu/Concat/Split W8A8 静态 PTQ（central 双尾截断）；CPUExecutionProvider。",
+  "script": "quantize_int8_percentile_v2.py"
+}

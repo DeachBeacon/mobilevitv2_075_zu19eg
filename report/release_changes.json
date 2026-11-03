@@ -1,0 +1,243 @@
+{
+  "date": "2026-11-03",
+  "base": "C:\\WorkSpace\\Z19-Onborad\\submission\\mobilevitv2_075_zu19eg",
+  "original_sources_unchanged": true,
+  "filename_exceptions": [
+    "README.md",
+    "SKILL.md"
+  ],
+  "renames": [
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/environment/vendor/alinx-vitis-ai-1.2/docker/PROMPT.txt",
+      "new_name": "prompt.txt"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/environment/vendor/alinx-vitis-ai-1.2/SOURCE.json",
+      "new_name": "source.json"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/Compile_Tools/hardware/AXU19EG_ko/AXU19EG_ko.dcf",
+      "new_name": "axu19eg_ko.dcf"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/Compile_Tools/hardware/AXU19EG_ko",
+      "new_name": "axu19eg_ko"
+    },
+    {
+      "old_path": "src/model_code/pytorch/NOTICE.md",
+      "new_name": "notice.md"
+    },
+    {
+      "old_path": "src/model_code/tf115/LICENSE",
+      "new_name": "license"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/audit/LAYOUT_MIGRATION.json",
+      "new_name": "layout_migration.json"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/docs/CALIBRATION.md",
+      "new_name": "calibration.md"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/docs/DOCKER_SETUP.md",
+      "new_name": "docker_setup.md"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/docs/GENERATED_FILES.md",
+      "new_name": "generated_files.md"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/docs/PT_H5_PB.md",
+      "new_name": "pt_h5_pb.md"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/environment/SOURCES.json",
+      "new_name": "sources.json"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/environment/VALIDATION.json",
+      "new_name": "validation.json"
+    },
+    {
+      "old_path": "board/deploy_best_fused/docs/deploy_best融合说明_20261101.md",
+      "new_name": "deploy_best_fusion_guide.md"
+    },
+    {
+      "old_path": "src/model_code/SOURCES.json",
+      "new_name": "sources.json"
+    },
+    {
+      "old_path": "data/calibration/JPEGImages",
+      "new_name": "jpegimages"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/ASSET_MANIFEST.json",
+      "new_name": "asset_manifest.json"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/CLEANUP_REPORT.json",
+      "new_name": "cleanup_report.json"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/Compile_Tools",
+      "new_name": "compile_tools"
+    },
+    {
+      "old_path": "build/mobilevitv2_axu19eg_release/LOCAL_VALIDATION.json",
+      "new_name": "local_validation.json"
+    },
+    {
+      "old_path": "board/deploy_best_fused/MANIFEST.txt",
+      "new_name": "manifest.txt"
+    },
+    {
+      "old_path": "board/deploy_best_fused/README_FUSE.md",
+      "new_name": "readme_fuse.md"
+    },
+    {
+      "old_path": "build/SHA256SUMS.json",
+      "new_name": "sha256sums.json"
+    },
+    {
+      "old_path": "report/PS_REFERENCE_SMOKE.json",
+      "new_name": "ps_reference_smoke.json"
+    },
+    {
+      "old_path": "report/SUBMISSION_VALIDATION.json",
+      "new_name": "submission_validation.json"
+    },
+    {
+      "old_path": "skill/SHA256SUMS.json",
+      "new_name": "sha256sums.json"
+    },
+    {
+      "old_path": "skill/SOURCES.json",
+      "new_name": "sources.json"
+    },
+    {
+      "old_path": "LICENSE",
+      "new_name": "license"
+    }
+  ],
+  "references_updated": [
+    ".gitattributes",
+    ".gitignore",
+    "README.md",
+    "board/README.md",
+    "board/run_visual_board.py",
+    "board/setup_dp_display.sh",
+    "build/sha256sums.json",
+    "build/verify_submission.py",
+    "data/README.md",
+    "report/model_versions.md",
+    "report/paths.md",
+    "report/qs_collaboration.md",
+    "report/software_system_sources.md",
+    "report/submission_merge.md",
+    "report/submission_validation.json",
+    "skill/README.md",
+    "skill/sha256sums.json",
+    "skill/sources.json",
+    "src/dpu/common.sh",
+    "src/dpu/project_paths.py",
+    "src/model_code/sources.json",
+    "src/tensorflow/records/deploy_b1_gnfold_audit.md",
+    "src/tensorflow/scripts/evaluate_mobilevitv2_075.py",
+    "src/tensorflow/scripts/evaluate_mobilevitv2_075_pb.py",
+    "src/tensorflow/scripts/export_mobilevitv2_deploy_pb.py",
+    "src/tensorflow/scripts/fold_mobilevitv2_gn_affine_pb.py",
+    "src/pytorch/scripts/inference.ipynb",
+    "src/model_code/pytorch/my_mobilevit_block.py",
+    "src/model_code/pytorch/notice.md",
+    "src/dpu/models/front_cle/records/manifest.json",
+    "src/dpu/models/front_cle/records/version_readme.md",
+    "src/dpu/models/front_baseline/records/split_driver/manifest.json",
+    "src/dpu/models/front_baseline/records/split_hybrid/manifest.json",
+    "src/dpu/models/front_baseline/records/split_modle/manifest.json",
+    "sim/diagnostics/cle_migration_notes.md",
+    "sim/diagnostics/hybrid_review_current.json",
+    "sim/diagnostics/native_fixneuron_analysis.json",
+    "report/measurements/02_split_analysis.md",
+    "build/historical/common.sh",
+    "build/historical/project_paths.py",
+    "build/mobilevitv2_axu19eg_release/.gitignore",
+    "build/mobilevitv2_axu19eg_release/asset_manifest.json",
+    "build/mobilevitv2_axu19eg_release/clean_generated.ps1",
+    "build/mobilevitv2_axu19eg_release/README.md",
+    "build/mobilevitv2_axu19eg_release/audit/layout_migration.json",
+    "build/mobilevitv2_axu19eg_release/audit/update_asset_manifest.py",
+    "build/mobilevitv2_axu19eg_release/audit/validate_local.py",
+    "build/mobilevitv2_axu19eg_release/compile_tools/0_prepare_pc.ps1",
+    "build/mobilevitv2_axu19eg_release/compile_tools/2_vai_compile.sh",
+    "build/mobilevitv2_axu19eg_release/docs/calibration.md",
+    "build/mobilevitv2_axu19eg_release/docs/docker_setup.md",
+    "build/mobilevitv2_axu19eg_release/docs/generated_files.md",
+    "build/mobilevitv2_axu19eg_release/docs/pt_h5_pb.md",
+    "build/mobilevitv2_axu19eg_release/environment/install_docker_ubuntu.sh",
+    "build/mobilevitv2_axu19eg_release/environment/launch_container.sh",
+    "build/mobilevitv2_axu19eg_release/environment/sources.json",
+    "build/mobilevitv2_axu19eg_release/environment/validation.json",
+    "build/mobilevitv2_axu19eg_release/environment/vendor/alinx-vitis-ai-1.2/docker_run.sh",
+    "build/mobilevitv2_axu19eg_release/environment/vendor/alinx-vitis-ai-1.2/source.json",
+    "build/mobilevitv2_axu19eg_release/environment/vendor/alinx-vitis-ai-1.2/docker/prompt.txt",
+    "build/mobilevitv2_axu19eg_release/compile_tools/scripts/finish.py",
+    "build/mobilevitv2_axu19eg_release/compile_tools/scripts/paths.py",
+    "build/mobilevitv2_axu19eg_release/compile_tools/scripts/prepare_pc.py",
+    "build/mobilevitv2_axu19eg_release/compile_tools/scripts/upstream/upstream_common.py",
+    "build/mobilevitv2_axu19eg_release/compile_tools/hardware/axu19eg_ko/arch.json",
+    "build/historical/baseline/2_compile_front.sh",
+    "build/historical/cle/3_compile_cle.sh",
+    "board/deploy_best_fused/manifest.txt",
+    "board/deploy_best_fused/readme_fuse.md",
+    "board/ps_reference/readme_ps.md",
+    "board/deploy_best_fused/docs/deploy_best_fusion_guide.md"
+  ],
+  "added_evidence": [
+    {
+      "source": "C:\\WorkSpace\\Z19-Onborad\\src\\mobilevitv2_075_zu19eg\\src\\dpu\\hardware\\axu19eg_ko\\design_1.hwh",
+      "file": "build/mobilevitv2_axu19eg_release/compile_tools/hardware/axu19eg_ko/design_1.hwh",
+      "sha256": "40d1a7232caafb1f1f21d6ae7189c58cb2e2cf52293f1ab105df7ffd56b0b5b8"
+    },
+    {
+      "source": "C:\\WorkSpace\\Z19-Onborad\\MobileViT\\Compile_Tools\\hybrid_mv2_dpu_20261031\\front_accuracy_3dpu_docker_20261101\\front_accuracy\\runs\\hybrid1\\compile\\compile.log",
+      "file": "build/reports/final_compile/front/compile.log",
+      "sha256": "8d182db2566d996c3cc2007df9f633f1943710ef645b0c75266031ee1b015cbb"
+    },
+    {
+      "source": "C:\\WorkSpace\\Z19-Onborad\\MobileViT\\Compile_Tools\\hybrid_mv2_dpu_20261031\\front_accuracy_3dpu_docker_20261101\\front_accuracy\\runs\\hybrid1\\compile\\dpu_mobilevitv2_075_fronta_ctlb100.elf",
+      "file": "build/reports/final_compile/front/dpu_mobilevitv2_075_fronta_ctlb100.elf",
+      "sha256": "6b74fc643560f4b6f3ca73073115ce5a65c26fe02c51d4052e724383e6f66d2a"
+    },
+    {
+      "source": "C:\\WorkSpace\\Z19-Onborad\\scheme_a\\runs\\search1\\compile\\compile.log",
+      "file": "build/reports/final_compile/mv2_4/compile.log",
+      "sha256": "1efddbc7298c9c4649e356dd4c6e5c96efa7f65d40ffe670440560711ee818f9"
+    },
+    {
+      "source": "C:\\WorkSpace\\Z19-Onborad\\scheme_a\\runs\\search1\\compile\\dpu_mobilevitv2_075_mv4a_ctlb100.elf",
+      "file": "build/reports/final_compile/mv2_4/dpu_mobilevitv2_075_mv4a_ctlb100.elf",
+      "sha256": "356e77a87be072507f21b1cad1cbd5919c66749ba74f4e7953710bf485e82511"
+    },
+    {
+      "source": "C:\\WorkSpace\\Z19-Onborad\\MobileViT\\Compile_Tools\\hybrid_mv2_dpu_20261031\\build\\mv2_5\\compile\\compile.log",
+      "file": "build/reports/final_compile/mv2_5/compile.log",
+      "sha256": "9d1cd81389480da5dae148e01fe45734892d08e9b6b612673bcc44a898121579"
+    },
+    {
+      "source": "C:\\WorkSpace\\Z19-Onborad\\MobileViT\\Compile_Tools\\hybrid_mv2_dpu_20261031\\build\\mv2_5\\compile\\dpu_mobilevitv2_075_mv2_5_cle.elf",
+      "file": "build/reports/final_compile/mv2_5/dpu_mobilevitv2_075_mv2_5_cle.elf",
+      "sha256": "2f0b0ca6ecc774abf97c4b195f7d9a291d52ccb8f43a7dc5dfec89c82026a646"
+    }
+  ],
+  "new_materials": [
+    "build/implementation_report.md",
+    "build/audit_evidence.py",
+    "build/reports/evidence_validation.json",
+    "report/release_validation.md"
+  ],
+  "new_destination": "C:\\Isar\\mobilevitv2_075_zu19eg",
+  "preserved_model_and_runtime": "Three final SOs, nine runtime source files, runtime config, all model graphs/weights and original PT weights unchanged from submission",
+  "vendor_hwh_source": "D:\\BaiduNetdiskDownload\\Z19\\AXU19EG_AI\\Project\\DEMO-Project\\tf_yolov3_voc_416_416_65.63G_1.2\\Compile_Tools\\hardware\\AXU19EG_ko\\design_1.hwh",
+  "vendor_hwh_sha256": "40d1a7232caafb1f1f21d6ae7189c58cb2e2cf52293f1ab105df7ffd56b0b5b8"
+}

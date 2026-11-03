@@ -1,0 +1,17 @@
+{
+  "configuration": "central_activation_only",
+  "fp32_accuracy_percent": 99.88851727982163,
+  "int8_accuracy_percent": 99.21962095875139,
+  "accuracy_drop_percentage_points": 0.6688963210702354,
+  "prediction_agreement_percent": 99.3088071348941,
+  "model_size_bytes": 3117196,
+  "elapsed_seconds": 300.27409449999686,
+  "model_path": "C:\\WorkSpace\\qsfpga\\Models\\int8_percentile_v2\\full_run\\central_activation_only\\model_int8_qdq.onnx",
+  "integer_kernel_calls": 47,
+  "executed_kernel_calls": 621,
+  "integer_share_percent": 25.97,
+  "all_kernel_integer_share_percent": 7.57,
+  "qdq_overhead_ratio": 4.55,
+  "evaluated_configurations": 2,
+  "note": "仅代表本次评估集合中已运行配置的最佳结果；方案选择后的泛化精度需独立测试集验证。"
+}

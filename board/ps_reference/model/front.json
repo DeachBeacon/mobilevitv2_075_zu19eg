@@ -1,0 +1,1875 @@
+{
+ "format_version": 1,
+ "input_tensor": "input_1:0",
+ "output_tensor": "stack3_block2_pre_2_conv/Conv2D:0",
+ "input_shape": [
+  1,
+  256,
+  256,
+  3
+ ],
+ "output_shape": [
+  1,
+  32,
+  32,
+  96
+ ],
+ "weights_file": "front_weights.npz",
+ "nodes": [
+  {
+   "name": "input_1",
+   "op": "Placeholder",
+   "inputs": [],
+   "attrs": {}
+  },
+  {
+   "name": "stem_pad/Pad/paddings",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0000"
+  },
+  {
+   "name": "stem_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0001"
+  },
+  {
+   "name": "stem_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0002"
+  },
+  {
+   "name": "stem_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0003"
+  },
+  {
+   "name": "stem_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0004"
+  },
+  {
+   "name": "stem_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0005"
+  },
+  {
+   "name": "stack1_block1_deep_1_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0006"
+  },
+  {
+   "name": "stack1_block1_deep_1_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0007"
+  },
+  {
+   "name": "stack1_block1_deep_1_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0008"
+  },
+  {
+   "name": "stack1_block1_deep_1_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0009"
+  },
+  {
+   "name": "stack1_block1_deep_1_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0010"
+  },
+  {
+   "name": "stack1_block1_deep_2_pad/Pad/paddings",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0011"
+  },
+  {
+   "name": "stack1_block1_deep_2_dw_conv/depthwise_kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0012"
+  },
+  {
+   "name": "stack1_block1_deep_2_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0013"
+  },
+  {
+   "name": "stack1_block1_deep_2_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0014"
+  },
+  {
+   "name": "stack1_block1_deep_2_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0015"
+  },
+  {
+   "name": "stack1_block1_deep_2_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0016"
+  },
+  {
+   "name": "stack1_block1_deep_3_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0017"
+  },
+  {
+   "name": "stack1_block1_deep_3_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0018"
+  },
+  {
+   "name": "stack1_block1_deep_3_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0019"
+  },
+  {
+   "name": "stack1_block1_deep_3_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0020"
+  },
+  {
+   "name": "stack1_block1_deep_3_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0021"
+  },
+  {
+   "name": "stack2_block1_deep_1_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0022"
+  },
+  {
+   "name": "stack2_block1_deep_1_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0023"
+  },
+  {
+   "name": "stack2_block1_deep_1_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0024"
+  },
+  {
+   "name": "stack2_block1_deep_1_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0025"
+  },
+  {
+   "name": "stack2_block1_deep_1_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0026"
+  },
+  {
+   "name": "stack2_block1_deep_2_pad/Pad/paddings",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0027"
+  },
+  {
+   "name": "stack2_block1_deep_2_dw_conv/depthwise_kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0028"
+  },
+  {
+   "name": "stack2_block1_deep_2_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0029"
+  },
+  {
+   "name": "stack2_block1_deep_2_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0030"
+  },
+  {
+   "name": "stack2_block1_deep_2_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0031"
+  },
+  {
+   "name": "stack2_block1_deep_2_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0032"
+  },
+  {
+   "name": "stack2_block1_deep_3_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0033"
+  },
+  {
+   "name": "stack2_block1_deep_3_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0034"
+  },
+  {
+   "name": "stack2_block1_deep_3_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0035"
+  },
+  {
+   "name": "stack2_block1_deep_3_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0036"
+  },
+  {
+   "name": "stack2_block1_deep_3_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0037"
+  },
+  {
+   "name": "stack2_block2_deep_1_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0038"
+  },
+  {
+   "name": "stack2_block2_deep_1_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0039"
+  },
+  {
+   "name": "stack2_block2_deep_1_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0040"
+  },
+  {
+   "name": "stack2_block2_deep_1_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0041"
+  },
+  {
+   "name": "stack2_block2_deep_1_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0042"
+  },
+  {
+   "name": "stack2_block2_deep_2_pad/Pad/paddings",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0043"
+  },
+  {
+   "name": "stack2_block2_deep_2_dw_conv/depthwise_kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0044"
+  },
+  {
+   "name": "stack2_block2_deep_2_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0045"
+  },
+  {
+   "name": "stack2_block2_deep_2_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0046"
+  },
+  {
+   "name": "stack2_block2_deep_2_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0047"
+  },
+  {
+   "name": "stack2_block2_deep_2_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0048"
+  },
+  {
+   "name": "stack2_block2_deep_3_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0049"
+  },
+  {
+   "name": "stack2_block2_deep_3_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0050"
+  },
+  {
+   "name": "stack2_block2_deep_3_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0051"
+  },
+  {
+   "name": "stack2_block2_deep_3_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0052"
+  },
+  {
+   "name": "stack2_block2_deep_3_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0053"
+  },
+  {
+   "name": "stack3_block1_deep_1_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0054"
+  },
+  {
+   "name": "stack3_block1_deep_1_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0055"
+  },
+  {
+   "name": "stack3_block1_deep_1_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0056"
+  },
+  {
+   "name": "stack3_block1_deep_1_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0057"
+  },
+  {
+   "name": "stack3_block1_deep_1_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0058"
+  },
+  {
+   "name": "stack3_block1_deep_2_pad/Pad/paddings",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0059"
+  },
+  {
+   "name": "stack3_block1_deep_2_dw_conv/depthwise_kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0060"
+  },
+  {
+   "name": "stack3_block1_deep_2_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0061"
+  },
+  {
+   "name": "stack3_block1_deep_2_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0062"
+  },
+  {
+   "name": "stack3_block1_deep_2_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0063"
+  },
+  {
+   "name": "stack3_block1_deep_2_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0064"
+  },
+  {
+   "name": "stack3_block1_deep_3_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0065"
+  },
+  {
+   "name": "stack3_block1_deep_3_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0066"
+  },
+  {
+   "name": "stack3_block1_deep_3_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0067"
+  },
+  {
+   "name": "stack3_block1_deep_3_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0068"
+  },
+  {
+   "name": "stack3_block1_deep_3_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0069"
+  },
+  {
+   "name": "stack3_block2_pre_1_pad/Pad/paddings",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0070"
+  },
+  {
+   "name": "stack3_block2_pre_1_dw_conv/depthwise_kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0071"
+  },
+  {
+   "name": "stack3_block2_pre_1_bn/gamma",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0072"
+  },
+  {
+   "name": "stack3_block2_pre_1_bn/beta",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0073"
+  },
+  {
+   "name": "stack3_block2_pre_1_bn/moving_mean",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0074"
+  },
+  {
+   "name": "stack3_block2_pre_1_bn/moving_variance",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0075"
+  },
+  {
+   "name": "stack3_block2_pre_2_conv/kernel",
+   "op": "Const",
+   "inputs": [],
+   "attrs": {},
+   "weight_key": "weight_0076"
+  },
+  {
+   "name": "stem_pad/Pad",
+   "op": "Pad",
+   "inputs": [
+    "input_1",
+    "stem_pad/Pad/paddings"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stem_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stem_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stem_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stem_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stem_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stem_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stem_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stem_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stem_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stem_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_1_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_1_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_1_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_1_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_1_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_1_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_1_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_1_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_2_dw_conv/depthwise/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_2_dw_conv/depthwise_kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_2_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_2_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_2_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_2_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_2_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_2_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_3_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_3_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_3_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_3_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_3_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_3_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_3_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack1_block1_deep_3_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_1_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_1_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_1_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_1_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_1_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_1_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_1_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_1_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_2_dw_conv/depthwise/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_2_dw_conv/depthwise_kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_2_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_2_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_2_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_2_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_2_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_2_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_3_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_3_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_3_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_3_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_3_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_3_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_3_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block1_deep_3_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_1_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_1_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_1_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_1_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_1_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_1_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_1_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_1_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_1_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_1_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_2_dw_conv/depthwise/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_2_dw_conv/depthwise_kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_2_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_2_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_2_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_2_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_2_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_2_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_2_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_2_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_3_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_3_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_3_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_3_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_3_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_3_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_3_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_3_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_3_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack2_block2_deep_3_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_1_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_1_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_1_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_1_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_1_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_1_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_1_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_1_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_2_dw_conv/depthwise/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_2_dw_conv/depthwise_kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_2_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_2_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_2_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_2_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_2_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_2_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_3_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_3_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_3_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_3_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_3_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_3_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_3_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block1_deep_3_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block2_pre_1_dw_conv/depthwise/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block2_pre_1_dw_conv/depthwise_kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block2_pre_1_bn/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block2_pre_1_bn/gamma"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block2_pre_1_bn/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block2_pre_1_bn/beta"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block2_pre_1_bn/FusedBatchNormV3/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block2_pre_1_bn/moving_mean"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block2_pre_1_bn/FusedBatchNormV3/ReadVariableOp_1",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block2_pre_1_bn/moving_variance"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block2_pre_2_conv/Conv2D/ReadVariableOp",
+   "op": "Identity",
+   "inputs": [
+    "stack3_block2_pre_2_conv/kernel"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stem_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "stem_pad/Pad",
+    "stem_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     2,
+     2,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stem_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stem_conv/Conv2D",
+    "stem_bn/ReadVariableOp",
+    "stem_bn/ReadVariableOp_1",
+    "stem_bn/FusedBatchNormV3/ReadVariableOp",
+    "stem_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stem_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stem_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_1_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "stem_relu/Relu",
+    "stack1_block1_deep_1_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack1_block1_deep_1_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack1_block1_deep_1_conv/Conv2D",
+    "stack1_block1_deep_1_bn/ReadVariableOp",
+    "stack1_block1_deep_1_bn/ReadVariableOp_1",
+    "stack1_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack1_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack1_block1_deep_1_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stack1_block1_deep_1_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_2_pad/Pad",
+   "op": "Pad",
+   "inputs": [
+    "stack1_block1_deep_1_relu/Relu",
+    "stack1_block1_deep_2_pad/Pad/paddings"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_2_dw_conv/depthwise",
+   "op": "DepthwiseConv2dNative",
+   "inputs": [
+    "stack1_block1_deep_2_pad/Pad",
+    "stack1_block1_deep_2_dw_conv/depthwise/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack1_block1_deep_2_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack1_block1_deep_2_dw_conv/depthwise",
+    "stack1_block1_deep_2_bn/ReadVariableOp",
+    "stack1_block1_deep_2_bn/ReadVariableOp_1",
+    "stack1_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack1_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack1_block1_deep_2_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stack1_block1_deep_2_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack1_block1_deep_3_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "stack1_block1_deep_2_relu/Relu",
+    "stack1_block1_deep_3_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack1_block1_deep_3_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack1_block1_deep_3_conv/Conv2D",
+    "stack1_block1_deep_3_bn/ReadVariableOp",
+    "stack1_block1_deep_3_bn/ReadVariableOp_1",
+    "stack1_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack1_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block1_deep_1_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "stack1_block1_deep_3_bn/FusedBatchNormV3",
+    "stack2_block1_deep_1_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block1_deep_1_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack2_block1_deep_1_conv/Conv2D",
+    "stack2_block1_deep_1_bn/ReadVariableOp",
+    "stack2_block1_deep_1_bn/ReadVariableOp_1",
+    "stack2_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack2_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block1_deep_1_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stack2_block1_deep_1_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_2_pad/Pad",
+   "op": "Pad",
+   "inputs": [
+    "stack2_block1_deep_1_relu/Relu",
+    "stack2_block1_deep_2_pad/Pad/paddings"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_2_dw_conv/depthwise",
+   "op": "DepthwiseConv2dNative",
+   "inputs": [
+    "stack2_block1_deep_2_pad/Pad",
+    "stack2_block1_deep_2_dw_conv/depthwise/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     2,
+     2,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block1_deep_2_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack2_block1_deep_2_dw_conv/depthwise",
+    "stack2_block1_deep_2_bn/ReadVariableOp",
+    "stack2_block1_deep_2_bn/ReadVariableOp_1",
+    "stack2_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack2_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block1_deep_2_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stack2_block1_deep_2_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block1_deep_3_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "stack2_block1_deep_2_relu/Relu",
+    "stack2_block1_deep_3_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block1_deep_3_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack2_block1_deep_3_conv/Conv2D",
+    "stack2_block1_deep_3_bn/ReadVariableOp",
+    "stack2_block1_deep_3_bn/ReadVariableOp_1",
+    "stack2_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack2_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block2_deep_1_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "stack2_block1_deep_3_bn/FusedBatchNormV3",
+    "stack2_block2_deep_1_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block2_deep_1_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack2_block2_deep_1_conv/Conv2D",
+    "stack2_block2_deep_1_bn/ReadVariableOp",
+    "stack2_block2_deep_1_bn/ReadVariableOp_1",
+    "stack2_block2_deep_1_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack2_block2_deep_1_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block2_deep_1_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stack2_block2_deep_1_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_2_pad/Pad",
+   "op": "Pad",
+   "inputs": [
+    "stack2_block2_deep_1_relu/Relu",
+    "stack2_block2_deep_2_pad/Pad/paddings"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_2_dw_conv/depthwise",
+   "op": "DepthwiseConv2dNative",
+   "inputs": [
+    "stack2_block2_deep_2_pad/Pad",
+    "stack2_block2_deep_2_dw_conv/depthwise/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block2_deep_2_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack2_block2_deep_2_dw_conv/depthwise",
+    "stack2_block2_deep_2_bn/ReadVariableOp",
+    "stack2_block2_deep_2_bn/ReadVariableOp_1",
+    "stack2_block2_deep_2_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack2_block2_deep_2_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block2_deep_2_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stack2_block2_deep_2_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack2_block2_deep_3_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "stack2_block2_deep_2_relu/Relu",
+    "stack2_block2_deep_3_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack2_block2_deep_3_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack2_block2_deep_3_conv/Conv2D",
+    "stack2_block2_deep_3_bn/ReadVariableOp",
+    "stack2_block2_deep_3_bn/ReadVariableOp_1",
+    "stack2_block2_deep_3_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack2_block2_deep_3_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "add/add",
+   "op": "AddV2",
+   "inputs": [
+    "stack2_block1_deep_3_bn/FusedBatchNormV3",
+    "stack2_block2_deep_3_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_1_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "add/add",
+    "stack3_block1_deep_1_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack3_block1_deep_1_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack3_block1_deep_1_conv/Conv2D",
+    "stack3_block1_deep_1_bn/ReadVariableOp",
+    "stack3_block1_deep_1_bn/ReadVariableOp_1",
+    "stack3_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack3_block1_deep_1_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack3_block1_deep_1_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stack3_block1_deep_1_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_2_pad/Pad",
+   "op": "Pad",
+   "inputs": [
+    "stack3_block1_deep_1_relu/Relu",
+    "stack3_block1_deep_2_pad/Pad/paddings"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_2_dw_conv/depthwise",
+   "op": "DepthwiseConv2dNative",
+   "inputs": [
+    "stack3_block1_deep_2_pad/Pad",
+    "stack3_block1_deep_2_dw_conv/depthwise/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     2,
+     2,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack3_block1_deep_2_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack3_block1_deep_2_dw_conv/depthwise",
+    "stack3_block1_deep_2_bn/ReadVariableOp",
+    "stack3_block1_deep_2_bn/ReadVariableOp_1",
+    "stack3_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack3_block1_deep_2_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack3_block1_deep_2_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stack3_block1_deep_2_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block1_deep_3_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "stack3_block1_deep_2_relu/Relu",
+    "stack3_block1_deep_3_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack3_block1_deep_3_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack3_block1_deep_3_conv/Conv2D",
+    "stack3_block1_deep_3_bn/ReadVariableOp",
+    "stack3_block1_deep_3_bn/ReadVariableOp_1",
+    "stack3_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack3_block1_deep_3_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack3_block2_pre_1_pad/Pad",
+   "op": "Pad",
+   "inputs": [
+    "stack3_block1_deep_3_bn/FusedBatchNormV3",
+    "stack3_block2_pre_1_pad/Pad/paddings"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block2_pre_1_dw_conv/depthwise",
+   "op": "DepthwiseConv2dNative",
+   "inputs": [
+    "stack3_block2_pre_1_pad/Pad",
+    "stack3_block2_pre_1_dw_conv/depthwise/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack3_block2_pre_1_bn/FusedBatchNormV3",
+   "op": "FusedBatchNormV3",
+   "inputs": [
+    "stack3_block2_pre_1_dw_conv/depthwise",
+    "stack3_block2_pre_1_bn/ReadVariableOp",
+    "stack3_block2_pre_1_bn/ReadVariableOp_1",
+    "stack3_block2_pre_1_bn/FusedBatchNormV3/ReadVariableOp",
+    "stack3_block2_pre_1_bn/FusedBatchNormV3/ReadVariableOp_1"
+   ],
+   "attrs": {
+    "epsilon": 1.0009999641624745e-05,
+    "is_training": false,
+    "data_format": "NHWC"
+   }
+  },
+  {
+   "name": "stack3_block2_pre_1_relu/Relu",
+   "op": "Relu",
+   "inputs": [
+    "stack3_block2_pre_1_bn/FusedBatchNormV3"
+   ],
+   "attrs": {}
+  },
+  {
+   "name": "stack3_block2_pre_2_conv/Conv2D",
+   "op": "Conv2D",
+   "inputs": [
+    "stack3_block2_pre_1_relu/Relu",
+    "stack3_block2_pre_2_conv/Conv2D/ReadVariableOp"
+   ],
+   "attrs": {
+    "strides": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "dilations": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "explicit_paddings": [],
+    "padding": "VALID",
+    "data_format": "NHWC"
+   }
+  }
+ ]
+}

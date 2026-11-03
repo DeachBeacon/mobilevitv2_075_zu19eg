@@ -1,0 +1,284 @@
+{
+  "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+  "torch": "2.9.1+cu130",
+  "backend": "KECAM torch backend, NOT TensorFlow execution",
+  "settings": {
+    "classes": 1000,
+    "activation": "swish",
+    "patch": 2,
+    "pretrained": false
+  },
+  "variants": [
+    {
+      "width": 0.5,
+      "apple_parameters": 1370593,
+      "modified_parameters": 1370593,
+      "kecam_parameters": 1370593,
+      "mapped_leaf_layers": 111
+    },
+    {
+      "width": 0.75,
+      "apple_parameters": 2866009,
+      "modified_parameters": 2866009,
+      "kecam_parameters": 2866009,
+      "mapped_leaf_layers": 111
+    },
+    {
+      "width": 1.0,
+      "apple_parameters": 4901841,
+      "modified_parameters": 4901841,
+      "kecam_parameters": 4901841,
+      "mapped_leaf_layers": 111
+    },
+    {
+      "width": 1.25,
+      "apple_parameters": 7478089,
+      "modified_parameters": 7478089,
+      "kecam_parameters": 7478089,
+      "mapped_leaf_layers": 111
+    },
+    {
+      "width": 1.5,
+      "apple_parameters": 10594753,
+      "modified_parameters": 10594753,
+      "kecam_parameters": 10594753,
+      "mapped_leaf_layers": 111
+    },
+    {
+      "width": 1.75,
+      "apple_parameters": 14251833,
+      "modified_parameters": 14251833,
+      "kecam_parameters": 14251833,
+      "mapped_leaf_layers": 111
+    },
+    {
+      "width": 2.0,
+      "apple_parameters": 18449329,
+      "modified_parameters": 18449329,
+      "kecam_parameters": 18449329,
+      "mapped_leaf_layers": 111
+    }
+  ],
+  "same_weights": [
+    {
+      "width": 0.5,
+      "size": 256,
+      "apple_vs_modified": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "apple_vs_kecam": {
+        "max_abs": 7.599592208862305e-07,
+        "mean_abs": 1.813061487609957e-07,
+        "allclose_1e_5": true
+      }
+    },
+    {
+      "width": 0.5,
+      "size": 224,
+      "apple_vs_modified": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "apple_vs_kecam": {
+        "max_abs": 0.00803038477897644,
+        "mean_abs": 0.0020204600878059864,
+        "allclose_1e_5": false
+      }
+    },
+    {
+      "width": 1.0,
+      "size": 256,
+      "apple_vs_modified": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "apple_vs_kecam": {
+        "max_abs": 8.344650268554688e-07,
+        "mean_abs": 1.9790790872775688e-07,
+        "allclose_1e_5": true
+      }
+    },
+    {
+      "width": 1.0,
+      "size": 224,
+      "apple_vs_modified": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "apple_vs_kecam": {
+        "max_abs": 0.011355936527252197,
+        "mean_abs": 0.0028795169200748205,
+        "allclose_1e_5": false
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "input": [
+        8,
+        8
+      ],
+      "patches": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "fold": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "output": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      }
+    },
+    {
+      "input": [
+        7,
+        9
+      ],
+      "patches": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "fold": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "output": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      }
+    },
+    {
+      "input": [
+        16,
+        20
+      ],
+      "patches": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "fold": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      },
+      "output": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "allclose_1e_5": true
+      }
+    }
+  ],
+  "additional_checks": {
+    "resize_causal_test_224": {
+      "before": {
+        "max_abs": 0.008036233484745026,
+        "mean_abs": 0.002021782798692584,
+        "allclose_1e_5": false
+      },
+      "after_only_apple_align_corners_false": {
+        "max_abs": 5.960464477539062e-07,
+        "mean_abs": 1.4956295046886225e-07,
+        "allclose_1e_5": true
+      },
+      "source_files_modified": false
+    },
+    "channels_last_patch_layout_vs_apple": {
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "allclose_1e_5": true
+    },
+    "channels_last_patch_roundtrip": {
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "allclose_1e_5": true
+    },
+    "nonstandard_width_0_6": {
+      "apple_config": {
+        "layer0": {
+          "img_channels": 3,
+          "out_channels": 24
+        },
+        "layer1": {
+          "out_channels": 48,
+          "expand_ratio": 2,
+          "num_blocks": 1,
+          "stride": 1,
+          "block_type": "mv2"
+        },
+        "layer2": {
+          "out_channels": 80,
+          "expand_ratio": 2,
+          "num_blocks": 2,
+          "stride": 2,
+          "block_type": "mv2"
+        },
+        "layer3": {
+          "out_channels": 152,
+          "attn_unit_dim": 80,
+          "ffn_multiplier": 2,
+          "attn_blocks": 2,
+          "patch_h": 2,
+          "patch_w": 2,
+          "stride": 2,
+          "mv_expand_ratio": 2,
+          "block_type": "mobilevit"
+        },
+        "layer4": {
+          "out_channels": 232,
+          "attn_unit_dim": 112,
+          "ffn_multiplier": 2,
+          "attn_blocks": 4,
+          "patch_h": 2,
+          "patch_w": 2,
+          "stride": 2,
+          "mv_expand_ratio": 2,
+          "block_type": "mobilevit"
+        },
+        "layer5": {
+          "out_channels": 304,
+          "attn_unit_dim": 152,
+          "ffn_multiplier": 2,
+          "attn_blocks": 3,
+          "patch_h": 2,
+          "patch_w": 2,
+          "stride": 2,
+          "mv_expand_ratio": 2,
+          "block_type": "mobilevit"
+        },
+        "last_layer_exp_factor": 4
+      },
+      "kecam_stem_and_stages": [
+        19,
+        [
+          38,
+          76,
+          153,
+          230,
+          307
+        ]
+      ]
+    },
+    "modified_rectangular_patch_error": "patch_h (2) must equal patch_w (4) for pixel_unshuffle/pixel_shuffle.",
+    "source_sha256": {
+      "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\keras_cv_attention_models\\mobilevit\\mobilevit.py": "c544b8dcaf46824ec5e8cf7bec995a3f5ed68cdaab5d8f40c37cad94bff4d4d0",
+      "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\keras_cv_attention_models\\mobilevit\\mobilevit_v2.py": "74dd6ae2d795a41e5eba52ba687b34c40cbc0563854bee43a96f3297f32e3592",
+      "C:\\transformerFPGA\\MobileViT\\ml-cvnets\\cvnets\\models\\classification\\mobilevit_v2.py": "15510548e30da13e1c3a690deb26587caa2257e7de81ff005ce6c6067ca38dfe",
+      "C:\\transformerFPGA\\MobileViT\\ml-cvnets\\cvnets\\modules\\mobilevit_block.py": "f0e6c1d9d1d87804544e93791d1f3142da59080263fb12ca997285771172d7c6",
+      "C:\\transformerFPGA\\MobileViT\\ml-cvnets\\cvnets\\modules\\my_mobilevit_block.py": "b75632d290cc30b0ed0398593ab5e6b9707853735c22f31144e5d476f8cadeae"
+    }
+  }
+}

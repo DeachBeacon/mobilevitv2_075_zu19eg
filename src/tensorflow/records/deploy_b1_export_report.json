@@ -1,0 +1,2908 @@
+{
+  "tensorflow_version": "1.15.2",
+  "source_path": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\mobilevitv2_075_10cls_relu_inference.pb",
+  "source_sha256": "776D00911C18FC0F7A5F8930FECA8A31273CDBE1C32A1E408B502943B514FB5A",
+  "deployment_path": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\mobilevitv2_075_10cls_relu_deploy_b1.pb",
+  "deployment_sha256": "78C15505EC9BC402EF5A07DC99DEBA942BAB549DC46ABEB0554230088D0C3132",
+  "input_tensor": "input_1:0",
+  "input_shape": [
+    1,
+    256,
+    256,
+    3
+  ],
+  "output_tensor": "predictions/BiasAdd:0",
+  "output_shape": [
+    1,
+    10
+  ],
+  "random_seed": 20261028,
+  "rtol": 1e-06,
+  "atol": 1e-06,
+  "source_nodes": 1750,
+  "deployment_nodes": 1255,
+  "concat_audit": [
+    {
+      "name": "stack3_block2_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack3_block2_attn_group_norm/strided_slice:0",
+        "stack3_block2_attn_group_norm/Const:0",
+        "stack3_block2_attn_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack3_block2_attn_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack3_block2_attn_mhsa_attention_scores/range:0",
+        "stack3_block2_attn_mhsa_attention_scores/concat/values_1:0",
+        "stack3_block2_attn_mhsa_attention_scores/range_1:0",
+        "stack3_block2_attn_mhsa_attention_scores/concat/values_3:0",
+        "stack3_block2_attn_mhsa_attention_scores/concat/axis:0"
+      ],
+      "consumers": [
+        "stack3_block2_attn_mhsa_attention_scores/transpose"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack3_block2_attn_mhsa_attention_scores/range_2:0",
+        "stack3_block2_attn_mhsa_attention_scores/concat_1/values_1:0",
+        "stack3_block2_attn_mhsa_attention_scores/range_3:0",
+        "stack3_block2_attn_mhsa_attention_scores/concat_1/values_3:0",
+        "stack3_block2_attn_mhsa_attention_scores/concat_1/axis:0"
+      ],
+      "consumers": [
+        "stack3_block2_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack3_block2_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack3_block2_mlp_group_norm/strided_slice:0",
+        "stack3_block2_mlp_group_norm/Const:0",
+        "stack3_block2_mlp_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack3_block2_mlp_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack3_block3_attn_group_norm/strided_slice:0",
+        "stack3_block3_attn_group_norm/Const:0",
+        "stack3_block3_attn_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack3_block3_attn_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack3_block3_attn_mhsa_attention_scores/range:0",
+        "stack3_block3_attn_mhsa_attention_scores/concat/values_1:0",
+        "stack3_block3_attn_mhsa_attention_scores/range_1:0",
+        "stack3_block3_attn_mhsa_attention_scores/concat/values_3:0",
+        "stack3_block3_attn_mhsa_attention_scores/concat/axis:0"
+      ],
+      "consumers": [
+        "stack3_block3_attn_mhsa_attention_scores/transpose"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack3_block3_attn_mhsa_attention_scores/range_2:0",
+        "stack3_block3_attn_mhsa_attention_scores/concat_1/values_1:0",
+        "stack3_block3_attn_mhsa_attention_scores/range_3:0",
+        "stack3_block3_attn_mhsa_attention_scores/concat_1/values_3:0",
+        "stack3_block3_attn_mhsa_attention_scores/concat_1/axis:0"
+      ],
+      "consumers": [
+        "stack3_block3_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack3_block3_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack3_block3_mlp_group_norm/strided_slice:0",
+        "stack3_block3_mlp_group_norm/Const:0",
+        "stack3_block3_mlp_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack3_block3_mlp_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block3_post_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack3_block3_post_group_norm/strided_slice:0",
+        "stack3_block3_post_group_norm/Const:0",
+        "stack3_block3_post_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack3_block3_post_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block2_attn_group_norm/strided_slice:0",
+        "stack4_block2_attn_group_norm/Const:0",
+        "stack4_block2_attn_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block2_attn_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block2_attn_mhsa_attention_scores/range:0",
+        "stack4_block2_attn_mhsa_attention_scores/concat/values_1:0",
+        "stack4_block2_attn_mhsa_attention_scores/range_1:0",
+        "stack4_block2_attn_mhsa_attention_scores/concat/values_3:0",
+        "stack4_block2_attn_mhsa_attention_scores/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block2_attn_mhsa_attention_scores/transpose"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block2_attn_mhsa_attention_scores/range_2:0",
+        "stack4_block2_attn_mhsa_attention_scores/concat_1/values_1:0",
+        "stack4_block2_attn_mhsa_attention_scores/range_3:0",
+        "stack4_block2_attn_mhsa_attention_scores/concat_1/values_3:0",
+        "stack4_block2_attn_mhsa_attention_scores/concat_1/axis:0"
+      ],
+      "consumers": [
+        "stack4_block2_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block2_mlp_group_norm/strided_slice:0",
+        "stack4_block2_mlp_group_norm/Const:0",
+        "stack4_block2_mlp_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block2_mlp_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block3_attn_group_norm/strided_slice:0",
+        "stack4_block3_attn_group_norm/Const:0",
+        "stack4_block3_attn_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block3_attn_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block3_attn_mhsa_attention_scores/range:0",
+        "stack4_block3_attn_mhsa_attention_scores/concat/values_1:0",
+        "stack4_block3_attn_mhsa_attention_scores/range_1:0",
+        "stack4_block3_attn_mhsa_attention_scores/concat/values_3:0",
+        "stack4_block3_attn_mhsa_attention_scores/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block3_attn_mhsa_attention_scores/transpose"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block3_attn_mhsa_attention_scores/range_2:0",
+        "stack4_block3_attn_mhsa_attention_scores/concat_1/values_1:0",
+        "stack4_block3_attn_mhsa_attention_scores/range_3:0",
+        "stack4_block3_attn_mhsa_attention_scores/concat_1/values_3:0",
+        "stack4_block3_attn_mhsa_attention_scores/concat_1/axis:0"
+      ],
+      "consumers": [
+        "stack4_block3_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block3_mlp_group_norm/strided_slice:0",
+        "stack4_block3_mlp_group_norm/Const:0",
+        "stack4_block3_mlp_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block3_mlp_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block4_attn_group_norm/strided_slice:0",
+        "stack4_block4_attn_group_norm/Const:0",
+        "stack4_block4_attn_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block4_attn_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block4_attn_mhsa_attention_scores/range:0",
+        "stack4_block4_attn_mhsa_attention_scores/concat/values_1:0",
+        "stack4_block4_attn_mhsa_attention_scores/range_1:0",
+        "stack4_block4_attn_mhsa_attention_scores/concat/values_3:0",
+        "stack4_block4_attn_mhsa_attention_scores/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block4_attn_mhsa_attention_scores/transpose"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block4_attn_mhsa_attention_scores/range_2:0",
+        "stack4_block4_attn_mhsa_attention_scores/concat_1/values_1:0",
+        "stack4_block4_attn_mhsa_attention_scores/range_3:0",
+        "stack4_block4_attn_mhsa_attention_scores/concat_1/values_3:0",
+        "stack4_block4_attn_mhsa_attention_scores/concat_1/axis:0"
+      ],
+      "consumers": [
+        "stack4_block4_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block4_mlp_group_norm/strided_slice:0",
+        "stack4_block4_mlp_group_norm/Const:0",
+        "stack4_block4_mlp_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block4_mlp_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block5_attn_group_norm/strided_slice:0",
+        "stack4_block5_attn_group_norm/Const:0",
+        "stack4_block5_attn_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block5_attn_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block5_attn_mhsa_attention_scores/range:0",
+        "stack4_block5_attn_mhsa_attention_scores/concat/values_1:0",
+        "stack4_block5_attn_mhsa_attention_scores/range_1:0",
+        "stack4_block5_attn_mhsa_attention_scores/concat/values_3:0",
+        "stack4_block5_attn_mhsa_attention_scores/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block5_attn_mhsa_attention_scores/transpose"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block5_attn_mhsa_attention_scores/range_2:0",
+        "stack4_block5_attn_mhsa_attention_scores/concat_1/values_1:0",
+        "stack4_block5_attn_mhsa_attention_scores/range_3:0",
+        "stack4_block5_attn_mhsa_attention_scores/concat_1/values_3:0",
+        "stack4_block5_attn_mhsa_attention_scores/concat_1/axis:0"
+      ],
+      "consumers": [
+        "stack4_block5_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block5_mlp_group_norm/strided_slice:0",
+        "stack4_block5_mlp_group_norm/Const:0",
+        "stack4_block5_mlp_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block5_mlp_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block5_post_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack4_block5_post_group_norm/strided_slice:0",
+        "stack4_block5_post_group_norm/Const:0",
+        "stack4_block5_post_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack4_block5_post_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block2_attn_group_norm/strided_slice:0",
+        "stack5_block2_attn_group_norm/Const:0",
+        "stack5_block2_attn_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block2_attn_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block2_attn_mhsa_attention_scores/range:0",
+        "stack5_block2_attn_mhsa_attention_scores/concat/values_1:0",
+        "stack5_block2_attn_mhsa_attention_scores/range_1:0",
+        "stack5_block2_attn_mhsa_attention_scores/concat/values_3:0",
+        "stack5_block2_attn_mhsa_attention_scores/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block2_attn_mhsa_attention_scores/transpose"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block2_attn_mhsa_attention_scores/range_2:0",
+        "stack5_block2_attn_mhsa_attention_scores/concat_1/values_1:0",
+        "stack5_block2_attn_mhsa_attention_scores/range_3:0",
+        "stack5_block2_attn_mhsa_attention_scores/concat_1/values_3:0",
+        "stack5_block2_attn_mhsa_attention_scores/concat_1/axis:0"
+      ],
+      "consumers": [
+        "stack5_block2_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block2_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block2_mlp_group_norm/strided_slice:0",
+        "stack5_block2_mlp_group_norm/Const:0",
+        "stack5_block2_mlp_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block2_mlp_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block3_attn_group_norm/strided_slice:0",
+        "stack5_block3_attn_group_norm/Const:0",
+        "stack5_block3_attn_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block3_attn_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block3_attn_mhsa_attention_scores/range:0",
+        "stack5_block3_attn_mhsa_attention_scores/concat/values_1:0",
+        "stack5_block3_attn_mhsa_attention_scores/range_1:0",
+        "stack5_block3_attn_mhsa_attention_scores/concat/values_3:0",
+        "stack5_block3_attn_mhsa_attention_scores/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block3_attn_mhsa_attention_scores/transpose"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block3_attn_mhsa_attention_scores/range_2:0",
+        "stack5_block3_attn_mhsa_attention_scores/concat_1/values_1:0",
+        "stack5_block3_attn_mhsa_attention_scores/range_3:0",
+        "stack5_block3_attn_mhsa_attention_scores/concat_1/values_3:0",
+        "stack5_block3_attn_mhsa_attention_scores/concat_1/axis:0"
+      ],
+      "consumers": [
+        "stack5_block3_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block3_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block3_mlp_group_norm/strided_slice:0",
+        "stack5_block3_mlp_group_norm/Const:0",
+        "stack5_block3_mlp_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block3_mlp_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block4_attn_group_norm/strided_slice:0",
+        "stack5_block4_attn_group_norm/Const:0",
+        "stack5_block4_attn_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block4_attn_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block4_attn_mhsa_attention_scores/range:0",
+        "stack5_block4_attn_mhsa_attention_scores/concat/values_1:0",
+        "stack5_block4_attn_mhsa_attention_scores/range_1:0",
+        "stack5_block4_attn_mhsa_attention_scores/concat/values_3:0",
+        "stack5_block4_attn_mhsa_attention_scores/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block4_attn_mhsa_attention_scores/transpose"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block4_attn_mhsa_attention_scores/range_2:0",
+        "stack5_block4_attn_mhsa_attention_scores/concat_1/values_1:0",
+        "stack5_block4_attn_mhsa_attention_scores/range_3:0",
+        "stack5_block4_attn_mhsa_attention_scores/concat_1/values_3:0",
+        "stack5_block4_attn_mhsa_attention_scores/concat_1/axis:0"
+      ],
+      "consumers": [
+        "stack5_block4_attn_mhsa_attention_scores/transpose_1"
+      ],
+      "category": "softmax_transpose_permutation",
+      "integer_value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block4_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block4_mlp_group_norm/strided_slice:0",
+        "stack5_block4_mlp_group_norm/Const:0",
+        "stack5_block4_mlp_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block4_mlp_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block4_post_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "original_inputs": [
+        "stack5_block4_post_group_norm/strided_slice:0",
+        "stack5_block4_post_group_norm/Const:0",
+        "stack5_block4_post_group_norm/concat/axis:0"
+      ],
+      "consumers": [
+        "stack5_block4_post_group_norm/Reshape"
+      ],
+      "category": "group_norm_shape",
+      "integer_value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    }
+  ],
+  "concat_categories": {
+    "group_norm_shape": 21,
+    "softmax_transpose_permutation": 18
+  },
+  "folded_static_shape_nodes": 39,
+  "integer_replacements": [
+    {
+      "name": "reshape_10/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_10/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_10/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_11/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_11/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_11/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_12_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_12_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_12_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_13_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_13_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_13_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_14_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_14_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_14_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_15_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_15_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_15_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_16_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_16_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_16_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_17_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_17_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "reshape_17_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_1_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "reshape_1_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "reshape_1_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_2_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "reshape_2_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "reshape_2_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_3/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "reshape_3/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "reshape_3/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_3_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "reshape_3_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "reshape_3_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_4_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_4_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_4_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_5_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_5_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_5_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_6_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_6_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_6_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_7_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_7_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_7_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_8_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_8_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_8_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "reshape_9_1/Reshape/shape",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_9_1/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "reshape_9_1/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": 1
+    },
+    {
+      "name": "stack3_block2_attn_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/Sub",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/Sub_1",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/concat/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/concat_1/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/range",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/range_1",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/range_2",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack3_block2_attn_mhsa_attention_scores/range_3",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack3_block2_mlp_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block2_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block2_mlp_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/Sub",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/Sub_1",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/concat/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/concat_1/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/range",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/range_1",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/range_2",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack3_block3_attn_mhsa_attention_scores/range_3",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack3_block3_mlp_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block3_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block3_mlp_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack3_block3_post_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        256,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block3_post_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        96
+      ]
+    },
+    {
+      "name": "stack3_block3_post_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/Sub",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/Sub_1",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/concat/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/concat_1/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/range",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/range_1",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/range_2",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack4_block2_attn_mhsa_attention_scores/range_3",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block2_mlp_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/Sub",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/Sub_1",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/concat/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/concat_1/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/range",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/range_1",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/range_2",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack4_block3_attn_mhsa_attention_scores/range_3",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block3_mlp_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/Sub",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/Sub_1",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/concat/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/concat_1/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/range",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/range_1",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/range_2",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack4_block4_attn_mhsa_attention_scores/range_3",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block4_mlp_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/Sub",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/Sub_1",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/concat/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/concat_1/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/range",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/range_1",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/range_2",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack4_block5_attn_mhsa_attention_scores/range_3",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block5_mlp_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack4_block5_post_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        64,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block5_post_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        144
+      ]
+    },
+    {
+      "name": "stack4_block5_post_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/Sub",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/Sub_1",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/concat/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/concat_1/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/range",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/range_1",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/range_2",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack5_block2_attn_mhsa_attention_scores/range_3",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack5_block2_mlp_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block2_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block2_mlp_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/Sub",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/Sub_1",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/concat/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/concat_1/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/range",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/range_1",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/range_2",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack5_block3_attn_mhsa_attention_scores/range_3",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack5_block3_mlp_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block3_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block3_mlp_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/Sub",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/Sub_1",
+      "original_op": "Sub",
+      "dtype": "int32",
+      "value": 3
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/concat/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/concat_1",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/concat_1/values_1",
+      "original_op": "Pack",
+      "dtype": "int32",
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/range",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/range_1",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/range_2",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "stack5_block4_attn_mhsa_attention_scores/range_3",
+      "original_op": "Range",
+      "dtype": "int32",
+      "value": []
+    },
+    {
+      "name": "stack5_block4_mlp_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block4_mlp_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block4_mlp_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    },
+    {
+      "name": "stack5_block4_post_group_norm/Shape",
+      "original_op": "Shape",
+      "dtype": "int32",
+      "value": [
+        1,
+        4,
+        16,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block4_post_group_norm/concat",
+      "original_op": "ConcatV2",
+      "dtype": "int32",
+      "value": [
+        1,
+        -1,
+        1,
+        192
+      ]
+    },
+    {
+      "name": "stack5_block4_post_group_norm/strided_slice",
+      "original_op": "StridedSlice",
+      "dtype": "int32",
+      "value": [
+        1
+      ]
+    }
+  ],
+  "all_float_node_definitions_equal_except_input_batch_and_shape_metadata": true,
+  "preserved_float_node_count": 1067,
+  "remaining_integer_nonconstant_ops": {},
+  "structure": {
+    "node_count": 1255,
+    "function_count": 0,
+    "op_counts": {
+      "AddV2": 61,
+      "BiasAdd": 37,
+      "Const": 453,
+      "Conv2D": 55,
+      "DepthwiseConv2dNative": 9,
+      "FusedBatchNormV3": 25,
+      "Identity": 247,
+      "MatMul": 1,
+      "Mean": 43,
+      "Mul": 60,
+      "Pad": 10,
+      "Placeholder": 1,
+      "Relu": 34,
+      "Reshape": 78,
+      "Rsqrt": 21,
+      "Softmax": 9,
+      "SplitV": 9,
+      "SquaredDifference": 21,
+      "StopGradient": 21,
+      "Sub": 21,
+      "Sum": 9,
+      "Transpose": 30
+    },
+    "placeholders": [
+      {
+        "name": "input_1",
+        "op": "Placeholder"
+      }
+    ],
+    "control_flow_ops": {},
+    "batch_norm_count": 25,
+    "training_batch_norm_count": 0,
+    "training_batch_norm_nodes": [],
+    "inference_batch_norm_count": 25,
+    "learning_phase_nodes": [],
+    "variable_or_update_ops": {},
+    "random_ops": {},
+    "gradient_or_optimizer_nodes": [],
+    "registered_gradient_count": 0,
+    "pure_inference": true
+  },
+  "comparisons": [
+    {
+      "input": "zero",
+      "image_path": null,
+      "image_sha256": null,
+      "normalized_input_sha256": "599c1bb5ffd4b87229a81958f33f1060821cd01cd7aa7ccafa0d862f4522f3f6",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 5,
+      "bitwise_equal": true
+    },
+    {
+      "input": "random_normal_0",
+      "image_path": null,
+      "image_sha256": null,
+      "normalized_input_sha256": "b019e0b244932ceaf32fbf5fd1d92846bae5dc23c70a2f338693ee8371a0c6cd",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 5,
+      "bitwise_equal": true
+    },
+    {
+      "input": "random_normal_1",
+      "image_path": null,
+      "image_sha256": null,
+      "normalized_input_sha256": "201dbdd296ce5e6752e52f3e362d34733e77fe7f0652c60d3ca6656650e1b2d5",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 5,
+      "bitwise_equal": true
+    },
+    {
+      "input": "random_normal_2",
+      "image_path": null,
+      "image_sha256": null,
+      "normalized_input_sha256": "57d77af46cbac832421d1300d5686710bc18076fdf5ad605073d433dffc1ec1c",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 5,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c0",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c0\\c0_1.jpg",
+      "image_sha256": "90EB039B04612F73CBDB218584CE098A324CCD31760C629CFEE9FB7A5C74C0C7",
+      "normalized_input_sha256": "292fcbe9aba7dfe9758e1b9efcdb6a991dadae14652bcc8e6fd136d046004a81",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 0,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c1",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c1\\c1_1.jpg",
+      "image_sha256": "E0857A1E6A8AA9936FAD4355222CAF96E20CCAD76550FEFCEF4D80118F4F98FE",
+      "normalized_input_sha256": "641266010d9c19741d411a202439ab59b033c958f62a24554c1af192ad2b3212",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 1,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c2",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c2\\c2_1.jpg",
+      "image_sha256": "334FC92F9840B2E9640A578BD3A3F1BDDE4E1005FD3569900BB9A188563BCCEE",
+      "normalized_input_sha256": "4fd2dbed57433303acb2e1f1e115904bcade6c6ca789d2179c077cb998e0d6eb",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 8,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c3",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c3\\c3_1.jpg",
+      "image_sha256": "0E9AB9BC3757197C7AC2DC84269F10A8BE5629929FBD0B3454598B9912530792",
+      "normalized_input_sha256": "849c30ee43cc6d7abf0bb8093169e10da4a940337f89565755733532f4d980fe",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 3,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c4",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c4\\c4_1.jpg",
+      "image_sha256": "6F9F6BF8BE48D975EE557685DFAD9C32B2072B6A6B2D50C2D05F4EC33B55C556",
+      "normalized_input_sha256": "0df638bee10fcf4e8019001a4ac6cb7c750bcbeaad6d1795de3e0b16ecce4600",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 4,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c5",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c5\\c5_1.jpg",
+      "image_sha256": "93846611E1243D6121B64F70659480B26FED847E1AD260369DBC61656D499482",
+      "normalized_input_sha256": "a1aa0fc7bcab40591f3163efd70f6774f46efb3736fa73c5b6dda9e1d836f57d",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 5,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c6",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c6\\c6_1.jpg",
+      "image_sha256": "7A43D02DC71E99133FAB1DF633C693D95C48544BB3FA11A22A008D844690E12A",
+      "normalized_input_sha256": "9bfeb8f404ba17cf1772d4b2aaded209561280ba54f6d248c70d14f6b30524ae",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 6,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c7",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c7\\img.jpg",
+      "image_sha256": "FFEDCCC7412E56697A55C408383B4AD68C5E773E52DDFFE8B20DA93A05D830D8",
+      "normalized_input_sha256": "e5d55eac0a58ede35287c01a112072d8984378ec9a4286ee842cbc135d23681a",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 7,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c8",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c8\\img_153.jpg",
+      "image_sha256": "09F58B9041346EBF30EA9DF041545757ABD7F7FB8B9D846B348204AA5D354761",
+      "normalized_input_sha256": "7ee63c1b6de2c99908b32a30e611ad86664e9478e167219d5dd3b1c2f03c874a",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 8,
+      "bitwise_equal": true
+    },
+    {
+      "input": "real_c9",
+      "image_path": "C:\\transformerFPGA\\MobileViT\\Dataset\\Driver\\test1_p\\c9\\img_1029.jpg",
+      "image_sha256": "2A1CCBCC228B597AE3A0C5595103F624E74840410EADCE1E1D2E6CFBD53EA168",
+      "normalized_input_sha256": "a63844245615c8326182eb3c23ed0363c438e44f889dad3217a5ff74c961f06b",
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "allclose": true,
+      "class_index": 9,
+      "bitwise_equal": true
+    }
+  ],
+  "vitis_ai_quantizer_executed": false
+}

@@ -1,0 +1,15 @@
+{
+  "source_pb": "model/segment.pb",
+  "input_tensor": "features:0",
+  "output_tensor": "output:0",
+  "update_parts": ["pl0"],
+  "frozen_parts": ["ps0", "pl1", "ps1"],
+  "evaluation_mode": "whole_hybrid",
+  "runtime": "discover_from_actual_environment",
+  "calibration_inputs": "features_npz",
+  "calibration_input_origin": "actual_deployed_prefix",
+  "primary_metric": "classification_accuracy",
+  "acceptance_min_accuracy": null,
+  "acceptance_max_drop": null,
+  "note": "Replace paths and stage IDs; null thresholds require the user to define acceptance, not an assumed default."
+}

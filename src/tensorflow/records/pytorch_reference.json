@@ -1,0 +1,34 @@
+{
+  "weights_path": "C:\\WorkSpace\\qsfpga\\Models\\weights\\bestmodel_v1_only_weights.pt",
+  "weights_sha256": "7D6D7BD14D2A163AC4C4B3DFEB05CC75D9C5BE3A06C58918570FE1C67943CDE9",
+  "model": "MobileViTv2 0.75, 10 classes, ReLU, eval mode, CPU",
+  "python_version": "3.10.20",
+  "pytorch_version": "1.13.0+cu117",
+  "state_dict_tensors": 269,
+  "input_seed": 20261026,
+  "input_shapes": {
+    "nchw": [
+      3,
+      3,
+      256,
+      256
+    ],
+    "nhwc": [
+      3,
+      256,
+      256,
+      3
+    ]
+  },
+  "logits_shape": [
+    3,
+    10
+  ],
+  "class_ids": [
+    5,
+    5,
+    7
+  ],
+  "reference_npz": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\pytorch_reference.npz",
+  "normalization": "(RGB_float32_[0,1] - [0.485,0.456,0.406]) / [0.229,0.224,0.225]"
+}

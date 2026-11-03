@@ -1,0 +1,9 @@
+{
+  "shape": [1, 8, 8, 16],
+  "layout": "NHWC",
+  "host_dtype": "float32",
+  "device_dtype": "int8",
+  "input_scale": 2.0,
+  "zero_point": 0,
+  "note": "Example only: obtain shape, dtype, scale and layout from the actual compiler/runtime/IP contract."
+}

@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "input": "synthetic float32 zeros, shape [1,256,256,3]",
+  "implementation": "fused",
+  "stages": [
+    "front",
+    "ps1",
+    "mv2_4",
+    "ps2",
+    "mv2_5",
+    "ps3"
+  ],
+  "output_shapes": [
+    [
+      1,
+      32,
+      32,
+      96
+    ],
+    [
+      1,
+      32,
+      32,
+      192
+    ],
+    [
+      1,
+      16,
+      16,
+      288
+    ],
+    [
+      1,
+      16,
+      16,
+      288
+    ],
+    [
+      1,
+      8,
+      8,
+      384
+    ],
+    [
+      1,
+      10
+    ]
+  ],
+  "all_outputs_finite": true,
+  "scope": "Host numerical smoke test of shared pure-PS graph paths in the renamed release; no accuracy or board speed measurement"
+}

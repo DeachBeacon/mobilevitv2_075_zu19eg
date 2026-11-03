@@ -1,0 +1,4 @@
+interface:
+  display_name: "PB 模型分段与 PS/PL 协同"
+  short_description: "按用户指定边界切分冻结 PB，检查跨段依赖并验证完整流水线数值等价"
+  default_prompt: "请使用 $pb-hybrid-split，按我的硬件分工切分冻结 PB，并交付独立子图、接口清单和数值验证。"

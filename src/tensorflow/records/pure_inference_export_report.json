@@ -1,0 +1,316 @@
+{
+  "tensorflow_version": "1.15.2",
+  "python_version": "3.6.10",
+  "model_source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\mobilevit\\__init__.py",
+  "weights_path": "C:\\WorkSpace\\Z19-Onborad\\Model\\weights\\mobilevitv2_075_10cls_relu_weights.h5",
+  "weights_sha256": "EE24E3C7B4D238B19011F9752E81A15030B64AA387298A9966BDC8C8CC1E8631",
+  "strict_h5_load": {
+    "weighted_layers": 111,
+    "tensors": 244,
+    "scalars": 2496523,
+    "max_weight_error": 0.0
+  },
+  "original_pb_path": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\mobilevitv2_075_10cls_relu_frozen.pb",
+  "original_pb_sha256": "3F92787E4E9B13819BB82651301D9D22A61F9F90B087BE0F38B678FE6B765625",
+  "original_pb_structure": {
+    "node_count": 2177,
+    "function_count": 0,
+    "op_counts": {
+      "AddV2": 61,
+      "BiasAdd": 37,
+      "ConcatV2": 39,
+      "Const": 792,
+      "Conv2D": 55,
+      "DepthwiseConv2dNative": 9,
+      "FusedBatchNormV3": 50,
+      "Identity": 347,
+      "MatMul": 1,
+      "Mean": 43,
+      "Merge": 25,
+      "Mul": 60,
+      "Pack": 36,
+      "Pad": 10,
+      "Placeholder": 1,
+      "PlaceholderWithDefault": 1,
+      "Range": 36,
+      "Relu": 34,
+      "Reshape": 78,
+      "Rsqrt": 21,
+      "Shape": 39,
+      "Softmax": 9,
+      "SplitV": 9,
+      "SquaredDifference": 21,
+      "StopGradient": 21,
+      "StridedSlice": 39,
+      "Sub": 39,
+      "Sum": 9,
+      "Switch": 225,
+      "Transpose": 30
+    },
+    "placeholders": [
+      {
+        "name": "input_1",
+        "op": "Placeholder"
+      },
+      {
+        "name": "keras_learning_phase",
+        "op": "PlaceholderWithDefault"
+      }
+    ],
+    "control_flow_ops": {
+      "Switch": 225,
+      "Merge": 25
+    },
+    "batch_norm_count": 50,
+    "training_batch_norm_count": 25,
+    "training_batch_norm_nodes": [
+      "stem_bn/cond/FusedBatchNormV3",
+      "stack1_block1_deep_1_bn/cond/FusedBatchNormV3",
+      "stack1_block1_deep_2_bn/cond/FusedBatchNormV3",
+      "stack1_block1_deep_3_bn/cond/FusedBatchNormV3",
+      "stack2_block1_deep_1_bn/cond/FusedBatchNormV3",
+      "stack2_block1_deep_2_bn/cond/FusedBatchNormV3",
+      "stack2_block1_deep_3_bn/cond/FusedBatchNormV3",
+      "stack2_block2_deep_1_bn/cond/FusedBatchNormV3",
+      "stack2_block2_deep_2_bn/cond/FusedBatchNormV3",
+      "stack2_block2_deep_3_bn/cond/FusedBatchNormV3",
+      "stack3_block1_deep_1_bn/cond/FusedBatchNormV3",
+      "stack3_block1_deep_2_bn/cond/FusedBatchNormV3",
+      "stack3_block1_deep_3_bn/cond/FusedBatchNormV3",
+      "stack3_block2_pre_1_bn/cond/FusedBatchNormV3",
+      "stack3_block3_post_1_bn/cond/FusedBatchNormV3",
+      "stack4_block1_deep_1_bn/cond/FusedBatchNormV3",
+      "stack4_block1_deep_2_bn/cond/FusedBatchNormV3",
+      "stack4_block1_deep_3_bn/cond/FusedBatchNormV3",
+      "stack4_block2_pre_1_bn/cond/FusedBatchNormV3",
+      "stack4_block5_post_1_bn/cond/FusedBatchNormV3",
+      "stack5_block1_deep_1_bn/cond/FusedBatchNormV3",
+      "stack5_block1_deep_2_bn/cond/FusedBatchNormV3",
+      "stack5_block1_deep_3_bn/cond/FusedBatchNormV3",
+      "stack5_block2_pre_1_bn/cond/FusedBatchNormV3",
+      "stack5_block4_post_1_bn/cond/FusedBatchNormV3"
+    ],
+    "inference_batch_norm_count": 25,
+    "learning_phase_nodes": [
+      "keras_learning_phase/input",
+      "keras_learning_phase"
+    ],
+    "variable_or_update_ops": {},
+    "random_ops": {},
+    "gradient_or_optimizer_nodes": [],
+    "registered_gradient_count": 0,
+    "pure_inference": false
+  },
+  "pb_path": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\artifacts\\mobilevitv2_tf115\\mobilevitv2_075_10cls_relu_inference.pb",
+  "pb_sha256": "776D00911C18FC0F7A5F8930FECA8A31273CDBE1C32A1E408B502943B514FB5A",
+  "pb_bytes": 10211882,
+  "learning_phase_fixed_before_model_construction": 0,
+  "input_tensor": "input_1:0",
+  "input_shape": [
+    null,
+    256,
+    256,
+    3
+  ],
+  "input_dtype": "float32",
+  "input_layout": "NHWC",
+  "input_preprocessing": "RGB / 255, then (x - [0.485,0.456,0.406]) / [0.229,0.224,0.225]; outside PB",
+  "output_tensor": "predictions/BiasAdd:0",
+  "output_shape": [
+    null,
+    10
+  ],
+  "output_dtype": "float32",
+  "output_semantics": "10 raw logits; no softmax",
+  "structure": {
+    "node_count": 1750,
+    "function_count": 0,
+    "op_counts": {
+      "AddV2": 61,
+      "BiasAdd": 37,
+      "ConcatV2": 39,
+      "Const": 741,
+      "Conv2D": 55,
+      "DepthwiseConv2dNative": 9,
+      "FusedBatchNormV3": 25,
+      "Identity": 247,
+      "MatMul": 1,
+      "Mean": 43,
+      "Mul": 60,
+      "Pack": 36,
+      "Pad": 10,
+      "Placeholder": 1,
+      "Range": 36,
+      "Relu": 34,
+      "Reshape": 78,
+      "Rsqrt": 21,
+      "Shape": 39,
+      "Softmax": 9,
+      "SplitV": 9,
+      "SquaredDifference": 21,
+      "StopGradient": 21,
+      "StridedSlice": 39,
+      "Sub": 39,
+      "Sum": 9,
+      "Transpose": 30
+    },
+    "placeholders": [
+      {
+        "name": "input_1",
+        "op": "Placeholder"
+      }
+    ],
+    "control_flow_ops": {},
+    "batch_norm_count": 25,
+    "training_batch_norm_count": 0,
+    "training_batch_norm_nodes": [],
+    "inference_batch_norm_count": 25,
+    "learning_phase_nodes": [],
+    "variable_or_update_ops": {},
+    "random_ops": {},
+    "gradient_or_optimizer_nodes": [],
+    "registered_gradient_count": 0,
+    "pure_inference": true
+  },
+  "comparisons": [
+    {
+      "mode": "batch_3",
+      "batch_size": 3,
+      "vs_keras_model": {
+        "max_abs_error": 4.500150680541992e-06,
+        "mean_abs_error": 1.449883029636112e-06,
+        "rtol": 1e-05,
+        "atol": 1e-05,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "vs_original_pb": {
+        "max_abs_error": 4.500150680541992e-06,
+        "mean_abs_error": 1.449883029636112e-06,
+        "rtol": 1e-05,
+        "atol": 1e-05,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "vs_pytorch_reference": {
+        "max_abs_error": 0.0001251697540283203,
+        "mean_abs_error": 3.650834332802333e-05,
+        "rtol": 0.0001,
+        "atol": 0.0001,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "class_ids": [
+        5,
+        5,
+        7
+      ]
+    },
+    {
+      "mode": "zero",
+      "batch_size": 1,
+      "vs_keras_model": {
+        "max_abs_error": 1.3709068298339844e-06,
+        "mean_abs_error": 5.245208853921213e-07,
+        "rtol": 1e-05,
+        "atol": 1e-05,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "vs_original_pb": {
+        "max_abs_error": 1.3709068298339844e-06,
+        "mean_abs_error": 5.245208853921213e-07,
+        "rtol": 1e-05,
+        "atol": 1e-05,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "vs_pytorch_reference": {
+        "max_abs_error": 6.705522537231445e-06,
+        "mean_abs_error": 3.618001983340946e-06,
+        "rtol": 0.0001,
+        "atol": 0.0001,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "class_ids": [
+        5
+      ]
+    },
+    {
+      "mode": "standard_normal",
+      "batch_size": 1,
+      "vs_keras_model": {
+        "max_abs_error": 1.5497207641601562e-06,
+        "mean_abs_error": 4.678964558024745e-07,
+        "rtol": 1e-05,
+        "atol": 1e-05,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "vs_original_pb": {
+        "max_abs_error": 1.5497207641601562e-06,
+        "mean_abs_error": 4.678964558024745e-07,
+        "rtol": 1e-05,
+        "atol": 1e-05,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "vs_pytorch_reference": {
+        "max_abs_error": 5.829334259033203e-05,
+        "mean_abs_error": 1.933872772497125e-05,
+        "rtol": 0.0001,
+        "atol": 0.0001,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "class_ids": [
+        5
+      ]
+    },
+    {
+      "mode": "normalized_rgb",
+      "batch_size": 1,
+      "vs_keras_model": {
+        "max_abs_error": 3.933906555175781e-06,
+        "mean_abs_error": 1.0728836059570312e-06,
+        "rtol": 1e-05,
+        "atol": 1e-05,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "vs_original_pb": {
+        "max_abs_error": 3.933906555175781e-06,
+        "mean_abs_error": 1.0728836059570312e-06,
+        "rtol": 1e-05,
+        "atol": 1e-05,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "vs_pytorch_reference": {
+        "max_abs_error": 5.161762237548828e-05,
+        "mean_abs_error": 1.2698769751295913e-05,
+        "rtol": 0.0001,
+        "atol": 0.0001,
+        "allclose": true,
+        "class_ids_equal": true
+      },
+      "class_ids": [
+        7
+      ]
+    }
+  ],
+  "batch_vs_single": {
+    "max_abs_error": 0.0001310110092163086,
+    "mean_abs_error": 3.200819264748134e-05,
+    "rtol": 0.0001,
+    "atol": 0.0002,
+    "allclose": true,
+    "class_ids_equal": true
+  },
+  "batch_norm_moving_stats_unchanged": true,
+  "repeat_inference_exactly_equal": true,
+  "fresh_tf115_graph_session_without_initializers_or_learning_phase_feed": true,
+  "reference_npz_sha256": "3FD84776CEF0CF5E738CBFF7A5D7DB6C921A52118EE173CFC6739A2A230E35DC",
+  "full_validation_dataset_tested": false
+}

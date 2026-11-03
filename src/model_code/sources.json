@@ -1,0 +1,96 @@
+[
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\__init__.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/__init__.py",
+    "source_sha256": "31c599c4252f928cff5f22fce88f7ef999e9599bbc854d7d935f1f6023d31837",
+    "bundled_sha256": "21eca4da09640f0482e46146a714efd2abf4e7a9c09226727903bf7a1c1fa5e4",
+    "modification": "Unsupported TF2 backend branch replaced with a clear TF1-only error; unused model families omitted."
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\backend.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/backend.py",
+    "source_sha256": "4649de4b1d8fe47d88cc27dcf799da003923f88c47a2d1686c64d9619b3a977b",
+    "bundled_sha256": "4649de4b1d8fe47d88cc27dcf799da003923f88c47a2d1686c64d9619b3a977b"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\common_layers.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/common_layers.py",
+    "source_sha256": "12b31ff90e00991c597200d95a87ac4042a88275a71db459a400ebedf67a88f0",
+    "bundled_sha256": "12b31ff90e00991c597200d95a87ac4042a88275a71db459a400ebedf67a88f0"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\download_and_load.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/download_and_load.py",
+    "source_sha256": "e47ce1671c061b127f5b0ae439780138ae4944ccb5960ec1b8f8f0ed21a70f48",
+    "bundled_sha256": "e47ce1671c061b127f5b0ae439780138ae4944ccb5960ec1b8f8f0ed21a70f48"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\models.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/models.py",
+    "source_sha256": "17c9fb68cf88614461db804230e852d3613bde77e9f530dc32063d6ec6fdf534",
+    "bundled_sha256": "17c9fb68cf88614461db804230e852d3613bde77e9f530dc32063d6ec6fdf534"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\tf_functional.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/tf_functional.py",
+    "source_sha256": "837f954d7b5712a4aabbbd0429ff35d0c4b00dffa829b08ada8567032f70008d",
+    "bundled_sha256": "837f954d7b5712a4aabbbd0429ff35d0c4b00dffa829b08ada8567032f70008d"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\version.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/version.py",
+    "source_sha256": "bb8c46a381046555febbe4c2c2be04ef1aa2348f0205afabecad11dec1896dc9",
+    "bundled_sha256": "bb8c46a381046555febbe4c2c2be04ef1aa2348f0205afabecad11dec1896dc9"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\mobilevit\\__init__.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/mobilevit/__init__.py",
+    "source_sha256": "a24d2fe6369d7fd6828f951657c34309cfa61f774b763cf604718b4660f10976",
+    "bundled_sha256": "a24d2fe6369d7fd6828f951657c34309cfa61f774b763cf604718b4660f10976"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\mobilevit\\mobilevit.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/mobilevit/mobilevit.py",
+    "source_sha256": "034b09e7021f07a45ee261a3240c036101a75d135b0b415d7c5f40fce78b2d35",
+    "bundled_sha256": "034b09e7021f07a45ee261a3240c036101a75d135b0b415d7c5f40fce78b2d35"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\keras_cv_attention_models\\mobilevit\\mobilevit_v2.py",
+    "file": "compile_tools/modle/driver/model_code/tf115/keras_cv_attention_models/mobilevit/mobilevit_v2.py",
+    "source_sha256": "44836bab58a36b534cd7af01dec1795f3b6c833810adc6c4fe0c2337458d7224",
+    "bundled_sha256": "44836bab58a36b534cd7af01dec1795f3b6c833810adc6c4fe0c2337458d7224"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\license",
+    "file": "compile_tools/modle/driver/model_code/tf115/license",
+    "source_sha256": "374f7d111c0c357eca7fb4b6d319855de3b5962b59fcf3f922b9148f9288466c",
+    "bundled_sha256": "374f7d111c0c357eca7fb4b6d319855de3b5962b59fcf3f922b9148f9288466c"
+  },
+  {
+    "source": "C:\\WorkSpace\\qsfpga\\MobileViTv2\\my_mobilevit_block.py",
+    "file": "compile_tools/modle/driver/model_code/pytorch/my_mobilevit_block.py",
+    "source_sha256": "b75632d290cc30b0ed0398593ab5e6b9707853735c22f31144e5d476f8cadeae",
+    "bundled_sha256": "b75632d290cc30b0ed0398593ab5e6b9707853735c22f31144e5d476f8cadeae"
+  },
+  {
+    "source": "C:\\WorkSpace\\qsfpga\\Models\\weights\\bestmodel_v1_only_weights.pt",
+    "file": "compile_tools/modle/driver/weights/bestmodel_v1_only_weights.pt",
+    "source_sha256": "7d6d7bd14d2a163ac4c4b3dfeb05cc75d9c5be3a06c58918570fe1c67943cde9",
+    "bundled_sha256": "7d6d7bd14d2a163ac4c4b3dfeb05cc75d9c5be3a06c58918570fe1c67943cde9"
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\export_mobilevitv2_deploy_pb.py",
+    "source_sha256": "6ae20d8072c2749b7c84524c171772b6e9ff56bc6badcabbd011da3668714bd2",
+    "note": "Portable transformation functions extracted; original entry points and historical validation paths omitted."
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\fold_mobilevitv2_gn_affine_pb.py",
+    "source_sha256": "44450e324bff0e984ea9bcf39d0145c4a0fae55a224607989d511e7f50e8c24c",
+    "note": "Portable transformation functions extracted; original entry points and historical validation paths omitted."
+  },
+  {
+    "source": "C:\\WorkSpace\\Z19-Onborad\\Model\\keras_cv_attention_models\\2board\\inspect_mobilevitv2_pb.py",
+    "source_sha256": "90fd74e0670ed343e008a4c7e01f99727048392f2bbb8565d4cbe7793521dca2",
+    "note": "Portable transformation functions extracted; original entry points and historical validation paths omitted."
+  }
+]

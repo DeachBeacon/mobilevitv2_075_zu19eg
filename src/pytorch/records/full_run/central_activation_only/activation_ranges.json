@@ -1,0 +1,797 @@
+[
+  {
+    "tensor": "logits",
+    "lower": -0.9571607112884521,
+    "upper": 4.8592729568481445
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/DepthToSpace_output_0",
+    "lower": -14.023242950439453,
+    "upper": 9.82912826538086
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "lower": -17.880859375,
+    "upper": 11.869064331054688
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "lower": -5.60797119140625,
+    "upper": 4.3646392822265625
+  },
+  {
+    "tensor": "/conv_1/block/conv/Conv_output_0",
+    "lower": -16.92803955078125,
+    "upper": 19.44544219970703
+  },
+  {
+    "tensor": "/layer_1/layer_1.0/block/exp_1x1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 44.97357177734375
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "lower": -12.279167175292969,
+    "upper": 8.66351318359375
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "lower": -7.252947807312012,
+    "upper": 5.968173980712891
+  },
+  {
+    "tensor": "/layer_1/layer_1.0/block/exp_1x1/block/conv/Conv_output_0",
+    "lower": -54.286895751953125,
+    "upper": 44.97357177734375
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "lower": -9.414484977722168,
+    "upper": -2.4791674613952637
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "lower": 0.0,
+    "upper": 6.114801406860352
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/block/red_1x1/block/conv/Conv_output_0",
+    "lower": -22.339279174804688,
+    "upper": 20.056427001953125
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "lower": -4.163417339324951,
+    "upper": 1.5759449005126953
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/conv_proj/block/conv/Conv_output_0",
+    "lower": -24.672107696533203,
+    "upper": 22.843734741210938
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "lower": -6.929549217224121,
+    "upper": 5.506595611572266
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "lower": -13.731653213500977,
+    "upper": 13.310295104980469
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "lower": -9.6326904296875,
+    "upper": 56.50086212158203
+  },
+  {
+    "tensor": "/layer_3/layer_3.0/block/red_1x1/block/conv/Conv_output_0",
+    "lower": -62.41998291015625,
+    "upper": 60.24591064453125
+  },
+  {
+    "tensor": "/layer_5/layer_5.0/block/conv_3x3/block/conv/Conv_output_0",
+    "lower": -35.25547790527344,
+    "upper": 34.91558837890625
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 8.159832000732422
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "lower": -7.856598854064941,
+    "upper": 7.167972564697266
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "lower": -22.62628173828125,
+    "upper": 46.63555908203125
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "lower": -7.339032173156738,
+    "upper": 5.864843368530273
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/local_rep/local_rep.0/block/conv/Conv_output_0",
+    "lower": -9.589942932128906,
+    "upper": 9.449823379516602
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "lower": -6.463201522827148,
+    "upper": 5.473024368286133
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "lower": -89.10075378417969,
+    "upper": 82.77520751953125
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "lower": -5.874486923217773,
+    "upper": 3.964053153991699
+  },
+  {
+    "tensor": "/layer_4/layer_4.0/block/exp_1x1/block/conv/Conv_output_0",
+    "lower": -8.335905075073242,
+    "upper": 11.571113586425781
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "lower": -7.937892913818359,
+    "upper": 6.746030807495117
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/block/conv_3x3/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 32.239593505859375
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/DepthToSpace_output_0",
+    "lower": -11.456110000610352,
+    "upper": 10.95361328125
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "lower": -7.202752113342285,
+    "upper": 7.314043045043945
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.1/block/conv/Conv_output_0",
+    "lower": -17.671518325805664,
+    "upper": 8.745353698730469
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/DepthToSpace_output_0",
+    "lower": -21.55583381652832,
+    "upper": 18.55514144897461
+  },
+  {
+    "tensor": "/layer_1/layer_1.0/block/conv_3x3/block/conv/Conv_output_0",
+    "lower": -32.703033447265625,
+    "upper": 30.423309326171875
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "lower": 0.0,
+    "upper": 7.109155654907227
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "lower": -13.049873352050781,
+    "upper": 0.9887094497680664
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "lower": -7.616403102874756,
+    "upper": 5.494631767272949
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "lower": -38.536285400390625,
+    "upper": 41.02252197265625
+  },
+  {
+    "tensor": "/classifier/classifier.0/ReduceMean_output_0",
+    "lower": -2.0712130069732666,
+    "upper": 2.180588722229004
+  },
+  {
+    "tensor": "/layer_2/layer_2.0/block/red_1x1/block/conv/Conv_output_0",
+    "lower": -24.717761993408203,
+    "upper": 23.17902374267578
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 13.45798110961914
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "lower": -67.28643798828125,
+    "upper": 37.964447021484375
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/conv_proj/block/conv/Conv_output_0",
+    "lower": -29.77292251586914,
+    "upper": 24.017623901367188
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "lower": -5.432338714599609,
+    "upper": 5.863433837890625
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "lower": -38.983123779296875,
+    "upper": 21.42044448852539
+  },
+  {
+    "tensor": "/layer_2/layer_2.0/block/conv_3x3/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 40.87940216064453
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "lower": -19.862504959106445,
+    "upper": 17.209007263183594
+  },
+  {
+    "tensor": "/layer_1/layer_1.0/block/red_1x1/block/conv/Conv_output_0",
+    "lower": -32.241737365722656,
+    "upper": 29.097900390625
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/local_rep/local_rep.1/block/conv/Conv_output_0",
+    "lower": -86.8284912109375,
+    "upper": 184.723876953125
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "lower": -6.761931896209717,
+    "upper": 5.742644309997559
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.1/block/conv/Conv_output_0",
+    "lower": -40.84697341918945,
+    "upper": 13.458381652832031
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "lower": -2.2558138370513916,
+    "upper": 0.4672367572784424
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "lower": -4.229640960693359,
+    "upper": 8.386499404907227
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 13.711978912353516
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_ffn/pre_norm_ffn.1/block/conv/Conv_output_0",
+    "lower": -34.23849868774414,
+    "upper": 11.948371887207031
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "lower": -50.77117156982422,
+    "upper": 28.3084716796875
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/local_rep/local_rep.0/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 9.449823379516602
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "lower": -2.4986181259155273,
+    "upper": 2.2416605949401855
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/local_rep/local_rep.0/block/conv/Conv_output_0",
+    "lower": -10.600311279296875,
+    "upper": 11.102005004882812
+  },
+  {
+    "tensor": "/layer_3/layer_3.0/block/exp_1x1/block/conv/Conv_output_0",
+    "lower": -11.909744262695312,
+    "upper": 13.222930908203125
+  },
+  {
+    "tensor": "/layer_3/layer_3.0/block/conv_3x3/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 28.076370239257812
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.1/block/conv/Conv_output_0",
+    "lower": -24.710657119750977,
+    "upper": 9.193317413330078
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "lower": -20.31140899658203,
+    "upper": 7.6795806884765625
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "lower": -1.934840202331543,
+    "upper": 1.9083843231201172
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/conv_proj/block/conv/Conv_output_0",
+    "lower": -7.838031768798828,
+    "upper": 7.759920120239258
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "lower": 0.0,
+    "upper": 13.289840698242188
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "lower": -20.304508209228516,
+    "upper": 19.03594970703125
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "lower": -7.901043891906738,
+    "upper": 6.366941452026367
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "lower": -3.786062717437744,
+    "upper": 3.693882942199707
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "lower": -6.732458114624023,
+    "upper": 8.24704360961914
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/local_rep/local_rep.1/block/conv/Conv_output_0",
+    "lower": -33.02312088012695,
+    "upper": 30.086227416992188
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "lower": 0.0,
+    "upper": 5.49467658996582
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/block/exp_1x1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 14.633148193359375
+  },
+  {
+    "tensor": "/layer_4/layer_4.0/block/conv_3x3/block/conv/Conv_output_0",
+    "lower": -22.157211303710938,
+    "upper": 15.9442138671875
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 8.745353698730469
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "lower": -158.8466033935547,
+    "upper": 121.78305053710938
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "lower": -20.31476593017578,
+    "upper": 23.28551483154297
+  },
+  {
+    "tensor": "/layer_5/layer_5.0/block/conv_3x3/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 34.91156005859375
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "lower": -9.635882377624512,
+    "upper": 6.087640762329102
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "lower": 1.3851161003112793,
+    "upper": 5.7801408767700195
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "lower": -7.472922325134277,
+    "upper": 7.0447998046875
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "lower": -8.258294105529785,
+    "upper": 5.199766159057617
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "lower": -5.346534729003906,
+    "upper": 7.031671524047852
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 54.7149658203125
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "lower": 0.0,
+    "upper": 23.28551483154297
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "lower": -24.916893005371094,
+    "upper": 50.25146484375
+  },
+  {
+    "tensor": "/layer_2/layer_2.0/block/conv_3x3/block/conv/Conv_output_0",
+    "lower": -43.33116149902344,
+    "upper": 40.86293029785156
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/block/exp_1x1/block/conv/Conv_output_0",
+    "lower": -19.843582153320312,
+    "upper": 14.616928100585938
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "lower": -3.89385986328125,
+    "upper": 3.9864368438720703
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "lower": -18.88611602783203,
+    "upper": 13.289840698242188
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "lower": -17.489246368408203,
+    "upper": 13.292980194091797
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 98.7169189453125
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "lower": -3.583092212677002,
+    "upper": 3.4243783950805664
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "lower": -7.5867228507995605,
+    "upper": 6.856043815612793
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "lower": -6.296041488647461,
+    "upper": 5.098602294921875
+  },
+  {
+    "tensor": "/layer_2/layer_2.0/block/exp_1x1/block/conv/Conv_output_0",
+    "lower": -71.97543334960938,
+    "upper": 49.852325439453125
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.1/block/conv/Conv_output_0",
+    "lower": -12.660074234008789,
+    "upper": 6.238628387451172
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "lower": -14.512653350830078,
+    "upper": 29.206825256347656
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.1/block/conv/Conv_output_0",
+    "lower": -29.93459701538086,
+    "upper": 13.708839416503906
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "lower": -82.70405578613281,
+    "upper": 111.3798828125
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "lower": -10.099044799804688,
+    "upper": 6.577096939086914
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "lower": -16.67961311340332,
+    "upper": 16.29971694946289
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "lower": -3.609048366546631,
+    "upper": 2.8633241653442383
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/Add_output_0",
+    "lower": -29.79290771484375,
+    "upper": 26.267105102539062
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "lower": -8.805386543273926,
+    "upper": 6.492240905761719
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "lower": 0.0,
+    "upper": 6.08778190612793
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.1/block/conv/Conv_output_0",
+    "lower": -26.49325942993164,
+    "upper": 8.157135009765625
+  },
+  {
+    "tensor": "/layer_5/layer_5.0/block/exp_1x1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 19.436553955078125
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "lower": -4.640163898468018,
+    "upper": 3.8628273010253906
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "lower": -59.73674011230469,
+    "upper": 32.85520935058594
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "lower": -8.163318634033203,
+    "upper": 7.107668876647949
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/local_rep/local_rep.0/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 24.290191650390625
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "lower": -2.5897488594055176,
+    "upper": 2.317315101623535
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 11.957965850830078
+  },
+  {
+    "tensor": "/layer_5/layer_5.0/block/exp_1x1/block/conv/Conv_output_0",
+    "lower": -12.665618896484375,
+    "upper": 19.436553955078125
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/local_rep/local_rep.0/block/conv/Conv_output_0",
+    "lower": -25.515933990478516,
+    "upper": 24.290191650390625
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "lower": 0.0,
+    "upper": 5.199487686157227
+  },
+  {
+    "tensor": "/layer_4/layer_4.0/block/exp_1x1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 11.571113586425781
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "lower": -9.380097389221191,
+    "upper": -1.2055540084838867
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "lower": -6.836200714111328,
+    "upper": 6.758869171142578
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "lower": -20.182783126831055,
+    "upper": 19.92218780517578
+  },
+  {
+    "tensor": "/layer_4/layer_4.0/block/red_1x1/block/conv/Conv_output_0",
+    "lower": -61.02079772949219,
+    "upper": 56.274749755859375
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "lower": -6.42890739440918,
+    "upper": 6.361091613769531
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "lower": -7.75071907043457,
+    "upper": 5.617048263549805
+  },
+  {
+    "tensor": "/conv_1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 19.445438385009766
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "lower": -2.1685123443603516,
+    "upper": 2.3231544494628906
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "lower": -20.24445343017578,
+    "upper": 21.539398193359375
+  },
+  {
+    "tensor": "/layer_3/layer_3.0/block/exp_1x1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 13.22116470336914
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "lower": -2.104886054992676,
+    "upper": 1.629589557647705
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.1/block/conv/Conv_output_0",
+    "lower": -96.23143005371094,
+    "upper": 98.7169189453125
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "lower": -9.39756965637207,
+    "upper": 6.450986862182617
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 6.242059707641602
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "lower": 0.0,
+    "upper": 5.507209777832031
+  },
+  {
+    "tensor": "/layer_5/layer_5.0/block/red_1x1/block/conv/Conv_output_0",
+    "lower": -65.40606689453125,
+    "upper": 60.658843994140625
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/block/conv_3x3/block/conv/Conv_output_0",
+    "lower": -24.84832763671875,
+    "upper": 32.239593505859375
+  },
+  {
+    "tensor": "/layer_1/layer_1.0/block/conv_3x3/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 30.423309326171875
+  },
+  {
+    "tensor": "/layer_4/layer_4.0/block/conv_3x3/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 15.956230163574219
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.1/block/conv/Conv_output_0",
+    "lower": -112.7970962524414,
+    "upper": 54.703765869140625
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "lower": -2.4994313716888428,
+    "upper": 2.7897043228149414
+  },
+  {
+    "tensor": "/layer_3/layer_3.0/block/conv_3x3/block/conv/Conv_output_0",
+    "lower": -10.508563995361328,
+    "upper": 28.076370239257812
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "lower": 0.0,
+    "upper": 3.9638185501098633
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "lower": -5.260903835296631,
+    "upper": 0.6139569282531738
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "lower": -10.996302604675293,
+    "upper": 6.1158905029296875
+  },
+  {
+    "tensor": "images",
+    "lower": -2.1179039478302,
+    "upper": 2.639355421066284
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "lower": -40.81221008300781,
+    "upper": 53.82991027832031
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "lower": -36.89723205566406,
+    "upper": 5.951763153076172
+  },
+  {
+    "tensor": "/layer_2/layer_2.0/block/exp_1x1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 49.8759765625
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/local_rep/local_rep.1/block/conv/Conv_output_0",
+    "lower": -78.03645324707031,
+    "upper": 24.999710083007812
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "lower": -17.35858917236328,
+    "upper": 37.923988342285156
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "lower": -2.811122417449951,
+    "upper": 2.2803168296813965
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "lower": -2.0324149131774902,
+    "upper": 5.328965663909912
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "lower": -855.4140625,
+    "upper": 291.57421875
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "lower": -7.602316856384277,
+    "upper": 2.2160139083862305
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "lower": -48.27436065673828,
+    "upper": 53.411834716796875
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "lower": -10.974445343017578,
+    "upper": 42.14015579223633
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "lower": -9.440679550170898,
+    "upper": 7.219825744628906
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/local_rep/local_rep.0/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 11.10232162475586
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "lower": 0.0,
+    "upper": 9.19489860534668
+  }
+]

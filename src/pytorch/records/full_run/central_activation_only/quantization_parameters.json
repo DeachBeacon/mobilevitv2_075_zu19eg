@@ -1,0 +1,2146 @@
+[
+  {
+    "tensor": "images",
+    "dtype": "int8",
+    "scale": [
+      0.018655918538570404
+    ],
+    "zero_point": [
+      -14
+    ],
+    "effective_lower": [
+      -2.126774713397026
+    ],
+    "effective_upper": [
+      2.630484513938427
+    ]
+  },
+  {
+    "tensor": "/conv_1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.07625661790370941
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      19.4454375654459
+    ]
+  },
+  {
+    "tensor": "/layer_1/layer_1.0/block/exp_1x1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.17636695504188538
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      44.97357353568077
+    ]
+  },
+  {
+    "tensor": "/layer_1/layer_1.0/block/conv_3x3/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.11930709332227707
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      30.423308797180653
+    ]
+  },
+  {
+    "tensor": "/layer_1/layer_1.0/block/red_1x1/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.24054759740829468
+    ],
+    "zero_point": [
+      6
+    ],
+    "effective_lower": [
+      -32.23337805271149
+    ],
+    "effective_upper": [
+      29.106259286403656
+    ]
+  },
+  {
+    "tensor": "/layer_2/layer_2.0/block/exp_1x1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.19559206068515778
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      49.87597547471523
+    ]
+  },
+  {
+    "tensor": "/layer_2/layer_2.0/block/conv_3x3/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.16031138598918915
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      40.87940342724323
+    ]
+  },
+  {
+    "tensor": "/layer_2/layer_2.0/block/red_1x1/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.18783053755760193
+    ],
+    "zero_point": [
+      4
+    ],
+    "effective_lower": [
+      -24.793630957603455
+    ],
+    "effective_upper": [
+      23.103156119585037
+    ]
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/block/exp_1x1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05738489329814911
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      14.633147791028023
+    ]
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/block/conv_3x3/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.12642978131771088
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      32.23959423601627
+    ]
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/block/red_1x1/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.16625766456127167
+    ],
+    "zero_point": [
+      6
+    ],
+    "effective_lower": [
+      -22.278527051210403
+    ],
+    "effective_upper": [
+      20.11717741191387
+    ]
+  },
+  {
+    "tensor": "/layer_2/layer_2.1/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.21984319388866425
+    ],
+    "zero_point": [
+      8
+    ],
+    "effective_lower": [
+      -29.898674368858337
+    ],
+    "effective_upper": [
+      26.161340072751045
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.0/block/exp_1x1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.051847703754901886
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      13.221164457499981
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.0/block/conv_3x3/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.11010341346263885
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      28.076370432972908
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.0/block/red_1x1/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.4810427129268646
+    ],
+    "zero_point": [
+      2
+    ],
+    "effective_lower": [
+      -62.5355526804924
+    ],
+    "effective_upper": [
+      60.13033911585808
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/local_rep/local_rep.0/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.04353851452469826
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      11.102321203798056
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/local_rep/local_rep.1/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.4040633738040924
+    ],
+    "zero_point": [
+      65
+    ],
+    "effective_lower": [
+      -77.98423114418983
+    ],
+    "effective_upper": [
+      25.05192917585373
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.014645002782344818
+    ],
+    "zero_point": [
+      16
+    ],
+    "effective_lower": [
+      -2.108880400657654
+    ],
+    "effective_upper": [
+      1.6255953088402748
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.04854198545217514
+    ],
+    "zero_point": [
+      -18
+    ],
+    "effective_lower": [
+      -5.339618399739265
+    ],
+    "effective_upper": [
+      7.038587890565395
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.04854198545217514
+    ],
+    "zero_point": [
+      -18
+    ],
+    "effective_lower": [
+      -5.339618399739265
+    ],
+    "effective_upper": [
+      7.038587890565395
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "dtype": "int8",
+    "scale": [
+      0.04854198545217514
+    ],
+    "zero_point": [
+      -18
+    ],
+    "effective_lower": [
+      -5.339618399739265
+    ],
+    "effective_upper": [
+      7.038587890565395
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "dtype": "int8",
+    "scale": [
+      0.04854198545217514
+    ],
+    "zero_point": [
+      -18
+    ],
+    "effective_lower": [
+      -5.339618399739265
+    ],
+    "effective_upper": [
+      7.038587890565395
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.015544386580586433
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      3.9638185780495405
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.02538185380399227
+    ],
+    "zero_point": [
+      14
+    ],
+    "effective_lower": [
+      -3.6042232401669025
+    ],
+    "effective_upper": [
+      2.8681494798511267
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.16803526878356934
+    ],
+    "zero_point": [
+      92
+    ],
+    "effective_lower": [
+      -36.967759132385254
+    ],
+    "effective_upper": [
+      5.881234407424927
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.029333120211958885
+    ],
+    "zero_point": [
+      1
+    ],
+    "effective_lower": [
+      -3.783972507342696
+    ],
+    "effective_upper": [
+      3.6959731467068195
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.024478664621710777
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      6.242059478536248
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.2368767410516739
+    ],
+    "zero_point": [
+      37
+    ],
+    "effective_lower": [
+      -39.08466227352619
+    ],
+    "effective_upper": [
+      21.31890669465065
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.02074170857667923
+    ],
+    "zero_point": [
+      -7
+    ],
+    "effective_lower": [
+      -2.509746737778187
+    ],
+    "effective_upper": [
+      2.779388949275017
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.051847536116838455
+    ],
+    "zero_point": [
+      12
+    ],
+    "effective_lower": [
+      -7.258655056357384
+    ],
+    "effective_upper": [
+      5.962466653436422
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.051847536116838455
+    ],
+    "zero_point": [
+      12
+    ],
+    "effective_lower": [
+      -7.258655056357384
+    ],
+    "effective_upper": [
+      5.962466653436422
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "dtype": "int8",
+    "scale": [
+      0.051847536116838455
+    ],
+    "zero_point": [
+      12
+    ],
+    "effective_lower": [
+      -7.258655056357384
+    ],
+    "effective_upper": [
+      5.962466653436422
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "dtype": "int8",
+    "scale": [
+      0.051847536116838455
+    ],
+    "zero_point": [
+      12
+    ],
+    "effective_lower": [
+      -7.258655056357384
+    ],
+    "effective_upper": [
+      5.962466653436422
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.02159690111875534
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      5.507209785282612
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.0391082763671875
+    ],
+    "zero_point": [
+      15
+    ],
+    "effective_lower": [
+      -5.5924835205078125
+    ],
+    "effective_upper": [
+      4.380126953125
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.1097685843706131
+    ],
+    "zero_point": [
+      57
+    ],
+    "effective_lower": [
+      -20.307188108563423
+    ],
+    "effective_upper": [
+      7.683800905942917
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.030903125181794167
+    ],
+    "zero_point": [
+      -2
+    ],
+    "effective_lower": [
+      -3.893793772906065
+    ],
+    "effective_upper": [
+      3.9865031484514475
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.03429550305008888
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      8.745353277772665
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.39876940846443176
+    ],
+    "zero_point": [
+      -7
+    ],
+    "effective_lower": [
+      -48.25109842419624
+    ],
+    "effective_upper": [
+      53.435100734233856
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/DepthToSpace_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.09353870898485184
+    ],
+    "zero_point": [
+      22
+    ],
+    "effective_lower": [
+      -14.030806347727776
+    ],
+    "effective_upper": [
+      9.821564443409443
+    ]
+  },
+  {
+    "tensor": "/layer_3/layer_3.1/conv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.2109433263540268
+    ],
+    "zero_point": [
+      13
+    ],
+    "effective_lower": [
+      -29.743009015917778
+    ],
+    "effective_upper": [
+      24.047539204359055
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.0/block/exp_1x1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.045376915484666824
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      11.57111344859004
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.0/block/conv_3x3/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.06257345527410507
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      15.956231094896793
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.0/block/red_1x1/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.4599825441837311
+    ],
+    "zero_point": [
+      5
+    ],
+    "effective_lower": [
+      -61.17767837643623
+    ],
+    "effective_upper": [
+      56.11787039041519
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/local_rep/local_rep.0/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.09525565057992935
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      24.290190897881985
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/local_rep/local_rep.1/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      1.0649112462997437
+    ],
+    "zero_point": [
+      -46
+    ],
+    "effective_lower": [
+      -87.32272219657898
+    ],
+    "effective_upper": [
+      184.22964560985565
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.01507146842777729
+    ],
+    "zero_point": [
+      0
+    ],
+    "effective_lower": [
+      -1.9291479587554932
+    ],
+    "effective_upper": [
+      1.9140764903277159
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05595288425683975
+    ],
+    "zero_point": [
+      13
+    ],
+    "effective_lower": [
+      -7.889356680214405
+    ],
+    "effective_upper": [
+      6.378628805279732
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05595288425683975
+    ],
+    "zero_point": [
+      13
+    ],
+    "effective_lower": [
+      -7.889356680214405
+    ],
+    "effective_upper": [
+      6.378628805279732
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "dtype": "int8",
+    "scale": [
+      0.05595288425683975
+    ],
+    "zero_point": [
+      13
+    ],
+    "effective_lower": [
+      -7.889356680214405
+    ],
+    "effective_upper": [
+      6.378628805279732
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "dtype": "int8",
+    "scale": [
+      0.05595288425683975
+    ],
+    "zero_point": [
+      13
+    ],
+    "effective_lower": [
+      -7.889356680214405
+    ],
+    "effective_upper": [
+      6.378628805279732
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.02039014734327793
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      5.1994875725358725
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.044297147542238235
+    ],
+    "zero_point": [
+      -5
+    ],
+    "effective_lower": [
+      -5.448549147695303
+    ],
+    "effective_upper": [
+      5.847223475575447
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.25934725999832153
+    ],
+    "zero_point": [
+      -91
+    ],
+    "effective_lower": [
+      -9.595848619937897
+    ],
+    "effective_upper": [
+      56.537702679634094
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.06215120106935501
+    ],
+    "zero_point": [
+      23
+    ],
+    "effective_lower": [
+      -9.384831361472607
+    ],
+    "effective_upper": [
+      6.463724911212921
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.03605842590332031
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      9.19489860534668
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.29477787017822266
+    ],
+    "zero_point": [
+      -43
+    ],
+    "effective_lower": [
+      -25.056118965148926
+    ],
+    "effective_upper": [
+      50.11223793029785
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.019243387505412102
+    ],
+    "zero_point": [
+      7
+    ],
+    "effective_lower": [
+      -2.5978573132306337
+    ],
+    "effective_upper": [
+      2.309206500649452
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05242261663079262
+    ],
+    "zero_point": [
+      20
+    ],
+    "effective_lower": [
+      -7.758547261357307
+    ],
+    "effective_upper": [
+      5.60921997949481
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05242261663079262
+    ],
+    "zero_point": [
+      20
+    ],
+    "effective_lower": [
+      -7.758547261357307
+    ],
+    "effective_upper": [
+      5.60921997949481
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "dtype": "int8",
+    "scale": [
+      0.05242261663079262
+    ],
+    "zero_point": [
+      20
+    ],
+    "effective_lower": [
+      -7.758547261357307
+    ],
+    "effective_upper": [
+      5.60921997949481
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "dtype": "int8",
+    "scale": [
+      0.05242261663079262
+    ],
+    "zero_point": [
+      20
+    ],
+    "effective_lower": [
+      -7.758547261357307
+    ],
+    "effective_upper": [
+      5.60921997949481
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.021547751501202583
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      5.494676632806659
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.04468487575650215
+    ],
+    "zero_point": [
+      13
+    ],
+    "effective_lower": [
+      -6.300567481666803
+    ],
+    "effective_upper": [
+      5.094075836241245
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.20829255878925323
+    ],
+    "zero_point": [
+      -75
+    ],
+    "effective_lower": [
+      -11.039505615830421
+    ],
+    "effective_upper": [
+      42.07509687542915
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05177990347146988
+    ],
+    "zero_point": [
+      14
+    ],
+    "effective_lower": [
+      -7.352746292948723
+    ],
+    "effective_upper": [
+      5.851129092276096
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.031999342143535614
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      8.159832246601582
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.21679441630840302
+    ],
+    "zero_point": [
+      -48
+    ],
+    "effective_lower": [
+      -17.34355330467224
+    ],
+    "effective_upper": [
+      37.93902285397053
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.019966429099440575
+    ],
+    "zero_point": [
+      13
+    ],
+    "effective_lower": [
+      -2.815266503021121
+    ],
+    "effective_upper": [
+      2.2761729173362255
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05999069660902023
+    ],
+    "zero_point": [
+      19
+    ],
+    "effective_lower": [
+      -8.818632401525974
+    ],
+    "effective_upper": [
+      6.478995233774185
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05999069660902023
+    ],
+    "zero_point": [
+      19
+    ],
+    "effective_lower": [
+      -8.818632401525974
+    ],
+    "effective_upper": [
+      6.478995233774185
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "dtype": "int8",
+    "scale": [
+      0.05999069660902023
+    ],
+    "zero_point": [
+      19
+    ],
+    "effective_lower": [
+      -8.818632401525974
+    ],
+    "effective_upper": [
+      6.478995233774185
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "dtype": "int8",
+    "scale": [
+      0.05999069660902023
+    ],
+    "zero_point": [
+      19
+    ],
+    "effective_lower": [
+      -8.818632401525974
+    ],
+    "effective_upper": [
+      6.478995233774185
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.02387365512549877
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      6.087782057002187
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.0575840137898922
+    ],
+    "zero_point": [
+      10
+    ],
+    "effective_lower": [
+      -7.946593903005123
+    ],
+    "effective_upper": [
+      6.737329613417387
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.17144893109798431
+    ],
+    "zero_point": [
+      -43
+    ],
+    "effective_lower": [
+      -14.573159143328667
+    ],
+    "effective_upper": [
+      29.146318286657333
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.08212815970182419
+    ],
+    "zero_point": [
+      22
+    ],
+    "effective_lower": [
+      -12.319223955273628
+    ],
+    "effective_upper": [
+      8.62345676869154
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05277639627456665
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      13.457981050014496
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.27161505818367004
+    ],
+    "zero_point": [
+      -45
+    ],
+    "effective_lower": [
+      -22.544049829244614
+    ],
+    "effective_upper": [
+      46.71779000759125
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.018589328974485397
+    ],
+    "zero_point": [
+      6
+    ],
+    "effective_lower": [
+      -2.4909700825810432
+    ],
+    "effective_upper": [
+      2.249308805912733
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.058919887989759445
+    ],
+    "zero_point": [
+      5
+    ],
+    "effective_lower": [
+      -7.836345102638006
+    ],
+    "effective_upper": [
+      7.188226334750652
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.058919887989759445
+    ],
+    "zero_point": [
+      5
+    ],
+    "effective_lower": [
+      -7.836345102638006
+    ],
+    "effective_upper": [
+      7.188226334750652
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "dtype": "int8",
+    "scale": [
+      0.058919887989759445
+    ],
+    "zero_point": [
+      5
+    ],
+    "effective_lower": [
+      -7.836345102638006
+    ],
+    "effective_upper": [
+      7.188226334750652
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "dtype": "int8",
+    "scale": [
+      0.058919887989759445
+    ],
+    "zero_point": [
+      5
+    ],
+    "effective_lower": [
+      -7.836345102638006
+    ],
+    "effective_upper": [
+      7.188226334750652
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.02787904255092144
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      7.109155850484967
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05874314531683922
+    ],
+    "zero_point": [
+      -13
+    ],
+    "effective_lower": [
+      -6.75546171143651
+    ],
+    "effective_upper": [
+      8.22404034435749
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.12933070957660675
+    ],
+    "zero_point": [
+      1
+    ],
+    "effective_lower": [
+      -16.68366153538227
+    ],
+    "effective_upper": [
+      16.29566940665245
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.06533531844615936
+    ],
+    "zero_point": [
+      16
+    ],
+    "effective_lower": [
+      -9.408285856246948
+    ],
+    "effective_upper": [
+      7.252220347523689
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.04689398407936096
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      11.957965940237045
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/global_rep/global_rep.3/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.4127485752105713
+    ],
+    "zero_point": [
+      35
+    ],
+    "effective_lower": [
+      -67.27801775932312
+    ],
+    "effective_upper": [
+      37.97286891937256
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/DepthToSpace_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.08788126707077026
+    ],
+    "zero_point": [
+      2
+    ],
+    "effective_lower": [
+      -11.424564719200134
+    ],
+    "effective_upper": [
+      10.985158383846283
+    ]
+  },
+  {
+    "tensor": "/layer_4/layer_4.1/conv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.18633663654327393
+    ],
+    "zero_point": [
+      4
+    ],
+    "effective_lower": [
+      -24.596436023712158
+    ],
+    "effective_upper": [
+      22.919406294822693
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.0/block/exp_1x1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.0762217789888382
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      19.43655364215374
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.0/block/conv_3x3/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.13690808415412903
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      34.9115614593029
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.0/block/red_1x1/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.4943721890449524
+    ],
+    "zero_point": [
+      4
+    ],
+    "effective_lower": [
+      -65.25712895393372
+    ],
+    "effective_upper": [
+      60.807779252529144
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/local_rep/local_rep.0/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.03705812990665436
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      9.449823126196861
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/local_rep/local_rep.1/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.2474876344203949
+    ],
+    "zero_point": [
+      5
+    ],
+    "effective_lower": [
+      -32.91585537791252
+    ],
+    "effective_upper": [
+      30.193491399288177
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.01761437952518463
+    ],
+    "zero_point": [
+      -5
+    ],
+    "effective_lower": [
+      -2.1665686815977097
+    ],
+    "effective_upper": [
+      2.3250980973243713
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.06539663672447205
+    ],
+    "zero_point": [
+      26
+    ],
+    "effective_lower": [
+      -10.071082055568695
+    ],
+    "effective_upper": [
+      6.605060309171677
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.06539663672447205
+    ],
+    "zero_point": [
+      26
+    ],
+    "effective_lower": [
+      -10.071082055568695
+    ],
+    "effective_upper": [
+      6.605060309171677
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "dtype": "int8",
+    "scale": [
+      0.06539663672447205
+    ],
+    "zero_point": [
+      26
+    ],
+    "effective_lower": [
+      -10.071082055568695
+    ],
+    "effective_upper": [
+      6.605060309171677
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "dtype": "int8",
+    "scale": [
+      0.06539663672447205
+    ],
+    "zero_point": [
+      26
+    ],
+    "effective_lower": [
+      -10.071082055568695
+    ],
+    "effective_upper": [
+      6.605060309171677
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.023979613557457924
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      6.114801457151771
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.11666636914014816
+    ],
+    "zero_point": [
+      25
+    ],
+    "effective_lower": [
+      -17.84995447844267
+    ],
+    "effective_upper": [
+      11.899969652295113
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.3631056845188141
+    ],
+    "zero_point": [
+      37
+    ],
+    "effective_lower": [
+      -59.912437945604324
+    ],
+    "effective_upper": [
+      32.67951160669327
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.04680873081088066
+    ],
+    "zero_point": [
+      10
+    ],
+    "effective_lower": [
+      -6.459604851901531
+    ],
+    "effective_upper": [
+      5.476621504873037
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.053772468119859695
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      13.711979370564222
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.0/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.3101162612438202
+    ],
+    "zero_point": [
+      36
+    ],
+    "effective_lower": [
+      -50.85906684398651
+    ],
+    "effective_upper": [
+      28.220579773187637
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.02748027630150318
+    ],
+    "zero_point": [
+      2
+    ],
+    "effective_lower": [
+      -3.5724359191954136
+    ],
+    "effective_upper": [
+      3.4350345376878977
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.12071461230516434
+    ],
+    "zero_point": [
+      17
+    ],
+    "effective_lower": [
+      -17.50361878424883
+    ],
+    "effective_upper": [
+      13.278607353568077
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.12071461230516434
+    ],
+    "zero_point": [
+      17
+    ],
+    "effective_lower": [
+      -17.50361878424883
+    ],
+    "effective_upper": [
+      13.278607353568077
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "dtype": "int8",
+    "scale": [
+      0.12071461230516434
+    ],
+    "zero_point": [
+      17
+    ],
+    "effective_lower": [
+      -17.50361878424883
+    ],
+    "effective_upper": [
+      13.278607353568077
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "dtype": "int8",
+    "scale": [
+      0.12071461230516434
+    ],
+    "zero_point": [
+      17
+    ],
+    "effective_lower": [
+      -17.50361878424883
+    ],
+    "effective_upper": [
+      13.278607353568077
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.05211702361702919
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      13.289841022342443
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.31199532747268677
+    ],
+    "zero_point": [
+      -4
+    ],
+    "effective_lower": [
+      -38.68742060661316
+    ],
+    "effective_upper": [
+      40.87138789892197
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.6740233898162842
+    ],
+    "zero_point": [
+      4
+    ],
+    "effective_lower": [
+      -88.97108745574951
+    ],
+    "effective_upper": [
+      82.90487694740295
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.1453784853219986
+    ],
+    "zero_point": [
+      9
+    ],
+    "effective_lower": [
+      -19.916852489113808
+    ],
+    "effective_upper": [
+      17.154661267995834
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.21456849575042725
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      54.71496641635895
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.1/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      1.100508451461792
+    ],
+    "zero_point": [
+      16
+    ],
+    "effective_lower": [
+      -158.47321701049805
+    ],
+    "effective_upper": [
+      122.15643811225891
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.0333450622856617
+    ],
+    "zero_point": [
+      11
+    ],
+    "effective_lower": [
+      -4.634963657706976
+    ],
+    "effective_upper": [
+      3.868027225136757
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/qkv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.16385823488235474
+    ],
+    "zero_point": [
+      -4
+    ],
+    "effective_lower": [
+      -20.318421125411987
+    ],
+    "effective_upper": [
+      21.46542876958847
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.16385823488235474
+    ],
+    "zero_point": [
+      -4
+    ],
+    "effective_lower": [
+      -20.318421125411987
+    ],
+    "effective_upper": [
+      21.46542876958847
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_1",
+    "dtype": "int8",
+    "scale": [
+      0.16385823488235474
+    ],
+    "zero_point": [
+      -4
+    ],
+    "effective_lower": [
+      -20.318421125411987
+    ],
+    "effective_upper": [
+      21.46542876958847
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Split_output_2",
+    "dtype": "int8",
+    "scale": [
+      0.16385823488235474
+    ],
+    "zero_point": [
+      -4
+    ],
+    "effective_lower": [
+      -20.318421125411987
+    ],
+    "effective_upper": [
+      21.46542876958847
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.09131574630737305
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      23.285515308380127
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/Mul_1_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.3711455762386322
+    ],
+    "zero_point": [
+      -18
+    ],
+    "effective_lower": [
+      -40.82601338624954
+    ],
+    "effective_upper": [
+      53.81610855460167
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_attn/pre_norm_attn.1/out_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.7611134648323059
+    ],
+    "zero_point": [
+      -19
+    ],
+    "effective_lower": [
+      -82.96136766672134
+    ],
+    "effective_upper": [
+      111.12256586551666
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.0/Add_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.1542763113975525
+    ],
+    "zero_point": [
+      4
+    ],
+    "effective_lower": [
+      -20.36447310447693
+    ],
+    "effective_upper": [
+      18.975986301898956
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.1/block/act/Relu_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.387125164270401
+    ],
+    "zero_point": [
+      -128
+    ],
+    "effective_lower": [
+      0.0
+    ],
+    "effective_upper": [
+      98.71691688895226
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/global_rep/global_rep.2/pre_norm_ffn/pre_norm_ffn.3/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      4.497993469238281
+    ],
+    "zero_point": [
+      62
+    ],
+    "effective_lower": [
+      -854.6187591552734
+    ],
+    "effective_upper": [
+      292.3695755004883
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/DepthToSpace_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.15729793906211853
+    ],
+    "zero_point": [
+      9
+    ],
+    "effective_lower": [
+      -21.54981765151024
+    ],
+    "effective_upper": [
+      18.561156809329987
+    ]
+  },
+  {
+    "tensor": "/layer_5/layer_5.1/conv_proj/block/conv/Conv_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.06116843968629837
+    ],
+    "zero_point": [
+      0
+    ],
+    "effective_lower": [
+      -7.829560279846191
+    ],
+    "effective_upper": [
+      7.768391840159893
+    ]
+  },
+  {
+    "tensor": "/classifier/classifier.0/ReduceMean_output_0",
+    "dtype": "int8",
+    "scale": [
+      0.016673732548952103
+    ],
+    "zero_point": [
+      -4
+    ],
+    "effective_lower": [
+      -2.0675428360700607
+    ],
+    "effective_upper": [
+      2.1842589639127254
+    ]
+  },
+  {
+    "tensor": "logits_QuantizeLinear_Input",
+    "dtype": "int8",
+    "scale": [
+      0.022809544578194618
+    ],
+    "zero_point": [
+      -86
+    ],
+    "effective_lower": [
+      -0.958000872284174
+    ],
+    "effective_upper": [
+      4.858432995155454
+    ]
+  }
+]

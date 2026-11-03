@@ -1,0 +1,4 @@
+interface:
+  display_name: "CLE 量化精度与 SO 重建"
+  short_description: "从原始浮点 PB 搜索 BN 折叠、CLE 与偏置校正，按实际部署链路重建 SO"
+  default_prompt: "请使用 $cle-accuracy-tuning，保留我的部署链路与固定后端，基于原始 PB 优化量化精度并生成可追溯的新 SO。"

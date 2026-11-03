@@ -1,0 +1,10 @@
+build/
+prepared/
+compile_tools/modle/driver/pb_file/
+external_capture/
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/
+results_*/
+*.input_tmp

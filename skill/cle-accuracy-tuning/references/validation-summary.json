@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-03",
+  "environment": {
+    "python": "3.6.10",
+    "tensorflow": "1.15.2",
+    "numpy": "1.19.5",
+    "platform": "Windows"
+  },
+  "whole_bundle_synthetic_tests": 13,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "source_full_report_sha256": "a5f3f45340182a761f9f21da863bc955540da36b35db093c1b90d14fe987709a",
+  "not_executed": [
+    "Docker native quantized candidate search",
+    "New target compilation and linking",
+    "Board accuracy and speed measurement",
+    "Independent-set acceptance",
+    "PYNQ hardware execution"
+  ],
+  "skill": "cle-accuracy-tuning",
+  "synthetic_checks": [
+    "test_self_coupled_internal_residual_group_is_pinned",
+    "test_bn_cle_bounded_depthwise_and_residual_equivalence",
+    "test_nonhomogeneous_activation_is_not_blindly_equalized",
+    "test_legacy_input_pad_metadata_copy_patch_and_range",
+    "test_whole_chain_selection_portable_provenance_and_stale_rejection",
+    "test_mixed_scope_or_backend_cannot_win"
+  ],
+  "retained_case": {
+    "elf_so": {
+      "matched": true,
+      "scope": "Existing binary payload inspection only; no compiler/linker or DPU executed"
+    },
+    "quant_boundary_positions": {
+      "front": [
+        5
+      ],
+      "mv2_4": [
+        0
+      ],
+      "mv2_5": [
+        0
+      ]
+    },
+    "scope": "Read-only historical artifacts and host transformations; no new accuracy claim"
+  }
+}

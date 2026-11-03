@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "date": "2026-11-03",
+  "source_directories": [
+    {
+      "source": "C:\\WorkSpace\\Z19-Onborad\\submission\\mobilevitv2_075_zu19eg",
+      "files": 778,
+      "added": 0,
+      "removed": 0,
+      "content_changed": 0,
+      "passed": true
+    },
+    {
+      "source": "C:\\WorkSpace\\Z19-Onborad\\src\\mobilevitv2_075_zu19eg",
+      "files": 1113,
+      "added": 0,
+      "removed": 0,
+      "content_changed": 0,
+      "passed": true
+    }
+  ],
+  "baseline_snapshot_sha256": "7d5e21ba3b660579845d57706a73b46343c6bb979b222888656fefde6e4d51cc",
+  "final_deployment_files_preserved": [
+    "board/deploy_best_fused/model/libdpumodelmobilevitv2_075_fronta_ctlb100.so",
+    "board/deploy_best_fused/model/libdpumodelmobilevitv2_075_mv2_5_cle.so",
+    "board/deploy_best_fused/model/libdpumodelmobilevitv2_075_mv4a_ctlb100.so",
+    "board/deploy_best_fused/model/mv2_4.json",
+    "board/deploy_best_fused/model/mv2_4_weights.npz",
+    "board/deploy_best_fused/model/mv2_5.json",
+    "board/deploy_best_fused/model/mv2_5_weights.npz",
+    "board/deploy_best_fused/model/ps1.json",
+    "board/deploy_best_fused/model/ps1_weights.npz",
+    "board/deploy_best_fused/model/ps2.json",
+    "board/deploy_best_fused/model/ps2_weights.npz",
+    "board/deploy_best_fused/model/ps3.json",
+    "board/deploy_best_fused/model/ps3_weights.npz",
+    "board/deploy_best_fused/model/ps_tail_numpy.json",
+    "board/deploy_best_fused/model/ps_tail_numpy_weights.npz",
+    "board/deploy_best_fused/runtime/capture_features.py",
+    "board/deploy_best_fused/runtime/check_numpy.py",
+    "board/deploy_best_fused/runtime/dpu_runtime.py",
+    "board/deploy_best_fused/runtime/model_libraries.py",
+    "board/deploy_best_fused/runtime/ps_tail_fast.py",
+    "board/deploy_best_fused/runtime/ps_tail_fused.py",
+    "board/deploy_best_fused/runtime/ps_tail_numpy.py",
+    "board/deploy_best_fused/runtime/run_hybrid_batch.py",
+    "board/deploy_best_fused/runtime/run_hybrid_board.py",
+    "board/deploy_best_fused/runtime_config.json"
+  ],
+  "original_pt_preserved": true
+}

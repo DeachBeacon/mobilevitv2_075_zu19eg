@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1130" viewBox="0 0 1600 1130">
+<rect width="100%" height="100%" fill="white"/>
+<text x="52" y="72" font-family="Microsoft YaHei, sans-serif" font-size="34" fill="#172D47" text-anchor="start">图2  软件总体框图</text>
+<text x="54" y="112" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#607185" text-anchor="start">离线构建工具 + 板端PS/PL协同推理</text>
+<path d="M52 134H1548" stroke="#D9E1EB" stroke-width="2"/>
+<rect x="55" y="175" width="450" height="160" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="280.0" y="214" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">PC：模型准备</text>
+<text x="280.0" y="256.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">训练权重 → H5 → 冻结PB</text>
+<text x="280.0" y="285.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">六段切分 / BN / CLE / 模型导出</text>
+<rect x="575" y="175" width="450" height="160" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="800.0" y="214" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">Vitis AI Docker</text>
+<text x="800.0" y="256.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">中间特征校准 / INT8量化</text>
+<text x="800.0" y="285.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">原生FixNeuron评估 / ELF编译</text>
+<rect x="1095" y="175" width="450" height="160" rx="14" fill="#F0EAFE" stroke="#7C57C2" stroke-width="2"/>
+<text x="1320.0" y="214" font-family="Microsoft YaHei, sans-serif" font-size="23" fill="#19364F" text-anchor="middle">Runtime Docker</text>
+<text x="1320.0" y="256.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">AArch64共享库链接</text>
+<text x="1320.0" y="285.0" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">SO / 配置 / PS模型 / Python程序</text>
+<polyline points="505,255.0 575,255.0" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="575.0,255.0 564.4,260.5 564.4,249.5" fill="#75889E"/>
+<polyline points="1025,255.0 1095,255.0" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1095.0,255.0 1084.4,260.5 1084.4,249.5" fill="#75889E"/>
+<text x="800" y="409" font-family="Microsoft YaHei, sans-serif" font-size="24" fill="#42627E" text-anchor="middle">完整部署包拷贝至AXU19EG开发板</text>
+<text x="55" y="467" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#607185" text-anchor="start">板端执行通路（箭头为单张图片的先后顺序）</text>
+<rect x="55" y="505" width="320" height="165" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="215.0" y="543" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">PS：图像预处理</text>
+<text x="215.0" y="588.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">256×256 RGB图片</text>
+<text x="215.0" y="617.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">FP32 [1,256,256,3]</text>
+<rect x="445" y="505" width="320" height="165" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="605.0" y="543" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">DPU：front</text>
+<text x="605.0" y="588.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">前端卷积</text>
+<text x="605.0" y="617.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">FP32输出 [1,32,32,96]</text>
+<rect x="835" y="505" width="320" height="165" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="995.0" y="543" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">PS：ps1</text>
+<text x="995.0" y="588.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">Transformer所在计算段1</text>
+<text x="995.0" y="617.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">输出 [1,32,32,192]</text>
+<rect x="1225" y="505" width="320" height="165" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="1385.0" y="543" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">DPU：mv2_4</text>
+<text x="1385.0" y="588.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">MV2卷积与下采样</text>
+<text x="1385.0" y="617.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">输出 [1,16,16,288]</text>
+<rect x="1225" y="755" width="320" height="165" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="1385.0" y="793" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">PS：ps2</text>
+<text x="1385.0" y="838.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">Transformer所在计算段2</text>
+<text x="1385.0" y="867.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">输出 [1,16,16,288]</text>
+<rect x="835" y="755" width="320" height="165" rx="14" fill="#FFF2D7" stroke="#BA821F" stroke-width="2"/>
+<text x="995.0" y="793" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">DPU：mv2_5</text>
+<text x="995.0" y="838.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">MV2卷积与下采样</text>
+<text x="995.0" y="867.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">输出 [1,8,8,384]</text>
+<rect x="445" y="755" width="320" height="165" rx="14" fill="#E9F3FF" stroke="#3178B9" stroke-width="2"/>
+<text x="605.0" y="793" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">PS：ps3</text>
+<text x="605.0" y="838.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">Transformer及分类后端</text>
+<text x="605.0" y="867.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">输出 [1,10] logits</text>
+<rect x="55" y="755" width="320" height="165" rx="14" fill="#E8F5EE" stroke="#34815C" stroke-width="2"/>
+<text x="215.0" y="793" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19364F" text-anchor="middle">PS：结果输出</text>
+<text x="215.0" y="838.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">argmax → 类别0～9</text>
+<text x="215.0" y="867.5" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#3D5369" text-anchor="middle">CSV / 精度 / 耗时 / 诊断</text>
+<polyline points="375,587.5 445,587.5" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="445.0,587.5 434.4,593.0 434.4,582.0" fill="#75889E"/>
+<polyline points="765,587.5 835,587.5" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="835.0,587.5 824.4,593.0 824.4,582.0" fill="#75889E"/>
+<polyline points="1155,587.5 1225,587.5" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1225.0,587.5 1214.4,593.0 1214.4,582.0" fill="#75889E"/>
+<polyline points="1385.0,670 1385.0,755" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1385.0,755.0 1379.5,744.4 1390.5,744.4" fill="#75889E"/>
+<polyline points="1225,837.5 1155,837.5" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1155.0,837.5 1165.6,832.0 1165.6,843.0" fill="#75889E"/>
+<polyline points="835,837.5 765,837.5" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="765.0,837.5 775.6,832.0 775.6,843.0" fill="#75889E"/>
+<polyline points="445,837.5 375,837.5" fill="none" stroke="#75889E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="375.0,837.5 385.6,832.0 385.6,843.0" fill="#75889E"/>
+<text x="800" y="1012" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#42627E" text-anchor="middle">PS段：Python / NumPy FP32        DPU段：内部INT8，N2Cube以FP32接口传输</text>
+<text x="54" y="1105" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#607185" text-anchor="start">三个DPU段对应三个依次调用的kernel；不表示三个物理DPU实例。</text>
+</svg>

@@ -1,0 +1,84 @@
+{
+  "scope": "All DPU submissions, including warmup and any rejected input. Outside counts use the conservative FP32 endpoint interval, not a simulation of runtime rounding.",
+  "policy": "error",
+  "stages": [
+    {
+      "kernel": "mobilevitv2_075_front_cle",
+      "input_node": "stem_conv_Conv2D",
+      "policy": "error",
+      "calls": 301,
+      "elements": 59179008,
+      "below_range": 0,
+      "above_range": 0,
+      "calls_outside_range": 0,
+      "clipped_elements": 0,
+      "input_min": -2.1179039478302,
+      "input_max": 2.640000104904175,
+      "last": {
+        "call": 301,
+        "input_min": -2.1179039478302,
+        "input_max": 2.640000104904175,
+        "scaled_min": -67.7729263305664,
+        "scaled_max": 84.4800033569336,
+        "below_range": 0,
+        "above_range": 0,
+        "outside_fraction": 0.0
+      },
+      "input_scale": 32.0,
+      "representable_input_min": -4.0,
+      "representable_input_max": 3.96875
+    },
+    {
+      "kernel": "mobilevitv2_075_mv4a_ctlb100",
+      "input_node": "stack4_block1_deep_1_conv_Conv2D",
+      "policy": "error",
+      "calls": 301,
+      "elements": 59179008,
+      "below_range": 0,
+      "above_range": 0,
+      "calls_outside_range": 0,
+      "clipped_elements": 0,
+      "input_min": -66.67101287841797,
+      "input_max": 61.92527389526367,
+      "last": {
+        "call": 301,
+        "input_min": -46.8950080871582,
+        "input_max": 51.64743423461914,
+        "scaled_min": -46.8950080871582,
+        "scaled_max": 51.64743423461914,
+        "below_range": 0,
+        "above_range": 0,
+        "outside_fraction": 0.0
+      },
+      "input_scale": 1.0,
+      "representable_input_min": -128.0,
+      "representable_input_max": 127.0
+    },
+    {
+      "kernel": "mobilevitv2_075_mv2_5_cle",
+      "input_node": "stack5_block1_deep_1_conv_Conv2D",
+      "policy": "error",
+      "calls": 301,
+      "elements": 22192128,
+      "below_range": 0,
+      "above_range": 0,
+      "calls_outside_range": 0,
+      "clipped_elements": 0,
+      "input_min": -65.14358520507812,
+      "input_max": 69.68415069580078,
+      "last": {
+        "call": 301,
+        "input_min": -56.444427490234375,
+        "input_max": 42.95630645751953,
+        "scaled_min": -56.444427490234375,
+        "scaled_max": 42.95630645751953,
+        "below_range": 0,
+        "above_range": 0,
+        "outside_fraction": 0.0
+      },
+      "input_scale": 1.0,
+      "representable_input_min": -128.0,
+      "representable_input_max": 127.0
+    }
+  ]
+}
